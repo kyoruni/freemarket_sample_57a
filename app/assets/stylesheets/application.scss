@@ -1,1 +1,9 @@
-@import "./reset";
+@import "reset";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "config/*";
+@import "modules/*";
+
+* {
+  box-sizing: border-box;
+}
