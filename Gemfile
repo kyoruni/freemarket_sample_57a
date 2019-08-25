@@ -64,6 +64,9 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'owlcarousel-rails'
 
+# devise
+gem 'devise'
+
 # デバッグ用
 gem 'pry-rails'
 
