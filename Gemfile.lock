@@ -134,10 +134,7 @@ GEM
     nio4r (2.4.0)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
-<<<<<<< HEAD
-=======
     orm_adapter (0.5.0)
->>>>>>> b0e813738eec8cd58967c96bf95e079276ec3049
     owlcarousel-rails (2.2.3.5)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -246,10 +243,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
-<<<<<<< HEAD
-=======
   devise
->>>>>>> b0e813738eec8cd58967c96bf95e079276ec3049
   font-awesome-sass (~> 5.9.0)
   haml-rails
   jbuilder (~> 2.5)
