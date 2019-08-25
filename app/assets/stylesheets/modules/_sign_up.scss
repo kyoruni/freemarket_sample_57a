@@ -33,8 +33,6 @@
 
 
         h2 {
-          float: left;
-          width: 100%;
           color: red;
           text-align: center;
           line-height:65px;
@@ -43,44 +41,40 @@
       .bottom_contents{
       
         margin: 24 16 40;
+
       
-        
+        .bottom_frame{
 
 
-        .field-top{
-          float: left;
-          width: 100%;
-          color: red;
-          text-align: center;
-          margin: 16 auto 0;
-          height: 65px;
-          background-color:mediumslateblue;
+          .field-top{
+            width: 100%;
+            text-align: center;
+            margin: 16 auto 0;
+            height: 65px;
+            background-color:mediumslateblue;
+            
+
+          }
           
+          .field-middle{
+            width: 100%;
+            text-align: center;
+            margin: 16 auto 0;
+            height: 65px;
+            background-color:royalblue;
+            
 
-        }
-        
-        .field-middle{
-          float: left;
-          width: 100%;
-          color: red;
-          text-align: center;
-          margin: 16 auto 0;
-          height: 65px;
-          background-color:royalblue;
-          
+          }
 
-        }
+          .field-bottom{
+            width: 100%;
+            text-align: center;
+            margin: 16 auto 0;
+            height: 65px;
+            background-color:greenyellow;
+            
 
-        .field-bottom{
-          float: left;
-          width: 100%;
-          color: red;
-          text-align: center;
-          margin: 16 auto 0;
-          height: 65px;
-          background-color:greenyellow;
-          
-
+          }
         }
       }
     }
