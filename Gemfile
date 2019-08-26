@@ -72,3 +72,9 @@ gem 'pry-rails'
 
 # アイコン
 gem 'font-awesome-sass', '~> 5.9.0'
+
+# 本番環境のみ
+group :production do
+  # ユニコーン
+  gem 'unicorn', '5.4.1'
+end
