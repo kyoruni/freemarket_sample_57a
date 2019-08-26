@@ -137,4 +137,29 @@ body {
       }
     }
   }
+  &__body {
+    height: 74px;
+    // お知らせとやることリストを内包するブロック
+    &__tabs {
+      font-size: 0; // インラインブロックの隙間をなくす
+      // ひとつひとつのタブ
+      &__tab,
+      &__tab h3 {
+        // リセットcssに優先度で負けてしまうので、h3も指定する
+        display: inline-block;
+        width: 350px;
+        font-size: 16px;
+        text-align: center; // 文字を横方向中央寄せ
+        line-height: 74px; // 文字を縦方向中央寄せ
+        font-weight: bold !important;
+        // アクティブになっている方のタブ
+        &__active {
+          background: white;
+          border-top: 2px solid red;
+          height: 72px; // 赤い線の分だけ高さを低くする
+          line-height: 72px;
+        }
+      }
+    }
+  }
 }
