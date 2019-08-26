@@ -7,6 +7,10 @@ body {
 }
 /////////////////
 
+.bold {
+  font-weight: bold;
+}
+
 /* -- 幅と高さをセット --*/
 @mixin sizeSet($height, $width) {
   height: $height;
@@ -78,6 +82,59 @@ body {
 
 /*-- マイページ右側 --*/
 .mypage-main {
-  background: red;
-  @include sizeSet(1200px, 700px); // heightは仮
+  @include sizeSet(auto, 700px); // heightは仮
+  // ヘッダー
+  &__header {
+    @include sizeSet(200px, 100%);
+    background-image: url("mypage-bg.jpg");
+    padding: 20px;
+    position: relative;
+    // ヘッダーのユーザーアイコンを内包するブロック
+    &__user {
+      color: #333;
+      height: 111px;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      // マイページの画像
+      &__icon {
+        display: block;
+        margin: auto;
+        border-radius: 50%;
+      }
+      // マイページのユーザー名
+      &__name {
+        font-weight: bold;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 8px;
+      }
+      // マイページのユーザー説明
+      &__caption {
+        height: 16px;
+        margin-top: 8px;
+        display: flex;
+        font-size: 14px;
+        justify-content: center;
+        margin-top: 8px;
+        // 評価
+        &__rating {
+          &__number {
+            margin-left: 8px;
+            font-size: 16px;
+          }
+        }
+        // 出品数
+        &__sell {
+          margin-left: 16px;
+          &__number {
+            margin-left: 8px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 }

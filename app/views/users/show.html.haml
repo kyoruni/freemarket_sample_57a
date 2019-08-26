@@ -79,6 +79,22 @@
         %li	
           %a.mypage-menu__nav__list__item{:href => "#"}	
             ログアウト           #{icon 'fas', 'chevron-right'}	
-  .mypage-main	
+  .mypage-main
+    .mypage-main__header
+      .mypage-main__header__user
+        = image_tag "user-icon.jpg", size: "60x60", class: "mypage-main__header__user__icon"
+        %h2.mypage-main__header__user__name
+          ユーザー1
+        .mypage-main__header__user__caption
+          .mypage-main__header__user__caption__rating
+            評価
+            %span.mypage-main__header__user__caption__rating__number.bold
+              123
+          .mypage-main__header__user__caption__sell
+            出品数
+            %span.mypage-main__header__user__caption__sell__number.bold
+              456
+    .mypage-main__body
+    .mypage-main__footer
 .mm-footer	
 .mm-footer2
