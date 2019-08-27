@@ -118,10 +118,10 @@
 
 ### 商品画像
 
-|       Column       |       Type       |  Options   |
-| :----------------: | :--------------: | :--------: |
-|       image        |      string      | null:falss |
-| item_id]references | foreign_key:true |
+| Column  |    Type    |     Options      |
+| :-----: | :--------: | :--------------: |
+|  image  |   string   |    null:falss    |
+| item_id | references | foreign_key:true |
 
 ### Association
 
@@ -220,11 +220,11 @@
 
 ### コメント
 
-|       Column       |       Type       | Options |
-| :----------------: | :--------------: | :-----: |
-| item_id]references | foreign_key:true |
-| user_id]references | foreign_key:true |
-|        text        |       text       |         |
+| Column  |    Type    |     Options      |
+| :-----: | :--------: | :--------------: |
+| item_id | references | foreign_key:true |
+| user_id | references | foreign_key:true |
+|  text   |    text    |                  |
 
 ### Association
 
@@ -235,10 +235,10 @@
 
 ### いいね
 
-|       Column       |       Type       | Options |
-| :----------------: | :--------------: | :-----: |
-| item_id]references | foreign_key:true |
-| user_id]references | foreign_key:true |
+| Column  |    Type    |     Options      |
+| :-----: | :--------: | :--------------: |
+| item_id | references | foreign_key:true |
+| user_id | references | foreign_key:true |
 
 - belongs_to :item
 - belongs_to :user
