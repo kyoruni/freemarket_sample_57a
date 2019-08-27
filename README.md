@@ -145,7 +145,7 @@
 
 ## brands table
 
-### 商品
+### ブランド
 
 | Column |  Type  |  Options   |
 | :----: | :----: | :--------: |
