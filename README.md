@@ -202,20 +202,6 @@
 
 - has_many :items
 
-## regions table
-
-### 都道府県
-
-| Column |  Type  |  Options   |
-| :----: | :----: | :--------: |
-|  name  | string | null:false |
-
-### Association
-
-- belongs_to :user
-- has_many :addresses
-- has_many :items
-
 ## comments table
 
 ### コメント
