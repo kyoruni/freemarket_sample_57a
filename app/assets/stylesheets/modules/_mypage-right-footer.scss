@@ -1,0 +1,55 @@
+.mypage-main__footer {
+  color: #333;
+  background: white;
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  &__head {
+    height: 72px;
+    line-height: 72px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  // お知らせとやることリストを内包するブロック
+  &__tabs {
+    font-size: 0; // インラインブロックの隙間をなくす
+    background: #eee;
+    // ひとつひとつのタブ
+    &__tab,
+    &__tab h3 {
+      // リセットcssに優先度で負けてしまうので、h3も指定する
+      display: inline-block;
+      width: 350px;
+      font-size: 16px;
+      text-align: center; // 文字を横方向中央寄せ
+      line-height: 74px; // 文字を縦方向中央寄せ
+      font-weight: bold !important;
+      // アクティブになっている方のタブ
+      &__active {
+        background: white;
+        border-top: 2px solid red;
+        line-height: 72px;
+      }
+    }
+  }
+  &__contents {
+    width: 100%;
+    height: auto;
+    // 取引がない場合
+    &__nothing {
+      height: 236px;
+      background-image: url("logo-gray-icon.svg");
+      background-repeat: no-repeat;
+      padding-top: 160px;
+      padding-bottom: 60px;
+      background-position: 50% 40px;
+      background-size: 78px 85px;
+      color: #ccc;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}

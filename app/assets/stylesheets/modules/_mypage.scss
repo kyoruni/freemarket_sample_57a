@@ -1,20 +1,12 @@
-/////////////////	// Place all the styles related to the users controller here.
 body {
   // They will automatically be included in application.css.
   background: #f5f5f5; // You can use Sass (SCSS) here: http://sass-lang.com/
   font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic,
     メイリオ, Meiryo, sans-serif;
 }
-/////////////////
 
-.bold {
-  font-weight: bold;
-}
-
-/* -- 幅と高さをセット --*/
-@mixin sizeSet($height, $width) {
-  height: $height;
-  width: $width;
+a {
+  text-decoration: none;
 }
 
 .mypage {
@@ -22,50 +14,6 @@ body {
   justify-content: center; // 中央寄せ
   margin-top: 40px;
   padding-bottom: 40px;
-}
-
-/*-- マイページ左側 --*/
-.mypage-menu {
-  @include sizeSet(1252px, 280px); // heightは仮
-  margin-right: 40px;
-  /* -- メニューの見出し -- */
-  &__head {
-    font-size: 16px;
-    color: #515151;
-    font-weight: bold;
-    margin-top: 40px;
-  }
-}
-
-/* -- メニューの項目 -- */
-.mypage-menu__nav__list__item {
-  @include sizeSet(49px, 100%);
-  border-top: 1px solid #eee;
-  color: #333;
-  background: #fff;
-  display: block; // 幅を指定するために、ブロック要素にする
-  font-size: 14px;
-  padding: 16px;
-  text-decoration: none;
-  position: relative;
-  /* -- メニューの「>」アイコン -- */
-  > .fa-chevron-right {
-    font-weight: bold;
-    font-size: 1rem;
-    transition: all ease-out 0.2s;
-    right: 16px;
-    color: #cfcecf;
-    position: absolute;
-  }
-  /* -- メニューにマウス乗せたとき -- */
-  &:hover {
-    background: #fafafa;
-    /* -- メニューにマウス乗せたときの、「>」アイコン -- */
-    & .fa-chevron-right {
-      transform: translate(4px, 0);
-      color: #333;
-    }
-  }
 }
 
 /*-- メニューリストのアクティブ --*/
@@ -77,89 +25,5 @@ body {
   font-weight: bold;
   &:hover {
     background: #eee;
-  }
-}
-
-/*-- マイページ右側 --*/
-.mypage-main {
-  @include sizeSet(auto, 700px); // heightは仮
-  // ヘッダー
-  &__header {
-    @include sizeSet(200px, 100%);
-    background-image: url("mypage-bg.jpg");
-    padding: 20px;
-    position: relative;
-    // ヘッダーのユーザーアイコンを内包するブロック
-    &__user {
-      color: #333;
-      height: 111px;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translate(0, -50%);
-      // マイページの画像
-      &__icon {
-        display: block;
-        margin: auto;
-        border-radius: 50%;
-      }
-      // マイページのユーザー名
-      &__name {
-        font-weight: bold;
-        text-align: center;
-        font-size: 14px;
-        margin-top: 8px;
-      }
-      // マイページのユーザー説明
-      &__caption {
-        height: 16px;
-        margin-top: 8px;
-        display: flex;
-        font-size: 14px;
-        justify-content: center;
-        margin-top: 8px;
-        // 評価
-        &__rating {
-          &__number {
-            margin-left: 8px;
-            font-size: 16px;
-          }
-        }
-        // 出品数
-        &__sell {
-          margin-left: 16px;
-          &__number {
-            margin-left: 8px;
-            font-size: 16px;
-          }
-        }
-      }
-    }
-  }
-  &__body {
-    height: 74px;
-    // お知らせとやることリストを内包するブロック
-    &__tabs {
-      font-size: 0; // インラインブロックの隙間をなくす
-      // ひとつひとつのタブ
-      &__tab,
-      &__tab h3 {
-        // リセットcssに優先度で負けてしまうので、h3も指定する
-        display: inline-block;
-        width: 350px;
-        font-size: 16px;
-        text-align: center; // 文字を横方向中央寄せ
-        line-height: 74px; // 文字を縦方向中央寄せ
-        font-weight: bold !important;
-        // アクティブになっている方のタブ
-        &__active {
-          background: white;
-          border-top: 2px solid red;
-          height: 72px; // 赤い線の分だけ高さを低くする
-          line-height: 72px;
-        }
-      }
-    }
   }
 }

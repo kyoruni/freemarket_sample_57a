@@ -1,0 +1,93 @@
+.mypage-main__body {
+  height: auto;
+  // お知らせとやることリストを内包するブロック
+  &__tabs {
+    font-size: 0; // インラインブロックの隙間をなくす
+    background: #eee;
+    // ひとつひとつのタブ
+    &__tab,
+    &__tab h3 {
+      // リセットcssに優先度で負けてしまうので、h3も指定する
+      display: inline-block;
+      width: 350px;
+      font-size: 16px;
+      text-align: center; // 文字を横方向中央寄せ
+      line-height: 74px; // 文字を縦方向中央寄せ
+      font-weight: bold !important;
+      // アクティブになっている方のタブ
+      &__active {
+        background: white;
+        border-top: 2px solid red;
+        line-height: 72px;
+      }
+    }
+  }
+  // お知らせ やることない場合
+  &__nothing {
+    width: 100%;
+    height: auto;
+    background: white;
+    // 取引がない場合
+    &__contents {
+      height: 236px;
+      background-image: url("logo-gray-icon.svg");
+      background-repeat: no-repeat;
+      padding-top: 160px;
+      padding-bottom: 60px;
+      background-position: 50% 40px;
+      background-size: 78px 85px;
+      color: #ccc;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  // お知らせ
+  &__items {
+    background: white;
+    font-size: 14px;
+    &__item {
+      padding: 16px;
+      border-bottom: solid 1px #eee;
+      &__body {
+        display: flex;
+        position: relative;
+        &__image {
+          width: 48px;
+          height: 48px; // 仮
+          margin: 0;
+        }
+        &__text {
+          margin-left: 20px;
+          margin-right: 40px;
+          &__time {
+            font-size: 16px;
+            color: #888;
+            margin-right: 8px;
+            &__num {
+              font-size: 14px;
+            }
+          }
+        }
+        &__icon {
+          position: absolute;
+          top: 20px;
+          right: 0;
+          font-size: 16px;
+        }
+      }
+      &__more {
+        background: #eee;
+        width: 100%;
+        height: 56px;
+        display: block;
+        line-height: 56px;
+        text-align: center;
+      }
+    }
+    &__item:last-child {
+      border: 0;
+    }
+  }
+}
