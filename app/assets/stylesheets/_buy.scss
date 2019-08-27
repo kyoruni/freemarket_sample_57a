@@ -1,20 +1,13 @@
-.buy__container {
-  // ヘッダー部分
-  &__header {
-    height: 144px;
-    background-color: green;
-    &--image {
-      width: 185px;
-      height: 49px;
-      margin: 0 auto;
-      line-height: 144px;
-    }
-  }
+@mixin frame() {
+  padding: 40px;
+  border-bottom: 1px solid $light-gray2;
+}
 
+.buy__container {
   // メイン部分
   &__main {
     height: 2016px;
-    background-color: #b3d4fc;
+    background-color: $light-gray;
     &__wrapper {
       width: 700px;
       height: 1888px;
@@ -25,12 +18,12 @@
         text-align: center;
         line-height: 97px;
         font-size: 22px;
-        border-bottom: 1px solid gray;
+        border-bottom: 1px solid $light-gray2;
       }
 
       // 画像投稿フォーム
       &__sell-form {
-        border-bottom: 1px solid gray; 
+        border-bottom: 1px solid $light-gray2; 
         &--up-load-box {
           width: 620px;
           height: 303px;
@@ -39,9 +32,9 @@
         &--up-load-drop-box {
           width: 620px;
           height: 162px;
-          background-color: #f5f5f5;
+          background-color: $light-gray;
           margin: 20px 0;
-          border: 1px dashed black;
+          border: 1px dashed #d5d5d5;
         }
         &--up-load-drop-box-text {
           text-align: center;
@@ -52,8 +45,7 @@
       // 商品名・商品説明入力フォーム
       &__name-form {
         height: 355px;
-        padding: 40px;
-        border-bottom: 1px solid gray;
+        @include frame();
         &__name-box {
           &__input input {
             width: 620px;
@@ -77,8 +69,7 @@
       // 商品の詳細セレクト欄
       &__detail {
         height: 261px;
-        padding: 40px;
-        border-bottom: 1px solid gray;
+        @include frame();
         &__title {
           float: left;
         }
@@ -95,8 +86,7 @@
       // 配送についてセレクト欄
       &__delivery {
         height: 371px;
-        padding: 40px;
-        border-bottom: 1px solid gray;
+        @include frame();
         &__title {
           float: left;
           font-size: 14px;
@@ -117,8 +107,7 @@
       // 販売価格欄
       &__price {
         height: 299px;
-        padding: 40px;
-        border-bottom: 1px solid gray;
+        @include frame();
         &__title {
           float: left;
           font-size: 14px;
@@ -160,8 +149,7 @@
         }
         &__price {
           height: 299px;
-          padding: 40px;
-          border-bottom: 1px solid gray;
+          @include frame();
           &__select {
             &__price-box {
               height: 72px;
@@ -232,10 +220,6 @@
         }
       }
     }
-  &__footer {
-    height: 348px;
-    background-color: pink;
-  }
 }
 
 
@@ -262,15 +246,15 @@ select {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #0099e8;
-  color: #fff;
+  background: $light-blue;
+  color: white;
   line-height: 14px;
   font-size: 12px;
   text-align: center;
   text-decoration: none;
 }
 
-// もどるリンク
+// もどるボタン
 .return-link {
   display: block;
   background-color: #aaa;
@@ -288,5 +272,5 @@ select {
 
 .text-link {
   text-decoration: none;
-  color: #0099e8;
+  color: $light-blue;
 }

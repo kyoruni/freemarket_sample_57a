@@ -1,10 +1,7 @@
-.buy__container
-  -# ヘッダー部分
-  .buy__container__header
-    .buy__container__header--image
-      = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?273499512", class:"logo"
+= render partial: 'share/simple-header'
 
-  -# メイン部分
+-# メイン部分
+.buy__container
   .buy__container__main
     .buy__container__main__wrapper
       .buy__container__main__wrapper--head
@@ -123,11 +120,4 @@
         %button{type:"submit"} 出品する
         =link_to 'もどる', "#", class:"return-link"
 
-
-
-
-
-
-  .buy__container__footer
-
-
+= render partial: 'share/simple-footer'
