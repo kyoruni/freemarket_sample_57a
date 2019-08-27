@@ -1,9 +1,12 @@
 @import "reset";
+@import "variable";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "config/*";
 @import "modules/*";
 @import "buy";
+@import "simple-footer";
+@import "simple-header";
 
 * {
   box-sizing: border-box;
