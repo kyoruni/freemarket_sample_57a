@@ -101,7 +101,6 @@
 |      price      |  integer   |    null:false    |
 |    saler_id     | references | foreign_key:true |
 |    buyer_id     | references | foreign_key:true |
-|    status_id    | references | foreign_key:true |
 |      state      |  boolean   |    null:false    |
 
 ### Association
