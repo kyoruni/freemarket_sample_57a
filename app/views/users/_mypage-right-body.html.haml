@@ -1,0 +1,79 @@
+.mypage-main__body
+  %ul.mypage-main__body__tabs
+    %li.mypage-main__body__tabs__tab
+      %h3.mypage-main__body__tabs__tab__active
+        お知らせ
+    %li.mypage-main__body__tabs__tab
+      %h3
+        やることリスト
+  // お知らせ一覧
+  %ul.mypage-main__body__items
+    // item1個
+    %li.mypage-main__body__items__item
+      %a.mypage-main__body__items__item__body{href: "#"}
+        %figure.mypage-main__body__items__item__body__image
+          = image_tag "mercari_profile.png", class: "mypage-main__body__items__item__body__image"
+        .mypage-main__body__items__item__body__text
+          《マツモトキヨシで使えるクーポン配信中》メルペイのお支払いで20%ポイント還元！上限P300まで
+          .mypage-main__body__items__item__body__text__time
+            #{icon 'far', 'clock'}
+            %span.mypage-main__body__items__item__body__text__time__num
+              19時間前
+        .mypage-main__body__items__item__body__icon
+          #{icon 'fas', 'chevron-right'}
+    // item1個
+    %li.mypage-main__body__items__item
+      %a.mypage-main__body__items__item__body{href: "#"}
+        %figure.mypage-main__body__items__item__body__image
+          = image_tag "mercari_profile.png", class: "mypage-main__body__items__item__body__image"
+        .mypage-main__body__items__item__body__text
+          事務局から個別メッセージ「ログイン通知」
+          .mypage-main__body__items__item__body__text__time
+            #{icon 'far', 'clock'}
+            %span.mypage-main__body__items__item__body__text__time__num
+              21時間前
+        .mypage-main__body__items__item__body__icon
+          #{icon 'fas', 'chevron-right'}
+    // item1個
+    %li.mypage-main__body__items__item
+      %a.mypage-main__body__items__item__body{href: "#"}
+        %figure.mypage-main__body__items__item__body__image
+          = image_tag "mercari_profile.png", class: "mypage-main__body__items__item__body__image"
+        .mypage-main__body__items__item__body__text
+          事務局から個別メッセージ「ログイン通知」
+          .mypage-main__body__items__item__body__text__time
+            #{icon 'far', 'clock'}
+            %span.mypage-main__body__items__item__body__text__time__num
+              21時間前
+        .mypage-main__body__items__item__body__icon
+          #{icon 'fas', 'chevron-right'}
+    // item1個
+    %li.mypage-main__body__items__item
+      %a.mypage-main__body__items__item__body{href: "#"}
+        %figure.mypage-main__body__items__item__body__image
+          = image_tag "mercari_profile.png", class: "mypage-main__body__items__item__body__image"
+        .mypage-main__body__items__item__body__text
+          事務局から個別メッセージ「《このメッセージを受け取られた方限定》8/29まで！メルペイ電子マネー(iD)を設定するだけでP500プレゼント！」
+          .mypage-main__body__items__item__body__text__time
+            #{icon 'far', 'clock'}
+            %span.mypage-main__body__items__item__body__text__time__num
+              1日前
+        .mypage-main__body__items__item__body__icon
+          #{icon 'fas', 'chevron-right'}
+    // item1個ぶん
+    %li.mypage-main__body__items__item
+      %a.mypage-main__body__items__item__body{href: "#"}
+        %figure.mypage-main__body__items__item__body__image
+          = image_tag "mercari_profile.png", class: "mypage-main__body__items__item__body__image"
+        .mypage-main__body__items__item__body__text
+          事務局から個別メッセージ「売上金の残高があります」
+          .mypage-main__body__items__item__body__text__time
+            #{icon 'far', 'clock'}
+            %span.mypage-main__body__items__item__body__text__time__num
+              1日前
+        .mypage-main__body__items__item__body__icon
+          #{icon 'fas', 'chevron-right'}
+    // item最後
+    %li.mypage-main__body__items__item
+      %a.mypage-main__body__items__item__more{href: "#"}
+        一覧を見る

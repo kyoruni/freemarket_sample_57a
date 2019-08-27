@@ -1,0 +1,18 @@
+// 下部分
+.mypage-main__footer
+  %h2.mypage-main__footer__head
+    購入した商品
+  %ul.mypage-main__footer__tabs
+    %li.mypage-main__footer__tabs__tab
+      %h3.mypage-main__footer__tabs__tab__active
+        取引中
+    %li.mypage-main__footer__tabs__tab
+      %h3
+        過去の取引
+  .mypage-main__footer__contents
+    %ul
+      // 取引がない場合
+      %li.mypage-main__footer__contents__nothing
+        取引中の商品がありません
+      // 取引がある場合
+      %li.mypage-main__footer__contents
