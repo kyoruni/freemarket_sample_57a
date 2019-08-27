@@ -22,10 +22,10 @@
 
 ### Association
 
-- belongs_to :credit, dependent: :destroy
-- belongs_to :address, dependent: :destroy
-- belongs_to :profile, dependent: :destroy
-- belongs_to :region, optional: true
+- has_one :credit, dependent: :destroy
+- has_one :address, dependent: :destroy
+- has_one :profile, dependent: :destroy
+- has_one :region, optional: true
 - has_many :favorites
 - has_many :comments
 - has_many :items, foreign_key: "saler_id", class_name: "Item"
@@ -213,6 +213,7 @@
 
 ### Association
 
+- belongs_to :user
 - has_many :addresses
 - has_many :items
 
