@@ -25,7 +25,7 @@
 - has_one :credit, dependent: :destroy
 - has_one :address, dependent: :destroy
 - has_one :profile, dependent: :destroy
-- has_one :region, optional: true
+- belongs_to_active_hash :region, optional: true
 - has_many :favorites
 - has_many :comments
 - has_many :items, foreign_key: "saler_id", class_name: "Item"
@@ -64,7 +64,7 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :region
+- belongs_to_active_hash :region
 
 ## credits table
 
@@ -110,7 +110,7 @@
 - has_many :images, dependent: :destroy
 - has_many :comments, dependent: :destroy
 - has_many :favorites, dependent: :destroy
-- belongs_to :region
+- belongs_to_active_hash :region
 - belongs_to :category
 - belongs_to :brand, optional: true
 
