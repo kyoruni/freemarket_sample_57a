@@ -1,3 +1,4 @@
+/* 幅と高さを設定 */
 @mixin box($width, $height) {
   @if $width {
     width: $width;
