@@ -1,8 +1,9 @@
 .mypage-main__footer {
+  @include box(100%, auto);
   color: $dark-gray;
   background: white;
-  @include box(100%, auto);
   margin-top: 40px;
+  /*-- 購入した商品 --*/
   &__head {
     @include box("", 72px);
     line-height: 72px;
@@ -11,29 +12,29 @@
     font-size: 16px;
     font-weight: 600;
   }
-  // お知らせとやることリストを内包するブロック
+  /*-- 取引中と過去の取引 --*/
   &__tabs {
     @extend .mypage-main__body__tabs;
-    // ひとつひとつのタブ
+    /*-- それぞれのタブ --*/
+    // リセットcssに優先度で負けてしまうので、h3も指定する
     &__tab,
     &__tab h3 {
       @extend .mypage-main__body__tabs__tab;
       // アクティブになっている方のタブ
-      &__active {
-        @extend .mypage-main__body__tabs__tab__active;
+      &--active {
+        @extend .mypage-main__body__tabs__tab--active;
       }
     }
   }
+  /*-- 取引中 --*/
   &__contents {
     @include box(100%, auto);
     // 取引がない場合
     &__nothing {
-      display: none;
-      @extend .mypage-main__body__nothing__contents;
+      @extend .mypage-main__body__nothing;
     }
     // 取引がある場合
     &__old {
-      //display: none;
       @include box("", auto);
       font-size: 14px;
       // お知らせ
@@ -52,7 +53,7 @@
             }
             &__text {
               @extend .mypage-main__body__items__item__body__text;
-              /* 取引完了 */
+              /*-- 取引完了 --*/
               &__complete {
                 display: inline-block;
                 background: $gray;
@@ -71,7 +72,7 @@
                 border-radius: 2px;
               }
             }
-            /* >のアイコン */
+            /*-- >のアイコン --*/
             &__icon {
               position: absolute;
               top: 20px;
@@ -79,12 +80,14 @@
               font-size: 16px;
             }
           }
+          /*-- 一覧を見る --*/
           &__more {
             @extend .mypage-main__body__items__item__more;
           }
         }
       }
     }
+    /*-- 取引中 最後の行 --*/
     &__item:last-child {
       border: 0;
     }

@@ -1,14 +1,9 @@
-.mypage-main {
-  @include box(700px, auto);
-  padding-bottom: 40px;
-}
-
 .mypage-main__header {
   @include box(100%, 200px);
   background-image: url("mypage-bg.jpg");
   padding: 20px;
   position: relative;
-  // ヘッダーのユーザーアイコンを内包するブロック
+  /*-- ヘッダーのユーザーアイコン --*/
   &__user {
     @include box(100%, 111px);
     color: $dark-gray;
@@ -16,20 +11,20 @@
     top: 50%;
     left: 0;
     transform: translate(0, -50%);
-    // マイページの画像
+    /*-- 丸い画像 --*/
     &__icon {
       display: block;
       margin: auto;
       border-radius: 50%;
     }
-    // マイページのユーザー名
+    /*-- ユーザー名 --*/
     &__name {
       font-weight: bold;
       text-align: center;
       font-size: 14px;
       margin-top: 8px;
     }
-    // マイページのユーザー説明
+    /*-- ユーザー説明 --*/
     &__caption {
       @include box("", 16px);
       margin-top: 8px;
@@ -37,21 +32,17 @@
       font-size: 14px;
       justify-content: center;
       margin-top: 8px;
-      // 評価
-      &__rating {
-        &__number {
-          margin-left: 8px;
-          font-size: 16px;
-          font-weight: bold;
-        }
+      /*-- 評価 --*/
+      &__rating__number {
+        margin-left: 8px;
+        font-size: 16px;
+        font-weight: bold;
       }
-      // 出品数
+      /*-- 出品数 --*/
       &__sell {
         margin-left: 16px;
         &__number {
-          margin-left: 8px;
-          font-size: 16px;
-          font-weight: bold;
+          @extend .mypage-main__header__user__caption__rating__number;
         }
       }
     }
