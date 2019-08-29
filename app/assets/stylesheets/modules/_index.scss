@@ -1,0 +1,115 @@
+.main{
+  &__visual{
+    height: 390px;
+    display: block;
+    background-size: cover;
+    background-image: url("visual");
+    min-width: 1068px;
+  }
+  &__container{
+    padding: 40px 0;
+    background-color: #fff;
+    &__head{
+      font-size: 28px;
+      text-align: center;
+      line-height: 1.4;
+      font-weight: bold;
+    }
+    &__item{
+      width: 940px;
+      margin: 0 auto;
+      &__category{
+        font-size: 22px;
+        margin: 26px 11px;
+        text-align: center;
+        font-weight:bold;
+        &__title{
+          color: #0099e8;
+          text-decoration: none;
+        }
+        &__num{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 8px 0 0;
+        }
+      }
+      &__all{
+        padding: 20px 0 30px;
+        width: 99.5%;
+        text-align: right;
+        &__link{
+          color: #0099e8;
+        }
+      }
+    }
+  }
+}
+.aside{
+  background: image-url("background-image.jpg");
+  background-position: center;
+  background-size: cover;
+  &__banner{
+    width: 750px;
+    height: 260px;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
+    &__left{
+      position: absolute;
+      top: 20%;
+      left: 16px;
+      &__title{
+        font-size: 24px;
+      }
+      &__Advertising{
+        font-size: 35px;
+        margin: 10px 0 0;
+      }
+      &__icon{
+        margin: 20px 0 0;
+        line-height: 68px;
+        &__image{
+          background: image-url("mercari_icon.png");
+          background-position: center;
+          background-size: cover;
+          height:68px;
+          width:68px;
+          float: left;
+        }
+        &__link{
+          margin: 0 0 0 24px;
+          list-style: none;
+          float: left;
+          &__app{
+            float: left;
+            background: image-url("app-icon.png");
+            background-position: center;
+            background-size: cover;
+            height:40px;
+            width:133px;
+          }
+          &__google{
+            float: left;
+            margin: 0 0 0 16px;
+            background: image-url("google-icon.png");
+            background-position: center;
+            background-size: cover;
+            height:40px;
+            width:133px;
+          }
+        }
+      }
+    }
+    &__right{
+      float:right;
+      &__image{
+        background: image-url("download_content_pc.png");
+        background-position: center;
+        background-size: cover;
+        height: 260px;
+        width:300px;
+      }
+    }
+  }
+}

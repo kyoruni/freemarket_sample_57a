@@ -4,7 +4,9 @@
 @import "font-awesome";
 @import "config/*";
 @import "modules/*";
-
 * {
   box-sizing: border-box;
+}
+a {
+  text-decoration: none;
 }
