@@ -3,7 +3,12 @@
 @import "font-awesome";
 @import "config/*";
 @import "modules/*";
-
+@import "index";
+@import "header";
+@import "footer";
 * {
   box-sizing: border-box;
+}
+a {
+  text-decoration: none;
 }
