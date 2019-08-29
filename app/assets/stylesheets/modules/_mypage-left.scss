@@ -1,7 +1,6 @@
 /*-- マイページ左側 --*/
 .mypage-menu {
-  height: 1252px; // 仮
-  width: 280px;
+  @include box(280px, auto);
   margin-right: 40px;
   /* -- メニューの見出し -- */
   &__head {
@@ -14,8 +13,7 @@
 
 /* -- メニューの項目 -- */
 .mypage-menu__nav__list__item {
-  height: 49px;
-  width: 100%;
+  @include box(100%, 49px);
   border-top: 1px solid #eee;
   color: #333;
   background: #fff;

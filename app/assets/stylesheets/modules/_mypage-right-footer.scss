@@ -1,11 +1,10 @@
 .mypage-main__footer {
   color: #333;
   background: white;
-  width: 100%;
-  height: auto;
+  @include box(100%, auto);
   margin-top: 40px;
   &__head {
-    height: 72px;
+    @include box("", 72px);
     line-height: 72px;
     padding-left: 16px;
     padding-right: 16px;
@@ -21,7 +20,7 @@
     &__tab h3 {
       // リセットcssに優先度で負けてしまうので、h3も指定する
       display: inline-block;
-      width: 350px;
+      @include box(350px, "");
       font-size: 16px;
       text-align: center; // 文字を横方向中央寄せ
       line-height: 74px; // 文字を縦方向中央寄せ
@@ -35,12 +34,10 @@
     }
   }
   &__contents {
-    width: 100%;
-    height: auto;
+    @include box(100%, auto);
     // 取引がない場合
     &__nothing {
-      //display: none; // 取りあえず非表示
-      height: 236px;
+      @include box("", 236px);
       background-image: url("logo-gray-icon.svg");
       background-repeat: no-repeat;
       padding-top: 160px;
@@ -55,7 +52,7 @@
     // 取引がある場合
     &__old {
       display: none;
-      height: auto;
+      @include box("", auto);
       font-size: 14px;
       // お知らせ
       &__items {
@@ -68,17 +65,15 @@
             display: flex;
             position: relative;
             &__image {
-              width: 48px;
-              height: 48px; // 仮
+              @include box(48px, 48px);
               margin: 0;
             }
             &__text {
               margin-left: 20px;
               margin-right: 40px;
-              width: 100%;
+              @include box(100%, "");
               &__complete {
                 background: #888;
-                //display: inline-block;
                 color: white;
                 width: 60px;
                 line-height: 12px;
@@ -100,8 +95,7 @@
           }
           &__more {
             background: #eee;
-            width: 100%;
-            height: 56px;
+            @include box(100%, 56px);
             display: block;
             line-height: 56px;
             text-align: center;

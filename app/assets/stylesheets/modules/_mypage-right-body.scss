@@ -8,11 +8,11 @@
     &__tab,
     &__tab h3 {
       // リセットcssに優先度で負けてしまうので、h3も指定する
+      @include box(350px, "");
       display: inline-block;
-      width: 350px;
       font-size: 16px;
-      text-align: center; // 文字を横方向中央寄せ
-      line-height: 74px; // 文字を縦方向中央寄せ
+      text-align: center;
+      line-height: 74px;
       font-weight: bold !important;
       // アクティブになっている方のタブ
       &__active {
@@ -24,12 +24,11 @@
   }
   // お知らせ やることない場合
   &__nothing {
-    width: 100%;
-    height: auto;
+    @include box(100%, auto);
     background: white;
     // 取引がない場合
     &__contents {
-      height: 236px;
+      @include box("", 236px);
       background-image: url("logo-gray-icon.svg");
       background-repeat: no-repeat;
       padding-top: 160px;
@@ -54,8 +53,7 @@
         display: flex;
         position: relative;
         &__image {
-          width: 48px;
-          height: 48px; // 仮
+          @include box(48px, 48px);
           margin: 0;
         }
         &__text {
@@ -78,9 +76,8 @@
         }
       }
       &__more {
+        @include box(100%, 56px);
         background: #eee;
-        width: 100%;
-        height: 56px;
         display: block;
         line-height: 56px;
         text-align: center;
