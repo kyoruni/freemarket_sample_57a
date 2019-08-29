@@ -62,7 +62,7 @@
       margin: 30px auto 20px;
       &__icon{
         display: inline-block;
-        background-image: url("mercari-logo_white.png");
+        background-image: url(assets_path("mercari-logo_white.png"));
         margin-right: 30%;
         color: #fff;
         background-position: center;

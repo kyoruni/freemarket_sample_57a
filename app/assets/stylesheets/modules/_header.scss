@@ -16,7 +16,7 @@
         display: block;
         color: #333;
         &__link{
-          background-image: url("mercari-logo.png");
+          background-image: url(assets_path("mercari-logo.png"));
           background-position: center;
           background-size: cover;
           height:36px;
@@ -134,7 +134,7 @@
                   border-radius: 50%;
                   vertical-align:center;
                   display:inline-block;
-                  background-image: url("member_photo_noimage_thumb.png");
+                  background-image: url(assets_path("member_photo_noimage_thumb.png"));
                   background-position: center;
                   background-size: cover;
                   height:30px;
