@@ -5,9 +5,9 @@
     font-size: 0; // インラインブロックの隙間をなくす
     background: #eee;
     // ひとつひとつのタブ
+    // リセットcssに優先度で負けてしまうので、h3も指定する
     &__tab,
     &__tab h3 {
-      // リセットcssに優先度で負けてしまうので、h3も指定する
       @include box(350px, "");
       display: inline-block;
       font-size: 16px;
@@ -49,6 +49,10 @@
     &__item {
       padding: 16px;
       border-bottom: solid 1px #eee;
+      /* -- メニューにマウス乗せたとき -- */
+      &:hover {
+        background: #fafafa;
+      }
       &__body {
         display: flex;
         position: relative;
@@ -81,10 +85,16 @@
         display: block;
         line-height: 56px;
         text-align: center;
+        &:hover {
+          background: #fafafa;
+        }
       }
     }
     &__item:last-child {
       border: 0;
+      &:hover {
+        background: white;
+      }
     }
   }
 }

@@ -11,7 +11,7 @@
   // ヘッダーのユーザーアイコンを内包するブロック
   &__user {
     @include box(100%, 111px);
-    color: #333;
+    color: $dark-gray;
     position: absolute;
     top: 50%;
     left: 0;

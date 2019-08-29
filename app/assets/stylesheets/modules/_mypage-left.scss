@@ -15,7 +15,7 @@
 .mypage-menu__nav__list__item {
   @include box(100%, 49px);
   border-top: 1px solid #eee;
-  color: #333;
+  color: $dark-gray;
   background: #fff;
   display: block; // 幅を指定するために、ブロック要素にする
   font-size: 14px;
@@ -37,7 +37,7 @@
     /* -- メニューにマウス乗せたときの、「>」アイコン -- */
     & .fa-chevron-right {
       transform: translate(4px, 0);
-      color: #333;
+      color: $dark-gray;
     }
   }
 }
@@ -46,7 +46,7 @@
 /*-- アクティブの中のアイコン --*/
 .active,
 .mypage-menu__nav__list__item.active > .fa-chevron-right {
-  color: #333;
+  color: $dark-gray;
   background: #eee;
   font-weight: bold;
   &:hover {

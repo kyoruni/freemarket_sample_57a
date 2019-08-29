@@ -1,5 +1,5 @@
 .mypage-main__footer {
-  color: #333;
+  color: $dark-gray;
   background: white;
   @include box(100%, auto);
   margin-top: 40px;
@@ -13,23 +13,14 @@
   }
   // お知らせとやることリストを内包するブロック
   &__tabs {
-    font-size: 0; // インラインブロックの隙間をなくす
-    background: #eee;
+    @extend .mypage-main__body__tabs;
     // ひとつひとつのタブ
     &__tab,
     &__tab h3 {
-      // リセットcssに優先度で負けてしまうので、h3も指定する
-      display: inline-block;
-      @include box(350px, "");
-      font-size: 16px;
-      text-align: center; // 文字を横方向中央寄せ
-      line-height: 74px; // 文字を縦方向中央寄せ
-      font-weight: bold !important;
+      @extend .mypage-main__body__tabs__tab;
       // アクティブになっている方のタブ
       &__active {
-        background: white;
-        border-top: 2px solid red;
-        line-height: 72px;
+        @extend .mypage-main__body__tabs__tab__active;
       }
     }
   }
@@ -37,52 +28,50 @@
     @include box(100%, auto);
     // 取引がない場合
     &__nothing {
-      @include box("", 236px);
-      background-image: url("logo-gray-icon.svg");
-      background-repeat: no-repeat;
-      padding-top: 160px;
-      padding-bottom: 60px;
-      background-position: 50% 40px;
-      background-size: 78px 85px;
-      color: #ccc;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
+      display: none;
+      @extend .mypage-main__body__nothing__contents;
     }
     // 取引がある場合
     &__old {
-      display: none;
+      //display: none;
       @include box("", auto);
       font-size: 14px;
       // お知らせ
       &__items {
-        background: white;
-        font-size: 14px;
+        @extend .mypage-main__body__items;
         &__item {
-          padding: 16px;
-          border-bottom: solid 1px #eee;
+          @extend .mypage-main__body__items__item;
+          /* -- メニューにマウス乗せたとき -- */
+          &:hover {
+            background: #fafafa;
+          }
           &__body {
-            display: flex;
-            position: relative;
+            @extend .mypage-main__body__items__item__body;
             &__image {
-              @include box(48px, 48px);
-              margin: 0;
+              @extend .mypage-main__body__items__item__body__image;
             }
             &__text {
-              margin-left: 20px;
-              margin-right: 40px;
-              @include box(100%, "");
+              @extend .mypage-main__body__items__item__body__text;
+              /* 取引完了 */
               &__complete {
+                display: inline-block;
                 background: #888;
                 color: white;
-                width: 60px;
                 line-height: 12px;
                 font-size: 12px;
                 margin-top: 8px;
-                padding: 5px, 6px;
+                // リセットcssに負けてしまうので、paddingを個別に指定
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 6px;
+                padding-right: 6px;
+                //
                 font-weight: bold;
+                text-align: center;
+                border-radius: 2px;
               }
             }
+            /* >のアイコン */
             &__icon {
               position: absolute;
               top: 20px;
@@ -91,11 +80,7 @@
             }
           }
           &__more {
-            background: #eee;
-            @include box(100%, 56px);
-            display: block;
-            line-height: 56px;
-            text-align: center;
+            @extend .mypage-main__body__items__item__more;
           }
         }
       }
