@@ -1,0 +1,165 @@
+.item-show__container
+  .item-box__container
+    %h1 COACH コーチ ショルダーバッグ
+    .item-box__container__box
+
+      -# 商品写真
+      .item-box__container__box__photo
+        .item-box__container__box__photo--main
+          = image_tag asset_path("sample.jpeg"), class:"main-photo"
+        .item-box__container__box__photo__sub-group
+          .item-box__container__box__photo__sub-group__upper-row
+            .item-box__container__box__photo__sub-group__upper-row__photo
+              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
+            .item-box__container__box__photo__sub-group__upper-row__photo
+              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
+            .item-box__container__box__photo__sub-group__upper-row__photo
+              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
+            .item-box__container__box__photo__sub-group__upper-row__photo
+              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
+            .item-box__container__box__photo__sub-group__upper-row__photo
+              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
+          .item-box__container__box__photo__sub-group__bottom-row
+            .item-box__container__box__photo__sub-group__bottom-row__photo
+              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
+            .item-box__container__box__photo__sub-group__bottom-row__photo
+              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
+            .item-box__container__box__photo__sub-group__bottom-row__photo
+              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
+            .item-box__container__box__photo__sub-group__bottom-row__photo
+              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
+            .item-box__container__box__photo__sub-group__bottom-row__photo
+              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
+      %table.item-box__container__box__table
+        %tbody
+          %tr
+            %th 出品者
+            %td
+              荒木
+              .item-box-icon
+                %i.fa.fa-smile
+                %span 22
+                %i.fa.fa-meh
+                %span 0
+                %i.fa.fa-frown
+                %span 0
+          %tr
+            %th カテゴリー
+            %td
+              = link_to "レディース", "#", class:"item-box__container__table-link"
+              = link_to "> バッグ", "#", class:"item-box__container__table-link"
+              = link_to "> ショルダーバッグ", "#", class:"item-box__container__table-link"
+          %tr
+            %th ブランド
+            %td
+              = link_to "コーチ", "#", class:"item-box__container__table-link"
+          %tr
+            %th 商品の状態
+            %td 未使用に近い
+          %tr
+            %th 配送料の負担
+            %td 送料込み(出品者負担)
+          %tr
+            %th 配送の方法
+            %td ゆうパック
+          %tr
+            %th 配送元地域
+            %td
+              = link_to "神奈川県", "#", class:"item-box__container__table-link"
+          %tr
+            %th 発送日の目安
+            %td 2~3日で発送
+
+    -# 価格表示
+    .item-price__container
+      .item-price__container__price
+        ¥ 8,000
+      .item-price__container__tax
+        (税込)
+      .item-price__container__delivery
+        送料込み
+    = link_to "購入画面に進む", "#", class:"item-buy-btn"
+
+    -# テキスト表示
+    .item-text
+      %p="商品の説明文を表示する(範囲を分かりやすくオレンジ色で表示中)"
+
+    .item-btn-container
+      .item-btn-container__left
+        %button.item-btn-container__left--like
+          %i.fa.fa-heart
+          %span いいね！ 3
+        
+        = link_to "#", class:"item-btn-container__left--report" do
+          %i.fa.fa-flag
+          %span 不適切な商品の報告
+      .item-btn-container__right
+        = link_to "#", class:"item-btn-container__right--safe" do
+          %i.fa.fa-lock
+          %span あんしん・あんぜんへの取り組み
+
+  -# コメント欄
+  .item-comment__container
+    %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+    %textarea
+    %button
+      %span.item-comment__container--submit コメントする
+
+  -# アイテムナビ欄
+  %ul.item-nav
+    %li.item-nav__prev
+      = link_to "#", class:"item-nav__link" do
+        %i.fa.fa-chevron-left
+        %span 前の商品名 
+    %li.item-nav__next
+      = link_to "#", class:"item-nav__link" do
+        %span 次の商品名
+        %i.fa.fa-chevron-right
+
+  -# SNSリンクボックス
+  .item-sns__container
+    .item-sns__container__box
+      = link_to "#", class:"item-sns__container__box--link" do
+        %i.fab.fa-facebook-square.fa-3x
+      = link_to "#", class:"item-sns__container__box--link" do
+        %i.fab.fa-twitter-square.fa-3x
+      = link_to "#", class:"item-sns__container__box--link" do
+        %i.fab.fa-pinterest-square.fa-3x
+
+  -# ユーザーのアイテム欄
+  .item-user__container
+    %h2
+      = link_to "荒木さんのその他の出品", "#", class:"item-user__container--name"
+    .item-user__container__user-box
+      .item-user__container__user-box--upper-row
+        = render partial: 'share/item-link-card'
+        = render partial: 'share/item-link-card'
+        = render partial: 'share/item-link-card'
+      .item-user__container__user-box--bottom-row
+        = render partial: 'share/item-link-card'
+        = render partial: 'share/item-link-card'
+        = render partial: 'share/item-link-card'
+  
+  -# 同一カテゴリーのアイテム欄
+  .item-category__container
+    %h2
+      = link_to "コーチのショルダーバックその他の出品", "#", class:"item-category__container--name"
+    .item-category__container__user-box
+      .item-category__container__user-box--upper-row
+        = render partial: 'share/item-link-card'
+        = render partial: 'share/item-link-card'
+        = render partial: 'share/item-link-card'
+      .item-category__container__user-box--bottom-row
+        = render partial: 'share/item-link-card'
+        = render partial: 'share/item-link-card'
+        = render partial: 'share/item-link-card'
+
+-# 下のパンくずリスト
+.bread-crumbs__container
+  %nav.bread-crumbs
+    %ul
+      %li
+        = link_to "メルカリ", "/", class:"bread-crumbs__home-rink"
+        %i.fa.fa-angle-right
+      %li
+        %span コーチ

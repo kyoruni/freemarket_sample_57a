@@ -1,0 +1,349 @@
+.item-show__container {
+  background-color: $light-gray;
+  padding: 40px 0;
+}
+
+.item-box__container {
+  background-color: white;
+  height: 1004px;
+  width: 700px;
+  margin: 0 auto;
+  padding: 24px 40px 40px;
+  &__box {
+    height: 420px;
+    width: 620px;
+    margin-top: 16px;
+    display: flex;
+
+    // 写真
+    &__photo {
+      height: 420px;
+      width: 300px;
+      &--main {
+        height: 300px;
+        width: 300px;
+      }
+      &__sub-group {
+        height: 120px;
+        width: 300px;
+        &__upper-row {
+          height:60px;
+          width: 300px;
+          display: flex;
+          &__photo {
+            height: 60px;
+            width: 60px;
+          }
+        }
+        &__bottom-row {
+          height:60px;
+          width: 300px;
+          display: flex;
+          &__photo {
+            height: 60px;
+            width: 60px;
+          }
+        }
+      }
+    }
+    &__table {
+      height: 420px;
+      width: 300px;
+      margin-left: 20px;
+    }
+  }
+}
+
+// 写真のCSS
+.item-box__container h1 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.main-photo {
+  height: 300px;
+  width: 300px;
+}
+
+.sub-photo {
+  height: 60px;
+  width: 60px;
+}
+
+// テーブルのCSS
+tbody {
+  font-size: 14px;
+}
+
+th {
+  background-color: $light-gray;
+  padding-left: 5px;
+}
+
+td {
+  padding-left: 5px;
+}
+
+tr {
+  border: 1px solid $light-gray2;
+}
+
+.item-box__container__table-link {
+  display: block;
+  text-decoration: none;
+  color: $light-blue;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.fa-smile {
+  color: #ff5d85;
+}
+
+.fa-meh {
+  color: orange;
+}
+
+.fa-frown {
+  color: #7ab4ff;
+}
+
+// 価格表示
+.item-price__container {
+  width: 620px;
+  height: 60px;
+  margin: 16px 0 0;
+  display: flex;
+  &__price {
+    font-size: 50px;
+    font-weight: bold;
+    padding-left: 150px;
+  }
+  &__tax {
+    font-size: 10px;
+    padding: 45px 0 0 10px;
+  }
+  &__delivery {
+    font-size: 16px;
+    padding: 39px 0 0 10px;
+  }
+}
+
+// 購入画面へ進むボタン
+.item-buy-btn {
+  font-size: 25px;
+  display: block;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  width: 620px;
+  height: 60px;
+  line-height: 60px;
+  margin-top: 16px;
+  background-color: #ff4639;
+  font-weight: bold;
+}
+
+.item-text {
+  width: 620px;
+  height: 216px;
+  background-color: orange;
+  margin-top: 32px;
+  font-size: 18px;
+}
+
+.item-btn-container {
+  width: 620px;
+  height: 33px;
+  margin-top: 16px;
+  display: flex;
+  &__left {
+    width: 310px;
+    display: flex;
+    &--like {
+      background-color: $light-gray;
+      border-style: none;
+      border-radius: 15px;
+      &:hover {
+        cursor : pointer;
+      }
+    }
+    &--report {
+      text-decoration: none;
+      color: black;
+      background-color: $light-gray;
+      border-radius: 15px;
+      line-height: 33px;
+      margin-left: 20px;
+      padding: 0 5px;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &__right {
+    width: 310px;
+    line-height: 33px;
+    &--safe {
+      color: $light-blue;
+      text-decoration: none;
+      float: right;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+// コメント欄
+.item-comment__container {
+  background-color: white;
+  width: 700px;
+  height: 262px;
+  padding: 24px;
+  margin: 10px auto;
+  & p {
+    background-color: #fff6de;
+    padding: 8px;
+    font-size: 14px;
+  }
+  & textarea {
+    width: 652px;
+    height: 104px;
+    padding: 8px;
+    margin: 8px 0 0;
+  }
+  & button {
+    border-style: none;
+    width: 652px;
+    height: 50px;
+    background-color: #aaa;
+    & span {
+      color: white;
+      font-size: 14px;
+    }
+    &:hover {
+      cursor : pointer;
+    }
+  }
+}
+
+// アイテムナビ欄
+.item-nav {
+  width: 700px;
+  height: 28px;
+  margin: 24px 370px;
+  &__prev {
+    float: left;
+  }
+  &__next {
+    float: right;
+  }
+  &__link {
+    color: $light-blue;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// SNSリンクボックス
+.item-sns__container {
+  background-color: white;
+  width: 700px;
+  height: 138px;
+  margin: 0 auto;
+  padding: 32px 0 24px;
+  &__box {
+    width: 700px;
+    height: 52px;
+    margin-top: 16px;
+    text-align: center;
+    &--link {
+      text-decoration: none;
+    }
+  }
+}
+
+.fa-facebook-square {
+  color: $facebook-color;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.fa-twitter-square {
+  color: $twitter-color;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.fa-pinterest-square {
+  color: $pinterest-color;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// ユーザーのアイテム欄、同一カテゴリーのアイテム欄
+.item-user__container, .item-category__container {
+  width: 700px;
+  height: 738px;
+  margin: 0 auto;
+  & h2 {
+    margin: 24px 0 8px;
+  }
+  &--name {
+    font-size: 22px;
+    color: $light-blue;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  &__user-box {
+    height: 700px;
+    &--upper-row {
+      height: 330px;
+      margin-bottom: 20px;
+      display: flex;
+    }
+    &--bottom-row {
+      height: 330px;
+      margin-bottom: 20px;
+      display: flex;
+    }
+  }
+}
+
+// パンくずリスト
+.bread-crumbs__container {
+  background-color: $light-gray;
+  border-top: 1px solid $light-gray2;
+}
+
+.bread-crumbs {
+  width: 1020px;
+  height: 48px;
+  margin: 0 210px;
+  & ul {
+    display: flex;
+    line-height: 48px;
+    & span {
+      padding-left: 10px;
+    }
+  }
+  &__home-rink {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      opacity: 0.6;
+      border-bottom: 1px solid black;
+    }
+  }
+}

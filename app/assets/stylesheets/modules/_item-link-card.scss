@@ -1,0 +1,42 @@
+// アイテムリンクカード
+.item-link-card {
+  height: 330px;
+  width: 220px;
+  margin-right: 20px;
+  color: black;
+  &__link {
+    text-decoration: none;
+  }
+  &--image {
+    height: 220px;
+    width: 220px;
+  }
+  &__text-box {
+    height: 110px;
+    width: 220px;
+    padding: 16px;
+    background-color: white;
+    &--name {
+      width: 188px;
+      height: 48px;
+    }
+    &__bottom {
+      width: 188px;
+      height: 17px;
+      margin-top: 8px;
+      font-size: 14px;
+      &--price {
+        float: left;
+        font-weight: bold;
+      }
+      &--like {
+        float: right;
+      }
+    }
+  }
+}
+
+.item-photo-size {
+  height: 220px;
+  width: 220px;
+} 
