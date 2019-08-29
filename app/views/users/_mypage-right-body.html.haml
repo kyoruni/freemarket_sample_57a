@@ -1,13 +1,18 @@
 .mypage-main__body
+  /* お知らせ・やることリストのタブ */
   %ul.mypage-main__body__tabs
     %li.mypage-main__body__tabs__tab
-      %h3.mypage-main__body__tabs__tab__active
+      %h3.mypage-main__body__tabs__tab--active
         お知らせ
     %li.mypage-main__body__tabs__tab
       %h3
         やることリスト
-  // お知らせ一覧
+  /*-- お知らせ一覧 --*/
   %ul.mypage-main__body__items
+    /*-- 取引がない場合 --*/
+    %li.mypage-main__body__nothing
+      取引中の商品がありません
+    /*-- 取引がある場合
     // item1個
     %li.mypage-main__body__items__item
       %a.mypage-main__body__items__item__body{href: "#"}
