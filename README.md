@@ -4,28 +4,19 @@
 
 ### ユーザー
 
-|     Column      |    Type    |         Options          |
-| :-------------: | :--------: | :----------------------: |
-|    nickname     |   string   |       null: false        |
-|      email      |   string   | null:false, unique: true |
-|    password     |   string   |        null:false        |
-|    last_name    |   string   |        null:false        |
-|   first_name    |   string   |        null:false        |
-| last_name_kana  |   string   |        null:false        |
-| first_name_kana |   string   |        null:false        |
-|    birthday     |    date    |        null:false        |
-|   postal_code   |   string   |                          |
-|    region_id    | references |     foreign_key:true     |
-|     address     |   string   |                          |
-|    building     |   string   |                          |
-|  phone_number   |   string   |        null:false        |
+|  Column  |  Type  |         Options          |
+| :------: | :----: | :----------------------: |
+| nickname | string |       null: false        |
+|  email   | string | null:false, unique: true |
+| password | string |        null:false        |
+| birthday |  date  |        null:false        |
 
 ### Association
 
 - has_one :credit, dependent: :destroy
 - has_one :address, dependent: :destroy
+- has_one :shipping_address, dependent: :destroy
 - has_one :profile, dependent: :destroy
-- belongs_to_active_hash :region, optional: true
 - has_many :favorites
 - has_many :comments
 - has_many :items, foreign_key: "saler_id", class_name: "Item"
@@ -58,8 +49,28 @@
 |   regions_id    | references | foreign_key:true |
 |     address     |   string   |    null:false    |
 |    building     |   string   |                  |
-|  phone_number   |  integer   |                  |
 |     user_id     | references | foreign_key:true |
+
+### Association
+
+- belongs_to :user
+- belongs_to_active_hash :region
+
+## shipping_addresses table
+
+### お届け先住所
+
+|     Column      |    Type    |     Options      |
+| :-------------: | :--------: | :--------------: |
+|    last_name    |   string   |    null:false    |
+|   first_name    |   string   |    null:false    |
+| last_name_kana  |   string   |    null:false    |
+| first_name_kana |   string   |    null:false    |
+|   postal_code   |   string   |                  |
+|    region_id    | references | foreign_key:true |
+|     address     |   string   |                  |
+|    building     |   string   |                  |
+|  phone_number   |   string   |    null:false    |
 
 ### Association
 
