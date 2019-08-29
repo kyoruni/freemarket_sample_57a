@@ -3,7 +3,7 @@
     height: 390px;
     display: block;
     background-size: cover;
-    background-image: url("visual");
+    background-image:url(asset_path('visual.png'));
     min-width: 1068px;
   }
   &__container{
