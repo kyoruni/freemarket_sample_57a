@@ -46,7 +46,7 @@
   }
 }
 .aside{
-  background: image-url("background-image.jpg");
+  background-image: url(assets_path("background-image.jpg"));
   background-position: center;
   background-size: cover;
   &__banner{
@@ -70,7 +70,7 @@
         margin: 20px 0 0;
         line-height: 68px;
         &__image{
-          background: image-url("mercari_icon.png");
+          background-image:url(assets_path("mercari_icon.png"));
           background-position: center;
           background-size: cover;
           height:68px;
@@ -83,7 +83,7 @@
           float: left;
           &__app{
             float: left;
-            background: image-url("app-icon.png");
+            background-image: url(assets_path("app-icon.png"));
             background-position: center;
             background-size: cover;
             height:40px;
@@ -92,7 +92,7 @@
           &__google{
             float: left;
             margin: 0 0 0 16px;
-            background: image-url("google-icon.png");
+            background-image: url(assets_path("google-icon.png"));
             background-position: center;
             background-size: cover;
             height:40px;
@@ -104,7 +104,7 @@
     &__right{
       float:right;
       &__image{
-        background: image-url("download_content_pc.png");
+        background-image: url(assets_path("download_content_pc.png"));
         background-position: center;
         background-size: cover;
         height: 260px;
