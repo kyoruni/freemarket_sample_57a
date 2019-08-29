@@ -15,7 +15,7 @@
     /*-- 取引がある場合
     // item1個
     %li.mypage-main__body__items__item
-      %a.mypage-main__body__items__item__body{href: "#"}
+      = link_to "#", class: "mypage-main__body__items__item__body" do
         %figure.mypage-main__body__items__item__body__image
           = image_tag "mercari_profile.png", class: "mypage-main__body__items__item__body__image"
         .mypage-main__body__items__item__body__text
@@ -28,7 +28,7 @@
           #{icon 'fas', 'chevron-right'}
     // item1個
     %li.mypage-main__body__items__item
-      %a.mypage-main__body__items__item__body{href: "#"}
+      = link_to "#", class: "mypage-main__body__items__item__body" do
         %figure.mypage-main__body__items__item__body__image
           = image_tag "mercari_profile.png", class: "mypage-main__body__items__item__body__image"
         .mypage-main__body__items__item__body__text
@@ -41,7 +41,7 @@
           #{icon 'fas', 'chevron-right'}
     // item1個
     %li.mypage-main__body__items__item
-      %a.mypage-main__body__items__item__body{href: "#"}
+      = link_to "#", class: "mypage-main__body__items__item__body" do
         %figure.mypage-main__body__items__item__body__image
           = image_tag "mercari_profile.png", class: "mypage-main__body__items__item__body__image"
         .mypage-main__body__items__item__body__text
@@ -54,7 +54,7 @@
           #{icon 'fas', 'chevron-right'}
     // item1個
     %li.mypage-main__body__items__item
-      %a.mypage-main__body__items__item__body{href: "#"}
+      = link_to "#", class: "mypage-main__body__items__item__body" do
         %figure.mypage-main__body__items__item__body__image
           = image_tag "mercari_profile.png", class: "mypage-main__body__items__item__body__image"
         .mypage-main__body__items__item__body__text
@@ -67,7 +67,7 @@
           #{icon 'fas', 'chevron-right'}
     // item1個ぶん
     %li.mypage-main__body__items__item
-      %a.mypage-main__body__items__item__body{href: "#"}
+      = link_to "#", class: "mypage-main__body__items__item__body" do
         %figure.mypage-main__body__items__item__body__image
           = image_tag "mercari_profile.png", class: "mypage-main__body__items__item__body__image"
         .mypage-main__body__items__item__body__text
@@ -80,5 +80,4 @@
           #{icon 'fas', 'chevron-right'}
     // item最後
     %li.mypage-main__body__items__item
-      %a.mypage-main__body__items__item__more{href: "#"}
-        一覧を見る
+      = link_to "一覧を見る", "#", class: "mypage-main__body__items__item__more"
