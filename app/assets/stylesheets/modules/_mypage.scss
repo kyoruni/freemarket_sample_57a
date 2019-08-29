@@ -1,3 +1,4 @@
+// ↓ ↓ ↓ トップページが完成したら削除 ↓ ↓ ↓ //
 body {
   background: $light-gray;
   font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic,
@@ -9,6 +10,34 @@ a {
   color: $dark-gray;
 }
 
+.mm-header {
+  background: #fff;
+  width: 100vw;
+  height: 100px;
+}
+
+.mm-header2 {
+  background: #fff;
+  width: 100vw;
+  height: 49px;
+  border-bottom: 1px solid #000;
+}
+
+.mm-footer {
+  background: #fff;
+  width: 100vw;
+  height: 260px;
+}
+
+.mm-footer2 {
+  background: #fff;
+  width: 100vw;
+  height: 391px;
+}
+
+// ↑ ↑ ↑ トップページが完成したら削除 ↑ ↑ ↑ //
+
+/*-- マイページ全体の枠 --*/
 .mypage {
   display: flex;
   justify-content: center;
@@ -16,14 +45,8 @@ a {
   padding-bottom: 40px;
 }
 
-/*-- メニューリストのアクティブ --*/
-/*-- アクティブの中のアイコン --*/
-.active,
-.mypage-menu__nav__list__item.active > .fa-chevron-right {
-  color: $dark-gray;
-  background: $light-gray3;
-  font-weight: bold;
-  &:hover {
-    background: $light-gray3;
-  }
+/*-- マイページ右側の大枠 --*/
+.mypage-main {
+  @include box(700px, auto);
+  padding-bottom: 40px;
 }
