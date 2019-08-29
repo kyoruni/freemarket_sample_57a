@@ -46,7 +46,7 @@
   }
 }
 .aside{
-  background-image: url(assets_path("background-image.jpg"));
+  background-image: image-url("background-image.jpg");
   background-position: center;
   background-size: cover;
   &__banner{
