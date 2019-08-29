@@ -1,0 +1,31 @@
+.simple-footer {
+  background-color: $light-gray;
+  &__box {
+    height: 220px;
+    width: 456px;
+    margin: 0 auto;
+    padding: 40px 0;
+    &__link {
+      display: flex;
+      font-size: 12px;
+      &__text {
+        color: black;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding-left: 28px;
+      }
+    }
+    &__logo-image {
+      margin: 0 auto;
+      height: 80px;
+      width: 65px;
+      padding-top: 40px;
+    }
+    &__logo-text {
+      text-align: center;
+      padding-top: 15px;
+      font-size: 10px;
+    }
+  }
+}

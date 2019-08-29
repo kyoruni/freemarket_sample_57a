@@ -1,0 +1,10 @@
+.simple__header {
+  height: 144px;
+  background-color: $light-gray;
+  &__image {
+    width: 185px;
+    height: 49px;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+}
