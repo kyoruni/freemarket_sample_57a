@@ -7,6 +7,11 @@
       %h3.main__container__item__category
         = link_to "#" do
           .main__container__item__category__title レディース新着アイテム
+          .main__container__item__category__num
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -14,6 +19,11 @@
       %h3.main__container__item__category
         = link_to "#" do
           .main__container__item__category__title メンズ新着アイテム
+          .main__container__item__category__num
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -21,6 +31,11 @@
       %h3.main__container__item__category
         = link_to "#" do
           .main__container__item__category__title ベビー・キッズ新着アイテム
+          .main__container__item__category__num
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -28,6 +43,11 @@
       %h3.main__container__item__category
         = link_to "#" do
           .main__container__item__category__title コスメ・香水・美容新着アイテム
+          .main__container__item__category__num
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -37,6 +57,11 @@
       %h3.main__container__item__category
         = link_to "#" do
           .main__container__item__category__title シャネル新着アイテム
+          .main__container__item__category__num
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -44,6 +69,11 @@
       %h3.main__container__item__category
         = link_to "#" do
           .main__container__item__category__title ルイヴィトン新着アイテム
+          .main__container__item__category__num
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -51,6 +81,11 @@
       %h3.main__container__item__category
         = link_to "#" do
           .main__container__item__category__title シュプリーム新着アイテム
+          .main__container__item__category__num
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -58,6 +93,11 @@
       %h3.main__container__item__category
         = link_to "#" do
           .main__container__item__category__title ナイキ新着アイテム
+          .main__container__item__category__num
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
+            = render partial: 'share/item-link-card'
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -69,8 +109,11 @@
       .aside__banner__left__icon
         .aside__banner__left__icon__image
         %ul.aside__banner__left__icon__link
-          %li.aside__banner__left__icon__link__app
-          %li.aside__banner__left__icon__link__google
+          = link_to "#" do
+            %li.aside__banner__left__icon__link__app
+          = link_to "#" do
+            %li.aside__banner__left__icon__link__google
+          
     .aside__banner__right
       .aside__banner__right__image
 = render 'shared/main_footer'
