@@ -46,7 +46,7 @@
 | last_name_kana  |   string   |    null:false    |
 | first_name_kana |   string   |    null:false    |
 |   postal_code   |   string   |    null:false    |
-|   regions_id    | references | foreign_key:true |
+|    region_id    | references | foreign_key:true |
 |     address     |   string   |    null:false    |
 |    building     |   string   |                  |
 |     user_id     | references | foreign_key:true |
