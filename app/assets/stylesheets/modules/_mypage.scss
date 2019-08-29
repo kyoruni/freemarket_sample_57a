@@ -21,9 +21,9 @@ a {
 .active,
 .mypage-menu__nav__list__item.active > .fa-chevron-right {
   color: $dark-gray;
-  background: #eee;
+  background: $light-gray3;
   font-weight: bold;
   &:hover {
-    background: #eee;
+    background: $light-gray3;
   }
 }

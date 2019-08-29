@@ -3,7 +3,7 @@
   // お知らせとやることリストを内包するブロック
   &__tabs {
     font-size: 0; // インラインブロックの隙間をなくす
-    background: #eee;
+    background: $light-gray3;
     // ひとつひとつのタブ
     // リセットcssに優先度で負けてしまうので、h3も指定する
     &__tab,
@@ -35,7 +35,7 @@
       padding-bottom: 60px;
       background-position: 50% 40px;
       background-size: 78px 85px;
-      color: #ccc;
+      color: $light-gray4;
       font-size: 16px;
       font-weight: bold;
       text-align: center;
@@ -48,10 +48,10 @@
     font-size: 14px;
     &__item {
       padding: 16px;
-      border-bottom: solid 1px #eee;
+      border-bottom: solid 1px $light-gray3;
       /* -- メニューにマウス乗せたとき -- */
       &:hover {
-        background: #fafafa;
+        background: $light-gray5;
       }
       &__body {
         display: flex;
@@ -65,7 +65,7 @@
           margin-right: 40px;
           &__time {
             font-size: 16px;
-            color: #888;
+            color: $gray;
             margin-right: 8px;
             &__num {
               font-size: 14px;
@@ -81,12 +81,12 @@
       }
       &__more {
         @include box(100%, 56px);
-        background: #eee;
+        background: $light-gray3;
         display: block;
         line-height: 56px;
         text-align: center;
         &:hover {
-          background: #fafafa;
+          background: $light-gray5;
         }
       }
     }

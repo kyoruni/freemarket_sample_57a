@@ -43,7 +43,7 @@
           @extend .mypage-main__body__items__item;
           /* -- メニューにマウス乗せたとき -- */
           &:hover {
-            background: #fafafa;
+            background: $light-gray5;
           }
           &__body {
             @extend .mypage-main__body__items__item__body;
@@ -55,8 +55,8 @@
               /* 取引完了 */
               &__complete {
                 display: inline-block;
-                background: #888;
-                color: white;
+                background: $gray;
+                color: $white;
                 line-height: 12px;
                 font-size: 12px;
                 margin-top: 8px;
