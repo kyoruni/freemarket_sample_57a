@@ -1,0 +1,95 @@
+.mypage-main__footer {
+  @include box(100%, auto);
+  color: $dark-gray;
+  background: white;
+  margin-top: 40px;
+  /*-- 購入した商品 --*/
+  &__head {
+    @include box("", 72px);
+    line-height: 72px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  /*-- 取引中と過去の取引 --*/
+  &__tabs {
+    @extend .mypage-main__body__tabs;
+    /*-- それぞれのタブ --*/
+    // リセットcssに優先度で負けてしまうので、h3も指定する
+    &__tab,
+    &__tab h3 {
+      @extend .mypage-main__body__tabs__tab;
+      // アクティブになっている方のタブ
+      &--active {
+        @extend .mypage-main__body__tabs__tab--active;
+      }
+    }
+  }
+  /*-- 取引中 --*/
+  &__contents {
+    @include box(100%, auto);
+    // 取引がない場合
+    &__nothing {
+      @extend .mypage-main__body__nothing;
+    }
+    // 取引がある場合
+    &__old {
+      @include box("", auto);
+      font-size: 14px;
+      // お知らせ
+      &__items {
+        @extend .mypage-main__body__items;
+        &__item {
+          @extend .mypage-main__body__items__item;
+          /* -- メニューにマウス乗せたとき -- */
+          &:hover {
+            background: $light-gray5;
+          }
+          &__body {
+            @extend .mypage-main__body__items__item__body;
+            &__image {
+              @extend .mypage-main__body__items__item__body__image;
+            }
+            &__text {
+              @extend .mypage-main__body__items__item__body__text;
+              /*-- 取引完了 --*/
+              &__complete {
+                display: inline-block;
+                background: $gray;
+                color: $white;
+                line-height: 12px;
+                font-size: 12px;
+                margin-top: 8px;
+                // リセットcssに負けてしまうので、paddingを個別に指定
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 6px;
+                padding-right: 6px;
+                //
+                font-weight: bold;
+                text-align: center;
+                border-radius: 2px;
+              }
+            }
+            /*-- >のアイコン --*/
+            &__icon {
+              position: absolute;
+              top: 20px;
+              right: 0;
+              font-size: 16px;
+            }
+          }
+          /*-- 一覧を見る --*/
+          &__more {
+            @extend .mypage-main__body__items__item__more;
+          }
+        }
+      }
+    }
+    /*-- 取引中 最後の行 --*/
+    &__item:last-child {
+      border: 0;
+    }
+  }
+}

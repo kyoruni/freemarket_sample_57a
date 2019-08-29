@@ -1,0 +1,276 @@
+@mixin frame() {
+  padding: 40px;
+  border-bottom: 1px solid $light-gray2;
+}
+
+.buy__container {
+  // メイン部分
+  &__main {
+    height: 2016px;
+    background-color: $light-gray;
+    &__wrapper {
+      width: 700px;
+      height: 1888px;
+      margin: 0 auto;
+      background-color: white;
+      &--head {
+        height: 97px;
+        text-align: center;
+        line-height: 97px;
+        font-size: 22px;
+        border-bottom: 1px solid $light-gray2;
+      }
+
+      // 画像投稿フォーム
+      &__sell-form {
+        border-bottom: 1px solid $light-gray2; 
+        &--up-load-box {
+          width: 620px;
+          height: 303px;
+          padding: 40px;
+        }
+        &--up-load-drop-box {
+          width: 620px;
+          height: 162px;
+          background-color: $light-gray;
+          margin: 20px 0;
+          border: 1px dashed #d5d5d5;
+        }
+        &--up-load-drop-box-text {
+          text-align: center;
+          padding-top: 60px;
+        }
+      }
+
+      // 商品名・商品説明入力フォーム
+      &__name-form {
+        height: 355px;
+        @include frame();
+        &__name-box {
+          &__input input {
+            width: 620px;
+            height: 48px;
+            margin: 8px 0 0;
+            padding: 10px 16px 8px;
+            border-radius: 5px;
+          }
+        }
+        &__text-box {
+          margin-top: 40px;
+          &__textarea textarea {
+            width: 620px;
+            height: 142px;
+            margin: 8px 0 0;
+            padding: 10px;
+          }
+        }
+      }
+
+      // 商品の詳細セレクト欄
+      &__detail {
+        height: 261px;
+        @include frame();
+        &__title {
+          float: left;
+        }
+        &__select {
+          float: right;
+          width: 400px;
+          height: 180px;
+          &__state {
+            padding-top: 40px;
+          }
+        }
+      }
+
+      // 配送についてセレクト欄
+      &__delivery {
+        height: 371px;
+        @include frame();
+        &__title {
+          float: left;
+          font-size: 14px;
+        }
+        &__select {
+          float: right;
+          width: 400px;
+          height: 290px;
+          &__shipping-origin {
+            margin-top: 40px;
+          }
+          &__schedule {
+            margin-top: 40px;
+          }
+        }
+      }
+
+      // 販売価格欄
+      &__price {
+        height: 299px;
+        @include frame();
+        &__title {
+          float: left;
+          font-size: 14px;
+        }
+        &__select {
+          float: right;
+          width: 400px;
+          height: 218px;
+            &__price {
+              height: 72px;
+              padding-bottom: 24px;
+              display: flex;
+              &__title {
+                width: 200px;
+                height: 48px;
+                line-height: 48px;
+              }
+              &__price-box {
+                width: 200px;
+                height: 48px;
+                display: flex;
+                &__mark {
+                  line-height: 48px;
+                  padding-left: 14px;
+                }
+                &__input input {
+                  width: 160px;
+                  height: 48px;
+                  margin-left: 10px;
+                  padding: 10px 16px 8px;
+                  border-radius: 5px;
+                }
+                &__input ::placeholder {
+                  padding-left: 60px;
+                }
+              }
+            }
+          }
+        }
+        &__price {
+          height: 299px;
+          @include frame();
+          &__select {
+            &__price-box {
+              height: 72px;
+              display: flex;
+              &__title-block {
+                width: 200px;
+                line-height: 48px;
+              }
+              &__input-block {
+                width: 200px;
+                line-height: 48px;
+                display: flex;
+              }
+              &__input-block label {
+                padding-left: 10px;
+              }
+              &__input-block input {
+                width: 160px;
+                height: 48px;
+                margin-left: 14px;
+                border-radius: 5px;
+                padding: 10px 16px 8px;
+              }
+              &__input-block ::placeholder {
+                padding-left: 60px;
+              }
+            }
+            &__fee {
+              height: 63px;
+              line-height: 63px;
+              &__left {
+                float: left;
+              }
+              &__right {
+                float: right;
+              }
+            }
+            &__profit {
+              height: 83px;
+              padding: 24px 0;
+              &__left {
+                float: left;
+              }
+              &__right {
+                float: right;
+                font-size: 34px;
+              }
+            }
+          }
+        }
+
+        // ボトム
+        &__bottom {
+          height: 329px;
+          background-color: white;
+          padding: 40px;
+          &__text {
+            font-size: 14px;
+          }
+        }
+        &__bottom button {
+          margin-top: 40px;
+          width: 620px;
+          height: 50px;
+          font-size: 14px;
+          background-color: #ea352d;
+          color: white;
+        }
+      }
+    }
+}
+
+
+// 必須のCSS
+.required {
+  background-color: #ea352d;
+  margin-left: 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: white;
+  font-size: 12px;
+}
+
+// セレクトボックスのCSS
+select {
+  width: 400px;
+  height: 48px;
+  padding: 0 16px;
+}
+
+// ?のCSS
+.question {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: $light-blue;
+  color: white;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+// もどるボタン
+.return-link {
+  display: block;
+  background-color: #aaa;
+  color: white;
+  text-align: center;
+  margin: 24px 170.5px 0;
+  padding: 13px 0;
+  text-decoration: none;
+  transition: all  0.5s ease;
+}
+
+.return-link:hover {
+  opacity: 0.8;
+}
+
+.text-link {
+  text-decoration: none;
+  color: $light-blue;
+}
