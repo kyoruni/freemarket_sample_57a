@@ -1,0 +1,106 @@
+.mypage-main__body {
+  height: auto;
+  /*-- お知らせとやることリスト --*/
+  &__tabs {
+    font-size: 0; // インラインブロックの隙間をなくす
+    background: $light-gray3;
+    /*-- それぞれのタブ --*/
+    // リセットcssに優先度で負けてしまうので、h3も指定する
+    &__tab,
+    &__tab h3 {
+      @include box(350px, "");
+      display: inline-block;
+      font-size: 16px;
+      text-align: center;
+      line-height: 74px;
+      font-weight: bold !important;
+      // アクティブになっている方のタブ
+      &--active {
+        background: white;
+        border-top: 2px solid red;
+        line-height: 72px;
+      }
+    }
+  }
+  /*-- お知らせ やることない場合 --*/
+  &__nothing {
+    display: none; // 普段は非表示にしておく
+    @include box(100%, 236px);
+    color: $light-gray4;
+    padding-top: 160px;
+    padding-bottom: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: white;
+    background-image: url("logo-gray-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 40px;
+    background-size: 78px 85px;
+  }
+
+  /*-- お知らせ やることある場合 --*/
+  &__items {
+    background: white;
+    font-size: 14px;
+    /*-- お知らせ 個別のアイテム --*/
+    &__item {
+      padding: 16px;
+      border-bottom: solid 1px $light-gray3;
+      /* -- マウス乗せたとき -- */
+      &:hover {
+        background: $light-gray5;
+      }
+      /*-- お知らせの中身 --*/
+      &__body {
+        display: flex;
+        position: relative;
+        /*-- メルカリのアイコン --*/
+        &__image {
+          @include box(48px, 48px);
+          margin: 0;
+        }
+        /*-- お知らせの詳細テキスト --*/
+        &__text {
+          margin-left: 20px;
+          margin-right: 40px;
+          /*-- お知らせに表示する時間のブロック --*/
+          &__time {
+            font-size: 16px;
+            color: $gray;
+            margin-right: 8px;
+            /*-- お知らせに表示する時間のテキスト --*/
+            &__num {
+              font-size: 14px;
+            }
+          }
+        }
+        /*-- お知らせの「>」アイコン --*/
+        &__icon {
+          position: absolute;
+          top: 20px;
+          right: 0;
+          font-size: 16px;
+        }
+      }
+      /*-- 一覧を見るボタン --*/
+      &__more {
+        @include box(100%, 56px);
+        background: $light-gray3;
+        display: block;
+        line-height: 56px;
+        text-align: center;
+        &:hover {
+          background: $light-gray5;
+        }
+      }
+    }
+    /*-- お知らせ 最後の行 --*/
+    &__item:last-child {
+      border: 0;
+      &:hover {
+        background: white;
+      }
+    }
+  }
+}

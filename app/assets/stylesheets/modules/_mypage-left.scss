@@ -1,0 +1,55 @@
+/*-- マイページ左側 --*/
+.mypage-menu {
+  @include box(280px, auto);
+  margin-right: 40px;
+  /* -- メニューの見出し -- */
+  &__head {
+    font-size: 16px;
+    color: $dark-gray2;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+}
+
+/* -- メニューの項目 -- */
+.mypage-menu__nav__list__item {
+  @include box(100%, 49px);
+  border-top: 1px solid $light-gray3;
+  color: $dark-gray;
+  background: $white;
+  display: block; // 幅を指定するために、ブロック要素にする
+  font-size: 14px;
+  padding: 16px;
+  text-decoration: none;
+  position: relative;
+  /* -- メニューの「>」アイコン -- */
+  > .fa-chevron-right {
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all ease-out 0.2s;
+    right: 16px;
+    color: $light-gray6;
+    position: absolute;
+  }
+  /* -- メニューにマウス乗せたとき -- */
+  &:hover {
+    background: $light-gray5;
+    /* -- メニューにマウス乗せたときの、「>」アイコン -- */
+    & .fa-chevron-right {
+      transform: translate(4px, 0);
+      color: $dark-gray;
+    }
+  }
+}
+
+/*-- メニューリストのアクティブ --*/
+/*-- アクティブの中のアイコン --*/
+.active,
+.mypage-menu__nav__list__item.active > .fa-chevron-right {
+  color: $dark-gray;
+  background: $light-gray3;
+  font-weight: bold;
+  &:hover {
+    background: $light-gray3;
+  }
+}
