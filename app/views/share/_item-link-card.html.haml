@@ -1,0 +1,15 @@
+-# アイテムリンクカード
+= link_to "#", class:"item-link-card__link" do
+  .item-link-card
+    .item-link-card--image
+      = image_tag asset_path("sample.jpeg"), class:"item-photo-size"
+    .item-link-card__text-box
+      .item-link-card__text-box--name
+        %h3
+          商品名
+      .item-link-card__text-box__bottom
+        .item-link-card__text-box__bottom--price
+          ￥100,000
+        .item-link-card__text-box__bottom--like
+          %i.fa.fa-heart
+          %span 3
