@@ -1,0 +1,51 @@
+-# 仮で会員登録ページの一部をマークアップ
+-# ヘッダー後で呼び出す
+.sign-up-form__container
+  .sign-up-form__container__title
+    住所入力
+  .sign-up-form__container__input
+    .sign-up-form__container__input--form
+      %h3<
+        お名前
+        %span.required> 必須
+      %input{placeholder:"例）山田", maxlength:'40', class:"sign-up--form"}
+      %input{placeholder:"例）彩", maxlength:'40', class:"sign-up--form"}
+    .sign-up-form__container__input--form
+      %h3<
+        お名前カナ
+        %span.required> 必須
+      %input{placeholder:"例）ヤマダ", maxlength:'40', class:"sign-up--form"}
+      %input{placeholder:"例）アヤ", maxlength:'40', class:"sign-up--form"}
+    .sign-up-form__container__input--form
+      %h3<
+        郵便番号
+        %span.required> 必須
+      %input{placeholder:"例）123-4567", maxlength:'40', class:"sign-up--form"}
+    .sign-up-form__container__input--form
+      %h3<
+        都道府県
+        %span.required> 必須
+      %select{class:"sign-up--form"}
+    .sign-up-form__container__input--form
+      %h3<
+        市町村
+        %span.required> 必須
+      %input{placeholder:"例）横浜市緑区", maxlength:'40', class:"sign-up--form"}
+    .sign-up-form__container__input--form
+      %h3<
+        番地
+        %span.required> 必須
+      %input{placeholder:"例）青山1-1-1", maxlength:'40', class:"sign-up--form"}
+    .sign-up-form__container__input--form
+      %h3<
+        建物名
+        %span.any> 任意
+      %input{placeholder:"例）柳ビル103", maxlength:'40', class:"sign-up--form"}
+    .sign-up-form__container__input--form
+      %h3<
+        電話
+        %span.any> 任意
+      %input{placeholder:"例）09012345678", maxlength:'40', class:"sign-up--form"}
+    
+    -# 次へ進むボタンコピペする予定。
+= render 'share/simple-footer'
