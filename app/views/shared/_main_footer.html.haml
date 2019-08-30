@@ -1,3 +1,18 @@
+.aside
+  .aside__banner
+    .aside__banner__left
+      %h2.aside__banner__left__title スマホでかんたんフリマアプリ
+      %p.aside__banner__left__Advertising 今すぐ無料ダウンロード
+      .aside__banner__left__icon
+        .aside__banner__left__icon__image
+        %ul.aside__banner__left__icon__link
+          = link_to "#" do
+            %li.aside__banner__left__icon__link__app
+          = link_to "#" do
+            %li.aside__banner__left__icon__link__google
+          
+    .aside__banner__right
+      .aside__banner__right__image
 .footer
   .footer__content
     .footer__content__box
@@ -48,6 +63,7 @@
           %li.footer__content__box__subhead__list 日本
           %li.footer__content__box__subhead__list United States
     .footer__content__bottom
+    = link_to "#" do
       .footer__content__bottom__icon
       %span.footer__content__bottom__copy-right
         %small © 2019 Mercari
