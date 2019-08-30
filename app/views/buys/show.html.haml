@@ -1,0 +1,61 @@
+= render partial: 'share/simple-header'
+
+.buy-confirmation-container
+  .buy-confirmation-wrapper
+    .buy-confirmation-wrapper__header
+      %h2 購入内容の確認
+
+    -# メインエリア
+    .buy-confirmation-wrapper__main
+      .buy-confirmation-wrapper__main__header
+        .buy-confirmation-wrapper__main__header--image
+          = image_tag asset_path("sample.jpeg"), class:"buy-confirmation-image"
+        .buy-confirmation-wrapper__main__header--text
+          %p コーチ ドリフター 2way ミックスドレザー 美品【鑑定済】
+      .buy-confirmation-wrapper__main__price
+        %p<
+          ￥100,000
+          %span>
+            送料込み
+      .buy-confirmation-wrapper__main__point-box
+        %p ポイントはありません
+      .buy-confirmation-wrapper__main__total-price-box
+        .buy-confirmation-wrapper__main__total-price-box__left
+          支払い金額
+        .buy-confirmation-wrapper__main__total-price-box__right
+          ￥100,000
+      = link_to "#" do
+        .buy-confirmation-wrapper__main__btn
+          購入する
+        
+    
+    -# 配送先
+    .buy-confirmation-wrapper__delivery
+      .buy-confirmation-wrapper__delivery--title
+        配送先
+      .buy-confirmation-wrapper__delivery--info
+        %p 〒362-0064
+        %p 埼玉県 上尾市 小敷谷77-1 西上尾第二団地2-12-501 
+        %p 荒木 裕登
+      .buy-confirmation-wrapper__delivery--user-info
+        = link_to "#", class:"buy-confirmation-wrapper__delivery--user-info__link" do
+          変更する
+          %i.fa.fa-chevron-right
+    
+    -# クレジットカード情報
+    .buy-confirmation-wrapper__card
+      .buy-confirmation-wrapper__card--title
+        支払い情報
+      .buy-confirmation-wrapper__card--info
+        %p ****************3712
+        %p 5/20
+        =image_tag "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?2394192159", class:"visa-card"
+      .buy-confirmation-wrapper__card--user-info
+        = link_to "#", class:"buy-confirmation-wrapper__card--user-info__link" do
+          変更する
+          %i.fa.fa-chevron-right
+
+
+
+
+= render partial: 'share/simple-footer'
