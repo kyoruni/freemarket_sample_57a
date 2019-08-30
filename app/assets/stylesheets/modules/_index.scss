@@ -3,7 +3,7 @@
     height: 390px;
     display: block;
     background-size: cover;
-    background-image:url(asset_path('visual.png'));
+    background-image: image-url('visual.png');
     min-width: 1068px;
   }
   &__container{
@@ -40,13 +40,14 @@
         text-align: right;
         &__link{
           color: #0099e8;
+          font-weight: bold;
         }
       }
     }
   }
 }
 .aside{
-  background-image: url(assets_path("background-image.jpg"));
+  background-image: image-url("background-image.jpg");
   background-position: center;
   background-size: cover;
   &__banner{
@@ -70,7 +71,7 @@
         margin: 20px 0 0;
         line-height: 68px;
         &__image{
-          background-image:url(assets_path("mercari_icon.png"));
+          background-image: image-url("mercari_icon.png");
           background-position: center;
           background-size: cover;
           height:68px;
@@ -83,20 +84,26 @@
           float: left;
           &__app{
             float: left;
-            background-image: url(assets_path("app-icon.png"));
+            background-image: image-url("app-icon.png");
             background-position: center;
             background-size: cover;
             height:40px;
             width:133px;
+            &:hover{
+              opacity: 0.7;
+            }
           }
           &__google{
             float: left;
             margin: 0 0 0 16px;
-            background-image: url(assets_path("google-icon.png"));
+            background-image: image-url("google-icon.png");
             background-position: center;
             background-size: cover;
             height:40px;
             width:133px;
+            &:hover{
+              opacity: 0.7;
+            }
           }
         }
       }
@@ -104,7 +111,7 @@
     &__right{
       float:right;
       &__image{
-        background-image: url(assets_path("download_content_pc.png"));
+        background-image: image-url("download_content_pc.png");
         background-position: center;
         background-size: cover;
         height: 260px;
