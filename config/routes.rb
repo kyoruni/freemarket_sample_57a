@@ -3,5 +3,9 @@ Rails.application.routes.draw do
   resources  :users, only: [:show]
   resources  :items
   resources  :buys, only: :index
+  resources  :hello, only: [:index, :show]
   root 'hello#index'
+
+  get 'step3' => 'hello#step3'
+  get 'step5' => 'hello#step5'
 end
