@@ -24,6 +24,9 @@
             color: #fff;
             font-size: 12px;
             line-height: 1.5em;
+            &:hover{
+              text-decoration: underline;
+            }
         }
         &__icon{
           color: #fff;
@@ -41,6 +44,9 @@
             color: #fff;
             font-size: 12px;
             line-height: 1.5em;
+            &:hover{
+              text-decoration: underline;
+            }
           }
         }
         &__right{
@@ -54,6 +60,9 @@
             color: #fff;
             font-size: 12px;
             line-height: 1.5;
+            &:hover{
+              text-decoration: underline;
+            }
           }
         }
       }
@@ -62,7 +71,7 @@
       margin: 30px auto 20px;
       &__icon{
         display: inline-block;
-        background-image: url(assets_path("mercari-logo_white.png"));
+        background-image: image-url("mercari-logo_white.png");
         margin-right: 30%;
         color: #fff;
         background-position: center;
