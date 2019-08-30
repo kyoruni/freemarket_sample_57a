@@ -1,6 +1,6 @@
 .mypage-main__header {
   @include box(100%, 200px);
-  background-image: url("mypage-bg.jpg");
+  background-image: image-url("mypage-bg.jpg");
   padding: 20px;
   position: relative;
   /*-- ヘッダーのユーザーアイコン --*/
