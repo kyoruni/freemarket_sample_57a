@@ -1,0 +1,11 @@
+-# ヘッダー挿入する
+.sign-up-form__container__finish
+  .sign-up-form__container__finish__title
+    会員登録完了
+  .sign-up-form__container__finish__message
+    %p ありがとうございます。
+    %p 会員登録が完了しました。
+  = link_to "#" do
+    .sign-up-form__btn
+      メルカリをはじめる
+= render partial: 'share/simple-footer'
