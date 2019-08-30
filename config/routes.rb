@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources  :users, only: [:show]
   resources  :items
-  resources  :buys, only: :index
-  resources  :hello, only: [:index, :show]
+  resources  :buys, only: [:index, :show]
   root 'hello#index'
 
   get 'step3' => 'hello#step3'
