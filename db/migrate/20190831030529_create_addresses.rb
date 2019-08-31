@@ -6,10 +6,9 @@ class CreateAddresses < ActiveRecord::Migration[5.2]
       t.string     :last_name_kana,         null: false
       t.string     :first_name_kana,        null: false
       t.string     :postal_code,            null: false
-      t.references :region,           foreign_kye: true
       t.string     :addless,                null: false
       t.string     :building               
-      t.references :user,             foreigh_kye: true
+      t.references :user,             foreigh_key: true
       t.timestamps
     end
   end

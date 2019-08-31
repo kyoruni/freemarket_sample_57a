@@ -18,13 +18,11 @@ ActiveRecord::Schema.define(version: 2019_08_31_045656) do
     t.string "last_name_kana", null: false
     t.string "first_name_kana", null: false
     t.string "postal_code", null: false
-    t.bigint "region_id"
     t.string "addless", null: false
     t.string "building"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["region_id"], name: "index_addresses_on_region_id"
     t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
