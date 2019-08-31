@@ -1,0 +1,226 @@
+.new-menber-info{
+  
+  &__header{
+    width: 852px;
+    height: 128px;
+    background-color: $light-gray;
+    font-size: 22px;
+  }
+
+  &__contents{
+    background-color: $light-gray;
+    width: 100%;
+    height: 1200px;
+
+    &__all-frame{
+    width: 700px;
+    height: 1200px;
+    background-color: $white;
+    margin: 0 auto;
+
+    &__top-contents{
+      height: 97px;
+        h2 {
+          text-align: center;
+          width: 100%;
+          height: 33px;
+          line-height:97px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+
+          
+    &__bottom-contents{
+      padding: 24px 64px 32px;
+      height: 1163px;
+      width: 100%;
+      border-top: 1px solid $light-gray;
+      
+      &__bottom-frame{
+        width: 343px;
+        height: 1200px;
+        margin:  0px 100px;
+        display: inline-block;
+      
+        p {
+          font-size: 13px;
+          font-weight: bold;
+        }
+
+        &__text{
+          margin-top: 8px;
+          border-radius: 4px;
+          font-weight: bold;
+        }
+
+          .nickname-text{
+          width: 343px;
+          height: 48px;
+          border-radius: 4px;
+          }
+          
+          .email-text{
+            width: 343px;
+            height: 48px;
+            border-radius: 4px;
+          }
+
+          .password-text{
+            width: 343px;
+            height: 48px;
+            border-radius: 4px;
+          }
+
+          .re-password-text{
+            width: 343px;
+            height: 48px;
+            border-radius: 4px;
+          }  
+
+          h3 {
+            margin-bottom: 8px;
+          }
+
+          .familyname-text{
+            width: 167.5px;
+            height: 48px;
+            border-radius: 4px;
+          }
+
+          .name-text{
+            width: 167.5px;
+            height: 48px;
+            border-radius: 4px;
+            margin: 0px 8px 0px 0px;
+          }
+
+          .familyname-text{
+            width: 167.5px;
+            height: 48px;
+            border-radius: 4px;
+          }
+
+          .name-text{
+            width: 167.5px;
+            height: 48px;
+            border-radius: 4px;
+            margin-right: 8px;
+          }
+
+          p.date{
+            flex-wrap: wrap;
+            margin: 0px 2px;
+          }
+
+            .text-date{
+              display:flex;
+              height: 56px;
+              line-height: 48px;
+              
+              .y{
+                width: 76px;
+                height: 48px;
+                margin-top: 8px;
+                display:flex;
+                border: 1px solid $gray;
+                border-radius: 4px;
+                line-height:48px;
+                .date-flame{
+                  width: 46px;
+                  height: 48px;
+                  
+                }
+                  .year{
+                  width: 76px;
+                  height: 48px;
+                  border-radius: 4px;
+                    
+                  }
+                    
+                .select-flame{
+                width: 30px;
+                height: 48px;
+                }
+              }
+            }  
+
+              .month{
+                width: 76px;
+                height: 48px;
+                border-radius: 4px;
+              }
+
+              .days{
+                width: 76px;
+                height: 48px;
+                border-radius: 4px;
+
+              }
+        
+        p.Notice{
+          margin-top: 8px;
+          color: $gray;
+        }
+
+        p.Notice2{
+          color: $gray;
+        }
+        
+        &__text-Notice{
+          font-size: 13.5px;
+          margin-top: 24px;
+          text-align: center;
+
+            &__terms-of-service{
+            color: $light-blue;
+            font-size: 13.5px;
+            text-decoration: none;
+            }
+        }
+
+        &__not-robo{
+          width: 280px;
+          height: 70px;
+          border-radius: 4px;
+          margin-top: 24px;
+          background: $gray;
+        }
+
+        &__next-btn{
+          width: 343px;
+          height: 50px;
+          text-align: center;
+          background-color:$red;
+          position: relative;
+          margin-top: 24px;
+          
+          p {
+            float: left;
+            position: absolute;
+            top: 14px;
+            left: 145.5px;
+            color: $white;
+          }
+        }
+
+      &__registration{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 24px;
+
+        a {
+          top: 13px;
+          left: 132px;
+          text-decoration: none;
+          font-size: 15px;
+          text-align: right;
+          color: $twitter-color;
+
+        }
+      }
+      }
+    }
+  }
+  }
+}

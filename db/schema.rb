@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 2019_08_31_094132) do
     t.integer "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "category_id_id"
     t.bigint "category_id"
     t.bigint "brand_id"
     t.bigint "condition_id"
@@ -72,7 +71,6 @@ ActiveRecord::Schema.define(version: 2019_08_31_094132) do
     t.index ["brand_id"], name: "index_items_on_brand_id"
     t.index ["buyer_id"], name: "index_items_on_buyer_id"
     t.index ["category_id"], name: "index_items_on_category_id"
-    t.index ["category_id_id"], name: "index_items_on_category_id_id"
     t.index ["condition_id"], name: "index_items_on_condition_id"
     t.index ["delivery_day_id"], name: "index_items_on_delivery_day_id"
     t.index ["delivery_way_id"], name: "index_items_on_delivery_way_id"
