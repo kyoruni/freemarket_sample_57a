@@ -133,13 +133,8 @@
       = link_to "荒木さんのその他の出品", "#", class:"item-user__container--name"
     .item-user__container__user-box
       .item-user__container__user-box--upper-row
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
-      .item-user__container__user-box--bottom-row
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
+        - @items.each do |item|
+          = render partial: 'share/item-link-card', locals: { item: item }
   
   -# 同一カテゴリーのアイテム欄
   .item-category__container
@@ -147,13 +142,8 @@
       = link_to "コーチのショルダーバックその他の出品", "#", class:"item-category__container--name"
     .item-category__container__user-box
       .item-category__container__user-box--upper-row
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
-      .item-category__container__user-box--bottom-row
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
+        - @items.each do |item|
+          = render partial: 'share/item-link-card', locals: { item: item }
 
 -# 下のパンくずリスト
 .bread-crumbs__container
