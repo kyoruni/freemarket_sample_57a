@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_31_031841) do
+ActiveRecord::Schema.define(version: 2019_08_31_044618) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -51,6 +51,24 @@ ActiveRecord::Schema.define(version: 2019_08_31_031841) do
     t.integer "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "category_id_id"
+    t.bigint "category_id"
+    t.bigint "brand_id"
+    t.bigint "condition_id"
+    t.bigint "delivery_day_id"
+    t.bigint "delivery_way_id"
+    t.bigint "size_id"
+    t.bigint "saler_id"
+    t.bigint "buyer_id"
+    t.index ["brand_id"], name: "index_items_on_brand_id"
+    t.index ["buyer_id"], name: "index_items_on_buyer_id"
+    t.index ["category_id"], name: "index_items_on_category_id"
+    t.index ["category_id_id"], name: "index_items_on_category_id_id"
+    t.index ["condition_id"], name: "index_items_on_condition_id"
+    t.index ["delivery_day_id"], name: "index_items_on_delivery_day_id"
+    t.index ["delivery_way_id"], name: "index_items_on_delivery_way_id"
+    t.index ["saler_id"], name: "index_items_on_saler_id"
+    t.index ["size_id"], name: "index_items_on_size_id"
   end
 
   create_table "sizes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -71,4 +89,12 @@ ActiveRecord::Schema.define(version: 2019_08_31_031841) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "items", "brands"
+  add_foreign_key "items", "categories"
+  add_foreign_key "items", "conditions"
+  add_foreign_key "items", "delivery_days"
+  add_foreign_key "items", "delivery_ways"
+  add_foreign_key "items", "sizes"
+  add_foreign_key "items", "users", column: "buyer_id"
+  add_foreign_key "items", "users", column: "saler_id"
 end
