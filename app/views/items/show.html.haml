@@ -8,30 +8,10 @@
       -# 商品写真
       .item-box__container__box__photo
         .item-box__container__box__photo--main
-          = image_tag asset_path("sample.jpeg"), class:"main-photo"
+          = image_tag @item.images.first.image, class:"main-photo"
         .item-box__container__box__photo__sub-group
-          .item-box__container__box__photo__sub-group__upper-row
-            .item-box__container__box__photo__sub-group__upper-row__photo
-              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
-            .item-box__container__box__photo__sub-group__upper-row__photo
-              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
-            .item-box__container__box__photo__sub-group__upper-row__photo
-              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
-            .item-box__container__box__photo__sub-group__upper-row__photo
-              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
-            .item-box__container__box__photo__sub-group__upper-row__photo
-              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
-          .item-box__container__box__photo__sub-group__bottom-row
-            .item-box__container__box__photo__sub-group__bottom-row__photo
-              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
-            .item-box__container__box__photo__sub-group__bottom-row__photo
-              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
-            .item-box__container__box__photo__sub-group__bottom-row__photo
-              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
-            .item-box__container__box__photo__sub-group__bottom-row__photo
-              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
-            .item-box__container__box__photo__sub-group__bottom-row__photo
-              = image_tag asset_path("sample.jpeg"), class:"sub-photo"
+          - @item.images.each do |image|
+            = image_tag image.image, class:"sub-photo"
       %table.item-box__container__box__table
         %tbody
           %tr
