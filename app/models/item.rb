@@ -11,4 +11,5 @@ class Item < ApplicationRecord
   belongs_to :delivery_way
   belongs_to :size
   belongs_to_active_hash :region
+  has_many :images, dependent: :destroy
 end
