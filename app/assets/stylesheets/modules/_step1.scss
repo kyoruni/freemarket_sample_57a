@@ -1,57 +1,26 @@
-
 .new-menber-info{
-
+  
   &__header{
     width: 852px;
     height: 128px;
-    color: red;
-    background-color: #f5f5f5;
+    background-color: $light-gray;
     font-size: 22px;
-
-    // &__flame-top{
-    //   display: inline-block;
-    //   width: 737px;
-    //   height: 128;
-    //   margin: 0px auto;
-
-    //   &__top-box{
-    //   width: 193px;
-    //   height: 49px;
-    //   // margin-top: 40px;
-    //   background: green;
-    //   }
-
-    //     &__logo{
-          
-    //     }
-
-    //   &__progress{
-    //     width: 552px;
-    //     height: 72px;
-    //     padding: 40px 0px 0px 44px;
-    //     background: #0099E8;
-
-    //   }
-    // }
-
   }
 
-
   &__contents{
-    background-color: #f5f5f5;
+    background-color: $light-gray;
     width: 100%;
     height: 1200px;
 
     &__all-frame{
     width: 700px;
     height: 1200px;
-    background-color: white;
+    background-color: $white;
     margin: 0 auto;
 
     &__top-contents{
       height: 97px;
         h2 {
-          color: black;
           text-align: center;
           width: 100%;
           height: 33px;
@@ -66,7 +35,7 @@
       padding: 24px 64px 32px;
       height: 1163px;
       width: 100%;
-      border-top: 1px solid #f5f5f5;
+      border-top: 1px solid $light-gray;
       
       &__bottom-frame{
         width: 343px;
@@ -74,20 +43,15 @@
         margin:  0px 100px;
         display: inline-block;
       
-
-      
         p {
           font-size: 13px;
           font-weight: bold;
-
         }
 
         &__text{
           margin-top: 8px;
           border-radius: 4px;
           font-weight: bold;
-
-
         }
 
           .nickname-text{
@@ -100,25 +64,21 @@
             width: 343px;
             height: 48px;
             border-radius: 4px;
-
           }
 
           .password-text{
             width: 343px;
             height: 48px;
             border-radius: 4px;
-
           }
 
           .re-password-text{
             width: 343px;
             height: 48px;
             border-radius: 4px;
-
           }  
 
           h3 {
-            color: black;
             margin-bottom: 8px;
           }
 
@@ -139,34 +99,31 @@
             width: 167.5px;
             height: 48px;
             border-radius: 4px;
-
           }
 
           .name-text{
             width: 167.5px;
             height: 48px;
             border-radius: 4px;
-            margin: 0px 8px 0px 0px;
+            margin-right: 8px;
           }
 
           p.date{
             flex-wrap: wrap;
             margin: 0px 2px;
-            
           }
+
             .text-date{
               display:flex;
               height: 56px;
               line-height: 48px;
               
-              
-            
               .y{
                 width: 76px;
                 height: 48px;
                 margin-top: 8px;
                 display:flex;
-                border: 1px solid gray;
+                border: 1px solid $gray;
                 border-radius: 4px;
                 line-height:48px;
                 .date-flame{
@@ -181,11 +138,9 @@
                     
                   }
                     
-                
                 .select-flame{
                 width: 30px;
                 height: 48px;
-            
                 }
               }
             }  
@@ -194,7 +149,6 @@
                 width: 76px;
                 height: 48px;
                 border-radius: 4px;
-          
               }
 
               .days{
@@ -206,11 +160,11 @@
         
         p.Notice{
           margin-top: 8px;
-          color:gray ;
+          color: $gray;
         }
 
         p.Notice2{
-          color:gray ;
+          color: $gray;
         }
         
         &__text-Notice{
@@ -218,42 +172,26 @@
           margin-top: 24px;
           text-align: center;
 
-
-          
-          span{
-            color: #000;
-            
-
-          }
             &__terms-of-service{
-            color: blue;
+            color: $light-blue;
             font-size: 13.5px;
             text-decoration: none;
             }
         }
-
-
-
-
-
 
         &__not-robo{
           width: 280px;
           height: 70px;
           border-radius: 4px;
           margin-top: 24px;
-          background: gray;
+          background: $gray;
         }
-
-
-
-
 
         &__next-btn{
           width: 343px;
           height: 50px;
           text-align: center;
-          background-color:red;
+          background-color:$red;
           position: relative;
           margin-top: 24px;
           
@@ -262,35 +200,27 @@
             position: absolute;
             top: 14px;
             left: 145.5px;
-            color: white;
-
+            color: $white;
           }
         }
-
 
       &__registration{
         display: flex;
         justify-content: flex-end;
         margin-top: 24px;
-        
 
-      
         a {
           top: 13px;
           left: 132px;
           text-decoration: none;
           font-size: 15px;
           text-align: right;
-          color: #0099E8;
-
+          color: $twitter-color;
 
         }
       }
-
-
       }
     }
   }
-
   }
 }

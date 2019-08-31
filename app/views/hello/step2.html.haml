@@ -20,9 +20,9 @@
           
           %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
 
-          %a.reason-box{:href => "#"} 
+
+          = link_to "#" , class: "reason-box" do
             %p 電話番号の確認が必要な理由>
-            -# %i.fas.fa-angle-right
             
 = render 'share/simple-footer'
 

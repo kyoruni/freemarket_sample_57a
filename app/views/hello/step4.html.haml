@@ -52,9 +52,8 @@
             %span.required> 必須
             %input{:placeholder => "  カード背面４桁もしくは３桁の番号", :type => "text",:class => "card-number"}
           
-          %a.reason-box{:href => "#"} 
+          = link_to "#" , class: "reason-box" do
             %p カード裏面の番号とは？
-            -# %i.fas.fa-question-circle
 
           .payment-method__contents__all-frame__bottom-contents__bottom-frame__next-btn
             %p 次に進む
