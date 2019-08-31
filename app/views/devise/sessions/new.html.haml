@@ -1,70 +1,49 @@
+= render 'share/simple-header'
+.sign-in
 
-.sign_in
-
-  .header
-
-
-  .contents
-    .frame
-      .top_contents
-        .top_frame
+  .sign-in__contents
+    .sign-in__contents__frame
+      .sign-in__contents__frame__top_contents
+        .sign-in__contents__frame__top_contents__top_frame
           %p アカウントをお持ちでない方はこちら
           .registration_btn
             %h3 新規会員登録
 
-      .middle_contents
-        .middle_frame
+      .sign-in__contents__frame__middle_contents
+        .sign-in__contents__frame__middle_contents__middle_frame
             
 
 
-          .field-top
+          .sign-in__contents__frame__middle_contents__middle_frame__field-top
             %i.fab.fa-facebook-square.size
             %p Facebookでログイン
             
 
 
-          .field-bottom
+          .sign-in__contents__frame__middle_contents__middle_frame__field-bottom
             %i.fab.fa-google.fa-lg
             %p Googleでログイン 
 
 
 
 
-      .bottom_contents
+      .sign-in__contents__frame__bottom-contents
         %input.text{:name => "name", :placeholder => "  メールアドレス", :type => "email",:class => "email_text"}
         %input.text{:name => "name", :placeholder => "  パスワード", :type => "email",:class => "password_text"}
           
-        .not_robo 
+        .sign-in__contents__frame__bottom-contents__not-robo 
 
-        .log_in_btn
+        .sign-in__contents__frame__bottom-contents__login-btn
           %p ログイン
 
         %a パスワードをお忘れの方
 
 
+= render 'share/simple-footer'
 
 
 
-
-
-  
-  .footer 
-
-    .frame
-      %ul
-        %li プライバシーポリシー
-        %li メルカリ利用規約
-        %li 特定商取引に関する表記
-      
-      .image
-
-
-
-
-
-
-
-
+//////本家/////////////
 
 
 
@@ -85,3 +64,8 @@
 -#   .actions
 -#     = f.submit "Log in"
 -# = render "devise/shared/links"
+
+
+//////本家/////////////
+
+

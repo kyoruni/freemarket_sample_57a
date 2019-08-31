@@ -1,0 +1,165 @@
+.payment-method{
+
+  &__header{
+    width: 2000px;
+    height: 128px;
+    color: red;
+    background-color: #f5f5f5;
+    font-size: 22px;
+
+
+  }
+
+
+  &__contents{
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 700px;
+    
+
+    &__all-frame{
+    width: 700px;
+    height: 347px;
+    background-color: white;
+    margin: 0 auto;
+
+      &__top-contents{
+        height: 95px;
+        h2 {
+          color: black;
+          text-align: center;
+          width: 100%;
+          height: 33px;
+          line-height: 95px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+      &__bottom-contents{
+        padding: 24px 16px 40px;
+        height: 650px;
+        width: 700px;
+        border-top: 1px solid #f5f5f5;
+        background-color: white;
+        
+        &__bottom-frame{
+          width: 343px;
+          height:550px;
+          background: white;
+          margin: auto;
+
+          &__from{
+            width: 343px;
+            height: 130px;
+            h4{
+              font-size: 14px;
+
+
+            }
+            .card-number{
+            width: 100%;
+            height: 48px;
+            border-radius: 4px;
+            margin-top: 8px;
+            }
+            
+          }
+          .card-image{
+            width: 40px;
+            height: 20px;
+            margin-top: 8px;
+
+          }
+
+
+
+          &__expiration-date-form{
+            width: 100%;
+            height: 200px;
+
+            &__text-date{
+              height: 56px;
+              line-height: 48px;
+              
+            
+              &__expiration-date{
+                width: 130px;
+                height: 48px;
+                margin-top: 8px;
+                display:flex;
+                border: 1px solid gray;
+                border-radius: 4px;
+                line-height:48px;
+                &__date-flame{
+                  width: 100px;
+                  height: 48px;
+                  
+                }
+                  .year{
+                  width: 130px;
+                  height: 48px;
+                  border-radius: 4px;
+                    
+                  }
+                  
+                &__select-flame{
+                width: 30px;
+                height: 48px;
+                }
+                p date {
+                  line-height: 56px;
+    
+                }
+              }
+              
+            }
+          }
+          &__cord-from{
+            width: 343px;
+            height: 85px;
+            margin-top: 20px;
+            h4{
+              font-size: 14px;
+            }
+
+            .card-number{
+            width: 100%;
+            height: 48px;
+            border-radius: 4px;
+            margin-top: 8px;
+            }
+            
+          }
+
+          a.reason-box {
+            top: 13px;
+            left: 132px;
+            text-decoration: none;
+            font-size: 15px;
+            text-align: right;
+            color: #0099E8;
+
+          }
+
+          &__next-btn{
+            width: 343px;
+            height: 50px;
+            text-align: center;
+            background-color:red;
+            position: relative;
+            margin-top: 30px;
+            
+            p {
+              float: left;
+              position: absolute;
+              top: 14px;
+              left: 145.5px;
+              color: white;
+  
+            }
+          }
+        }
+      }
+    }
+  }
+}
