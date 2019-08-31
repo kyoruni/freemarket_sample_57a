@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_31_064030) do
+ActiveRecord::Schema.define(version: 2019_08_31_094132) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -43,6 +43,14 @@ ActiveRecord::Schema.define(version: 2019_08_31_064030) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "image", null: false
+    t.bigint "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_images_on_item_id"
+  end
+
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "text", null: false
@@ -60,6 +68,7 @@ ActiveRecord::Schema.define(version: 2019_08_31_064030) do
     t.bigint "size_id"
     t.bigint "saler_id"
     t.bigint "buyer_id"
+    t.bigint "region_id", null: false
     t.index ["brand_id"], name: "index_items_on_brand_id"
     t.index ["buyer_id"], name: "index_items_on_buyer_id"
     t.index ["category_id"], name: "index_items_on_category_id"
@@ -67,6 +76,7 @@ ActiveRecord::Schema.define(version: 2019_08_31_064030) do
     t.index ["condition_id"], name: "index_items_on_condition_id"
     t.index ["delivery_day_id"], name: "index_items_on_delivery_day_id"
     t.index ["delivery_way_id"], name: "index_items_on_delivery_way_id"
+    t.index ["region_id"], name: "index_items_on_region_id"
     t.index ["saler_id"], name: "index_items_on_saler_id"
     t.index ["size_id"], name: "index_items_on_size_id"
   end
@@ -95,6 +105,7 @@ ActiveRecord::Schema.define(version: 2019_08_31_064030) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "images", "items"
   add_foreign_key "items", "brands"
   add_foreign_key "items", "categories"
   add_foreign_key "items", "conditions"
