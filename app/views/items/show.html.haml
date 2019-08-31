@@ -67,7 +67,7 @@
           %tr
             %th 配送元地域
             %td
-              = link_to "神奈川県", "#", class:"item-box__container__table-link"
+              = link_to "#{@item.region.name}", "#", class:"item-box__container__table-link"
           %tr
             %th 発送日の目安
             %td= @item.delivery_day.day
