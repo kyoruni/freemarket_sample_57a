@@ -78,6 +78,12 @@ gem 'pry-rails'
 # アイコン
 gem 'font-awesome-sass', '~> 5.9.0'
 
+# テストデータ作成用
+gem 'seed-fu'
+
+# 多階層カテゴリ
+gem 'ancestry'
+
 # 本番環境のみ
 group :production do
   # ユニコーン
