@@ -1,7 +1,7 @@
 # 01 Delivery_days 発送までの日数
 # 02 Delivery_ways 配送方法
 # 03 sizes サイズ
-# 04 conditions
+# 04 conditions 商品の状態
 
 # 01 Delivery_days 発送までの日数
 DeliveryDay.seed(:id,
@@ -76,4 +76,13 @@ Size.seed(:id,
   # {id: 40, name: "30cm" },
   # {id: 41, name: "30.5cm" },
   # {id: 42, name: "31cm以上" },
+)
+
+Condition.seed(:id,
+  {id: 1, name: "新品、未使用" },
+  {id: 2, name: "未使用に近い" },
+  {id: 3, name: "目立った傷や汚れなし" },
+  {id: 4, name: "やや傷や汚れあり" },
+  {id: 5, name: "傷や汚れあり" },
+  {id: 6, name: "全体的に状態が悪い" },
 )
