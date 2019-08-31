@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(version: 2019_08_31_031841) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "conditions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "delivery_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "day", null: false
     t.datetime "created_at", null: false
@@ -33,6 +39,16 @@ ActiveRecord::Schema.define(version: 2019_08_31_031841) do
 
   create_table "delivery_ways", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "text", null: false
+    t.string "postage"
+    t.integer "price"
+    t.integer "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

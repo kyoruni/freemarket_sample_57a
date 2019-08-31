@@ -1,7 +1,8 @@
 = render 'shared/main_header'
 .item-show__container
   .item-box__container
-    %h1 COACH コーチ ショルダーバッグ
+    %h1 
+      = @item.name
     .item-box__container__box
 
       -# 商品写真
@@ -74,7 +75,7 @@
     -# 価格表示
     .item-price__container
       .item-price__container__price
-        ¥ 8,000
+        = "￥ #{@item.price.to_s(:delimited)}"
       .item-price__container__tax
         (税込)
       .item-price__container__delivery
@@ -83,7 +84,7 @@
 
     -# テキスト表示
     .item-text
-      %p="商品の説明文を表示する(範囲を分かりやすくオレンジ色で表示中)"
+      %p= @item.text
 
     .item-btn-container
       .item-btn-container__left
@@ -133,13 +134,8 @@
       = link_to "荒木さんのその他の出品", "#", class:"item-user__container--name"
     .item-user__container__user-box
       .item-user__container__user-box--upper-row
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
-      .item-user__container__user-box--bottom-row
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
+        - @items.each do |item|
+          = render partial: 'share/item-link-card', locals: { item: item }
   
   -# 同一カテゴリーのアイテム欄
   .item-category__container
@@ -147,13 +143,8 @@
       = link_to "コーチのショルダーバックその他の出品", "#", class:"item-category__container--name"
     .item-category__container__user-box
       .item-category__container__user-box--upper-row
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
-      .item-category__container__user-box--bottom-row
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
-        = render partial: 'share/item-link-card'
+        - @items.each do |item|
+          = render partial: 'share/item-link-card', locals: { item: item }
 
 -# 下のパンくずリスト
 .bread-crumbs__container

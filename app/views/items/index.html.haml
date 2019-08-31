@@ -8,10 +8,8 @@
         = link_to "#" do
           .main__container__item__category__title レディース新着アイテム
           .main__container__item__category__num
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
+            - @items.each do |item|
+              = render partial: 'share/item-link-card', locals: { item: item }
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -20,10 +18,8 @@
         = link_to "#" do
           .main__container__item__category__title メンズ新着アイテム
           .main__container__item__category__num
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
+            - @items.each do |item|
+              = render partial: 'share/item-link-card', locals: { item: item }
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -32,10 +28,8 @@
         = link_to "#" do
           .main__container__item__category__title ベビー・キッズ新着アイテム
           .main__container__item__category__num
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
+            - @items.each do |item|
+              = render partial: 'share/item-link-card', locals: { item: item }
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -44,10 +38,8 @@
         = link_to "#" do
           .main__container__item__category__title コスメ・香水・美容新着アイテム
           .main__container__item__category__num
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
+            - @items.each do |item|
+              = render partial: 'share/item-link-card', locals: { item: item }
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -58,10 +50,8 @@
         = link_to "#" do
           .main__container__item__category__title シャネル新着アイテム
           .main__container__item__category__num
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
+            - @items.each do |item|
+              = render partial: 'share/item-link-card', locals: { item: item }
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -70,10 +60,8 @@
         = link_to "#" do
           .main__container__item__category__title ルイヴィトン新着アイテム
           .main__container__item__category__num
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
+            - @items.each do |item|
+              = render partial: 'share/item-link-card', locals: { item: item }
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -82,10 +70,8 @@
         = link_to "#" do
           .main__container__item__category__title シュプリーム新着アイテム
           .main__container__item__category__num
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
+            - @items.each do |item|
+              = render partial: 'share/item-link-card', locals: { item: item }
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
@@ -94,10 +80,8 @@
         = link_to "#" do
           .main__container__item__category__title ナイキ新着アイテム
           .main__container__item__category__num
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
-            = render partial: 'share/item-link-card'
+            - @items.each do |item|
+              = render partial: 'share/item-link-card', locals: { item: item }
       .main__container__item__all
         = link_to "#" do
           %p.main__container__item__all__link 全ての商品を見る
