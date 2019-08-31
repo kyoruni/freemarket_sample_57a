@@ -307,16 +307,14 @@ tr {
     font-weight: 600;
   }
   &__user-box {
+    width: 700px;
     height: 700px;
     &--upper-row {
-      height: 330px;
+      width: 720px;
+      height: 700px;
       margin-bottom: 20px;
       display: flex;
-    }
-    &--bottom-row {
-      height: 330px;
-      margin-bottom: 20px;
-      display: flex;
+      flex-wrap: wrap;
     }
   }
 }
