@@ -1,0 +1,80 @@
+.mypage-main__profile {
+  @include box(100%, auto);
+  background: $white;
+  /*-- プロフィール --*/
+  &__header {
+    background: $white;
+    color: $dark-gray;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 24px;
+    text-align: center;
+  }
+  /*-- ユーザーアイコンと名前入力欄 --*/
+  &__icon {
+    @include box(100%, auto);
+    background-image: image-url("mypage-bg.jpg");
+    padding: 72px 16px 24px;
+    text-align: center;
+    font-size: 16px;
+    /*-- ユーザーアイコン --*/
+    &__image {
+      @include box(60px, 60px);
+      margin: 0;
+      display: inline-block;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+    /*-- 名前入力欄 --*/
+    &__input {
+      @include box(220px, 48px);
+      border-radius: 4px;
+      vertical-align: middle;
+      padding: 10px 16px 8px;
+      border: solid 1px $light-gray4;
+      line-height: 24px;
+      margin-left: 8px;
+      color: $dark-gray2;
+      /* -- テキストエリア選択時 --*/
+      &:focus {
+        outline: none; // フォーム入力時の枠線を消す
+        border: 1px solid $light-blue;
+      }
+    }
+  }
+  /*-- プロフィール入力欄 --*/
+  &__contents {
+    @include box(700px, 362px);
+    background: $white;
+    padding: 40px 16px;
+    /*-- テキストエリア --*/
+    &__text {
+      @include box(668px, 216px);
+      min-height: 216px;
+      padding: 10px;
+      border: solid 1px $light-gray4;
+      color: $dark-gray;
+      /* -- テキストエリア選択時 --*/
+      &:focus {
+        @extend .mypage-main__profile__icon__input:focus;
+      }
+    }
+    /*-- 変更するボタン --*/
+    &__button {
+      @include box(668px, "");
+      min-height: 21px;
+      line-height: 48px;
+      background: $red;
+      color: $white;
+      margin-top: 14px;
+      border: 1px solid $red;
+      font-size: 14px;
+      transition: all ease-out 0.3s;
+      /* -- ボタンにカーソル乗っているとき --*/
+      &:hover {
+        background: $red2;
+        transition: all ease-out 0.3s;
+      }
+    }
+  }
+}
