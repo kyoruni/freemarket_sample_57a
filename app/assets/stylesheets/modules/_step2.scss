@@ -1,0 +1,97 @@
+.sms-comfirmation{
+  &__header{
+    width: 2000px;
+    height: 128px;
+    background-color: $light-gray5;
+    font-size: 22px;
+  }
+  &__contents{
+    background-color: $light-gray;
+    width: 100%;
+    height: 600px;
+    &__all-frame{
+    width: 700px;
+    height: 347px;
+    background-color: $white;
+    margin: 0 auto;
+      &__top-contents{
+        height: 95px;
+        h2 {
+          text-align: center;
+          width: 100%;
+          height: 33px;
+          line-height: 95px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+      &__bottom-contents{
+        padding: 24px 16px 40px;
+        height: 347px;
+        width: 700px;
+        border-top: 1px solid $light-gray;
+        background-color: $white;
+        &__bottom-frame{
+          width: 343px;
+          height: 282px;
+          background: $white;
+          margin: auto;
+          &__from{
+            width: 343px;
+            height: 70px;
+            h4{
+              font-size: 14px;
+            }
+            .telephone-number{
+            width: 100%;
+            height: 48px;
+            border-radius: 4px;
+            margin-top: 8px;
+            }
+
+          }
+          p{
+            font-size: 14px;
+            margin-top: 10px;
+          }
+
+          &__next-btn{
+            width: 343px;
+            height: 50px;
+            text-align: center;
+            background-color:$red;
+            position: relative;
+            margin-top: 24px;
+            p {
+              float: left;
+              position: absolute;
+              top: 5px;
+              left: 120px;
+              color: $white;
+            }
+          }
+
+          p.sms-btn {
+          margin-top: 8px;
+          }
+
+          .reason-box{
+            width: 100%;
+            height: 14px;
+            margin-top: 24px;
+            display: flex;
+            justify-content: flex-end;
+            a.reason-box {
+              top: 13px;
+              left: 132px;
+              text-decoration: none;
+              font-size: 15px;
+              text-align: right;
+              color: $light-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
