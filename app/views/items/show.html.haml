@@ -48,29 +48,29 @@
           %tr
             %th カテゴリー
             %td
-              = link_to "レディース", "#", class:"item-box__container__table-link"
+              = link_to "#{@item.category.name}", "#", class:"item-box__container__table-link"
               = link_to "> バッグ", "#", class:"item-box__container__table-link"
               = link_to "> ショルダーバッグ", "#", class:"item-box__container__table-link"
           %tr
             %th ブランド
             %td
-              = link_to "コーチ", "#", class:"item-box__container__table-link"
+              = link_to "#{@item.brand.name}", "#", class:"item-box__container__table-link"
           %tr
             %th 商品の状態
-            %td 未使用に近い
+            %td= @item.condition.name
           %tr
             %th 配送料の負担
-            %td 送料込み(出品者負担)
+            %td= @item.postage
           %tr
             %th 配送の方法
-            %td ゆうパック
+            %td= @item.delivery_way.name
           %tr
             %th 配送元地域
             %td
               = link_to "神奈川県", "#", class:"item-box__container__table-link"
           %tr
             %th 発送日の目安
-            %td 2~3日で発送
+            %td= @item.delivery_day.day
 
     -# 価格表示
     .item-price__container
