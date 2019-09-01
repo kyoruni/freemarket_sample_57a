@@ -84,6 +84,9 @@ gem 'seed-fu'
 # 多階層カテゴリ
 gem 'ancestry'
 
+# 都道府県
+gem 'active_hash'
+
 # 本番環境のみ
 group :production do
   # ユニコーン
