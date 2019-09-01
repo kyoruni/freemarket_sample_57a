@@ -1,4 +1,4 @@
-= form_for @user,url: step2_signup_path, method: :get, html: {class: ''} do |f|
+= form_for @user,url: step2_signup_index_path, method: :get do |f|
   .new-menber-info
 
     .new-menber-info__header
@@ -14,46 +14,44 @@
               %p 
               ニックネーム 
               %span.required> 必須
-              
-              %input.text{:name => "name", :placeholder => "  例）メルカリ太郎", :type => "text",:class => "nickname-text"}
+              = f.text_field :name, placeholder: '例)  メルカリ太郎', class:"nickname-text"
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
               メールアドレス
               %span.required> 必須
-
-              %input.text{:name => "name", :placeholder => "  PC・携帯どちらでも可", :type => "email",:class => "email-text"}
+              = f.email_field :email, placeholder: '  PC・携帯どちらでも可', class:"email-text"
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
               パスワード
               %span.required> 必須
-
-              %input.text{:name => "name", :placeholder => "  ７文字以上", :type => "text",:class => "password-text"}
+              = f.password_field :password, placeholder: '  7文字以上', class: "password-text"
+            
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
               パスワード（確認）
               %span.required> 必須
-              %input.text{:name => "name", :placeholder => "  ７文字以上", :type => "text",:class => "re-password-text"}
+              = f.password_field :password_confirmation, placeholder: '  7文字以上', class: "re-password-text"
             
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %h3 本人確認
               %p 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
-
+            
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
                 お名前(全角)
                 %span.required> 必須
-              %input.text{:name => "name", :placeholder => "  例）山田", :type => "text",:class => "familyname-text"}
-              %input.text{:name => "name", :placeholder => "  例）彩", :type => "text",:class => "familyname-text"}
+              = f.fields_for :address do |i|
+                = i.text_field :last_name, placeholder: '例)  山田', class: "familyname-text"
+                = i.text_field :first_name, placeholder: '例)  彩', class: "familyname-text"
               
-
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
                 お名前カナ(全角)
                 %span.required> 必須
-              %input.text{:name => "name", :placeholder => "  例）ヤマダ", :type => "text",:class => "familyname-text"}
-              %input.text{:name => "name", :placeholder => "  例）アヤ", :type => "text",:class => "familyname-text"}
+              = f.fields_for :address do |i|
+                = i.text_field :last_name_kana, placeholder: '例)  ヤマダ', class: "familyname-text"
+                = i.text_field :first_name_kana, placeholder: '例)  アヤ', class: "familyname-text"
             
-
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
                 生年月日
@@ -61,25 +59,23 @@
               .text-date
                 .y
                   .date-flame
-                    %input{:placeholder => "  --", :type => "text",:class => "year"}
-                      
+                    = f.text_field :birthday, placeholder: "  --", class: "year"
                   .select-flame
                     %i.fas.fa-angle-down.fa-lg
-
                 %p.date 年
+                
                 .y
                   .date-flame
-                    %input{:placeholder => "  --", :type => "text",:class => "month"}
+                    = f.text_field :birthday, placeholder: "  --", class: "month"
                   .select-flame
                     %i.fas.fa-angle-down.fa-lg
-
                 %p.date 月
+                
                 .y
                   .date-flame
-                    %input{ :placeholder => "  --", :type => "text",:class => "days"}
+                    = f.text_field :birthday, placeholder: "  --", class: "days"
                   .select-flame
                     %i.fas.fa-angle-down.fa-lg
-
                 %p.date 日
 
             %p.Notice ※本人情報は正しく入力してください。会員登録後、
@@ -98,7 +94,8 @@
 
 
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__next-btn
-              %p 次に進む
+              %p= f.submit "次に進む", class:"next-btn"
+              -# %p 次に進む
 
 
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__registration
