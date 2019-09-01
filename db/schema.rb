@@ -67,14 +67,12 @@ ActiveRecord::Schema.define(version: 2019_08_31_094132) do
     t.bigint "size_id"
     t.bigint "saler_id"
     t.bigint "buyer_id"
-    t.bigint "region_id", null: false
     t.index ["brand_id"], name: "index_items_on_brand_id"
     t.index ["buyer_id"], name: "index_items_on_buyer_id"
     t.index ["category_id"], name: "index_items_on_category_id"
     t.index ["condition_id"], name: "index_items_on_condition_id"
     t.index ["delivery_day_id"], name: "index_items_on_delivery_day_id"
     t.index ["delivery_way_id"], name: "index_items_on_delivery_way_id"
-    t.index ["region_id"], name: "index_items_on_region_id"
     t.index ["saler_id"], name: "index_items_on_saler_id"
     t.index ["size_id"], name: "index_items_on_size_id"
   end
