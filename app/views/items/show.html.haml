@@ -28,9 +28,9 @@
           %tr
             %th カテゴリー
             %td
+              = link_to "#{@item.category.root.name}", "#", class:"item-box__container__table-link"
+              = link_to "#{@item.category.parent.name}", "#", class:"item-box__container__table-link"
               = link_to "#{@item.category.name}", "#", class:"item-box__container__table-link"
-              = link_to "> バッグ", "#", class:"item-box__container__table-link"
-              = link_to "> ショルダーバッグ", "#", class:"item-box__container__table-link"
           %tr
             %th ブランド
             %td
