@@ -26,24 +26,8 @@
       &__sub-group {
         height: 120px;
         width: 300px;
-        &__upper-row {
-          height:60px;
-          width: 300px;
-          display: flex;
-          &__photo {
-            height: 60px;
-            width: 60px;
-          }
-        }
-        &__bottom-row {
-          height:60px;
-          width: 300px;
-          display: flex;
-          &__photo {
-            height: 60px;
-            width: 60px;
-          }
-        }
+        display: flex;
+        flex-wrap: wrap;
       }
     }
     &__table {

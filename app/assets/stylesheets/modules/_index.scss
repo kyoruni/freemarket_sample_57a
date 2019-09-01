@@ -1,121 +1,116 @@
-.main{
-  &__visual{
+.main {
+  &__visual {
     height: 390px;
     display: block;
     background-size: cover;
-    background-image: image-url('visual.png');
+    background-image: image-url("visual.png");
     min-width: 1068px;
   }
-  &__container{
+  &__container {
     padding: 40px 0;
-    background-color: #fff;
-    &__head{
+    background-color: $white;
+    &__head {
       font-size: 28px;
       text-align: center;
       line-height: 1.4;
       font-weight: bold;
     }
-    &__item{
+    &__item {
       width: 940px;
       margin: 0 auto;
-      &__category{
+      &__category {
         font-size: 22px;
         margin: 26px 11px;
         text-align: center;
-        font-weight:bold;
-        &__title{
-          color: #0099e8;
+        font-weight: bold;
+        &__title {
+          color: $light-blue;
           text-decoration: none;
         }
-        &__num{
+        &__num {
           display: flex;
           align-items: center;
           justify-content: space-between;
           margin: 8px 0 0;
         }
       }
-      &__all{
+      &__all {
         padding: 20px 0 30px;
         width: 99.5%;
         text-align: right;
-        &__link{
-          color: #0099e8;
+        &__link {
+          color: $light-blue;
           font-weight: bold;
         }
       }
     }
   }
 }
-.aside{
+.aside {
   background-image: image-url("background-image.jpg");
   background-position: center;
   background-size: cover;
-  &__banner{
-    width: 750px;
-    height: 260px;
+  &__banner {
+    @include box(750px, 260px);
     margin: 0 auto;
-    color: #fff;
+    color: $white;
     position: relative;
-    &__left{
+    &__left {
       position: absolute;
       top: 20%;
       left: 16px;
-      &__title{
+      &__title {
         font-size: 24px;
       }
-      &__Advertising{
+      &__Advertising {
         font-size: 35px;
         margin: 10px 0 0;
       }
-      &__icon{
+      &__icon {
         margin: 20px 0 0;
         line-height: 68px;
-        &__image{
+        &__image {
+          @include box(68px, 68px);
           background-image: image-url("mercari_icon.png");
           background-position: center;
           background-size: cover;
-          height:68px;
-          width:68px;
           float: left;
         }
-        &__link{
+        &__link {
           margin: 0 0 0 24px;
           list-style: none;
           float: left;
-          &__app{
+          &__app {
+            @include box(133px, 40px);
             float: left;
             background-image: image-url("app-icon.png");
             background-position: center;
             background-size: cover;
-            height:40px;
-            width:133px;
-            &:hover{
+            &:hover {
               opacity: 0.7;
             }
           }
-          &__google{
+          &__google {
+            @include box(133px, 40px);
             float: left;
             margin: 0 0 0 16px;
             background-image: image-url("google-icon.png");
             background-position: center;
             background-size: cover;
-            height:40px;
-            width:133px;
-            &:hover{
+            &:hover {
               opacity: 0.7;
             }
           }
         }
       }
     }
-    &__right{
-      float:right;
-      &__image{
+    &__right {
+      float: right;
+      &__image {
+        @include box(300px, 260px);
         background-image: image-url("download_content_pc.png");
         background-position: center;
         background-size: cover;
-        height: 260px;
-        width:300px;
       }
     }
   }
