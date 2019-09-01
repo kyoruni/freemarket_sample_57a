@@ -2,19 +2,19 @@
   height: 100px;
   width: 100%;
   position: relative;
-  background-color: white;
+  background-color: $white;
   &__box {
     width: 1020px;
     margin: 0 auto;
     padding: 8px 0 0;
-    background-color: white;
+    background-color: $white;
     &__top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       &__logo {
         display: block;
-        color: #333;
+        color: $dark-gray;
         &__link {
           background-image: image-url("mercari-logo.png");
           background-position: center;
@@ -32,7 +32,7 @@
         margin-left: 45px;
         width: 100%;
         &__box {
-          background: #f5f5f5;
+          background: $light-gray;
           border-radius: 4px;
           padding: 0 42px 0 10px;
           width: 100%;
@@ -81,7 +81,7 @@
                 height: 32px;
                 line-height: 32px;
                 &__icon {
-                  color: #ea352d;
+                  color: $red;
                   font-size: 12px;
                   margin-right: 4px;
                   font-size: 1em;
@@ -89,7 +89,7 @@
                 &__text {
                   font-weight: bold;
                   font-size: 14px;
-                  color: #333;
+                  color: $dark-gray;
                   &:hover {
                     color: $light-blue;
                   }
@@ -117,9 +117,9 @@
               height: 32px;
               line-height: 32px;
               font-size: 0;
-              color: #333;
+              color: $dark-gray;
               &__icon {
-                color: #ccc;
+                color: $light-gray4;
                 font-size: 20px;
                 margin-right: 4px;
                 display: inline-block;

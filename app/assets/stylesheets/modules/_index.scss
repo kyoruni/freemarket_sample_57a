@@ -8,7 +8,7 @@
   }
   &__container {
     padding: 40px 0;
-    background-color: #fff;
+    background-color: $white;
     &__head {
       font-size: 28px;
       text-align: center;
@@ -24,7 +24,7 @@
         text-align: center;
         font-weight: bold;
         &__title {
-          color: #0099e8;
+          color: $light-blue;
           text-decoration: none;
         }
         &__num {
@@ -39,7 +39,7 @@
         width: 99.5%;
         text-align: right;
         &__link {
-          color: #0099e8;
+          color: $light-blue;
           font-weight: bold;
         }
       }
@@ -54,7 +54,7 @@
     width: 750px;
     height: 260px;
     margin: 0 auto;
-    color: #fff;
+    color: $white;
     position: relative;
     &__left {
       position: absolute;
