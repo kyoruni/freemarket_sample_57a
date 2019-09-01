@@ -70,14 +70,13 @@
     &__bottom {
       margin: 30px auto 20px;
       &__icon {
+        @include box(120px, 30px);
         display: inline-block;
         background-image: image-url("mercari-logo_white.png");
         margin-right: 30%;
         color: $white;
         background-position: center;
         background-size: cover;
-        height: 30px;
-        width: 120px;
       }
       &__copy-right {
         color: $white;
@@ -93,10 +92,9 @@
     }
   }
   .sell-btn {
+    @include box(160px, 160px);
     bottom: 32px;
     right: 32px;
-    width: 160px;
-    height: 160px;
     font-size: 22px;
     position: fixed;
     border-radius: 50%;

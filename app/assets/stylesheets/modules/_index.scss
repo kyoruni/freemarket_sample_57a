@@ -51,8 +51,7 @@
   background-position: center;
   background-size: cover;
   &__banner {
-    width: 750px;
-    height: 260px;
+    @include box(750px, 260px);
     margin: 0 auto;
     color: $white;
     position: relative;
@@ -71,11 +70,10 @@
         margin: 20px 0 0;
         line-height: 68px;
         &__image {
+          @include box(68px, 68px);
           background-image: image-url("mercari_icon.png");
           background-position: center;
           background-size: cover;
-          height: 68px;
-          width: 68px;
           float: left;
         }
         &__link {
@@ -83,24 +81,22 @@
           list-style: none;
           float: left;
           &__app {
+            @include box(133px, 40px);
             float: left;
             background-image: image-url("app-icon.png");
             background-position: center;
             background-size: cover;
-            height: 40px;
-            width: 133px;
             &:hover {
               opacity: 0.7;
             }
           }
           &__google {
+            @include box(133px, 40px);
             float: left;
             margin: 0 0 0 16px;
             background-image: image-url("google-icon.png");
             background-position: center;
             background-size: cover;
-            height: 40px;
-            width: 133px;
             &:hover {
               opacity: 0.7;
             }
@@ -111,11 +107,10 @@
     &__right {
       float: right;
       &__image {
+        @include box(300px, 260px);
         background-image: image-url("download_content_pc.png");
         background-position: center;
         background-size: cover;
-        height: 260px;
-        width: 300px;
       }
     }
   }
