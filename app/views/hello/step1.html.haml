@@ -1,0 +1,111 @@
+
+.new-menber-info
+
+  .new-menber-info__header
+
+  .new-menber-info__contents
+    .new-menber-info__contents__all-frame
+      .new-menber-info__contents__all-frame__top-contents
+        %h2 会員情報入力
+
+      .new-menber-info__contents__all-frame__bottom-contents
+        .new-menber-info__contents__all-frame__bottom-contents__bottom-frame
+          .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
+            %p 
+            ニックネーム 
+            %span.required> 必須
+            
+            %input.text{:name => "name", :placeholder => "  例）メルカリ太郎", :type => "text",:class => "nickname-text"}
+          .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
+            %p 
+            メールアドレス
+            %span.required> 必須
+
+            %input.text{:name => "name", :placeholder => "  PC・携帯どちらでも可", :type => "email",:class => "email-text"}
+          .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
+            %p 
+            パスワード
+            %span.required> 必須
+
+            %input.text{:name => "name", :placeholder => "  ７文字以上", :type => "text",:class => "password-text"}
+          .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
+            %p 
+            パスワード（確認）
+            %span.required> 必須
+            %input.text{:name => "name", :placeholder => "  ７文字以上", :type => "text",:class => "re-password-text"}
+          
+          .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
+            %h3 本人確認
+            %p 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+
+          .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
+            %p 
+              お名前(全角)
+              %span.required> 必須
+            %input.text{:name => "name", :placeholder => "  例）山田", :type => "text",:class => "familyname-text"}
+            %input.text{:name => "name", :placeholder => "  例）彩", :type => "text",:class => "familyname-text"}
+            
+
+          .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
+            %p 
+              お名前カナ(全角)
+              %span.required> 必須
+            %input.text{:name => "name", :placeholder => "  例）ヤマダ", :type => "text",:class => "familyname-text"}
+            %input.text{:name => "name", :placeholder => "  例）アヤ", :type => "text",:class => "familyname-text"}
+          
+
+          .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
+            %p 
+              生年月日
+              %span.required> 必須
+            .text-date
+              .y
+                .date-flame
+                  %input{:placeholder => "  --", :type => "text",:class => "year"}
+                    
+                .select-flame
+                  %i.fas.fa-angle-down.fa-lg
+
+              %p.date 年
+              .y
+                .date-flame
+                  %input{:placeholder => "  --", :type => "text",:class => "month"}
+                .select-flame
+                  %i.fas.fa-angle-down.fa-lg
+
+              %p.date 月
+              .y
+                .date-flame
+                  %input{ :placeholder => "  --", :type => "text",:class => "days"}
+                .select-flame
+                  %i.fas.fa-angle-down.fa-lg
+
+              %p.date 日
+
+          %p.Notice ※本人情報は正しく入力してください。会員登録後、
+          %p.Notice2 修正するにはお時間を頂く場合があります。
+
+          .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__not-robo 
+
+
+          .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text-Notice
+
+            %p
+            「次へ進む」のボタンを押すことにより、
+            %a.new-menber-info__contents__all-frame__bottom-contents__bottom-frame__terms_of_service{:href => "#"}利用規約
+            に同意したものとみなします
+
+
+
+          .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__next-btn
+            %p 次に進む
+
+
+          .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__registration
+          
+            = link_to "#" do
+              本人情報の登録について
+              %i.fas.fa-angle-right
+            
+
+= render 'share/simple-footer'
