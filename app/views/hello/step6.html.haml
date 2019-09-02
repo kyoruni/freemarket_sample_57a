@@ -21,16 +21,16 @@
           %p 
             お名前
             %span.required> 必須
-            %input.text{:name => "name", :placeholder => "  例）山田", :type => "text",:class => "name-text"}
-            %input.text{:name => "name", :placeholder => "  例）彩", :type => "text",:class => "name-text"}
+            %input.text{name: "name", placeholder: "  例）山田", type: "text",class: "name-text"}
+            %input.text{name: "name", placeholder: "  例）彩", type: "text",class: "name-text"}
 
         .new-users-info__main__bottom-contents__from
           .new-users-info__main__bottom-contents__from__nickname-text
           %p 
             お名前カナ
             %span.required> 必須
-            %input.text{:name => "name", :placeholder => "  例）ヤマダ", :type => "text",:class => "name-text"}
-            %input.text{:name => "name", :placeholder => "  例）アヤ", :type => "text",:class => "name-text"}
+            %input.text{name: "name", placeholder: "  例）ヤマダ", type: "text",class: "name-text"}
+            %input.text{name: "name", placeholder: "  例）アヤ", type: "text",class: "name-text"}
 
         .new-users-info__main__bottom-contents__from-group
           .new-users-info__main__bottom-contents__from-group__name-text
@@ -40,7 +40,7 @@
             .text-date
               .y
                 .date-flame
-                  %input{:placeholder => "  --", :type => "text",:class => "year"}
+                  %input{placeholder: "  --", type: "text",class: "year"}
                 .select-flame
                   %i.fas.fa-angle-down.fa-lg
 
@@ -48,7 +48,7 @@
                 %span 年
               .y
                 .date-flame
-                  %input{:placeholder => "  --", :type => "text",:class => "month"}
+                  %input{placeholder: "  --", type: "text",class: "month"}
                 .select-flame
                   %i.fas.fa-angle-down.fa-lg
 
@@ -56,7 +56,7 @@
                 %span 月
               .y
                 .date-flame
-                  %input{ :placeholder => "  --", :type => "text",:class => "days"}
+                  %input{placeholder: "  --", type: "text",class: "days"}
                 .select-flame
                   %i.fas.fa-angle-down.fa-lg
 
@@ -69,7 +69,7 @@
           %p 
             郵便番号
             %span.any> 任意
-            %input.text{:name => "name", :placeholder => "  例）1234567", :type => "text",:class => "name-text"}
+            %input.text{name: "name", placeholder: "  例）1234567", type: "text",class: "name-text"}
 
         .new-users-info__main__bottom-contents__from-streetaddress
           %p 
@@ -77,7 +77,7 @@
             %span.any> 任意
             .y
               .date-flame
-                %input.text{:name => "name", :placeholder => "   --", :type => "text",:class => "name-text"}
+                %input.text{name: "name", placeholder: "   --", type: "text",class: "name-text"}
                   
               .select-flame
                 %i.fas.fa-angle-down.fa-lg
@@ -86,19 +86,19 @@
           %p 
             市区町村
             %span.any> 任意
-            %input.text{:name => "name", :placeholder => "  例）横浜市緑区", :type => "text",:class => "name-text"}
+            %input.text{name: "name", placeholder: "  例）横浜市緑区", type: "text",class: "name-text"}
 
         .new-users-info__main__bottom-contents__from-streetaddress
           %p 
             番地
             %span.any> 任意
-            %input.text{:name => "name", :placeholder => "  例）青山1-1-1", :type => "text",:class => "name-text"}
+            %input.text{name: "name", placeholder: "  例）青山1-1-1", type: "text",class: "name-text"}
 
         .new-users-info__main__bottom-contents__from-streetaddress
           %p 
             建物名
             %span.any> 任意
-            %input.text{:name => "name", :placeholder => "  例）柳ビル1-0-3", :type => "text",:class => "name-text"}
+            %input.text{name: "name", placeholder: "  例）柳ビル1-0-3", type: "text",class: "name-text"}
 
         = link_to "#" do
           .new-users-info__main__bottom-contents__registration-btn
