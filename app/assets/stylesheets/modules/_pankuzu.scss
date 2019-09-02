@@ -2,13 +2,12 @@
   width: 1680px;
   height: 49px;
   background: $white;
-  border-top: 1px solid $gray;
-  border-bottom: 1px solid $gray;
+  border-top: 1px solid $light-gray3;
+  box-shadow: 2px 2px 4px $shadow-color;
+  padding-left: 330px;
   line-height: 48px;
-  p {
+
+  .breadcrumb{
     line-height: 48px;
-    width: 500px;
-    height: 30px;
-    margin-left: 300px;
   }
 }

@@ -1,6 +1,22 @@
 crumb :root do
-  link "Home", root_path
+  link "メルカリ", root_path
 end
+
+# マイページ
+crumb :mypage do
+  link "マイページ", '/users/show'
+end
+
+# 本人情報の登録
+crumb :Personal_info_registration do
+  link "本人情報の登録", '/hello/step6'
+  parent :mypage
+end
+
+# # プロフィール編集
+# crumb :mypage do
+#   link "プロフィール", '//'
+# end
 
 # crumb :projects do
 #   link "Projects", projects_path
