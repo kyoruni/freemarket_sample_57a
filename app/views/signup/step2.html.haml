@@ -17,7 +17,8 @@
             %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
 
             .sms-comfirmation__contents__all-frame__bottom-contents__bottom-frame__next-btn
-              %p.sms-btn SMSを送信する
+              %p= f.submit "次に進む", class:"next-btn"
+              -# %p.sms-btn SMSを送信する
             
             %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
 

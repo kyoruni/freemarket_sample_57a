@@ -21,6 +21,9 @@ class SignupController < ApplicationController
   end
 
   def step3
+    session[:phone_number]           = user_params[:phone_number]
+    @user = User.new
+    @user.build_shipping_address
   end
 
   def step4
