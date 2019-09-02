@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_31_094132) do
+ActiveRecord::Schema.define(version: 2019_09_02_003045) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -67,12 +67,14 @@ ActiveRecord::Schema.define(version: 2019_08_31_094132) do
     t.bigint "size_id"
     t.bigint "saler_id"
     t.bigint "buyer_id"
+    t.bigint "region_id"
     t.index ["brand_id"], name: "index_items_on_brand_id"
     t.index ["buyer_id"], name: "index_items_on_buyer_id"
     t.index ["category_id"], name: "index_items_on_category_id"
     t.index ["condition_id"], name: "index_items_on_condition_id"
     t.index ["delivery_day_id"], name: "index_items_on_delivery_day_id"
     t.index ["delivery_way_id"], name: "index_items_on_delivery_way_id"
+    t.index ["region_id"], name: "index_items_on_region_id"
     t.index ["saler_id"], name: "index_items_on_saler_id"
     t.index ["size_id"], name: "index_items_on_size_id"
   end
@@ -107,6 +109,7 @@ ActiveRecord::Schema.define(version: 2019_08_31_094132) do
   add_foreign_key "items", "conditions"
   add_foreign_key "items", "delivery_days"
   add_foreign_key "items", "delivery_ways"
+  add_foreign_key "items", "regions"
   add_foreign_key "items", "sizes"
   add_foreign_key "items", "users", column: "buyer_id"
   add_foreign_key "items", "users", column: "saler_id"
