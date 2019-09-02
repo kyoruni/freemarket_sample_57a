@@ -1,28 +1,29 @@
+= form_for @user,url: step3_signup_index_path, method: :get do |f|
+  .sms-comfirmation
 
-.sms-comfirmation
+    .sms-comfirmation__header
 
-  .sms-comfirmation__header
+    .sms-comfirmation__contents
+      .sms-comfirmation__contents__all-frame
+        .sms-comfirmation__contents__all-frame__top-contents
+          %h2 電話番号の確認
+        
+        .sms-comfirmation__contents__all-frame__bottom-contents
+          .sms-comfirmation__contents__all-frame__bottom-contents__bottom-frame
+            .sms-comfirmation__contents__all-frame__bottom-contents__bottom-frame__from
+              %h4 携帯の電話番号
+              = f.fields_for :shipping_addres do |i|
+                = i.text_field :phone_number, placeholder: '  携帯の電話番号を入力', class: "telephone-number"
+            %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
 
-  .sms-comfirmation__contents
-    .sms-comfirmation__contents__all-frame
-      .sms-comfirmation__contents__all-frame__top-contents
-        %h2 電話番号の確認
-      
-      .sms-comfirmation__contents__all-frame__bottom-contents
-        .sms-comfirmation__contents__all-frame__bottom-contents__bottom-frame
-          .sms-comfirmation__contents__all-frame__bottom-contents__bottom-frame__from
-            %h4 携帯の電話番号
-            %input{:placeholder => "  携帯の電話番号を入力", :type => "text",:class => "telephone-number"}
-          %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-
-          .sms-comfirmation__contents__all-frame__bottom-contents__bottom-frame__next-btn
-            %p.sms-btn SMSを送信する
-          
-          %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+            .sms-comfirmation__contents__all-frame__bottom-contents__bottom-frame__next-btn
+              %p.sms-btn SMSを送信する
+            
+            %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
 
 
-          = link_to "#" , class: "reason-box" do
-            %p 電話番号の確認が必要な理由>
+            = link_to "#" , class: "reason-box" do
+              %p 電話番号の確認が必要な理由>
             
 = render 'share/simple-footer'
 
