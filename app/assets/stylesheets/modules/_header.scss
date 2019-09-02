@@ -55,12 +55,14 @@
     &__nav {
       margin: 8px 0 0;
       height: 32px;
+      display: flex;
+      justify-content: space-between;
       &__left {
-        float: left;
         line-height: 32px;
         display: block;
         &__contents {
           list-style: none;
+          display: flex;
           &__list {
             padding-left: 0;
             position: relative;
@@ -95,7 +97,6 @@
         }
       }
       &__right {
-        float: right;
         line-height: 32px;
         display: block;
         &__contents {
