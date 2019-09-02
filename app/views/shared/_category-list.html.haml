@@ -1,0 +1,20 @@
+.category-list-position
+.category
+  -# 親カテゴリー
+  %ul.category-list-parent
+    - categories.each do |parent|
+      - if parent.ancestry == nil
+        %li.category-list-parent-item
+          = parent.name
+          -# 子カテゴリー
+          %ul.category-list-child
+            - parent.children.each do |child|
+              %li.category-list-child-item
+                = child.name
+                -# 孫カテゴリー
+                %ul.category-list-grand-child
+                  - child.children.each do |grandChild|
+                    %li.category-list-grand-child-item
+                      = grandChild.name
+    %li.category-list-parent-item
+      カテゴリー一覧
