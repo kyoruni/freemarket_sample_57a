@@ -5,11 +5,12 @@ end
 # マイページ
 crumb :mypage do
   link "マイページ", '/users/show'
+  parent :root
 end
 
 # 本人情報の登録
-crumb :Personal_info_registration do
-  link "本人情報の登録", '/hello/step6'
+crumb :personal_info_regist do
+  link "本人情報の登録", '/step6'
   parent :mypage
 end
 

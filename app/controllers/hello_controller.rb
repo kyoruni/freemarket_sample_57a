@@ -22,4 +22,7 @@ class HelloController < ApplicationController
 
   def pan
   end
+
+  def pan2
+  end
 end
