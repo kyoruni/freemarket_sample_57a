@@ -30,7 +30,7 @@ $(document).on("turbolinks:load", function() {
   );
 
   // 親カテゴリーにマウスが乗ったとき
-  $(".category-list-parent-item").hover(
+  $(".category-list__parent__item").hover(
     function() {
       showChild(this);
     },
@@ -40,7 +40,7 @@ $(document).on("turbolinks:load", function() {
   );
 
   // 子カテゴリーにマウスが乗ったとき
-  $(".category-list-child-item").hover(
+  $(".category-list__child__item").hover(
     function() {
       showChild(this);
     },

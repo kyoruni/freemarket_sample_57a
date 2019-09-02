@@ -5,39 +5,37 @@
 
 /*-- カテゴリーリスト --*/
 .category {
-  display: none;
+  display: none; // jsで表示させるので、最初は非表示にしておく
   position: relative;
   z-index: 1111;
 }
 
-// 親リスト本体
-.category-list-parent {
+/*-- 親リスト本体 --*/
+.category-list__parent {
   background: $white;
   top: 0;
-  color: #333;
+  color: $dark-gray;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
   display: block;
+  /*-- 親リストの項目 --*/
+  &__item {
+    width: 224px;
+    max-height: 44px;
+    padding: 15px 16px;
+    line-height: 14px;
+    font-size: 14px;
+    display: -webkit-box; // box要素にする
+    -webkit-box-align: center; // 縦位置中央
+    /*-- 親リスト マウス乗せたとき --*/
+    &:hover {
+      background: $red3;
+      color: $white;
+    }
+  }
 }
 
-// 親リストの項目
-.category-list-parent-item {
-  width: 224px;
-  max-height: 44px;
-  padding: 15px 16px;
-  line-height: 14px;
-  font-size: 14px;
-  display: -webkit-box; // box要素にする
-  -webkit-box-align: center; // 縦位置中央
-}
-
-// 親リスト マウス乗せたとき
-.category-list-parent-item:hover {
-  background: $red3;
-  color: $white;
-}
-
-// 子供リスト本体
-.category-list-child {
+/*-- 子リスト本体 --*/
+.category-list__child {
   display: none;
   position: absolute;
   top: 0;
@@ -47,56 +45,33 @@
   line-height: 14px;
   background: $white;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
-  color: #333333;
+  color: $dark-gray;
   height: 100%;
-}
-
-// 子供リストの項目
-.category-list-child-item {
-  max-height: 30px;
-  padding: 8px 16px;
-  &:hover {
-    background: #ebebeb;
-    color: #333333;
+  /*-- 子リストの項目 --*/
+  &__item {
+    max-height: 30px;
+    padding: 8px 16px;
+    /*-- 子リスト マウス乗せたとき --*/
+    &:hover {
+      background: #ebebeb;
+      color: $dark-gray;
+    }
   }
 }
 
-// 子供リスト マウス乗せたとき
-.category-list-child-item:hover {
-  background: #ebebeb;
-  color: #333;
-}
-
-// 孫リスト本体
-.category-list-grand-child {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 224px;
-  width: 320px;
-  min-height: 100%;
-  font-size: 14px;
-  line-height: 14px;
-  background: $white;
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
-  color: #333333;
-}
-
-// 孫リストの項目
-.category-list-grand-child-item {
-  max-height: 30px;
-  padding: 8px 16px;
-  background: $white;
-  &:hover {
-    background: #ebebeb;
-    color: #333333;
+/*-- 孫リスト本体 --*/
+.category-list__grand__child {
+  @extend .category-list__child;
+  @include box(320px, auto); // 幅と高さは差異があるので上書き
+  min-height: 100%; // 項目が少なくても、子リストと同じ高さにする
+  /*-- 孫リストの項目 --*/
+  &__item {
+    @extend .category-list__child__item;
+    /*-- 孫リスト マウス乗せたとき --*/
+    &:hover {
+      @extend .category-list__child__item:hover;
+    }
   }
-}
-
-// 孫リスト マウス乗せたとき
-.category-list-grand-child-item:hover {
-  background: #ebebeb;
-  color: #333;
 }
 
 /*-- 今マウスが乗っているブロック判別用 --*/

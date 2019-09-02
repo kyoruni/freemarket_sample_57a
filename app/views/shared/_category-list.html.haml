@@ -1,20 +1,20 @@
 .category-list-position
   .category
     -# 親カテゴリー
-    %ul.category-list-parent
+    %ul.category-list__parent
       - categories.each do |parent|
         - if parent.ancestry == nil
-          %li.category-list-parent-item
+          %li.category-list__parent__item
             = parent.name
             -# 子カテゴリー
-            %ul.category-list-child
+            %ul.category-list__child
               - parent.children.each do |child|
-                %li.category-list-child-item
+                %li.category-list__child__item
                   = child.name
                   -# 孫カテゴリー
-                  %ul.category-list-grand-child
+                  %ul.category-list__grand__child
                     - child.children.each do |grandChild|
-                      %li.category-list-grand-child-item
+                      %li.category-list__grand__child__item
                         = grandChild.name
-      %li.category-list-parent-item
+      %li.category-list__parent__item
         カテゴリー一覧
