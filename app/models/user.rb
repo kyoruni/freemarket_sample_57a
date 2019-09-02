@@ -7,5 +7,7 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :address
   has_one :shipping_address
   accepts_nested_attributes_for :shipping_address
+  has_one :credit
+  accepts_nested_attributes_for :credit
 
 end

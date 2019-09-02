@@ -27,8 +27,7 @@
           %h3<
             都道府県
             %span.required> 必須
-            -# = i.text_field :
-          %select{class:"sign-up--form"}
+            = i.text_field :address, placeholder: '例)  東京都', class:"sign-up--form"
         .sign-up-form__container__input--form
           %h3<
             市町村

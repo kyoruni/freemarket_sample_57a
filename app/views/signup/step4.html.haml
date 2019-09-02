@@ -1,60 +1,54 @@
+= form_for @user,url: step5_signup_index_path, method: :get do |f|
+  =f.fields_for :credit do |i|
+    .payment-method
+      .payment-method__header
+      .payment-method__contents
+        .payment-method__contents__all-frame
+          .payment-method__contents__all-frame__top-contents
+            %h2 支払い方法
+          .payment-method__contents__all-frame__bottom-contents
+            .payment-method__contents__all-frame__bottom-contents__bottom-frame
+              .payment-method__contents__all-frame__bottom-contents__bottom-frame__from
+                %h4 
+                カード番号
+                %span.required> 必須
+                = i.text_field :number, type: "text", placeholder: "  半角数字のみ", class: "card-number"
+                = image_tag asset_path("visa.svg"),class:"card-image"
+                = image_tag asset_path("master-card.svg"),class:"card-image"
+                = image_tag asset_path("saison-card.svg"),class:"card-image"
+                = image_tag asset_path("jcb.svg"),class:"card-image"
+                = image_tag asset_path("american_express.svg"),class:"card-image"
+                = image_tag asset_path("dinersclub.svg"),class:"card-image"
+                = image_tag asset_path("discover.svg"),class:"card-image"
+              .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form
+                %p 
+                  有効期限
+                  %span.required> 必須
+                .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date
+                  .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date__expiration-date
+                    .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date__expiration-date__date-flame
+                      = i.text_field :expiration_date_month, type: "text", placeholder: "  --", class: "year"
+                    .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date__expiration-date__select-flame
+                      %i.fas.fa-angle-down.fa-lg
+                  %p.date 月
 
-
-.payment-method
-
-  .payment-method__header
-
-  .payment-method__contents
-    .payment-method__contents__all-frame
-      .payment-method__contents__all-frame__top-contents
-        %h2 支払い方法
-      .payment-method__contents__all-frame__bottom-contents
-        .payment-method__contents__all-frame__bottom-contents__bottom-frame
-          .payment-method__contents__all-frame__bottom-contents__bottom-frame__from
-            %h4 
-            カード番号
-            %span.required> 必須
-            %input{:placeholder => "  半角数字のみ", :type => "text",:class => "card-number"}
-            = image_tag asset_path("visa.svg"),class:"card-image"
-            = image_tag asset_path("master-card.svg"),class:"card-image"
-            = image_tag asset_path("saison-card.svg"),class:"card-image"
-            = image_tag asset_path("jcb.svg"),class:"card-image"
-            = image_tag asset_path("american_express.svg"),class:"card-image"
-            = image_tag asset_path("dinersclub.svg"),class:"card-image"
-            = image_tag asset_path("discover.svg"),class:"card-image"
-
-          .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form
-            %p 
-              有効期限
-              %span.required> 必須
-            .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date
-              .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date__expiration-date
-                .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date__expiration-date__date-flame
-                  %input{:placeholder => "  --", :type => "text",:class => "year"}
-                    
-                .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date__expiration-date__select-flame
-                  %i.fas.fa-angle-down.fa-lg
-
-              %p.date 月
-              .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date__expiration-date
-                .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date__expiration-date__date-flame
-                  %input{:placeholder => "  --", :type => "text",:class => "year"}
-                    
-                .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date__expiration-date__select-flame
-                  %i.fas.fa-angle-down.fa-lg
+                  .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date__expiration-date
+                    .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date__expiration-date__date-flame
+                      = i.text_field :expiration_date_year, type: "text", placeholder: "  --", class: "year"
+                    .payment-method__contents__all-frame__bottom-contents__bottom-frame__expiration-date-form__text-date__expiration-date__select-flame
+                      %i.fas.fa-angle-down.fa-lg
+                  %p.date 年
+                
+              .payment-method__contents__all-frame__bottom-contents__bottom-frame__cord-from
+                %h4 
+                セキュリティコード
+                %span.required> 必須
+                = i.text_field :security_code, type: "text", placeholder: "  カード背面４桁もしくは３桁の番号", class: "card-number"
               
-              %p.date 年
-            
-          .payment-method__contents__all-frame__bottom-contents__bottom-frame__cord-from
-            %h4 
-            セキュリティコード
-            %span.required> 必須
-            %input{:placeholder => "  カード背面４桁もしくは３桁の番号", :type => "text",:class => "card-number"}
-          
-          = link_to "#" , class: "reason-box" do
-            %p カード裏面の番号とは？
+              = link_to "#" , class: "reason-box" do
+                %p カード裏面の番号とは？
 
-          .payment-method__contents__all-frame__bottom-contents__bottom-frame__next-btn
-            %p 次に進む
+              .payment-method__contents__all-frame__bottom-contents__bottom-frame__next-btn
+                = i.submit "次へ進む", class: "next__btn"
 = render 'share/simple-footer'
 

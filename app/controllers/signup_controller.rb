@@ -15,21 +15,37 @@ class SignupController < ApplicationController
     session[:last_name_kana]         = user_params[:last_name_kana]
     session[:first_name_kana]        = user_params[:first_name_kana]
     session[:birthday]               = user_params[:birthday]
-    @user = User.new
+    @user = User.new()
     @user.build_shipping_address
 
   end
 
   def step3
+    @user = User.new()
     session[:phone_number]           = user_params[:phone_number]
-    @user = User.new
     @user.build_shipping_address
   end
 
   def step4
+    session[:last_name]              = user_params[:last_name]
+    session[:first_name]             = user_params[:first_name]
+    session[:last_name_kana]         = user_params[:last_name_kana]
+    session[:first_name_kana]        = user_params[:first_name_kana]
+    session[:postal_code]            = user_params[:postal_code]
+    session[:address]                = user_params[:address]
+    session[:building]               = user_params[:building]
+    session[:phone_number]           = user_params[:phone_number]
+    @user = User.new()
+    @user.build_credit
   end
 
   def step5
+    session[:number]
+    session[:expiration_date_month]
+    session[:expiration_date_year]
+    session[:security_code]
+    @user = User.new()
+
   end
 
   private
@@ -45,6 +61,7 @@ class SignupController < ApplicationController
       :last_name_kana,
       :first_name_kana,
       :birthday,
+      phone_number_attributes: [:id]
     )
   end
 end
