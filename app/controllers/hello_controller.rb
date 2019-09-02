@@ -16,4 +16,7 @@ class HelloController < ApplicationController
 
   def step5
   end
+
+  def step6
+  end
 end
