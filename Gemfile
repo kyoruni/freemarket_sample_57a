@@ -92,3 +92,6 @@ group :production do
   # ユニコーン
   gem 'unicorn', '5.4.1'
 end
+
+# パンくず
+gem 'gretel'
