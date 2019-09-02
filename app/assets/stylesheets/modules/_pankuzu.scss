@@ -1,0 +1,14 @@
+.pankuzu-box{
+  width: 1680px;
+  height: 49px;
+  background: $white;
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  line-height: 48px;
+  p {
+    line-height: 48px;
+    width: 500px;
+    height: 30px;
+    margin-left: 300px;
+  }
+}
