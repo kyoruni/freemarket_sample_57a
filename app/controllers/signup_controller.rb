@@ -16,6 +16,7 @@ class SignupController < ApplicationController
     session[:first_name_kana]        = user_params[:first_name_kana]
     session[:birthday]               = user_params[:birthday]
     @user = User.new
+    @user.build_shipping_address
 
   end
 
