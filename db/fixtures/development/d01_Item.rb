@@ -14,6 +14,7 @@ Item.seed do |s|
   s.delivery_day_id = 1
   s.size_id = 1
   s.region_id = 10
+  s.postage_id = 2
 end
 
 data_id += 1
@@ -30,4 +31,5 @@ Item.seed do |s|
   s.delivery_day_id = 2
   s.size_id = 1
   s.region_id = 30
+  s.postage_id = 1
 end
