@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
+  before_action :set_category_list, only: :show
+
   def show
-    @categories = Category.order("id ASC")
   end
 end
