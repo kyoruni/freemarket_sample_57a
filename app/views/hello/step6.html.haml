@@ -1,0 +1,112 @@
+= render 'shared/main_header'
+
+.mypage
+  = render 'users/mypage-left'
+
+  .new-users-info
+    .new-users-info__main
+      .new-users-info__main__top-contents
+        %h2 本人情報の登録
+      .new-users-info__main__bottom-contents
+        %p
+          お客さまの本人情報をご登録ください。
+          %br 
+          登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+        .identification_update_box
+          = link_to "#" , class: "identification_update" do
+            本人確認書類のアップデートについて＞
+
+        .new-users-info__main__bottom-contents__from
+          .new-users-info__main__bottom-contents__from__nickname-text
+          %p 
+            お名前
+            %span.required> 必須
+            %input.text{name: "name", placeholder: "  例）山田", type: "text",class: "name-text"}
+            %input.text{name: "name", placeholder: "  例）彩", type: "text",class: "name-text"}
+
+        .new-users-info__main__bottom-contents__from
+          .new-users-info__main__bottom-contents__from__nickname-text
+          %p 
+            お名前カナ
+            %span.required> 必須
+            %input.text{name: "name", placeholder: "  例）ヤマダ", type: "text",class: "name-text"}
+            %input.text{name: "name", placeholder: "  例）アヤ", type: "text",class: "name-text"}
+
+        .new-users-info__main__bottom-contents__from-group
+          .new-users-info__main__bottom-contents__from-group__name-text
+            %p 
+              生年月日
+              %span.required> 必須
+            .text-date
+              .y
+                .date-flame
+                  %input{placeholder: "  --", type: "text",class: "year"}
+                .select-flame
+                  %i.fas.fa-angle-down.fa-lg
+
+              %p.date 
+                %span 年
+              .y
+                .date-flame
+                  %input{placeholder: "  --", type: "text",class: "month"}
+                .select-flame
+                  %i.fas.fa-angle-down.fa-lg
+
+              %p.date
+                %span 月
+              .y
+                .date-flame
+                  %input{placeholder: "  --", type: "text",class: "days"}
+                .select-flame
+                  %i.fas.fa-angle-down.fa-lg
+
+              %p.date 
+                %span 日
+        .new-users-info__main__bottom-contents__Notes-box
+          %p ※出品されたことがある、本人情報未登録のお客さまもご対象となります。
+
+        .new-users-info__main__bottom-contents__from-streetaddress
+          %p 
+            郵便番号
+            %span.any> 任意
+            %input.text{name: "name", placeholder: "  例）1234567", type: "text",class: "name-text"}
+
+        .new-users-info__main__bottom-contents__from-streetaddress
+          %p 
+            都道府県
+            %span.any> 任意
+            .y
+              .date-flame
+                %input.text{name: "name", placeholder: "   --", type: "text",class: "name-text"}
+                  
+              .select-flame
+                %i.fas.fa-angle-down.fa-lg
+
+        .new-users-info__main__bottom-contents__from-streetaddress
+          %p 
+            市区町村
+            %span.any> 任意
+            %input.text{name: "name", placeholder: "  例）横浜市緑区", type: "text",class: "name-text"}
+
+        .new-users-info__main__bottom-contents__from-streetaddress
+          %p 
+            番地
+            %span.any> 任意
+            %input.text{name: "name", placeholder: "  例）青山1-1-1", type: "text",class: "name-text"}
+
+        .new-users-info__main__bottom-contents__from-streetaddress
+          %p 
+            建物名
+            %span.any> 任意
+            %input.text{name: "name", placeholder: "  例）柳ビル1-0-3", type: "text",class: "name-text"}
+
+        = link_to "#" do
+          .new-users-info__main__bottom-contents__registration-btn
+            %p 登録する
+
+        .new-users-info__main__bottom-contents__registration-text
+          = link_to "#" do
+            本人情報の登録について
+            %i.fas.fa-angle-right
+
+= render 'shared/main_footer'
