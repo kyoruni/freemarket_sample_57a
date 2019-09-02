@@ -1,5 +1,21 @@
 $(document).on("turbolinks:load", function() {
-  // カテゴリー一覧
+  // 触ったところをアクティブ状態にする＆次の階層のカテゴリーを表示
+  function showChild(target) {
+    $(target).addClass("active-list");
+    $(target)
+      .children()
+      .show();
+  }
+
+  // 離れたところを非アクティブ状態にする＆次の階層のカテゴリーを隠す
+  function hideChild(target) {
+    $(target).removeClass("active-list");
+    $(target)
+      .children()
+      .hide();
+  }
+
+  // カテゴリー一覧にマウスが乗ったとき
   $("#category").hover(
     function() {
       // 今触ったところをアクティブ状態にする＆親カテゴリーを表示
@@ -13,39 +29,23 @@ $(document).on("turbolinks:load", function() {
     }
   );
 
-  // 親カテゴリー
+  // 親カテゴリーにマウスが乗ったとき
   $(".category-list-parent-item").hover(
     function() {
-      // 今触ったところをアクティブ状態にする＆子カテゴリーを表示
-      $(this).addClass("active-list");
-      $(this)
-        .children()
-        .show();
+      showChild(this);
     },
     function() {
-      // 今離れたところを非アクティブ状態にする＆子カテゴリーを隠す
-      $(this).removeClass("active-list");
-      $(this)
-        .children()
-        .hide();
+      hideChild(this);
     }
   );
 
-  // 子カテゴリー
+  // 子カテゴリーにマウスが乗ったとき
   $(".category-list-child-item").hover(
     function() {
-      // 今触ったところをアクティブ状態にする＆孫カテゴリーを表示
-      $(this).addClass("active-list");
-      $(this)
-        .children()
-        .show();
+      showChild(this);
     },
     function() {
-      // 今離れたところを非アクティブ状態にする＆孫カテゴリーを隠す
-      $(this).removeClass("active-list");
-      $(this)
-        .children()
-        .hide();
+      hideChild(this);
     }
   );
 });
