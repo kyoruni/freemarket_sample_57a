@@ -13,8 +13,6 @@ Rails.application.routes.draw do
   get 'step4' => 'hello#step4'
   get 'step5' => 'hello#step5'
   get 'step6' => 'hello#step6'
-  get 'pan' => 'hello#pan'
-  get 'pan2' => 'hello#pan2'
 end
 
 

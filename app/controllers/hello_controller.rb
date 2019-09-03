@@ -19,10 +19,4 @@ class HelloController < ApplicationController
 
   def step6
   end
-
-  def pan
-  end
-
-  def pan2
-  end
 end
