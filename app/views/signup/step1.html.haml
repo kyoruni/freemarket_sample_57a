@@ -40,16 +40,15 @@
               %p 
                 お名前(全角)
                 %span.required> 必須
-                = f.text_field :last_name, placeholder: '例)  山田', class: "familyname-text"
-                = f.text_field :first_name, placeholder: '例)  彩', class: "familyname-text"
+              = f.text_field :last_name, placeholder: '例)  山田', class: "familyname-text"
+              = f.text_field :first_name, placeholder: '例)  彩', class: "familyname-text"
               
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
                 お名前カナ(全角)
                 %span.required> 必須
-              = f.fields_for :address do |i|
-                = i.text_field :last_name_kana, placeholder: '例)  ヤマダ', class: "familyname-text"
-                = i.text_field :first_name_kana, placeholder: '例)  アヤ', class: "familyname-text"
+              = f.text_field :last_name_kana, placeholder: '例)  ヤマダ', class: "familyname-text"
+              = f.text_field :first_name_kana, placeholder: '例)  アヤ', class: "familyname-text"
             
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
