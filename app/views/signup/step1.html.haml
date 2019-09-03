@@ -14,7 +14,7 @@
               %p 
               ニックネーム 
               %span.required> 必須
-              = f.text_field :name, placeholder: '例)  メルカリ太郎', class:"nickname-text"
+            = f.text_field :name, placeholder: '例)  メルカリ太郎', class:"nickname-text"
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
               メールアドレス
@@ -40,9 +40,8 @@
               %p 
                 お名前(全角)
                 %span.required> 必須
-              = f.fields_for :address do |i|
-                = i.text_field :last_name, placeholder: '例)  山田', class: "familyname-text"
-                = i.text_field :first_name, placeholder: '例)  彩', class: "familyname-text"
+                = f.text_field :last_name, placeholder: '例)  山田', class: "familyname-text"
+                = f.text_field :first_name, placeholder: '例)  彩', class: "familyname-text"
               
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 

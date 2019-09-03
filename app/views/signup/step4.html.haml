@@ -1,4 +1,4 @@
-= form_for @user,url: step5_signup_index_path, method: :get do |f|
+= form_for @user,url: signup_create_signup_index_path, method: :post do |f|
   =f.fields_for :credit do |i|
     .payment-method
       .payment-method__header

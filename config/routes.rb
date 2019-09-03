@@ -7,12 +7,12 @@ Rails.application.routes.draw do
 
   resources :signup do
     collection do
-      get 'step1' => 'signup#step1'
-      get 'step2' => 'signup#step2'
-      get 'step3' => 'signup#step3'
-      get 'step4' => 'signup#step4'
-      get 'step5' => 'signup#step5'# ここで、入力の全てが終了する
-      get 'done' # 登録完了後のページ
+      get  '/'               => 'signup#index'
+      get  'step1'           => 'signup#step1'
+      get  'step2'           => 'signup#step2'
+      get  'step3'           => 'signup#step3'
+      get  'step4'           => 'signup#step4'
+      post 'signup/create'   => 'signup#create'
     end
   end
 
