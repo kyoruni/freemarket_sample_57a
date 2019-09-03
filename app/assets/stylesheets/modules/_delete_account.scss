@@ -6,14 +6,11 @@
   &__registration-btn{
     width: 343px;
     height: 50px;
-    text-align: center;
     background-color:$red;
-    position: relative;
+    text-align: center;
+    line-height: 50px;
     margin: 0px auto;
     p {
-      position: absolute;
-      top: 14px;
-      left: 145.5px;
       color: $white;
     }
   }
