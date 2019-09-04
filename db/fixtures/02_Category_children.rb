@@ -51,6 +51,20 @@
 # 03-13 ベビー・キッズ > おもちゃ
 # 03-14 ベビー・キッズ > 行事/記念品
 # 03-15 ベビー・キッズ > その他
+#############################################
+# 04 インテリア・住まい・小物の孫カテゴリー作成
+# 04-01 インテリア・住まい・小物 > キッチン/食器
+# 04-02 インテリア・住まい・小物 > ベッド/マットレス
+# 04-03 インテリア・住まい・小物 > ソファ/ソファベッド
+# 04-04 インテリア・住まい・小物 > 椅子/チェア
+# 04-05 インテリア・住まい・小物 > 机/テーブル
+# 04-06 インテリア・住まい・小物 > 収納家具
+# 04-07 インテリア・住まい・小物 > ラグ/カーペット/マット
+# 04-08 インテリア・住まい・小物 > カーテン/ブラインド
+# 04-09 インテリア・住まい・小物 > ライト/照明
+# 04-09 インテリア・住まい・小物 > 寝具
+# 04-10 インテリア・住まい・小物 > インテリア小物
+# 04-11 インテリア・住まい・小物 > 季節/年中行事
 
 # 01-01 レディース > トップス
 parent_id = "1/14"
@@ -714,4 +728,197 @@ parent_id = "3/61"
 Category.seed(:id,
   {id: 586, name: "母子手帳用品", ancestry: parent_id },
   {id: 587, name: "その他", ancestry: parent_id },
+)
+
+# 04-01 インテリア・住まい・小物 > キッチン/食器
+parent_id = "4/62"
+Category.seed(:id,
+  {id: 588, name: "食器", ancestry: parent_id },
+  {id: 589, name: "調理器具", ancestry: parent_id },
+  {id: 590, name: "収納/キッチン雑貨", ancestry: parent_id },
+  {id: 591, name: "弁当用品", ancestry: parent_id },
+  {id: 592, name: "カトラリー(スプーン等)", ancestry: parent_id },
+  {id: 593, name: "テーブル用品", ancestry: parent_id },
+  {id: 594, name: "容器", ancestry: parent_id },
+  {id: 595, name: "エプロン", ancestry: parent_id },
+  {id: 596, name: "アルコールグッズ", ancestry: parent_id },
+  {id: 597, name: "浄水機", ancestry: parent_id },
+  {id: 598, name: "その他", ancestry: parent_id },
+)
+
+# 04-02 インテリア・住まい・小物 > ベッド/マットレス
+parent_id = "4/63"
+Category.seed(:id,
+  {id: 599, name: "セミシングルベッド", ancestry: parent_id },
+  {id: 600, name: "シングルベッド", ancestry: parent_id },
+  {id: 601, name: "セミダブルベッド", ancestry: parent_id },
+  {id: 602, name: "ダブルベッド", ancestry: parent_id },
+  {id: 603, name: "ワイドダブルベッド", ancestry: parent_id },
+  {id: 604, name: "クイーンベッド", ancestry: parent_id },
+  {id: 605, name: "キングベッド", ancestry: parent_id },
+  {id: 606, name: "脚付きマットレスベッド", ancestry: parent_id },
+  {id: 607, name: "マットレス", ancestry: parent_id },
+  {id: 608, name: "すのこベッド", ancestry: parent_id },
+  {id: 609, name: "ロフトベッド/システムベッド", ancestry: parent_id },
+  {id: 610, name: "簡易ベッド/折りたたみベッド", ancestry: parent_id },
+  {id: 611, name: "収納付き", ancestry: parent_id },
+  {id: 612, name: "その他", ancestry: parent_id },
+)
+
+# 04-03 インテリア・住まい・小物 > ソファ/ソファベッド
+parent_id = "4/64"
+Category.seed(:id,
+  {id: 613, name: "ソファセット", ancestry: parent_id },
+  {id: 614, name: "シングルソファ", ancestry: parent_id },
+  {id: 615, name: "ラブソファ", ancestry: parent_id },
+  {id: 616, name: "トリプルソファ", ancestry: parent_id },
+  {id: 617, name: "オットマン", ancestry: parent_id },
+  {id: 618, name: "コーナーソファ", ancestry: parent_id },
+  {id: 619, name: "ビーズソファ/クッションソファ", ancestry: parent_id },
+  {id: 620, name: "ローソファ/フロアソファ", ancestry: parent_id },
+  {id: 621, name: "ソファベッド", ancestry: parent_id },
+  {id: 622, name: "応接セット", ancestry: parent_id },
+  {id: 623, name: "ソファカバー", ancestry: parent_id },
+  {id: 624, name: "リクライニングソファ", ancestry: parent_id },
+  {id: 625, name: "その他", ancestry: parent_id },
+)
+
+# 04-04 インテリア・住まい・小物 > 椅子/チェア
+parent_id = "4/65"
+Category.seed(:id,
+  {id: 626, name: "一般", ancestry: parent_id },
+  {id: 627, name: "スツール", ancestry: parent_id },
+  {id: 628, name: "ダイニングチェア", ancestry: parent_id },
+  {id: 629, name: "ハイバックチェア", ancestry: parent_id },
+  {id: 630, name: "ロッキングチェア", ancestry: parent_id },
+  {id: 631, name: "座椅子", ancestry: parent_id },
+  {id: 632, name: "折り畳みイス", ancestry: parent_id },
+  {id: 633, name: "デスクチェア", ancestry: parent_id },
+  {id: 634, name: "その他", ancestry: parent_id },
+)
+
+# 04-05 インテリア・住まい・小物 > 机/テーブル
+parent_id = "4/66"
+Category.seed(:id,
+  {id: 635, name: "こたつ", ancestry: parent_id },
+  {id: 636, name: "カウンターテーブル", ancestry: parent_id },
+  {id: 637, name: "サイドテーブル", ancestry: parent_id },
+  {id: 638, name: "センターテーブル", ancestry: parent_id },
+  {id: 639, name: "ダイニングテーブル", ancestry: parent_id },
+  {id: 640, name: "座卓/ちゃぶ台", ancestry: parent_id },
+  {id: 641, name: "アウトドア用", ancestry: parent_id },
+  {id: 642, name: "パソコン用", ancestry: parent_id },
+  {id: 643, name: "事務机/学習机", ancestry: parent_id },
+  {id: 644, name: "その他", ancestry: parent_id },
+)
+
+# 04-06 インテリア・住まい・小物 > 収納家具
+parent_id = "4/67"
+Category.seed(:id,
+  {id: 645, name: "リビング収納", ancestry: parent_id },
+  {id: 646, name: "キッチン収納", ancestry: parent_id },
+  {id: 647, name: "玄関/屋外収納", ancestry: parent_id },
+  {id: 648, name: "バス/トイレ収納", ancestry: parent_id },
+  {id: 649, name: "本収納", ancestry: parent_id },
+  {id: 650, name: "本/CD/DVD収納", ancestry: parent_id },
+  {id: 651, name: "洋服タンス/押入れ収納", ancestry: parent_id },
+  {id: 652, name: "電話台/ファックス台", ancestry: parent_id },
+  {id: 653, name: "ドレッサー/鏡台", ancestry: parent_id },
+  {id: 654, name: "棚/ラック", ancestry: parent_id },
+  {id: 655, name: "ケース/ボックス", ancestry: parent_id },
+  {id: 656, name: "その他", ancestry: parent_id },
+)
+
+# 04-07 インテリア・住まい・小物 > ラグ/カーペット/マット
+parent_id = "4/68"
+Category.seed(:id,
+  {id: 657, name: "ラグ", ancestry: parent_id },
+  {id: 658, name: "カーペット", ancestry: parent_id },
+  {id: 659, name: "ホットカーペット", ancestry: parent_id },
+  {id: 660, name: "玄関/キッチンマット", ancestry: parent_id },
+  {id: 661, name: "トイレ/バスマット", ancestry: parent_id },
+  {id: 662, name: "その他", ancestry: parent_id },
+)
+
+# 04-08 インテリア・住まい・小物 > カーテン/ブラインド
+parent_id = "4/69"
+Category.seed(:id,
+  {id: 663, name: "カーテン", ancestry: parent_id },
+  {id: 664, name: "ブラインド", ancestry: parent_id },
+  {id: 665, name: "ロールスクリーン", ancestry: parent_id },
+  {id: 666, name: "のれん", ancestry: parent_id },
+  {id: 667, name: "その他", ancestry: parent_id },
+)
+
+# 04-09 インテリア・住まい・小物 > ライト/照明
+parent_id = "4/70"
+Category.seed(:id,
+  {id: 668, name: "蛍光灯/電球", ancestry: parent_id },
+  {id: 669, name: "天井照明", ancestry: parent_id },
+  {id: 670, name: "フロアスタンド", ancestry: parent_id },
+  {id: 671, name: "その他", ancestry: parent_id },
+)
+
+# 04-09 インテリア・住まい・小物 > 寝具
+parent_id = "4/71"
+Category.seed(:id,
+  {id: 672, name: "布団/毛布", ancestry: parent_id },
+  {id: 673, name: "枕", ancestry: parent_id },
+  {id: 674, name: "シーツ/カバー", ancestry: parent_id },
+  {id: 675, name: "その他", ancestry: parent_id },
+)
+
+# 04-10 インテリア・住まい・小物 > インテリア小物
+parent_id = "4/72"
+Category.seed(:id,
+  {id: 676, name: "ごみ箱", ancestry: parent_id },
+  {id: 677, name: "ウェルカムボード", ancestry: parent_id },
+  {id: 678, name: "オルゴール", ancestry: parent_id },
+  {id: 679, name: "クッション", ancestry: parent_id },
+  {id: 680, name: "クッションカバー", ancestry: parent_id },
+  {id: 681, name: "スリッパラック", ancestry: parent_id },
+  {id: 682, name: "ティッシュボックス", ancestry: parent_id },
+  {id: 683, name: "バスケット/かご", ancestry: parent_id },
+  {id: 684, name: "フォトフレーム", ancestry: parent_id },
+  {id: 685, name: "マガジンラック", ancestry: parent_id },
+  {id: 686, name: "モビール", ancestry: parent_id },
+  {id: 687, name: "花瓶", ancestry: parent_id },
+  {id: 688, name: "灰皿", ancestry: parent_id },
+  {id: 689, name: "傘立て", ancestry: parent_id },
+  {id: 690, name: "小物入れ", ancestry: parent_id },
+  {id: 691, name: "置時計", ancestry: parent_id },
+  {id: 692, name: "掛時計/柱時計", ancestry: parent_id },
+  {id: 693, name: "鏡(立て掛け式)", ancestry: parent_id },
+  {id: 694, name: "鏡(壁掛け式)", ancestry: parent_id },
+  {id: 695, name: "置物", ancestry: parent_id },
+  {id: 696, name: "風鈴", ancestry: parent_id },
+  {id: 697, name: "植物/観葉植物", ancestry: parent_id },
+  {id: 698, name: "その他", ancestry: parent_id },
+)
+
+# 04-11 インテリア・住まい・小物 > 季節/年中行事
+parent_id = "4/73"
+Category.seed(:id,
+  {id: 699, name: "正月", ancestry: parent_id },
+  {id: 700, name: "成人式", ancestry: parent_id },
+  {id: 701, name: "バレンタインデー", ancestry: parent_id },
+  {id: 702, name: "ひな祭り", ancestry: parent_id },
+  {id: 703, name: "子どもの日", ancestry: parent_id },
+  {id: 704, name: "母の日", ancestry: parent_id },
+  {id: 705, name: "父の日", ancestry: parent_id },
+  {id: 706, name: "サマーギフト/お中元", ancestry: parent_id },
+  {id: 707, name: "夏/夏休み", ancestry: parent_id },
+  {id: 708, name: "ハロウィン", ancestry: parent_id },
+  {id: 709, name: "敬老の日", ancestry: parent_id },
+  {id: 710, name: "七五三", ancestry: parent_id },
+  {id: 711, name: "お歳暮", ancestry: parent_id },
+  {id: 712, name: "クリスマス", ancestry: parent_id },
+  {id: 713, name: "冬一般", ancestry: parent_id },
+  {id: 714, name: "その他", ancestry: parent_id },
+  {id: 715, name: "", ancestry: parent_id },
+  {id: 716, name: "", ancestry: parent_id },
+  {id: 717, name: "", ancestry: parent_id },
+  {id: 718, name: "", ancestry: parent_id },
+  {id: 719, name: "", ancestry: parent_id },
+  {id: 720, name: "", ancestry: parent_id },
 )
