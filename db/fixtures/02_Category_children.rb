@@ -65,6 +65,15 @@
 # 04-09 インテリア・住まい・小物 > 寝具
 # 04-10 インテリア・住まい・小物 > インテリア小物
 # 04-11 インテリア・住まい・小物 > 季節/年中行事
+#############################################
+# 05 本・音楽・ゲームの孫カテゴリー作成
+# 05-01 本・音楽・ゲーム > 本
+# 05-02 本・音楽・ゲーム > 漫画
+# 05-03 本・音楽・ゲーム > 雑誌
+# 05-04 本・音楽・ゲーム > CD
+# 05-05 本・音楽・ゲーム > DVD/ブルーレイ
+# 05-06 本・音楽・ゲーム > レコード
+# 05-07 本・音楽・ゲーム > テレビゲーム
 
 # 01-01 レディース > トップス
 parent_id = "1/14"
@@ -915,4 +924,90 @@ Category.seed(:id,
   {id: 712, name: "クリスマス", ancestry: parent_id },
   {id: 713, name: "冬一般", ancestry: parent_id },
   {id: 714, name: "その他", ancestry: parent_id },
+)
+
+# 05-01 本・音楽・ゲーム > 本
+parent_id = ""
+Category.seed(:id,
+  {id: 715, name: "文学/小説", ancestry: parent_id },
+  {id: 716, name: "人文/社会", ancestry: parent_id },
+  {id: 717, name: "ノンフィクション/教養", ancestry: parent_id },
+  {id: 718, name: "地図/旅行ガイド", ancestry: parent_id },
+  {id: 719, name: "ビジネス/経済", ancestry: parent_id },
+  {id: 720, name: "健康/医学", ancestry: parent_id },
+  {id: 721, name: "コンピュータ/IT", ancestry: parent_id },
+  {id: 722, name: "趣味/スポーツ/実用", ancestry: parent_id },
+  {id: 723, name: "住まい/暮らし/子育て", ancestry: parent_id },
+  {id: 724, name: "アート/エンタメ", ancestry: parent_id },
+  {id: 725, name: "洋書", ancestry: parent_id },
+  {id: 726, name: "絵本", ancestry: parent_id },
+  {id: 727, name: "参考書", ancestry: parent_id },
+  {id: 728, name: "その他", ancestry: parent_id },
+)
+
+# 05-02 本・音楽・ゲーム > 漫画
+parent_id = ""
+Category.seed(:id,
+  {id: 729, name: "全巻セット", ancestry: parent_id },
+  {id: 730, name: "少年漫画", ancestry: parent_id },
+  {id: 731, name: "少女漫画", ancestry: parent_id },
+  {id: 732, name: "青年漫画", ancestry: parent_id },
+  {id: 733, name: "女性漫画", ancestry: parent_id },
+  {id: 734, name: "同人誌", ancestry: parent_id },
+  {id: 735, name: "その他", ancestry: parent_id },
+)
+
+# 05-03 本・音楽・ゲーム > 雑誌
+parent_id = ""
+Category.seed(:id,
+  {id: 736, name: "アート/エンタメ/ホビー", ancestry: parent_id },
+  {id: 737, name: "ファッション", ancestry: parent_id },
+  {id: 738, name: "ニュース/総合", ancestry: parent_id },
+  {id: 739, name: "趣味/スポーツ", ancestry: parent_id },
+  {id: 740, name: "その他", ancestry: parent_id },
+)
+
+# 05-04 本・音楽・ゲーム > CD
+parent_id = ""
+Category.seed(:id,
+  {id: 741, name: "邦楽", ancestry: parent_id },
+  {id: 742, name: "洋楽", ancestry: parent_id },
+  {id: 743, name: "アニメ", ancestry: parent_id },
+  {id: 744, name: "クラシック", ancestry: parent_id },
+  {id: 745, name: "K-POP/アジア", ancestry: parent_id },
+  {id: 746, name: "キッズ/ファミリー", ancestry: parent_id },
+  {id: 747, name: "その他", ancestry: parent_id },
+)
+
+# 05-05 本・音楽・ゲーム > DVD/ブルーレイ
+parent_id = ""
+Category.seed(:id,
+  {id: 748, name: "外国映画", ancestry: parent_id },
+  {id: 749, name: "日本映画", ancestry: parent_id },
+  {id: 750, name: "アニメ", ancestry: parent_id },
+  {id: 751, name: "TVドラマ", ancestry: parent_id },
+  {id: 752, name: "ミュージック", ancestry: parent_id },
+  {id: 753, name: "お笑い/バラエティ", ancestry: parent_id },
+  {id: 754, name: "スポーツ/フィットネス", ancestry: parent_id },
+  {id: 755, name: "キッズ/ファミリー", ancestry: parent_id },
+  {id: 756, name: "その他", ancestry: parent_id },
+)
+
+# 05-06 本・音楽・ゲーム > レコード
+parent_id = ""
+Category.seed(:id,
+  {id: 757, name: "邦楽", ancestry: parent_id },
+  {id: 758, name: "洋楽", ancestry: parent_id },
+  {id: 759, name: "その他", ancestry: parent_id },
+)
+
+# 05-07 本・音楽・ゲーム > テレビゲーム
+parent_id = ""
+Category.seed(:id,
+  {id: 760, name: "家庭用ゲーム本体", ancestry: parent_id },
+  {id: 761, name: "家庭用ゲームソフト", ancestry: parent_id },
+  {id: 762, name: "携帯用ゲーム本体", ancestry: parent_id },
+  {id: 763, name: "携帯用ゲームソフト", ancestry: parent_id },
+  {id: 764, name: "PCゲーム", ancestry: parent_id },
+  {id: 765, name: "その他", ancestry: parent_id },
 )
