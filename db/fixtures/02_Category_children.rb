@@ -19,7 +19,7 @@
 # 01-18 レディース > マタニティ
 # 01-19 レディース > その他
 #############################################
-#02 メンズの孫カテゴリー作成
+# 02 メンズの孫カテゴリー作成
 # 02-01 メンズ > トップス
 # 02-02 メンズ > ジャケット/アウター
 # 02-03 メンズ > パンツ
@@ -34,6 +34,23 @@
 # 02-12 メンズ > レッグウェア
 # 02-13 メンズ > アンダーウェア
 # 02-14 メンズ > その他
+#############################################
+# 03 ベビー・キッズの孫カテゴリー作成
+# 03-01 ベビー服(女の子用) ~95cm
+# 03-02 ベビー服(男の子用) ~95cm
+# 03-03 ベビー服(男女兼用) ~95cm
+# 03-04 キッズ服(女の子用) 100cm~
+# 03-05 キッズ服(男の子用) 100cm~
+# 03-06 キッズ服(男女兼用) 100cm~
+# 03-07 キッズ靴
+# 03-08 子ども用ファッション小物
+# 03-09 おむつ/トイレ/バス
+# 03-10 外出/移動用品
+# 03-11 授乳/食事
+# 03-12 ベビー家具/寝具/室内用品
+# 03-13 おもちゃ
+# 03-14 行事/記念品
+# 03-15 その他
 
 # 01-01 レディース > トップス
 parent_id = "1/14"
@@ -505,4 +522,196 @@ Category.seed(:id,
   {id: 468, name: "その他", ancestry: parent_id },
 )
 
+# 03-01 ベビー服(女の子用) ~95cm
+parent_id = "3/47"
+Category.seed(:id,
+  {id: 469, name: "トップス", ancestry: parent_id },
+  {id: 470, name: "アウター", ancestry: parent_id },
+  {id: 471, name: "パンツ", ancestry: parent_id },
+  {id: 472, name: "スカート", ancestry: parent_id },
+  {id: 473, name: "ワンピース", ancestry: parent_id },
+  {id: 474, name: "ベビードレス", ancestry: parent_id },
+  {id: 475, name: "おくるみ", ancestry: parent_id },
+  {id: 476, name: "下着/肌着", ancestry: parent_id },
+  {id: 477, name: "パジャマ", ancestry: parent_id },
+  {id: 478, name: "ロンパース", ancestry: parent_id },
+  {id: 479, name: "その他", ancestry: parent_id },
+)
 
+# 03-02 ベビー服(男の子用) ~95cm
+parent_id = "3/48"
+Category.seed(:id,
+  {id: 480, name: "トップス", ancestry: parent_id },
+  {id: 481, name: "アウター", ancestry: parent_id },
+  {id: 482, name: "パンツ", ancestry: parent_id },
+  {id: 483, name: "おくるみ", ancestry: parent_id },
+  {id: 484, name: "下着/肌着", ancestry: parent_id },
+  {id: 485, name: "パジャマ", ancestry: parent_id },
+  {id: 486, name: "ロンパース", ancestry: parent_id },
+  {id: 487, name: "その他", ancestry: parent_id },
+)
+
+# 03-03 ベビー服(男女兼用) ~95cm
+parent_id = "3/49"
+Category.seed(:id,
+  {id: 488, name: "トップス", ancestry: parent_id },
+  {id: 489, name: "アウター", ancestry: parent_id },
+  {id: 490, name: "パンツ", ancestry: parent_id },
+  {id: 491, name: "おくるみ", ancestry: parent_id },
+  {id: 492, name: "下着/肌着", ancestry: parent_id },
+  {id: 493, name: "パジャマ", ancestry: parent_id },
+  {id: 494, name: "ロンパース", ancestry: parent_id },
+  {id: 495, name: "その他", ancestry: parent_id },
+)
+
+# 03-04 キッズ服(女の子用) 100cm~
+parent_id = "3/50"
+Category.seed(:id,
+  {id: 496, name: "コート", ancestry: parent_id },
+  {id: 497, name: "ジャケット/上着", ancestry: parent_id },
+  {id: 498, name: "トップス(Tシャツ/カットソー)", ancestry: parent_id },
+  {id: 499, name: "トップス(トレーナー)", ancestry: parent_id },
+  {id: 500, name: "トップス(チュニック)", ancestry: parent_id },
+  {id: 501, name: "トップス(タンクトップ)", ancestry: parent_id },
+  {id: 502, name: "トップス(その他)", ancestry: parent_id },
+  {id: 503, name: "スカート", ancestry: parent_id },
+  {id: 504, name: "パンツ", ancestry: parent_id },
+  {id: 505, name: "ワンピース", ancestry: parent_id },
+  {id: 506, name: "セットアップ", ancestry: parent_id },
+  {id: 507, name: "パジャマ", ancestry: parent_id },
+  {id: 508, name: "フォーマル/ドレス", ancestry: parent_id },
+  {id: 509, name: "和服", ancestry: parent_id },
+  {id: 510, name: "浴衣", ancestry: parent_id },
+  {id: 511, name: "甚平", ancestry: parent_id },
+  {id: 512, name: "水着", ancestry: parent_id },
+  {id: 513, name: "その他", ancestry: parent_id },
+)
+
+# 03-05 キッズ服(男の子用) 100cm~
+parent_id = "3/51"
+Category.seed(:id,
+  {id: 514, name: "コート", ancestry: parent_id },
+  {id: 515, name: "ジャケット/上着", ancestry: parent_id },
+  {id: 516, name: "トップス(Tシャツ/カットソー)", ancestry: parent_id },
+  {id: 517, name: "トップス(トレーナー)", ancestry: parent_id },
+  {id: 518, name: "トップス(その他)", ancestry: parent_id },
+  {id: 519, name: "パンツ", ancestry: parent_id },
+  {id: 520, name: "セットアップ", ancestry: parent_id },
+  {id: 521, name: "パジャマ", ancestry: parent_id },
+  {id: 522, name: "フォーマル/ドレス", ancestry: parent_id },
+  {id: 523, name: "和服", ancestry: parent_id },
+  {id: 524, name: "浴衣", ancestry: parent_id },
+  {id: 525, name: "甚平", ancestry: parent_id },
+  {id: 526, name: "水着", ancestry: parent_id },
+  {id: 527, name: "その他", ancestry: parent_id },
+)
+
+# 03-06 キッズ服(男女兼用) 100cm~
+parent_id = "3/52"
+Category.seed(:id,
+  {id: 528, name: "コート", ancestry: parent_id },
+  {id: 529, name: "ジャケット/上着", ancestry: parent_id },
+  {id: 530, name: "トップス(Tシャツ/カットソー)", ancestry: parent_id },
+  {id: 531, name: "トップス(トレーナー)", ancestry: parent_id },
+  {id: 532, name: "トップス(その他)", ancestry: parent_id },
+  {id: 533, name: "ボトムス", ancestry: parent_id },
+  {id: 534, name: "パジャマ", ancestry: parent_id },
+  {id: 535, name: "その他", ancestry: parent_id },
+)
+
+# 03-07 キッズ靴
+parent_id = "3/53"
+Category.seed(:id,
+  {id: 536, name: "スニーカー", ancestry: parent_id },
+  {id: 537, name: "サンダル", ancestry: parent_id },
+  {id: 538, name: "ブーツ", ancestry: parent_id },
+  {id: 539, name: "長靴", ancestry: parent_id },
+  {id: 540, name: "その他", ancestry: parent_id },
+)
+
+# 03-08 子ども用ファッション小物
+parent_id = "3/54"
+Category.seed(:id,
+  {id: 541, name: "靴下/スパッツ", ancestry: parent_id },
+  {id: 542, name: "帽子", ancestry: parent_id },
+  {id: 543, name: "エプロン", ancestry: parent_id },
+  {id: 544, name: "サスペンダー", ancestry: parent_id },
+  {id: 545, name: "タイツ", ancestry: parent_id },
+  {id: 546, name: "ハンカチ", ancestry: parent_id },
+  {id: 547, name: "バンダナ", ancestry: parent_id },
+  {id: 548, name: "ベルト", ancestry: parent_id },
+  {id: 549, name: "マフラー", ancestry: parent_id },
+  {id: 550, name: "傘", ancestry: parent_id },
+  {id: 551, name: "手袋", ancestry: parent_id },
+  {id: 552, name: "スタイ", ancestry: parent_id },
+  {id: 553, name: "バッグ", ancestry: parent_id },
+  {id: 554, name: "その他", ancestry: parent_id },
+)
+
+# 03-09 おむつ/トイレ/バス
+parent_id = "3/55"
+Category.seed(:id,
+  {id: 555, name: "おむつ用品", ancestry: parent_id },
+  {id: 556, name: "おまる/補助便座", ancestry: parent_id },
+  {id: 557, name: "トレーニングパンツ", ancestry: parent_id },
+  {id: 558, name: "ベビーバス", ancestry: parent_id },
+  {id: 559, name: "お風呂用品", ancestry: parent_id },
+  {id: 560, name: "その他", ancestry: parent_id },
+)
+
+# 03-10 外出/移動用品
+parent_id = "3/56"
+Category.seed(:id,
+  {id: 561, name: "ベビーカー", ancestry: parent_id },
+  {id: 562, name: "抱っこひも/スリング", ancestry: parent_id },
+  {id: 563, name: "チャイルドシート", ancestry: parent_id },
+  {id: 564, name: "その他", ancestry: parent_id },
+)
+
+# 03-11 授乳/食事
+parent_id = "3/57"
+Category.seed(:id,
+  {id: 565, name: "ミルク", ancestry: parent_id },
+  {id: 566, name: "ベビーフード", ancestry: parent_id },
+  {id: 567, name: "ベビー用食器", ancestry: parent_id },
+  {id: 568, name: "その他", ancestry: parent_id },
+)
+
+# 03-12 ベビー家具/寝具/室内用品
+parent_id = "3/58"
+Category.seed(:id,
+  {id: 569, name: "ベッド", ancestry: parent_id },
+  {id: 570, name: "布団/毛布", ancestry: parent_id },
+  {id: 571, name: "イス", ancestry: parent_id },
+  {id: 572, name: "たんす", ancestry: parent_id },
+  {id: 573, name: "その他", ancestry: parent_id },
+)
+
+# 03-13 おもちゃ
+parent_id = "3/59"
+Category.seed(:id,
+  {id: 574, name: "おふろのおもちゃ", ancestry: parent_id },
+  {id: 575, name: "がらがら", ancestry: parent_id },
+  {id: 576, name: "オルゴール", ancestry: parent_id },
+  {id: 577, name: "ベビージム", ancestry: parent_id },
+  {id: 578, name: "手押し車/カタカタ", ancestry: parent_id },
+  {id: 579, name: "知育玩具", ancestry: parent_id },
+  {id: 580, name: "その他", ancestry: parent_id },
+)
+
+# 03-14 行事/記念品
+parent_id = "3/60"
+Category.seed(:id,
+  {id: 581, name: "お宮参り用品", ancestry: parent_id },
+  {id: 582, name: "お食い初め用品", ancestry: parent_id },
+  {id: 583, name: "アルバム", ancestry: parent_id },
+  {id: 584, name: "手形/足形", ancestry: parent_id },
+  {id: 585, name: "その他", ancestry: parent_id },
+)
+
+# 03-15 その他
+parent_id = "3/61"
+Category.seed(:id,
+  {id: 586, name: "母子手帳用品", ancestry: parent_id },
+  {id: 587, name: "その他", ancestry: parent_id },
+)
