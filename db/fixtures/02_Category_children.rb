@@ -36,21 +36,21 @@
 # 02-14 メンズ > その他
 #############################################
 # 03 ベビー・キッズの孫カテゴリー作成
-# 03-01 ベビー服(女の子用) ~95cm
-# 03-02 ベビー服(男の子用) ~95cm
-# 03-03 ベビー服(男女兼用) ~95cm
-# 03-04 キッズ服(女の子用) 100cm~
-# 03-05 キッズ服(男の子用) 100cm~
-# 03-06 キッズ服(男女兼用) 100cm~
-# 03-07 キッズ靴
-# 03-08 子ども用ファッション小物
-# 03-09 おむつ/トイレ/バス
-# 03-10 外出/移動用品
-# 03-11 授乳/食事
-# 03-12 ベビー家具/寝具/室内用品
-# 03-13 おもちゃ
-# 03-14 行事/記念品
-# 03-15 その他
+# 03-01 ベビー・キッズ > ベビー服(女の子用) ~95cm
+# 03-02 ベビー・キッズ > ベビー服(男の子用) ~95cm
+# 03-03 ベビー・キッズ > ベビー服(男女兼用) ~95cm
+# 03-04 ベビー・キッズ > キッズ服(女の子用) 100cm~
+# 03-05 ベビー・キッズ > キッズ服(男の子用) 100cm~
+# 03-06 ベビー・キッズ > キッズ服(男女兼用) 100cm~
+# 03-07 ベビー・キッズ > キッズ靴
+# 03-08 ベビー・キッズ > 子ども用ファッション小物
+# 03-09 ベビー・キッズ > おむつ/トイレ/バス
+# 03-10 ベビー・キッズ > 外出/移動用品
+# 03-11 ベビー・キッズ > 授乳/食事
+# 03-12 ベビー・キッズ > ベビー家具/寝具/室内用品
+# 03-13 ベビー・キッズ > おもちゃ
+# 03-14 ベビー・キッズ > 行事/記念品
+# 03-15 ベビー・キッズ > その他
 
 # 01-01 レディース > トップス
 parent_id = "1/14"
@@ -522,7 +522,7 @@ Category.seed(:id,
   {id: 468, name: "その他", ancestry: parent_id },
 )
 
-# 03-01 ベビー服(女の子用) ~95cm
+# 03-01 ベビー・キッズ > ベビー服(女の子用) ~95cm
 parent_id = "3/47"
 Category.seed(:id,
   {id: 469, name: "トップス", ancestry: parent_id },
@@ -538,7 +538,7 @@ Category.seed(:id,
   {id: 479, name: "その他", ancestry: parent_id },
 )
 
-# 03-02 ベビー服(男の子用) ~95cm
+# 03-02 ベビー・キッズ > ベビー服(男の子用) ~95cm
 parent_id = "3/48"
 Category.seed(:id,
   {id: 480, name: "トップス", ancestry: parent_id },
@@ -551,7 +551,7 @@ Category.seed(:id,
   {id: 487, name: "その他", ancestry: parent_id },
 )
 
-# 03-03 ベビー服(男女兼用) ~95cm
+# 03-03 ベビー・キッズ > ベビー服(男女兼用) ~95cm
 parent_id = "3/49"
 Category.seed(:id,
   {id: 488, name: "トップス", ancestry: parent_id },
@@ -564,7 +564,7 @@ Category.seed(:id,
   {id: 495, name: "その他", ancestry: parent_id },
 )
 
-# 03-04 キッズ服(女の子用) 100cm~
+# 03-04 ベビー・キッズ > キッズ服(女の子用) 100cm~
 parent_id = "3/50"
 Category.seed(:id,
   {id: 496, name: "コート", ancestry: parent_id },
@@ -587,7 +587,7 @@ Category.seed(:id,
   {id: 513, name: "その他", ancestry: parent_id },
 )
 
-# 03-05 キッズ服(男の子用) 100cm~
+# 03-05 ベビー・キッズ > キッズ服(男の子用) 100cm~
 parent_id = "3/51"
 Category.seed(:id,
   {id: 514, name: "コート", ancestry: parent_id },
@@ -606,7 +606,7 @@ Category.seed(:id,
   {id: 527, name: "その他", ancestry: parent_id },
 )
 
-# 03-06 キッズ服(男女兼用) 100cm~
+# 03-06 ベビー・キッズ > キッズ服(男女兼用) 100cm~
 parent_id = "3/52"
 Category.seed(:id,
   {id: 528, name: "コート", ancestry: parent_id },
@@ -619,7 +619,7 @@ Category.seed(:id,
   {id: 535, name: "その他", ancestry: parent_id },
 )
 
-# 03-07 キッズ靴
+# 03-07 ベビー・キッズ > キッズ靴
 parent_id = "3/53"
 Category.seed(:id,
   {id: 536, name: "スニーカー", ancestry: parent_id },
@@ -629,7 +629,7 @@ Category.seed(:id,
   {id: 540, name: "その他", ancestry: parent_id },
 )
 
-# 03-08 子ども用ファッション小物
+# 03-08 ベビー・キッズ > 子ども用ファッション小物
 parent_id = "3/54"
 Category.seed(:id,
   {id: 541, name: "靴下/スパッツ", ancestry: parent_id },
@@ -648,7 +648,7 @@ Category.seed(:id,
   {id: 554, name: "その他", ancestry: parent_id },
 )
 
-# 03-09 おむつ/トイレ/バス
+# 03-09 ベビー・キッズ > おむつ/トイレ/バス
 parent_id = "3/55"
 Category.seed(:id,
   {id: 555, name: "おむつ用品", ancestry: parent_id },
@@ -659,7 +659,7 @@ Category.seed(:id,
   {id: 560, name: "その他", ancestry: parent_id },
 )
 
-# 03-10 外出/移動用品
+# 03-10 ベビー・キッズ > 外出/移動用品
 parent_id = "3/56"
 Category.seed(:id,
   {id: 561, name: "ベビーカー", ancestry: parent_id },
@@ -668,7 +668,7 @@ Category.seed(:id,
   {id: 564, name: "その他", ancestry: parent_id },
 )
 
-# 03-11 授乳/食事
+# 03-11 ベビー・キッズ > 授乳/食事
 parent_id = "3/57"
 Category.seed(:id,
   {id: 565, name: "ミルク", ancestry: parent_id },
@@ -677,7 +677,7 @@ Category.seed(:id,
   {id: 568, name: "その他", ancestry: parent_id },
 )
 
-# 03-12 ベビー家具/寝具/室内用品
+# 03-12 ベビー・キッズ > ベビー家具/寝具/室内用品
 parent_id = "3/58"
 Category.seed(:id,
   {id: 569, name: "ベッド", ancestry: parent_id },
@@ -687,7 +687,7 @@ Category.seed(:id,
   {id: 573, name: "その他", ancestry: parent_id },
 )
 
-# 03-13 おもちゃ
+# 03-13 ベビー・キッズ > おもちゃ
 parent_id = "3/59"
 Category.seed(:id,
   {id: 574, name: "おふろのおもちゃ", ancestry: parent_id },
@@ -699,7 +699,7 @@ Category.seed(:id,
   {id: 580, name: "その他", ancestry: parent_id },
 )
 
-# 03-14 行事/記念品
+# 03-14 ベビー・キッズ > 行事/記念品
 parent_id = "3/60"
 Category.seed(:id,
   {id: 581, name: "お宮参り用品", ancestry: parent_id },
@@ -709,7 +709,7 @@ Category.seed(:id,
   {id: 585, name: "その他", ancestry: parent_id },
 )
 
-# 03-15 その他
+# 03-15 ベビー・キッズ > その他
 parent_id = "3/61"
 Category.seed(:id,
   {id: 586, name: "母子手帳用品", ancestry: parent_id },
