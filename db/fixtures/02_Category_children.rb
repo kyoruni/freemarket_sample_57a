@@ -74,6 +74,19 @@
 # 05-05 本・音楽・ゲーム > DVD/ブルーレイ
 # 05-06 本・音楽・ゲーム > レコード
 # 05-07 本・音楽・ゲーム > テレビゲーム
+#############################################
+# 06 おもちゃ・ホビー・グッズの孫カテゴリー作成
+# 06-01 おもちゃ・ホビー・グッズ > おもちゃ
+# 06-02 おもちゃ・ホビー・グッズ > タレントグッズ
+# 06-03 おもちゃ・ホビー・グッズ > コミック/アニメグッズ
+# 06-04 おもちゃ・ホビー・グッズ > トレーディングカード
+# 06-05 おもちゃ・ホビー・グッズ > フィギュア
+# 06-06 おもちゃ・ホビー・グッズ > 楽器/器材
+# 06-07 おもちゃ・ホビー・グッズ > コレクション
+# 06-08 おもちゃ・ホビー・グッズ > ミリタリー
+# 06-09 おもちゃ・ホビー・グッズ > 美術品
+# 06-10 おもちゃ・ホビー・グッズ > アート用品
+# 06-11 おもちゃ・ホビー・グッズ > その他
 
 # 01-01 レディース > トップス
 parent_id = "1/14"
@@ -1010,4 +1023,165 @@ Category.seed(:id,
   {id: 763, name: "携帯用ゲームソフト", ancestry: parent_id },
   {id: 764, name: "PCゲーム", ancestry: parent_id },
   {id: 765, name: "その他", ancestry: parent_id },
+)
+
+# 06-01 おもちゃ・ホビー・グッズ > おもちゃ
+parent_id = "6/82"
+Category.seed(:id,
+  {id: 766, name: "キャラクターグッズ", ancestry: parent_id },
+  {id: 767, name: "ぬいぐるみ", ancestry: parent_id },
+  {id: 768, name: "小物/アクセサリー", ancestry: parent_id },
+  {id: 769, name: "模型/プラモデル", ancestry: parent_id },
+  {id: 770, name: "ミニカー", ancestry: parent_id },
+  {id: 771, name: "トイラジコン", ancestry: parent_id },
+  {id: 772, name: "プラモデル", ancestry: parent_id },
+  {id: 773, name: "ホビーラジコン", ancestry: parent_id },
+  {id: 774, name: "鉄道模型", ancestry: parent_id },
+  {id: 775, name: "その他", ancestry: parent_id },
+)
+
+# 06-02 おもちゃ・ホビー・グッズ > タレントグッズ
+parent_id = "6/83"
+Category.seed(:id,
+  {id: 776, name: "アイドル", ancestry: parent_id },
+  {id: 777, name: "ミュージシャン", ancestry: parent_id },
+  {id: 778, name: "タレント/お笑い芸人", ancestry: parent_id },
+  {id: 779, name: "スポーツ選手", ancestry: parent_id },
+  {id: 780, name: "その他", ancestry: parent_id },
+)
+
+# 06-03 おもちゃ・ホビー・グッズ > コミック/アニメグッズ
+parent_id = "6/84"
+Category.seed(:id,
+  {id: 781, name: "ストラップ", ancestry: parent_id },
+  {id: 782, name: "キーホルダー", ancestry: parent_id },
+  {id: 783, name: "バッジ", ancestry: parent_id },
+  {id: 784, name: "カード", ancestry: parent_id },
+  {id: 785, name: "クリアファイル", ancestry: parent_id },
+  {id: 786, name: "ポスター", ancestry: parent_id },
+  {id: 787, name: "タオル", ancestry: parent_id },
+  {id: 788, name: "その他", ancestry: parent_id },
+)
+
+# 06-04 おもちゃ・ホビー・グッズ > トレーディングカード
+parent_id = "6/85"
+Category.seed(:id,
+  {id: 789, name: "遊戯王", ancestry: parent_id },
+  {id: 790, name: "マジック：ザ・ギャザリング", ancestry: parent_id },
+  {id: 791, name: "ポケモンカードゲーム", ancestry: parent_id },
+  {id: 792, name: "デュエルマスターズ", ancestry: parent_id },
+  {id: 793, name: "バトルスピリッツ", ancestry: parent_id },
+  {id: 794, name: "プリパラ", ancestry: parent_id },
+  {id: 795, name: "アイカツ", ancestry: parent_id },
+  {id: 796, name: "カードファイト!! ヴァンガード", ancestry: parent_id },
+  {id: 797, name: "ヴァイスシュヴァルツ", ancestry: parent_id },
+  {id: 798, name: "プロ野球オーナーズリーグ", ancestry: parent_id },
+  {id: 799, name: "ベースボールヒーローズ", ancestry: parent_id },
+  {id: 800, name: "ドラゴンボール", ancestry: parent_id },
+  {id: 801, name: "スリーブ", ancestry: parent_id },
+  {id: 802, name: "その他", ancestry: parent_id },
+)
+
+# 06-05 おもちゃ・ホビー・グッズ > フィギュア
+parent_id = "6/86"
+Category.seed(:id,
+  {id: 803, name: "コミック/アニメ", ancestry: parent_id },
+  {id: 804, name: "特撮", ancestry: parent_id },
+  {id: 805, name: "ゲームキャラクター", ancestry: parent_id },
+  {id: 806, name: "SF/ファンタジー/ホラー", ancestry: parent_id },
+  {id: 807, name: "アメコミ", ancestry: parent_id },
+  {id: 808, name: "スポーツ", ancestry: parent_id },
+  {id: 809, name: "ミリタリー", ancestry: parent_id },
+  {id: 810, name: "その他", ancestry: parent_id },
+)
+
+# 06-06 おもちゃ・ホビー・グッズ > 楽器/器材
+parent_id = "6/87"
+Category.seed(:id,
+  {id: 811, name: "エレキギター", ancestry: parent_id },
+  {id: 812, name: "アコースティックギター", ancestry: parent_id },
+  {id: 813, name: "ベース", ancestry: parent_id },
+  {id: 814, name: "エフェクター", ancestry: parent_id },
+  {id: 815, name: "アンプ", ancestry: parent_id },
+  {id: 816, name: "弦楽器", ancestry: parent_id },
+  {id: 817, name: "管楽器", ancestry: parent_id },
+  {id: 818, name: "鍵盤楽器", ancestry: parent_id },
+  {id: 819, name: "打楽器", ancestry: parent_id },
+  {id: 820, name: "和楽器", ancestry: parent_id },
+  {id: 821, name: "楽譜/スコア", ancestry: parent_id },
+  {id: 822, name: "レコーディング/PA機器", ancestry: parent_id },
+  {id: 823, name: "DJ機器", ancestry: parent_id },
+  {id: 824, name: "DTM/DAW", ancestry: parent_id },
+  {id: 825, name: "その他", ancestry: parent_id },
+)
+
+# 06-07 おもちゃ・ホビー・グッズ > コレクション
+parent_id = "6/88"
+Category.seed(:id,
+  {id: 826, name: "武具", ancestry: parent_id },
+  {id: 827, name: "使用済切手/官製はがき", ancestry: parent_id },
+  {id: 828, name: "旧貨幣/金貨/銀貨/記念硬貨", ancestry: parent_id },
+  {id: 829, name: "印刷物", ancestry: parent_id },
+  {id: 830, name: "ノベルティグッズ", ancestry: parent_id },
+  {id: 831, name: "その他", ancestry: parent_id },
+)
+
+# 06-08 おもちゃ・ホビー・グッズ > ミリタリー
+parent_id = "6/89"
+Category.seed(:id,
+  {id: 832, name: "トイガン", ancestry: parent_id },
+  {id: 833, name: "個人装備", ancestry: parent_id },
+  {id: 834, name: "その他", ancestry: parent_id },
+)
+
+# 06-09 おもちゃ・ホビー・グッズ > 美術品
+parent_id = "6/90"
+Category.seed(:id,
+  {id: 835, name: "陶芸", ancestry: parent_id },
+  {id: 836, name: "ガラス", ancestry: parent_id },
+  {id: 837, name: "漆芸", ancestry: parent_id },
+  {id: 838, name: "金属工芸", ancestry: parent_id },
+  {id: 839, name: "絵画/タペストリ", ancestry: parent_id },
+  {id: 840, name: "版画", ancestry: parent_id },
+  {id: 841, name: "彫刻/オブジェクト", ancestry: parent_id },
+  {id: 842, name: "書", ancestry: parent_id },
+  {id: 843, name: "写真", ancestry: parent_id },
+  {id: 844, name: "その他", ancestry: parent_id },
+)
+
+# 06-10 おもちゃ・ホビー・グッズ > アート用品
+parent_id = "6/91"
+Category.seed(:id,
+  {id: 845, name: "画材", ancestry: parent_id },
+  {id: 846, name: "額縁", ancestry: parent_id },
+  {id: 847, name: "その他", ancestry: parent_id },
+  {id: 848, name: "", ancestry: parent_id },
+  {id: 849, name: "", ancestry: parent_id },
+  {id: 850, name: "", ancestry: parent_id },
+  {id: 851, name: "", ancestry: parent_id },
+  {id: 852, name: "", ancestry: parent_id },
+)
+
+# 06-11 おもちゃ・ホビー・グッズ > その他
+parent_id = "6/92"
+Category.seed(:id,
+  {id: 853, name: "トランプ/UNO", ancestry: parent_id },
+  {id: 854, name: "カルタ/百人一首", ancestry: parent_id },
+  {id: 855, name: "ダーツ", ancestry: parent_id },
+  {id: 856, name: "ビリヤード", ancestry: parent_id },
+  {id: 857, name: "麻雀", ancestry: parent_id },
+  {id: 858, name: "パズル/ジグソーパズル", ancestry: parent_id },
+  {id: 859, name: "囲碁/将棋", ancestry: parent_id },
+  {id: 860, name: "オセロ/チェス", ancestry: parent_id },
+  {id: 861, name: "人生ゲーム", ancestry: parent_id },
+  {id: 862, name: "野球/サッカーゲーム", ancestry: parent_id },
+  {id: 863, name: "スポーツ", ancestry: parent_id },
+  {id: 864, name: "三輪車/乗り物", ancestry: parent_id },
+  {id: 865, name: "ヨーヨー", ancestry: parent_id },
+  {id: 866, name: "模型製作用品", ancestry: parent_id },
+  {id: 867, name: "鉄道", ancestry: parent_id },
+  {id: 868, name: "航空機", ancestry: parent_id },
+  {id: 869, name: "アマチュア無線", ancestry: parent_id },
+  {id: 870, name: "パチンコ/パチスロ", ancestry: parent_id },
+  {id: 871, name: "その他", ancestry: parent_id },
 )
