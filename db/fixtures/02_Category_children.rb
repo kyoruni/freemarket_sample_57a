@@ -100,6 +100,18 @@
 # 07-09 コスメ・香水・美容 > リラクゼーション
 # 07-10 コスメ・香水・美容 > ダイエット
 # 07-11 コスメ・香水・美容 > その他
+#############################################
+# 08 家電・スマホ・カメラの孫カテゴリー作成
+# 08-01 家電・スマホ・カメラ > スマートフォン/携帯電話
+# 08-02 家電・スマホ・カメラ > スマホアクセサリー
+# 08-03 家電・スマホ・カメラ > PC/タブレット
+# 08-04 家電・スマホ・カメラ > カメラ
+# 08-05 家電・スマホ・カメラ > テレビ/映像機器
+# 08-06 家電・スマホ・カメラ > オーディオ機器
+# 08-07 家電・スマホ・カメラ > 美容/健康
+# 08-08 家電・スマホ・カメラ > 冷暖房/空調
+# 08-09 家電・スマホ・カメラ > 生活家電
+# 08-10 家電・スマホ・カメラ > その他
 
 # 01-01 レディース > トップス
 parent_id = "1/14"
@@ -1335,4 +1347,129 @@ Category.seed(:id,
   {id: 952, name: "看護/介護用品", ancestry: parent_id },
   {id: 953, name: "救急/衛生用品", ancestry: parent_id },
   {id: 954, name: "その他", ancestry: parent_id },
+)
+
+# 08-01 家電・スマホ・カメラ > スマートフォン/携帯電話
+parent_id = "8/104"
+Category.seed(:id,
+  {id: 955, name: "スマートフォン本体", ancestry: parent_id },
+  {id: 956, name: "バッテリー/充電器", ancestry: parent_id },
+  {id: 957, name: "携帯電話本体", ancestry: parent_id },
+  {id: 958, name: "PHS本体", ancestry: parent_id },
+  {id: 959, name: "その他", ancestry: parent_id },
+)
+
+# 08-02 家電・スマホ・カメラ > スマホアクセサリー
+parent_id = "8/105"
+Category.seed(:id,
+  {id: 960, name: "Android用ケース", ancestry: parent_id },
+  {id: 961, name: "iPhone用ケース", ancestry: parent_id },
+  {id: 962, name: "カバー", ancestry: parent_id },
+  {id: 963, name: "イヤホンジャック", ancestry: parent_id },
+  {id: 964, name: "ストラップ", ancestry: parent_id },
+  {id: 965, name: "フィルム", ancestry: parent_id },
+  {id: 966, name: "自撮り棒", ancestry: parent_id },
+  {id: 967, name: "その他", ancestry: parent_id },
+)
+
+# 08-03 家電・スマホ・カメラ > PC/タブレット
+parent_id = "8/106"
+Category.seed(:id,
+  {id: 968, name: "タブレット", ancestry: parent_id },
+  {id: 969, name: "ノートPC", ancestry: parent_id },
+  {id: 970, name: "デスクトップ型PC", ancestry: parent_id },
+  {id: 971, name: "ディスプレイ", ancestry: parent_id },
+  {id: 972, name: "電子ブックリーダー", ancestry: parent_id },
+  {id: 973, name: "PC周辺機器", ancestry: parent_id },
+  {id: 974, name: "PCパーツ", ancestry: parent_id },
+  {id: 975, name: "その他", ancestry: parent_id },
+)
+
+# 08-04 家電・スマホ・カメラ > カメラ
+parent_id = "8/107"
+Category.seed(:id,
+  {id: 976, name: "デジタルカメラ", ancestry: parent_id },
+  {id: 977, name: "ビデオカメラ", ancestry: parent_id },
+  {id: 978, name: "レンズ(単焦点)", ancestry: parent_id },
+  {id: 979, name: "レンズ(ズーム)", ancestry: parent_id },
+  {id: 980, name: "フィルムカメラ", ancestry: parent_id },
+  {id: 981, name: "防犯カメラ", ancestry: parent_id },
+  {id: 982, name: "その他", ancestry: parent_id },
+)
+
+# 08-05 家電・スマホ・カメラ > テレビ/映像機器
+parent_id = "8/108"
+Category.seed(:id,
+  {id: 983, name: "テレビ", ancestry: parent_id },
+  {id: 984, name: "プロジェクター", ancestry: parent_id },
+  {id: 985, name: "ブルーレイレコーダー", ancestry: parent_id },
+  {id: 986, name: "DVDレコーダー", ancestry: parent_id },
+  {id: 987, name: "ブルーレイプレーヤー", ancestry: parent_id },
+  {id: 988, name: "DVDプレーヤー", ancestry: parent_id },
+  {id: 989, name: "映像用ケーブル", ancestry: parent_id },
+  {id: 990, name: "その他", ancestry: parent_id },
+)
+
+# 08-06 家電・スマホ・カメラ > オーディオ機器
+parent_id = "8/109"
+Category.seed(:id,
+  {id: 991, name: "ポータブルプレーヤー", ancestry: parent_id },
+  {id: 992, name: "イヤフォン", ancestry: parent_id },
+  {id: 993, name: "ヘッドフォン", ancestry: parent_id },
+  {id: 994, name: "アンプ", ancestry: parent_id },
+  {id: 995, name: "スピーカー", ancestry: parent_id },
+  {id: 996, name: "ケーブル/シールド", ancestry: parent_id },
+  {id: 997, name: "ラジオ", ancestry: parent_id },
+  {id: 998, name: "その他", ancestry: parent_id },
+)
+
+# 08-07 家電・スマホ・カメラ > 美容/健康
+parent_id = "8/110"
+Category.seed(:id,
+  {id: 999,  name: "ヘアドライヤー", ancestry: parent_id },
+  {id: 1000, name: "ヘアアイロン", ancestry: parent_id },
+  {id: 1001, name: "美容機器", ancestry: parent_id },
+  {id: 1002, name: "電気シェーバー", ancestry: parent_id },
+  {id: 1003, name: "電動歯ブラシ", ancestry: parent_id },
+  {id: 1004, name: "その他", ancestry: parent_id },
+)
+
+# 08-08 家電・スマホ・カメラ > 冷暖房/空調
+parent_id = "8/111"
+Category.seed(:id,
+  {id: 1005, name: "エアコン", ancestry: parent_id },
+  {id: 1006, name: "空気清浄器", ancestry: parent_id },
+  {id: 1007, name: "加湿器", ancestry: parent_id },
+  {id: 1008, name: "扇風機", ancestry: parent_id },
+  {id: 1009, name: "除湿機", ancestry: parent_id },
+  {id: 1010, name: "ファンヒーター", ancestry: parent_id },
+  {id: 1011, name: "電気ヒーター", ancestry: parent_id },
+  {id: 1012, name: "オイルヒーター", ancestry: parent_id },
+  {id: 1013, name: "ストーブ", ancestry: parent_id },
+  {id: 1014, name: "ホットカーペット", ancestry: parent_id },
+  {id: 1015, name: "こたつ", ancestry: parent_id },
+  {id: 1016, name: "電気毛布", ancestry: parent_id },
+  {id: 1017, name: "その他", ancestry: parent_id },
+)
+
+# 08-09 家電・スマホ・カメラ > 生活家電
+parent_id = "8/112"
+Category.seed(:id,
+  {id: 1018, name: "冷蔵庫", ancestry: parent_id },
+  {id: 1019, name: "洗濯機", ancestry: parent_id },
+  {id: 1020, name: "炊飯器", ancestry: parent_id },
+  {id: 1021, name: "電子レンジ/オーブン", ancestry: parent_id },
+  {id: 1022, name: "調理機器", ancestry: parent_id },
+  {id: 1023, name: "アイロン", ancestry: parent_id },
+  {id: 1024, name: "掃除機", ancestry: parent_id },
+  {id: 1025, name: "エスプレッソマシン", ancestry: parent_id },
+  {id: 1026, name: "コーヒーメーカー", ancestry: parent_id },
+  {id: 1027, name: "衣類乾燥機", ancestry: parent_id },
+  {id: 1028, name: "その他", ancestry: parent_id },
+)
+
+# 08-10 家電・スマホ・カメラ > その他
+parent_id = "8/113"
+Category.seed(:id,
+  {id: 1029, name: "その他", ancestry: parent_id },
 )
