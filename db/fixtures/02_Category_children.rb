@@ -927,7 +927,7 @@ Category.seed(:id,
 )
 
 # 05-01 本・音楽・ゲーム > 本
-parent_id = ""
+parent_id = "5/75"
 Category.seed(:id,
   {id: 715, name: "文学/小説", ancestry: parent_id },
   {id: 716, name: "人文/社会", ancestry: parent_id },
@@ -946,7 +946,7 @@ Category.seed(:id,
 )
 
 # 05-02 本・音楽・ゲーム > 漫画
-parent_id = ""
+parent_id = "5/76"
 Category.seed(:id,
   {id: 729, name: "全巻セット", ancestry: parent_id },
   {id: 730, name: "少年漫画", ancestry: parent_id },
@@ -958,7 +958,7 @@ Category.seed(:id,
 )
 
 # 05-03 本・音楽・ゲーム > 雑誌
-parent_id = ""
+parent_id = "5/77"
 Category.seed(:id,
   {id: 736, name: "アート/エンタメ/ホビー", ancestry: parent_id },
   {id: 737, name: "ファッション", ancestry: parent_id },
@@ -968,7 +968,7 @@ Category.seed(:id,
 )
 
 # 05-04 本・音楽・ゲーム > CD
-parent_id = ""
+parent_id = "5/78"
 Category.seed(:id,
   {id: 741, name: "邦楽", ancestry: parent_id },
   {id: 742, name: "洋楽", ancestry: parent_id },
@@ -980,7 +980,7 @@ Category.seed(:id,
 )
 
 # 05-05 本・音楽・ゲーム > DVD/ブルーレイ
-parent_id = ""
+parent_id = "5/79"
 Category.seed(:id,
   {id: 748, name: "外国映画", ancestry: parent_id },
   {id: 749, name: "日本映画", ancestry: parent_id },
@@ -994,7 +994,7 @@ Category.seed(:id,
 )
 
 # 05-06 本・音楽・ゲーム > レコード
-parent_id = ""
+parent_id = "5/80"
 Category.seed(:id,
   {id: 757, name: "邦楽", ancestry: parent_id },
   {id: 758, name: "洋楽", ancestry: parent_id },
@@ -1002,7 +1002,7 @@ Category.seed(:id,
 )
 
 # 05-07 本・音楽・ゲーム > テレビゲーム
-parent_id = ""
+parent_id = "5/81"
 Category.seed(:id,
   {id: 760, name: "家庭用ゲーム本体", ancestry: parent_id },
   {id: 761, name: "家庭用ゲームソフト", ancestry: parent_id },
