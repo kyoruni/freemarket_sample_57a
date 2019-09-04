@@ -1223,116 +1223,116 @@ Category.seed(:id,
   {id: 885, name: "アイブロウペンシル", ancestry: parent_id },
   {id: 886, name: "パウダーアイブロウ", ancestry: parent_id },
   {id: 887, name: "眉マスカラ", ancestry: parent_id },
-  {id: 889, name: "トライアルセット/サンプル", ancestry: parent_id },
-  {id: 890, name: "メイク道具/化粧小物", ancestry: parent_id },
-  {id: 891, name: "美顔用品/美顔ローラー", ancestry: parent_id },
-  {id: 892, name: "その他", ancestry: parent_id },
+  {id: 888, name: "トライアルセット/サンプル", ancestry: parent_id },
+  {id: 889, name: "メイク道具/化粧小物", ancestry: parent_id },
+  {id: 890, name: "美顔用品/美顔ローラー", ancestry: parent_id },
+  {id: 891, name: "その他", ancestry: parent_id },
 )
 
 # 07-03 コスメ・香水・美容 > ネイルケア
 parent_id = "7/95"
 Category.seed(:id,
-  {id: 893, name: "ネイルカラー", ancestry: parent_id },
-  {id: 894, name: "カラージェル", ancestry: parent_id },
-  {id: 895, name: "ネイルベースコート/トップコート", ancestry: parent_id },
-  {id: 896, name: "ネイルアート用品", ancestry: parent_id },
-  {id: 897, name: "ネイルパーツ", ancestry: parent_id },
-  {id: 898, name: "ネイルチップ/付け爪", ancestry: parent_id },
-  {id: 899, name: "手入れ用具", ancestry: parent_id },
-  {id: 900, name: "除光液", ancestry: parent_id },
-  {id: 901, name: "その他", ancestry: parent_id },
+  {id: 892, name: "ネイルカラー", ancestry: parent_id },
+  {id: 893, name: "カラージェル", ancestry: parent_id },
+  {id: 894, name: "ネイルベースコート/トップコート", ancestry: parent_id },
+  {id: 895, name: "ネイルアート用品", ancestry: parent_id },
+  {id: 896, name: "ネイルパーツ", ancestry: parent_id },
+  {id: 897, name: "ネイルチップ/付け爪", ancestry: parent_id },
+  {id: 898, name: "手入れ用具", ancestry: parent_id },
+  {id: 899, name: "除光液", ancestry: parent_id },
+  {id: 900, name: "その他", ancestry: parent_id },
 )
 
 # 07-04 コスメ・香水・美容 > 香水
 parent_id = "7/96"
 Category.seed(:id,
-  {id: 902, name: "香水(女性用)", ancestry: parent_id },
-  {id: 903, name: "香水(男性用)", ancestry: parent_id },
-  {id: 904, name: "ユニセックス", ancestry: parent_id },
-  {id: 905, name: "ボディミスト", ancestry: parent_id },
-  {id: 906, name: "その他", ancestry: parent_id },
+  {id: 901, name: "香水(女性用)", ancestry: parent_id },
+  {id: 902, name: "香水(男性用)", ancestry: parent_id },
+  {id: 903, name: "ユニセックス", ancestry: parent_id },
+  {id: 904, name: "ボディミスト", ancestry: parent_id },
+  {id: 905, name: "その他", ancestry: parent_id },
 )
 
 # 07-05 コスメ・香水・美容 > スキンケア/基礎化粧品
 parent_id = "7/97"
 Category.seed(:id,
-  {id: 907, name: "化粧水/ローション", ancestry: parent_id },
-  {id: 908, name: "乳液/ミルク", ancestry: parent_id },
-  {id: 909, name: "美容液", ancestry: parent_id },
-  {id: 910, name: "フェイスクリーム", ancestry: parent_id },
-  {id: 911, name: "洗顔料", ancestry: parent_id },
-  {id: 912, name: "クレンジング/メイク落とし", ancestry: parent_id },
-  {id: 913, name: "パック/フェイスマスク", ancestry: parent_id },
-  {id: 914, name: "ジェル/ゲル", ancestry: parent_id },
-  {id: 915, name: "ブースター/導入液", ancestry: parent_id },
-  {id: 916, name: "アイケア", ancestry: parent_id },
-  {id: 917, name: "リップケア", ancestry: parent_id },
-  {id: 918, name: "トライアルセット/サンプル", ancestry: parent_id },
-  {id: 919, name: "洗顔グッズ", ancestry: parent_id },
-  {id: 920, name: "その他", ancestry: parent_id },
+  {id: 906, name: "化粧水/ローション", ancestry: parent_id },
+  {id: 907, name: "乳液/ミルク", ancestry: parent_id },
+  {id: 908, name: "美容液", ancestry: parent_id },
+  {id: 909, name: "フェイスクリーム", ancestry: parent_id },
+  {id: 910, name: "洗顔料", ancestry: parent_id },
+  {id: 911, name: "クレンジング/メイク落とし", ancestry: parent_id },
+  {id: 912, name: "パック/フェイスマスク", ancestry: parent_id },
+  {id: 913, name: "ジェル/ゲル", ancestry: parent_id },
+  {id: 914, name: "ブースター/導入液", ancestry: parent_id },
+  {id: 915, name: "アイケア", ancestry: parent_id },
+  {id: 916, name: "リップケア", ancestry: parent_id },
+  {id: 917, name: "トライアルセット/サンプル", ancestry: parent_id },
+  {id: 918, name: "洗顔グッズ", ancestry: parent_id },
+  {id: 919, name: "その他", ancestry: parent_id },
 )
 
 # 07-06 コスメ・香水・美容 > ヘアケア
 parent_id = "7/98"
 Category.seed(:id,
-  {id: 921, name: "シャンプー", ancestry: parent_id },
-  {id: 922, name: "トリートメント", ancestry: parent_id },
-  {id: 923, name: "コンディショナー", ancestry: parent_id },
-  {id: 924, name: "リンス", ancestry: parent_id },
-  {id: 925, name: "スタイリング剤", ancestry: parent_id },
-  {id: 926, name: "カラーリング剤", ancestry: parent_id },
-  {id: 927, name: "ブラシ", ancestry: parent_id },
-  {id: 928, name: "その他", ancestry: parent_id },
+  {id: 920, name: "シャンプー", ancestry: parent_id },
+  {id: 921, name: "トリートメント", ancestry: parent_id },
+  {id: 922, name: "コンディショナー", ancestry: parent_id },
+  {id: 923, name: "リンス", ancestry: parent_id },
+  {id: 924, name: "スタイリング剤", ancestry: parent_id },
+  {id: 925, name: "カラーリング剤", ancestry: parent_id },
+  {id: 926, name: "ブラシ", ancestry: parent_id },
+  {id: 927, name: "その他", ancestry: parent_id },
 )
 
 # 07-07 コスメ・香水・美容 > ボディケア
 parent_id = "7/99"
 Category.seed(:id,
-  {id: 929, name: "オイル/クリーム", ancestry: parent_id },
-  {id: 930, name: "ハンドクリーム", ancestry: parent_id },
-  {id: 931, name: "ローション", ancestry: parent_id },
-  {id: 932, name: "日焼け止め/サンオイル", ancestry: parent_id },
-  {id: 933, name: "ボディソープ", ancestry: parent_id },
-  {id: 934, name: "入浴剤", ancestry: parent_id },
-  {id: 935, name: "制汗/デオドラント", ancestry: parent_id },
-  {id: 936, name: "フットケア", ancestry: parent_id },
-  {id: 937, name: "その他", ancestry: parent_id },
+  {id: 928, name: "オイル/クリーム", ancestry: parent_id },
+  {id: 929, name: "ハンドクリーム", ancestry: parent_id },
+  {id: 930, name: "ローション", ancestry: parent_id },
+  {id: 931, name: "日焼け止め/サンオイル", ancestry: parent_id },
+  {id: 932, name: "ボディソープ", ancestry: parent_id },
+  {id: 933, name: "入浴剤", ancestry: parent_id },
+  {id: 934, name: "制汗/デオドラント", ancestry: parent_id },
+  {id: 935, name: "フットケア", ancestry: parent_id },
+  {id: 936, name: "その他", ancestry: parent_id },
 )
 
 # 07-08 コスメ・香水・美容 > オーラルケア
 parent_id = "7/100"
 Category.seed(:id,
-  {id: 938, name: "口臭防止/エチケット用品", ancestry: parent_id },
-  {id: 939, name: "歯ブラシ", ancestry: parent_id },
-  {id: 940, name: "その他", ancestry: parent_id },
+  {id: 937, name: "口臭防止/エチケット用品", ancestry: parent_id },
+  {id: 938, name: "歯ブラシ", ancestry: parent_id },
+  {id: 939, name: "その他", ancestry: parent_id },
 )
 
 # 07-09 コスメ・香水・美容 > リラクゼーション
 parent_id = "7/101"
 Category.seed(:id,
-  {id: 941, name: "エッセンシャルオイル", ancestry: parent_id },
-  {id: 942, name: "芳香器", ancestry: parent_id },
-  {id: 943, name: "お香/香炉", ancestry: parent_id },
-  {id: 944, name: "キャンドル", ancestry: parent_id },
-  {id: 945, name: "リラクゼーショングッズ", ancestry: parent_id },
-  {id: 946, name: "その他", ancestry: parent_id },
+  {id: 940, name: "エッセンシャルオイル", ancestry: parent_id },
+  {id: 941, name: "芳香器", ancestry: parent_id },
+  {id: 942, name: "お香/香炉", ancestry: parent_id },
+  {id: 943, name: "キャンドル", ancestry: parent_id },
+  {id: 944, name: "リラクゼーショングッズ", ancestry: parent_id },
+  {id: 945, name: "その他", ancestry: parent_id },
 )
 
 # 07-10 コスメ・香水・美容 > ダイエット
 parent_id = "7/102"
 Category.seed(:id,
-  {id: 947, name: "ダイエット食品", ancestry: parent_id },
-  {id: 948, name: "エクササイズ用品", ancestry: parent_id },
-  {id: 949, name: "体重計", ancestry: parent_id },
-  {id: 950, name: "体脂肪計", ancestry: parent_id },
-  {id: 951, name: "その他", ancestry: parent_id },
+  {id: 946, name: "ダイエット食品", ancestry: parent_id },
+  {id: 947, name: "エクササイズ用品", ancestry: parent_id },
+  {id: 948, name: "体重計", ancestry: parent_id },
+  {id: 949, name: "体脂肪計", ancestry: parent_id },
+  {id: 950, name: "その他", ancestry: parent_id },
 )
 
 # 07-11 コスメ・香水・美容 > その他
 parent_id = "7/103"
 Category.seed(:id,
-  {id: 952, name: "健康用品", ancestry: parent_id },
-  {id: 953, name: "看護/介護用品", ancestry: parent_id },
-  {id: 954, name: "救急/衛生用品", ancestry: parent_id },
-  {id: 955, name: "その他", ancestry: parent_id },
+  {id: 951, name: "健康用品", ancestry: parent_id },
+  {id: 952, name: "看護/介護用品", ancestry: parent_id },
+  {id: 953, name: "救急/衛生用品", ancestry: parent_id },
+  {id: 954, name: "その他", ancestry: parent_id },
 )
