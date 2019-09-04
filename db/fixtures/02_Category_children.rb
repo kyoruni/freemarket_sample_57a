@@ -18,6 +18,22 @@
 # 01-17 レディース > スーツ/フォーマル/ドレス
 # 01-18 レディース > マタニティ
 # 01-19 レディース > その他
+#############################################
+#02 メンズの孫カテゴリー作成
+# 02-01 メンズ > トップス
+# 02-02 メンズ > ジャケット/アウター
+# 02-03 メンズ > パンツ
+# 02-04 メンズ > 靴
+# 02-05 メンズ > バッグ
+# 02-06 メンズ > スーツ
+# 02-07 メンズ > 帽子
+# 02-08 メンズ > アクセサリー
+# 02-09 メンズ > 小物
+# 02-10 メンズ > 時計
+# 02-11 メンズ > 水着
+# 02-12 メンズ > レッグウェア
+# 02-13 メンズ > アンダーウェア
+# 02-14 メンズ > その他
 
 # 01-01 レディース > トップス
 parent_id = "1/14"
@@ -292,3 +308,201 @@ Category.seed(:id,
   {id: 336, name: "下着", ancestry: parent_id },
   {id: 337, name: "その他", ancestry: parent_id },
 )
+
+# 02-01 メンズ > トップス
+parent_id = "2/33"
+Category.seed(:id,
+  {id: 338, name: "Tシャツ/カットソー(半袖/袖なし)", ancestry: parent_id },
+  {id: 339, name: "Tシャツ/カットソー(七分/長袖)", ancestry: parent_id },
+  {id: 340, name: "シャツ", ancestry: parent_id },
+  {id: 341, name: "ポロシャツ", ancestry: parent_id },
+  {id: 342, name: "タンクトップ", ancestry: parent_id },
+  {id: 343, name: "ニット/セーター", ancestry: parent_id },
+  {id: 344, name: "パーカー", ancestry: parent_id },
+  {id: 345, name: "カーディガン", ancestry: parent_id },
+  {id: 346, name: "スウェット", ancestry: parent_id },
+  {id: 347, name: "ジャージ", ancestry: parent_id },
+  {id: 348, name: "ベスト", ancestry: parent_id },
+  {id: 349, name: "その他", ancestry: parent_id },
+)
+
+# 02-02 メンズ > ジャケット/アウター
+parent_id = "2/34"
+Category.seed(:id,
+  {id: 350, name: "テーラードジャケット", ancestry: parent_id },
+  {id: 351, name: "ノーカラージャケット", ancestry: parent_id },
+  {id: 352, name: "Gジャン/デニムジャケット", ancestry: parent_id },
+  {id: 353, name: "レザージャケット", ancestry: parent_id },
+  {id: 354, name: "ダウンジャケット", ancestry: parent_id },
+  {id: 355, name: "ライダースジャケット", ancestry: parent_id },
+  {id: 356, name: "ミリタリージャケット", ancestry: parent_id },
+  {id: 357, name: "ナイロンジャケット", ancestry: parent_id },
+  {id: 358, name: "フライトジャケット", ancestry: parent_id },
+  {id: 359, name: "ダッフルコート", ancestry: parent_id },
+  {id: 360, name: "ピーコート", ancestry: parent_id },
+  {id: 361, name: "ステンカラーコート", ancestry: parent_id },
+  {id: 362, name: "トレンチコート", ancestry: parent_id },
+  {id: 363, name: "モッズコート", ancestry: parent_id },
+  {id: 364, name: "チェスターコート", ancestry: parent_id },
+  {id: 365, name: "スタジャン", ancestry: parent_id },
+  {id: 366, name: "スカジャン", ancestry: parent_id },
+  {id: 367, name: "ブルゾン", ancestry: parent_id },
+  {id: 368, name: "マウンテンパーカー", ancestry: parent_id },
+  {id: 369, name: "ダウンベスト", ancestry: parent_id },
+  {id: 370, name: "ポンチョ", ancestry: parent_id },
+  {id: 371, name: "カバーオール", ancestry: parent_id },
+  {id: 372, name: "その他", ancestry: parent_id },
+)
+
+# 02-03 メンズ > パンツ
+parent_id = "2/35"
+Category.seed(:id,
+  {id: 373, name: "パンツ", ancestry: parent_id },
+  {id: 374, name: "デニム/ジーンズ", ancestry: parent_id },
+  {id: 375, name: "ワークパンツ/カーゴパンツ", ancestry: parent_id },
+  {id: 376, name: "スラックス", ancestry: parent_id },
+  {id: 377, name: "チノパン", ancestry: parent_id },
+  {id: 378, name: "ショートパンツ", ancestry: parent_id },
+  {id: 379, name: "ペインターパンツ", ancestry: parent_id },
+  {id: 380, name: "サルエルパンツ", ancestry: parent_id },
+  {id: 381, name: "オーバーオール", ancestry: parent_id },
+  {id: 382, name: "その他", ancestry: parent_id },
+)
+
+# 02-04 メンズ > 靴
+parent_id = "2/36"
+Category.seed(:id,
+  {id: 383, name: "スニーカー", ancestry: parent_id },
+  {id: 384, name: "サンダル", ancestry: parent_id },
+  {id: 385, name: "ブーツ", ancestry: parent_id },
+  {id: 386, name: "モカシン", ancestry: parent_id },
+  {id: 387, name: "ドレス/ビジネス", ancestry: parent_id },
+  {id: 388, name: "長靴/レインシューズ", ancestry: parent_id },
+  {id: 389, name: "デッキシューズ", ancestry: parent_id },
+  {id: 390, name: "その他", ancestry: parent_id },
+)
+
+# 02-05 メンズ > バッグ
+parent_id = "2/37"
+Category.seed(:id,
+  {id: 391, name: "ショルダーバッグ", ancestry: parent_id },
+  {id: 392, name: "トートバッグ", ancestry: parent_id },
+  {id: 393, name: "ボストンバッグ", ancestry: parent_id },
+  {id: 394, name: "リュック/バックパック", ancestry: parent_id },
+  {id: 395, name: "ウエストポーチ", ancestry: parent_id },
+  {id: 396, name: "ボディーバッグ", ancestry: parent_id },
+  {id: 397, name: "ドラムバッグ", ancestry: parent_id },
+  {id: 398, name: "ビジネスバッグ", ancestry: parent_id },
+  {id: 399, name: "トラベルバッグ", ancestry: parent_id },
+  {id: 400, name: "メッセンジャーバッグ", ancestry: parent_id },
+  {id: 401, name: "エコバッグ", ancestry: parent_id },
+  {id: 402, name: "その他", ancestry: parent_id },
+)
+
+# 02-06 メンズ > スーツ
+parent_id = "2/38"
+Category.seed(:id,
+  {id: 403, name: "スーツジャケット", ancestry: parent_id },
+  {id: 404, name: "スーツベスト", ancestry: parent_id },
+  {id: 405, name: "スラックス", ancestry: parent_id },
+  {id: 406, name: "セットアップ", ancestry: parent_id },
+  {id: 407, name: "その他", ancestry: parent_id },
+)
+
+# 02-07 メンズ > 帽子
+parent_id = "2/39"
+Category.seed(:id,
+  {id: 408, name: "キャップ", ancestry: parent_id },
+  {id: 409, name: "ハット", ancestry: parent_id },
+  {id: 410, name: "ニットキャップ/ビーニー", ancestry: parent_id },
+  {id: 411, name: "ハンチング/ベレー帽", ancestry: parent_id },
+  {id: 412, name: "キャスケット", ancestry: parent_id },
+  {id: 413, name: "サンバイザー", ancestry: parent_id },
+  {id: 414, name: "その他", ancestry: parent_id },
+)
+
+# 02-08 メンズ > アクセサリー
+parent_id = "2/40"
+Category.seed(:id,
+  {id: 415, name: "ネックレス", ancestry: parent_id },
+  {id: 416, name: "ブレスレット", ancestry: parent_id },
+  {id: 417, name: "バングル/リストバンド", ancestry: parent_id },
+  {id: 418, name: "リング", ancestry: parent_id },
+  {id: 419, name: "ピアス(片耳用)", ancestry: parent_id },
+  {id: 420, name: "ピアス(両耳用)", ancestry: parent_id },
+  {id: 421, name: "アンクレット", ancestry: parent_id },
+  {id: 422, name: "その他", ancestry: parent_id },
+)
+
+# 02-09 メンズ > 小物
+parent_id = "2/41"
+Category.seed(:id,
+  {id: 423, name: "長財布", ancestry: parent_id },
+  {id: 424, name: "折り財布", ancestry: parent_id },
+  {id: 425, name: "マネークリップ", ancestry: parent_id },
+  {id: 426, name: "コインケース/小銭入れ", ancestry: parent_id },
+  {id: 427, name: "名刺入れ/定期入れ", ancestry: parent_id },
+  {id: 428, name: "キーケース", ancestry: parent_id },
+  {id: 429, name: "キーホルダー", ancestry: parent_id },
+  {id: 430, name: "ネクタイ", ancestry: parent_id },
+  {id: 431, name: "手袋", ancestry: parent_id },
+  {id: 432, name: "ハンカチ", ancestry: parent_id },
+  {id: 433, name: "ベルト", ancestry: parent_id },
+  {id: 434, name: "マフラー", ancestry: parent_id },
+  {id: 435, name: "ストール", ancestry: parent_id },
+  {id: 436, name: "バンダナ", ancestry: parent_id },
+  {id: 437, name: "ネックウォーマー", ancestry: parent_id },
+  {id: 438, name: "サスペンダー", ancestry: parent_id },
+  {id: 439, name: "ウォレットチェーン", ancestry: parent_id },
+  {id: 440, name: "サングラス/メガネ", ancestry: parent_id },
+  {id: 441, name: "モバイルケース/カバー", ancestry: parent_id },
+  {id: 442, name: "手帳", ancestry: parent_id },
+  {id: 443, name: "ストラップ", ancestry: parent_id },
+  {id: 444, name: "ネクタイピン", ancestry: parent_id },
+  {id: 445, name: "カフリンクス", ancestry: parent_id },
+  {id: 446, name: "イヤマフラー", ancestry: parent_id },
+  {id: 447, name: "傘", ancestry: parent_id },
+  {id: 448, name: "レインコート", ancestry: parent_id },
+  {id: 449, name: "ミラー", ancestry: parent_id },
+  {id: 450, name: "タバコグッズ", ancestry: parent_id },
+  {id: 451, name: "その他", ancestry: parent_id },
+)
+
+# 02-10 メンズ > 時計
+parent_id = "2/42"
+Category.seed(:id,
+  {id: 452, name: "腕時計(アナログ)", ancestry: parent_id },
+  {id: 453, name: "腕時計(デジタル)", ancestry: parent_id },
+  {id: 454, name: "ラバーベルト", ancestry: parent_id },
+  {id: 455, name: "レザーベルト", ancestry: parent_id },
+  {id: 456, name: "金属ベルト", ancestry: parent_id },
+  {id: 457, name: "その他", ancestry: parent_id },
+)
+
+# 02-11 メンズ > 水着
+parent_id = "2/43"
+Category.seed(:id,
+  {id: 458, name: "一般水着", ancestry: parent_id },
+  {id: 459, name: "スポーツ用", ancestry: parent_id },
+  {id: 460, name: "アクセサリー", ancestry: parent_id },
+  {id: 461, name: "その他", ancestry: parent_id },
+)
+
+# 02-12 メンズ > レッグウェア
+parent_id = "2/44"
+Category.seed(:id,
+  {id: 462, name: "ソックス", ancestry: parent_id },
+  {id: 463, name: "レギンス/スパッツ", ancestry: parent_id },
+  {id: 464, name: "レッグウォーマー", ancestry: parent_id },
+  {id: 465, name: "その他", ancestry: parent_id },
+)
+
+# 02-13 メンズ > アンダーウェア
+parent_id = "2/45"
+Category.seed(:id,
+  {id: 466, name: "トランクス", ancestry: parent_id },
+  {id: 467, name: "ボクサーパンツ", ancestry: parent_id },
+  {id: 468, name: "その他", ancestry: parent_id },
+)
+
+
