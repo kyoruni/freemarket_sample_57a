@@ -1,0 +1,17 @@
+.logout-main{
+  background-color: $white;
+  width: 700px;
+  height: 179px;
+  padding: 64px;
+  &__registration-btn{
+    width: 343px;
+    height: 50px;
+    background-color:$red;
+    text-align: center;
+    line-height: 50px;
+    margin: 0px auto;
+    p {
+      color: $white;
+    }
+  }
+}
