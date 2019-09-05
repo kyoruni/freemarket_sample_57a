@@ -126,6 +126,16 @@
 # 09-10 スポーツ・レジャー > その他スポーツ
 # 09-11 スポーツ・レジャー > アウトドア
 # 09-12 スポーツ・レジャー > その他
+#############################################
+# 10 ハンドメイドの孫カテゴリー作成
+# 10-01 ハンドメイド > アクセサリー(女性用)
+# 10-02 ハンドメイド > ファッション/小物
+# 10-03 ハンドメイド > アクセサリー/時計
+# 10-04 ハンドメイド > 日用品/インテリア
+# 10-05 ハンドメイド > 趣味/おもちゃ
+# 10-06 ハンドメイド > キッズ/ベビー
+# 10-07 ハンドメイド > 素材/材料
+# 10-08 ハンドメイド > 二次創作物
 
 # 01-01 レディース > トップス
 parent_id = "1/14"
@@ -1642,4 +1652,84 @@ parent_id = "9/125"
 Category.seed(:id,
   {id: 1124, name: "旅行用品", ancestry: parent_id },
   {id: 1125, name: "その他", ancestry: parent_id },
+)
+
+# 10-01 ハンドメイド > アクセサリー(女性用)
+parent_id = "10/126"
+Category.seed(:id,
+  {id: 1126, name: "ピアス", ancestry: parent_id },
+  {id: 1127, name: "イヤリング", ancestry: parent_id },
+  {id: 1128, name: "ネックレス", ancestry: parent_id },
+  {id: 1129, name: "ブレスレット", ancestry: parent_id },
+  {id: 1130, name: "リング", ancestry: parent_id },
+  {id: 1131, name: "チャーム", ancestry: parent_id },
+  {id: 1132, name: "ヘアゴム", ancestry: parent_id },
+  {id: 1133, name: "アンクレット", ancestry: parent_id },
+  {id: 1134, name: "その他", ancestry: parent_id },
+)
+
+# 10-02 ハンドメイド > ファッション/小物
+parent_id = "10/127"
+Category.seed(:id,
+  {id: 1135, name: "バッグ(女性用)", ancestry: parent_id },
+  {id: 1136, name: "バッグ(男性用)", ancestry: parent_id },
+  {id: 1137, name: "財布(女性用)", ancestry: parent_id },
+  {id: 1138, name: "財布(男性用)", ancestry: parent_id },
+  {id: 1139, name: "ファッション雑貨", ancestry: parent_id },
+  {id: 1140, name: "その他", ancestry: parent_id },
+)
+
+# 10-03 ハンドメイド > アクセサリー/時計
+parent_id = "10/128"
+Category.seed(:id,
+  {id: 1141, name: "アクセサリー(男性用)", ancestry: parent_id },
+  {id: 1142, name: "時計(女性用)", ancestry: parent_id },
+  {id: 1143, name: "時計(男性用)", ancestry: parent_id },
+  {id: 1144, name: "その他", ancestry: parent_id },
+)
+
+# 10-04 ハンドメイド > 日用品/インテリア
+parent_id = "10/129"
+Category.seed(:id,
+  {id: 1145, name: "キッチン用品", ancestry: parent_id },
+  {id: 1146, name: "家具", ancestry: parent_id },
+  {id: 1147, name: "文房具", ancestry: parent_id },
+  {id: 1148, name: "アート/写真", ancestry: parent_id },
+  {id: 1149, name: "アロマ/キャンドル", ancestry: parent_id },
+  {id: 1150, name: "フラワー/ガーデン", ancestry: parent_id },
+  {id: 1151, name: "その他", ancestry: parent_id },
+)
+
+# 10-05 ハンドメイド > 趣味/おもちゃ
+parent_id = "10/130"
+Category.seed(:id,
+  {id: 1152, name: "クラフト/布製品", ancestry: parent_id },
+  {id: 1153, name: "おもちゃ/人形", ancestry: parent_id },
+  {id: 1154, name: "その他", ancestry: parent_id },
+)
+
+# 10-06 ハンドメイド > キッズ/ベビー
+parent_id = "10/131"
+Category.seed(:id,
+  {id: 1155, name: "ファッション雑貨", ancestry: parent_id },
+  {id: 1156, name: "スタイ/よだれかけ", ancestry: parent_id },
+  {id: 1157, name: "外出用品", ancestry: parent_id },
+  {id: 1158, name: "ネームタグ", ancestry: parent_id },
+  {id: 1159, name: "その他", ancestry: parent_id },
+)
+
+# 10-07 ハンドメイド > 素材/材料
+parent_id = "10/132"
+Category.seed(:id,
+  {id: 1160, name: "各種パーツ", ancestry: parent_id },
+  {id: 1161, name: "生地/糸", ancestry: parent_id },
+  {id: 1162, name: "型紙/パターン", ancestry: parent_id },
+  {id: 1163, name: "その他", ancestry: parent_id },
+)
+
+# 10-08 ハンドメイド > 二次創作物
+parent_id = "10/133"
+Category.seed(:id,
+  {id: 1164, name: "Ingress", ancestry: parent_id },
+  {id: 1165, name: "クリエイターズ宇宙兄弟", ancestry: parent_id },
 )
