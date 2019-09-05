@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   get 'step5' => 'hello#step5'
   get 'step6' => 'hello#step6'
   get 'step7' => 'hello#step7'
+  get 'card_registration' => 'hello#card_registration'
+
 end
 
 
