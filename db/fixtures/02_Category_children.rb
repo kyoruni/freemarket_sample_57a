@@ -136,6 +136,15 @@
 # 10-06 ハンドメイド > キッズ/ベビー
 # 10-07 ハンドメイド > 素材/材料
 # 10-08 ハンドメイド > 二次創作物
+#############################################
+# 11 チケットの孫カテゴリー作成
+# 11-01 チケット > 音楽
+# 11-02 チケット > スポーツ
+# 11-03 チケット > 演劇/芸能
+# 11-04 チケット > イベント
+# 11-05 チケット > 映画
+# 11-06 チケット > 施設利用券
+# 11-07 チケット > 優待券/割引券
 
 # 01-01 レディース > トップス
 parent_id = "1/14"
@@ -1733,3 +1742,91 @@ Category.seed(:id,
   {id: 1164, name: "Ingress", ancestry: parent_id },
   {id: 1165, name: "クリエイターズ宇宙兄弟", ancestry: parent_id },
 )
+
+# 11-01 チケット > 音楽
+parent_id = "11/135"
+Category.seed(:id,
+  {id: 1166, name: "男性アイドル", ancestry: parent_id },
+  {id: 1167, name: "女性アイドル", ancestry: parent_id },
+  {id: 1168, name: "韓流", ancestry: parent_id },
+  {id: 1169, name: "国内アーティスト", ancestry: parent_id },
+  {id: 1170, name: "海外アーティスト", ancestry: parent_id },
+  {id: 1171, name: "音楽フェス", ancestry: parent_id },
+  {id: 1172, name: "声優/アニメ", ancestry: parent_id },
+  {id: 1173, name: "その他", ancestry: parent_id },
+)
+
+# 11-02 チケット > スポーツ
+parent_id = "11/136"
+Category.seed(:id,
+  {id: 1174, name: "サッカー", ancestry: parent_id },
+  {id: 1175, name: "野球", ancestry: parent_id },
+  {id: 1176, name: "テニス", ancestry: parent_id },
+  {id: 1177, name: "格闘技/プロレス", ancestry: parent_id },
+  {id: 1178, name: "相撲/武道", ancestry: parent_id },
+  {id: 1179, name: "ゴルフ", ancestry: parent_id },
+  {id: 1180, name: "バレーボール", ancestry: parent_id },
+  {id: 1181, name: "バスケットボール", ancestry: parent_id },
+  {id: 1182, name: "モータースポーツ", ancestry: parent_id },
+  {id: 1183, name: "ウィンタースポーツ", ancestry: parent_id },
+  {id: 1184, name: "その他", ancestry: parent_id },
+)
+
+# 11-03 チケット > 演劇/芸能
+parent_id = "11/137"
+Category.seed(:id,
+  {id: 1185, name: "ミュージカル", ancestry: parent_id },
+  {id: 1186, name: "演劇", ancestry: parent_id },
+  {id: 1187, name: "伝統芸能", ancestry: parent_id },
+  {id: 1188, name: "落語", ancestry: parent_id },
+  {id: 1189, name: "お笑い", ancestry: parent_id },
+  {id: 1190, name: "オペラ", ancestry: parent_id },
+  {id: 1191, name: "サーカス", ancestry: parent_id },
+  {id: 1192, name: "バレエ", ancestry: parent_id },
+  {id: 1193, name: "その他", ancestry: parent_id },
+)
+
+# 11-04 チケット > イベント
+parent_id = "11/138"
+Category.seed(:id,
+  {id: 1194, name: "声優/アニメ", ancestry: parent_id },
+  {id: 1195, name: "キッズ/ファミリー", ancestry: parent_id },
+  {id: 1196, name: "トークショー/講演会", ancestry: parent_id },
+  {id: 1197, name: "その他", ancestry: parent_id },
+)
+
+# 11-05 チケット > 映画
+parent_id = "11/139"
+Category.seed(:id,
+  {id: 1198, name: "邦画", ancestry: parent_id },
+  {id: 1199, name: "洋画", ancestry: parent_id },
+  {id: 1200, name: "その他", ancestry: parent_id },
+)
+
+# 11-06 チケット > 施設利用券
+parent_id = "11/140"
+Category.seed(:id,
+  {id: 1201, name: "遊園地/テーマパーク", ancestry: parent_id },
+  {id: 1202, name: "美術館/博物館", ancestry: parent_id },
+  {id: 1203, name: "スキー場", ancestry: parent_id },
+  {id: 1204, name: "ゴルフ場", ancestry: parent_id },
+  {id: 1205, name: "フィットネスクラブ", ancestry: parent_id },
+  {id: 1206, name: "プール", ancestry: parent_id },
+  {id: 1207, name: "ボウリング場", ancestry: parent_id },
+  {id: 1208, name: "水族館", ancestry: parent_id },
+  {id: 1209, name: "動物園", ancestry: parent_id },
+  {id: 1210, name: "その他", ancestry: parent_id },
+)
+
+# 11-07 チケット > 優待券/割引券
+parent_id = "11/141"
+Category.seed(:id,
+  {id: 1211, name: "レストラン/食事券", ancestry: parent_id },
+  {id: 1212, name: "フード/ドリンク券", ancestry: parent_id },
+  {id: 1213, name: "宿泊券", ancestry: parent_id },
+  {id: 1214, name: "その他", ancestry: parent_id },
+)
+
+
+
+
