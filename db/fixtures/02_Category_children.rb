@@ -153,6 +153,15 @@
 # 12-04 自動車・オートバイ > 自動車アクセサリー
 # 12-05 自動車・オートバイ > オートバイパーツ
 # 12-06 自動車・オートバイ > オートバイアクセサリー
+#############################################
+# 13 その他の孫カテゴリー作成
+# 13-01 その他 > ペット用品
+# 13-02 その他 > 食品
+# 13-03 その他 > 飲料/酒
+# 13-04 その他 > 日用品/生活雑貨/旅行
+# 13-05 その他 > アンティーク/コレクション
+# 13-06 その他 > 文房具/事務用品
+# 13-06 その他 > 事務/店舗用品
 
 
 # 01-01 レディース > トップス
@@ -1920,4 +1929,95 @@ Category.seed(:id,
   {id: 1268, name: "その他", ancestry: parent_id },
 )
 
+# 13-01 その他 > ペット用品
+parent_id = "13/151"
+Category.seed(:id,
+  {id: 1269, name: "ペットフード", ancestry: parent_id },
+  {id: 1270, name: "犬用品", ancestry: parent_id },
+  {id: 1271, name: "猫用品", ancestry: parent_id },
+  {id: 1272, name: "魚用品/水草", ancestry: parent_id },
+  {id: 1273, name: "小動物用品", ancestry: parent_id },
+  {id: 1274, name: "爬虫類/両生類用品", ancestry: parent_id },
+  {id: 1275, name: "かご/おり", ancestry: parent_id },
+  {id: 1276, name: "鳥用品", ancestry: parent_id },
+  {id: 1277, name: "虫類用品", ancestry: parent_id },
+  {id: 1278, name: "その他", ancestry: parent_id },
+)
+
+# 13-02 その他 > 食品
+parent_id = "13/152"
+Category.seed(:id,
+  {id: 1279, name: "菓子", ancestry: parent_id },
+  {id: 1280, name: "米", ancestry: parent_id },
+  {id: 1281, name: "野菜", ancestry: parent_id },
+  {id: 1282, name: "果物", ancestry: parent_id },
+  {id: 1283, name: "調味料", ancestry: parent_id },
+  {id: 1284, name: "魚介類(加工食品)", ancestry: parent_id },
+  {id: 1285, name: "肉類(加工食品)", ancestry: parent_id },
+  {id: 1286, name: "その他 加工食品", ancestry: parent_id },
+  {id: 1287, name: "その他", ancestry: parent_id },
+)
+
+# 13-03 その他 > 飲料/酒
+parent_id = "13/153"
+Category.seed(:id,
+  {id: 1288, name: "コーヒー", ancestry: parent_id },
+  {id: 1289, name: "ソフトドリンク", ancestry: parent_id },
+  {id: 1290, name: "ミネラルウォーター", ancestry: parent_id },
+  {id: 1291, name: "茶", ancestry: parent_id },
+  {id: 1292, name: "ウイスキー", ancestry: parent_id },
+  {id: 1293, name: "ワイン", ancestry: parent_id },
+  {id: 1294, name: "ブランデー", ancestry: parent_id },
+  {id: 1295, name: "焼酎", ancestry: parent_id },
+  {id: 1296, name: "日本酒", ancestry: parent_id },
+  {id: 1297, name: "ビール、発泡酒", ancestry: parent_id },
+  {id: 1298, name: "その他", ancestry: parent_id },
+)
+
+# 13-04 その他 > 日用品/生活雑貨/旅行
+parent_id = "13/154"
+Category.seed(:id,
+  {id: 1299, name: "タオル/バス用品", ancestry: parent_id },
+  {id: 1300, name: "日用品/生活雑貨", ancestry: parent_id },
+  {id: 1301, name: "洗剤/柔軟剤", ancestry: parent_id },
+  {id: 1302, name: "旅行用品", ancestry: parent_id },
+  {id: 1303, name: "防災関連グッズ", ancestry: parent_id },
+  {id: 1304, name: "その他", ancestry: parent_id },
+)
+
+# 13-05 その他 > アンティーク/コレクション
+parent_id = "13/155"
+Category.seed(:id,
+  {id: 1305, name: "雑貨", ancestry: parent_id },
+  {id: 1306, name: "工芸品", ancestry: parent_id },
+  {id: 1307, name: "家具", ancestry: parent_id },
+  {id: 1308, name: "印刷物", ancestry: parent_id },
+  {id: 1309, name: "その他", ancestry: parent_id },
+)
+
+# 13-06 その他 > 文房具/事務用品
+parent_id = "13/156"
+Category.seed(:id,
+  {id: 1310, name: "筆記具", ancestry: parent_id },
+  {id: 1311, name: "ノート/メモ帳", ancestry: parent_id },
+  {id: 1312, name: "テープ/マスキングテープ", ancestry: parent_id },
+  {id: 1313, name: "カレンダー/スケジュール", ancestry: parent_id },
+  {id: 1314, name: "アルバム/スクラップ", ancestry: parent_id },
+  {id: 1315, name: "ファイル/バインダー", ancestry: parent_id },
+  {id: 1316, name: "はさみ/カッター", ancestry: parent_id },
+  {id: 1317, name: "カードホルダー/名刺管理", ancestry: parent_id },
+  {id: 1318, name: "のり/ホッチキス", ancestry: parent_id },
+  {id: 1319, name: "その他", ancestry: parent_id },
+)
+
+# 13-06 その他 > 事務/店舗用品
+parent_id = "13/157"
+Category.seed(:id,
+  {id: 1320, name: "オフィス用品一般", ancestry: parent_id },
+  {id: 1321, name: "オフィス家具", ancestry: parent_id },
+  {id: 1322, name: "店舗用品", ancestry: parent_id },
+  {id: 1323, name: "OA機器", ancestry: parent_id },
+  {id: 1324, name: "ラッピング/包装", ancestry: parent_id },
+  {id: 1325, name: "その他", ancestry: parent_id },
+)
 
