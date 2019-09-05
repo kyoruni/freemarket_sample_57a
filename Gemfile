@@ -87,11 +87,19 @@ gem 'ancestry'
 # 都道府県
 gem 'active_hash'
 
+# 画像アップロード
+gem 'carrierwave'
+gem 'mini_magick'
+
 # 本番環境のみ
 group :production do
   # ユニコーン
   gem 'unicorn', '5.4.1'
 end
 
+# S3
+gem 'fog-aws'
+
 # パンくず
 gem 'gretel'
+
