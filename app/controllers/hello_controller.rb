@@ -22,4 +22,7 @@ class HelloController < ApplicationController
 
   def step7
   end
+
+  def card_registration
+  end
 end
