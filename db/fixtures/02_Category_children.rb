@@ -1491,216 +1491,155 @@ Category.seed(:id,
 # 09-01 スポーツ・レジャー > ゴルフ
 parent_id = "9/114"
 Category.seed(:id,
-  {id: , name: "クラブ", ancestry: parent_id },
-  {id: , name: "ウエア(男性用)", ancestry: parent_id },
-  {id: , name: "ウエア(女性用)", ancestry: parent_id },
-  {id: , name: "バッグ", ancestry: parent_id },
-  {id: , name: "シューズ(男性用)", ancestry: parent_id },
-  {id: , name: "シューズ(女性用)", ancestry: parent_id },
-  {id: , name: "アクセサリー", ancestry: parent_id },
-  {id: , name: "その他", ancestry: parent_id },
+  {id: 1030, name: "クラブ", ancestry: parent_id },
+  {id: 1031, name: "ウエア(男性用)", ancestry: parent_id },
+  {id: 1032, name: "ウエア(女性用)", ancestry: parent_id },
+  {id: 1033, name: "バッグ", ancestry: parent_id },
+  {id: 1034, name: "シューズ(男性用)", ancestry: parent_id },
+  {id: 1035, name: "シューズ(女性用)", ancestry: parent_id },
+  {id: 1036, name: "アクセサリー", ancestry: parent_id },
+  {id: 1037, name: "その他", ancestry: parent_id },
 )
 
 # 09-02 スポーツ・レジャー > フィッシング
 parent_id = "8/115"
 Category.seed(:id,
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
+  {id: 1038, name: "ロッド", ancestry: parent_id },
+  {id: 1039, name: "リール", ancestry: parent_id },
+  {id: 1040, name: "ルアー用品", ancestry: parent_id },
+  {id: 1041, name: "ウエア", ancestry: parent_id },
+  {id: 1042, name: "釣り糸/ライン", ancestry: parent_id },
+  {id: 1043, name: "その他", ancestry: parent_id },
 )
-
-ロッド
-リール
-ルアー用品
-ウエア
-釣り糸/ライン
-その他
 
 # 09-03 スポーツ・レジャー > 自転車
 parent_id = "8/116"
 Category.seed(:id,
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
+  {id: 1044, name: "自転車本体", ancestry: parent_id },
+  {id: 1045, name: "ウエア", ancestry: parent_id },
+  {id: 1046, name: "パーツ", ancestry: parent_id },
+  {id: 1047, name: "アクセサリー", ancestry: parent_id },
+  {id: 1048, name: "バッグ", ancestry: parent_id },
+  {id: 1049, name: "工具/メンテナンス", ancestry: parent_id },
+  {id: 1050, name: "その他", ancestry: parent_id },
 )
-
-自転車本体
-ウエア
-パーツ
-アクセサリー
-バッグ
-工具/メンテナンス
-その他
 
 # 09-04 スポーツ・レジャー > トレーニング/エクササイズ
 parent_id = "8/117"
 Category.seed(:id,
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
+  {id: 1051, name: "ランニング", ancestry: parent_id },
+  {id: 1052, name: "ウォーキング", ancestry: parent_id },
+  {id: 1053, name: "ヨガ", ancestry: parent_id },
+  {id: 1054, name: "トレーニング用品", ancestry: parent_id },
+  {id: 1055, name: "その他", ancestry: parent_id },
 )
-ランニング
-ウォーキング
-ヨガ
-トレーニング用品
-その他
 
 # 09-05 スポーツ・レジャー > 野球
 parent_id = "8/118"
 Category.seed(:id,
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
+  {id: 1056, name: "ウェア", ancestry: parent_id },
+  {id: 1057, name: "シューズ", ancestry: parent_id },
+  {id: 1058, name: "グローブ", ancestry: parent_id },
+  {id: 1059, name: "バット", ancestry: parent_id },
+  {id: 1060, name: "アクセサリー", ancestry: parent_id },
+  {id: 1061, name: "防具", ancestry: parent_id },
+  {id: 1062, name: "練習機器", ancestry: parent_id },
+  {id: 1063, name: "記念グッズ", ancestry: parent_id },
+  {id: 1064, name: "応援グッズ", ancestry: parent_id },
+  {id: 1065, name: "その他", ancestry: parent_id },
 )
-
-ウェア
-シューズ
-グローブ
-バット
-アクセサリー
-防具
-練習機器
-記念グッズ
-応援グッズ
-その他
 
 # 09-06 スポーツ・レジャー > サッカー/フットサル
 parent_id = "8/119"
 Category.seed(:id,
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
+  {id: 1066, name: "ウェア", ancestry: parent_id },
+  {id: 1067, name: "シューズ", ancestry: parent_id },
+  {id: 1068, name: "ボール", ancestry: parent_id },
+  {id: 1069, name: "アクセサリー", ancestry: parent_id },
+  {id: 1070, name: "記念グッズ", ancestry: parent_id },
+  {id: 1071, name: "応援グッズ", ancestry: parent_id },
+  {id: 1072, name: "その他", ancestry: parent_id },
 )
-
-ウェア
-シューズ
-ボール
-アクセサリー
-記念グッズ
-応援グッズ
-その他
 
 # 09-07 スポーツ・レジャー > テニス
 parent_id = "8/120"
 Category.seed(:id,
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
+  {id: 1073, name: "ラケット(硬式用)", ancestry: parent_id },
+  {id: 1074, name: "ラケット(軟式用)", ancestry: parent_id },
+  {id: 1075, name: "ウェア", ancestry: parent_id },
+  {id: 1076, name: "シューズ", ancestry: parent_id },
+  {id: 1077, name: "ボール", ancestry: parent_id },
+  {id: 1078, name: "アクセサリー", ancestry: parent_id },
+  {id: 1079, name: "記念グッズ", ancestry: parent_id },
+  {id: 1080, name: "応援グッズ", ancestry: parent_id },
+  {id: 1081, name: "その他", ancestry: parent_id },
 )
-
-ラケット(硬式用)
-ラケット(軟式用)
-ウェア
-シューズ
-ボール
-アクセサリー
-記念グッズ
-応援グッズ
-その他
 
 # 09-08 スポーツ・レジャー > スノーボード
 parent_id = "8/121"
 Category.seed(:id,
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
-  {id: , name: "", ancestry: parent_id },
+  {id: 1082, name: "ボード", ancestry: parent_id },
+  {id: 1083, name: "バインディング", ancestry: parent_id },
+  {id: 1084, name: "ブーツ(男性用)", ancestry: parent_id },
+  {id: 1085, name: "ブーツ(女性用)", ancestry: parent_id },
+  {id: 1086, name: "ブーツ(子ども用)", ancestry: parent_id },
+  {id: 1087, name: "ウエア/装備(男性用)", ancestry: parent_id },
+  {id: 1088, name: "ウエア/装備(女性用)", ancestry: parent_id },
+  {id: 1089, name: "ウエア/装備(子ども用)", ancestry: parent_id },
+  {id: 1090, name: "アクセサリー", ancestry: parent_id },
+  {id: 1091, name: "バッグ", ancestry: parent_id },
+  {id: 1092, name: "その他", ancestry: parent_id },
 )
-
-ボード
-バインディング
-ブーツ(男性用)
-ブーツ(女性用)
-ブーツ(子ども用)
-ウエア/装備(男性用)
-ウエア/装備(女性用)
-ウエア/装備(子ども用)
-アクセサリー
-バッグ
-その他
 
 # 09-09 スポーツ・レジャー > スキー
 parent_id = "9/122"
 Category.seed(:id,
-  {id: , name: "板", ancestry: parent_id },
-  {id: , name: "ブーツ(男性用)", ancestry: parent_id },
-  {id: , name: "ブーツ(女性用)", ancestry: parent_id },
-  {id: , name: "ブーツ(子ども用)", ancestry: parent_id },
-  {id: , name: "ビンディング", ancestry: parent_id },
-  {id: , name: "ウエア(男性用)", ancestry: parent_id },
-  {id: , name: "ウエア(女性用)", ancestry: parent_id },
-  {id: , name: "ウエア(子ども用)", ancestry: parent_id },
-  {id: , name: "ストック", ancestry: parent_id },
-  {id: , name: "その他", ancestry: parent_id },
+  {id: 1093, name: "板", ancestry: parent_id },
+  {id: 1094, name: "ブーツ(男性用)", ancestry: parent_id },
+  {id: 1095, name: "ブーツ(女性用)", ancestry: parent_id },
+  {id: 1096, name: "ブーツ(子ども用)", ancestry: parent_id },
+  {id: 1097, name: "ビンディング", ancestry: parent_id },
+  {id: 1098, name: "ウエア(男性用)", ancestry: parent_id },
+  {id: 1099, name: "ウエア(女性用)", ancestry: parent_id },
+  {id: 1100, name: "ウエア(子ども用)", ancestry: parent_id },
+  {id: 1101, name: "ストック", ancestry: parent_id },
+  {id: 1102, name: "その他", ancestry: parent_id },
 )
 
 # 09-10 スポーツ・レジャー > その他スポーツ
 parent_id = "9/123"
 Category.seed(:id,
-  {id: , name: "ダンス/バレエ", ancestry: parent_id },
-  {id: , name: "サーフィン", ancestry: parent_id },
-  {id: , name: "バスケットボール", ancestry: parent_id },
-  {id: , name: "バドミントン", ancestry: parent_id },
-  {id: , name: "バレーボール", ancestry: parent_id },
-  {id: , name: "スケートボード", ancestry: parent_id },
-  {id: , name: "陸上競技", ancestry: parent_id },
-  {id: , name: "ラグビー", ancestry: parent_id },
-  {id: , name: "アメリカンフットボール", ancestry: parent_id },
-  {id: , name: "ボクシング", ancestry: parent_id },
-  {id: , name: "ボウリング", ancestry: parent_id },
-  {id: , name: "その他", ancestry: parent_id },
+  {id: 1103, name: "ダンス/バレエ", ancestry: parent_id },
+  {id: 1104, name: "サーフィン", ancestry: parent_id },
+  {id: 1105, name: "バスケットボール", ancestry: parent_id },
+  {id: 1106, name: "バドミントン", ancestry: parent_id },
+  {id: 1107, name: "バレーボール", ancestry: parent_id },
+  {id: 1108, name: "スケートボード", ancestry: parent_id },
+  {id: 1109, name: "陸上競技", ancestry: parent_id },
+  {id: 1110, name: "ラグビー", ancestry: parent_id },
+  {id: 1111, name: "アメリカンフットボール", ancestry: parent_id },
+  {id: 1112, name: "ボクシング", ancestry: parent_id },
+  {id: 1113, name: "ボウリング", ancestry: parent_id },
+  {id: 1114, name: "その他", ancestry: parent_id },
 )
 
 # 09-11 スポーツ・レジャー > アウトドア
 parent_id = "9/124"
 Category.seed(:id,
-  {id: , name: "テント/タープ", ancestry: parent_id },
-  {id: , name: "ライト/ランタン", ancestry: parent_id },
-  {id: , name: "寝袋/寝具", ancestry: parent_id },
-  {id: , name: "テーブル/チェア", ancestry: parent_id },
-  {id: , name: "ストーブ/コンロ", ancestry: parent_id },
-  {id: , name: "調理器具", ancestry: parent_id },
-  {id: , name: "食器", ancestry: parent_id },
-  {id: , name: "登山用品", ancestry: parent_id },
-  {id: , name: "その他", ancestry: parent_id },
+  {id: 1115, name: "テント/タープ", ancestry: parent_id },
+  {id: 1116, name: "ライト/ランタン", ancestry: parent_id },
+  {id: 1117, name: "寝袋/寝具", ancestry: parent_id },
+  {id: 1118, name: "テーブル/チェア", ancestry: parent_id },
+  {id: 1119, name: "ストーブ/コンロ", ancestry: parent_id },
+  {id: 1120, name: "調理器具", ancestry: parent_id },
+  {id: 1121, name: "食器", ancestry: parent_id },
+  {id: 1122, name: "登山用品", ancestry: parent_id },
+  {id: 1123, name: "その他", ancestry: parent_id },
 )
 
 # 09-12 スポーツ・レジャー > その他
 parent_id = "9/125"
 Category.seed(:id,
-  {id: , name: "旅行用品", ancestry: parent_id },
-  {id: , name: "その他", ancestry: parent_id },
+  {id: 1124, name: "旅行用品", ancestry: parent_id },
+  {id: 1125, name: "その他", ancestry: parent_id },
 )
