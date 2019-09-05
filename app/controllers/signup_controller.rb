@@ -6,7 +6,6 @@ class SignupController < ApplicationController
   
   def step2
     @user = User.new()
-    @user.build_address(user_params[:address_attributes])
     session[:name]                   = user_params[:name]
     session[:email]                  = user_params[:email]
     session[:password]               = user_params[:password]
@@ -20,7 +19,7 @@ class SignupController < ApplicationController
   
   def step3
     @user = User.new()
-    @user.build_shipping_address(user_params[:shipping_address_attributes])
+    @user.build_shipping_address(session[:shipping_address_attributes])
     session[:phone_number]           = user_params[:phone_number]
   end
 
@@ -34,22 +33,26 @@ class SignupController < ApplicationController
     session[:address]                = user_params[:address]
     session[:building]               = user_params[:building]
     session[:phone_number]           = user_params[:phone_number]
-    @user.build_credit(user_params[:credit_attributes])
+    @user.build_credit(session[:credit_attributes])
+    @user.build_shipping_address(session[:shipping_address_attributes])
+
   end
 
   def create
-    @user = User.new(
-      email:                     session[:email],
-      password:                  session[:password],
-      password_confirmation:     session[:password_confirmation],
-      name:                      user_params[:name]
+    @user = User.new( name: session[:name],
+      email:                        session[:email],
+      password:                     session[:password],
+      password_confirmation:        session[:password_confirmation],
+      last_name:                    session[:last_name],
+      first_name:                   session[:first_name],
+      last_name_kana:               session[:last_name_kana],
+      first_name_kana:              session[:first_name_kana],
+      birthday:                     session[:birthday],
+      shipping_address_attributes:  session[:shipping_address_attributes] 
     )
-    # session[:user_id] = @user.user_id
-    session[:number]
-    session[:expiration_date_month]
-    session[:expiration_date_year]
-    session[:security_code]
+    binding.pry
     @user.save
+    session[:id] = @user.id
   end
 
   private
@@ -65,9 +68,7 @@ class SignupController < ApplicationController
       :last_name_kana,
       :first_name_kana,
       :birthday,
-      :phone_number_attributes,
-      address_attributes:[:last_name,:first_name,:last_name_kana,:first_name_kana,:postal_code,:address,:building,:user_id,:created_at, :updated_at],
-      shipping_address_attributes:[:last_name,:first_name,:last_name_kana,:first_name_kana,:postal_code,:address,:building,:phone_number,:created_at, :updated_at],
+      shipping_address_attributes:[:id,:last_name,:first_name,:last_name_kana,:first_name_kana,:postal_code,:address,:building,:phone_number,:created_at, :updated_at],
       credit_attributes:[:number,:expiration_date_month,:expiration_date_year,:security_code,:user_id,:created_at, :updated_at]
     )
   end
