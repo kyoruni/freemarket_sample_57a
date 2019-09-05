@@ -6,14 +6,13 @@
       .sign-in__contents__frame__top_contents
         .sign-in__contents__frame__top_contents__top_frame
           %p アカウントをお持ちでない方はこちら
-          .registration_btn
-            %h3 新規会員登録
-
+          = link_to step1_signup_index_path, class: "registration_btn" do
+            .registration_btn
+              %h3 新規会員登録
       .sign-in__contents__frame__middle_contents
         .sign-in__contents__frame__middle_contents__middle_frame
+          
             
-
-
           .sign-in__contents__frame__middle_contents__middle_frame__field-top
             %i.fab.fa-facebook-square.size
             %p Facebookでログイン
