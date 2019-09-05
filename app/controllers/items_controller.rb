@@ -11,6 +11,8 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    @item.images.build
+
     # collction_selectで選択肢を呼び出す記述
     @root_category = Category.order("id ASC").limit(13)
     @condition = Condition.order("id ASC")
@@ -34,7 +36,7 @@ class ItemsController < ApplicationController
 
   def item_params
     # binding.pry
-    params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :price )
+    params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :price, images_attributes: [:image] )
   end
 end
 
