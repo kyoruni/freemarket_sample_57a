@@ -1,6 +1,6 @@
 require 'csv'
 
-CSV.read('db/fixtures/04_Brand.csv', encoding: 'Shift_JIS:UTF-8').each_with_index do |brand, i|
+CSV.read('db/fixtures/04_brand.csv', encoding: 'Shift_JIS:UTF-8').each_with_index do |brand, i|
   next if i === 0
 
   name = brand[0]
