@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+if Rails.env == "development"
+  Image.create!(
+    [
+      {
+        image: File.open("./app/assets/images/sample.jpeg"),
+        item_id: "1",
+      }
+    ]
+  )
+ end
