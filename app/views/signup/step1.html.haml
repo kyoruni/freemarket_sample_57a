@@ -57,21 +57,21 @@
               .text-date
                 .y
                   .date-flame
-                    = f.text_field :birthday, placeholder: "  --", class: "year"
+                    = f.text_field :birth_year, placeholder: "  --", class: "year"
                   .select-flame
                     %i.fas.fa-angle-down.fa-lg
                 %p.date 年
                 
                 .y
                   .date-flame
-                    = f.text_field :birthday, placeholder: "  --", class: "month"
+                    = f.text_field :birth_month, placeholder: "  --", class: "month"
                   .select-flame
                     %i.fas.fa-angle-down.fa-lg
                 %p.date 月
                 
                 .y
                   .date-flame
-                    = f.text_field :birthday, placeholder: "  --", class: "days"
+                    = f.text_field :birth_day, placeholder: "  --", class: "days"
                   .select-flame
                     %i.fas.fa-angle-down.fa-lg
                 %p.date 日

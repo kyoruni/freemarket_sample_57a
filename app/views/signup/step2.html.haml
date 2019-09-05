@@ -12,8 +12,7 @@
           .sms-comfirmation__contents__all-frame__bottom-contents__bottom-frame
             .sms-comfirmation__contents__all-frame__bottom-contents__bottom-frame__from
               %h4 携帯の電話番号
-              = f.fields_for :shipping_addres do |i|
-                = i.text_field :phone_number, placeholder: '  携帯の電話番号を入力', class: "telephone-number"
+              = f.text_field :phone_number, placeholder: '  携帯の電話番号を入力', class: "telephone-number"
             %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
 
             .sms-comfirmation__contents__all-frame__bottom-contents__bottom-frame__next-btn
