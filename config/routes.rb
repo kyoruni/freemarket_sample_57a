@@ -5,6 +5,19 @@ Rails.application.routes.draw do
   resources  :buys, only: [:index, :show]
   root 'hello#index'
 
+
+  resources :signup do
+    collection do
+      get  '/'               => 'signup#index'
+      get  'step1'           => 'signup#step1'
+      get  'step2'           => 'signup#step2'
+      get  'step3'           => 'signup#step3'
+      get  'step4'           => 'signup#step4'
+      post 'signup/create'   => 'signup#create'
+    end
+  end
+
+
   get 'step1' => 'hello#step1'
   get 'step2' => 'hello#step2'
   get 'step3' => 'hello#step3'
