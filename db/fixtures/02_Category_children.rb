@@ -145,6 +145,15 @@
 # 11-05 チケット > 映画
 # 11-06 チケット > 施設利用券
 # 11-07 チケット > 優待券/割引券
+#############################################
+# 12  自動車・オートバイの孫カテゴリー作成
+# 12-01 自動車・オートバイ > 自動車本体
+# 12-02 自動車・オートバイ > 自動車タイヤ/ホイール
+# 12-03 自動車・オートバイ > 自動車パーツ
+# 12-04 自動車・オートバイ > 自動車アクセサリー
+# 12-05 自動車・オートバイ > オートバイパーツ
+# 12-06 自動車・オートバイ > オートバイアクセサリー
+
 
 # 01-01 レディース > トップス
 parent_id = "1/14"
@@ -1827,6 +1836,88 @@ Category.seed(:id,
   {id: 1214, name: "その他", ancestry: parent_id },
 )
 
+# 12-01 自動車・オートバイ > 自動車本体
+parent_id = "12/143"
+Category.seed(:id,
+  {id: 1215, name: "国内自動車本体", ancestry: parent_id },
+  {id: 1216, name: "外国自動車本体", ancestry: parent_id },
+)
 
+# 12-02 自動車・オートバイ > 自動車タイヤ/ホイール
+parent_id = "12/144"
+Category.seed(:id,
+  {id: 1217, name: "タイヤ/ホイールセット", ancestry: parent_id },
+  {id: 1218, name: "タイヤ", ancestry: parent_id },
+  {id: 1219, name: "ホイール", ancestry: parent_id },
+  {id: 1220, name: "その他", ancestry: parent_id },
+)
+
+# 12-03 自動車・オートバイ > 自動車パーツ
+parent_id = "12/145"
+Category.seed(:id,
+  {id: 1221, name: "サスペンション", ancestry: parent_id },
+  {id: 1222, name: "ブレーキ", ancestry: parent_id },
+  {id: 1223, name: "外装、エアロパーツ", ancestry: parent_id },
+  {id: 1224, name: "ライト", ancestry: parent_id },
+  {id: 1225, name: "内装品、シート", ancestry: parent_id },
+  {id: 1226, name: "ステアリング", ancestry: parent_id },
+  {id: 1227, name: "マフラー・排気系", ancestry: parent_id },
+  {id: 1228, name: "エンジン、過給器、冷却装置", ancestry: parent_id },
+  {id: 1229, name: "クラッチ、ミッション、駆動系", ancestry: parent_id },
+  {id: 1230, name: "電装品", ancestry: parent_id },
+  {id: 1231, name: "補強パーツ", ancestry: parent_id },
+  {id: 1232, name: "汎用パーツ", ancestry: parent_id },
+  {id: 1233, name: "外国自動車用パーツ", ancestry: parent_id },
+  {id: 1234, name: "その他", ancestry: parent_id },
+)
+
+# 12-04 自動車・オートバイ > 自動車アクセサリー
+parent_id = "12/146"
+Category.seed(:id,
+  {id: 1235, name: "車内アクセサリー", ancestry: parent_id },
+  {id: 1236, name: "カーナビ", ancestry: parent_id },
+  {id: 1237, name: "カーオーディオ", ancestry: parent_id },
+  {id: 1238, name: "車外アクセサリー", ancestry: parent_id },
+  {id: 1239, name: "メンテナンス用品", ancestry: parent_id },
+  {id: 1240, name: "チャイルドシート", ancestry: parent_id },
+  {id: 1241, name: "ドライブレコーダー", ancestry: parent_id },
+  {id: 1242, name: "レーダー探知機", ancestry: parent_id },
+  {id: 1243, name: "カタログ/マニュアル", ancestry: parent_id },
+  {id: 1244, name: "セキュリティ", ancestry: parent_id },
+  {id: 1245, name: "ETC", ancestry: parent_id },
+  {id: 1246, name: "その他", ancestry: parent_id },
+)
+
+# 12-05 自動車・オートバイ > オートバイパーツ
+parent_id = "12/148"
+Category.seed(:id,
+  {id: 1247, name: "タイヤ", ancestry: parent_id },
+  {id: 1248, name: "マフラー", ancestry: parent_id },
+  {id: 1249, name: "エンジン、冷却装置", ancestry: parent_id },
+  {id: 1250, name: "カウル、フェンダー、外装", ancestry: parent_id },
+  {id: 1251, name: "サスペンション", ancestry: parent_id },
+  {id: 1252, name: "ホイール", ancestry: parent_id },
+  {id: 1253, name: "シート", ancestry: parent_id },
+  {id: 1254, name: "ブレーキ", ancestry: parent_id },
+  {id: 1255, name: "タンク", ancestry: parent_id },
+  {id: 1256, name: "ライト、ウィンカー", ancestry: parent_id },
+  {id: 1257, name: "チェーン、スプロケット、駆動系", ancestry: parent_id },
+  {id: 1258, name: "メーター", ancestry: parent_id },
+  {id: 1259, name: "電装系", ancestry: parent_id },
+  {id: 1260, name: "ミラー", ancestry: parent_id },
+  {id: 1261, name: "外国オートバイ用パーツ", ancestry: parent_id },
+  {id: 1262, name: "その他", ancestry: parent_id },
+)
+
+# 12-06 自動車・オートバイ > オートバイアクセサリー
+parent_id = "12/149"
+Category.seed(:id,
+  {id: 1263, name: "ヘルメット/シールド", ancestry: parent_id },
+  {id: 1264, name: "バイクウエア/装備", ancestry: parent_id },
+  {id: 1265, name: "アクセサリー", ancestry: parent_id },
+  {id: 1266, name: "メンテナンス", ancestry: parent_id },
+  {id: 1267, name: "カタログ/マニュアル", ancestry: parent_id },
+  {id: 1268, name: "その他", ancestry: parent_id },
+)
 
 
