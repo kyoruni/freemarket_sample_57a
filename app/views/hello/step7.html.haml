@@ -1,0 +1,8 @@
+= render 'shared/main_header'
+.mypage
+  = render 'users/mypage-left'
+  .logout-main
+    = link_to "#" do
+      .logout-main__registration-btn
+        %p ログアウト
+= render 'shared/main_footer'

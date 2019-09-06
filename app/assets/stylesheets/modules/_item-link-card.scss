@@ -1,28 +1,24 @@
 // アイテムリンクカード
 .item-link-card {
-  height: 330px;
-  width: 220px;
+  @include box(220px, 330px);
   margin-right: 20px;
   color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   &__link {
     text-decoration: none;
   }
   &--image {
-    height: 220px;
-    width: 220px;
+    @include box(220px, 220px);
   }
   &__text-box {
-    height: 110px;
-    width: 220px;
+    @include box(220px, 110px);
     padding: 16px;
-    background-color: white;
+    background-color: $white;
     &--name {
-      width: 188px;
-      height: 48px;
+      @include box(188px, 48px);
     }
     &__bottom {
-      width: 188px;
-      height: 17px;
+      @include box(188px, 17px);
       margin-top: 8px;
       font-size: 14px;
       &--price {
@@ -37,8 +33,7 @@
 }
 
 .item-photo-size {
-  height: 220px;
-  width: 220px;
+  @extend .item-link-card--image;
 }
 
 .item-link-card__text-box--name h3 {

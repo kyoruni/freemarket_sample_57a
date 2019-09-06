@@ -14,4 +14,13 @@ class Item < ApplicationRecord
   belongs_to :postage
   has_many :images, dependent: :destroy
   accepts_nested_attributes_for :images
+
+  # 最新のデータを、指定した件数取得
+  scope :recent, -> count { order('created_at DESC').limit(count) }
+
+  # 指定したカテゴリーのデータを取得
+  scope :category_items, -> categories { includes(:images).where(category_id: categories.ids ) }
+
+  # 指定したブランドのデータを取得
+  scope :brand_items, -> brand_id { includes(:images).where(brand_id: brand_id ) }
 end

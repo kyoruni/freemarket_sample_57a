@@ -1,6 +1,6 @@
 .main {
   &__visual {
-    height: 390px;
+    @include box("", 390px);
     display: block;
     background-size: cover;
     background-image: image-url("visual.png");
@@ -8,7 +8,6 @@
   }
   &__container {
     padding: 40px 0;
-    background-color: $white;
     &__head {
       font-size: 28px;
       text-align: center;
@@ -16,7 +15,7 @@
       font-weight: bold;
     }
     &__item {
-      width: 940px;
+      @include box(940px, "");
       margin: 0 auto;
       &__category {
         font-size: 22px;
@@ -35,8 +34,8 @@
         }
       }
       &__all {
+        @include box(99.5%, "");
         padding: 20px 0 30px;
-        width: 99.5%;
         text-align: right;
         &__link {
           color: $light-blue;
