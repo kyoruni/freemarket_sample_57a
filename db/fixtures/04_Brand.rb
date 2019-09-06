@@ -1,36 +1,11 @@
-Brand.seed(:id,
-  {id: 1,  name: "アー ヴェ ヴェ" },
-  {id: 2,  name: "アーカー" },
-  {id: 3,  name: "アーキ" },
-  {id: 4,  name: "アークスタンダード" },
-  {id: 5,  name: "アークテリクス" },
-  {id: 6,  name: "イアパピヨネ" },
-  {id: 7,  name: "イーアールジー" },
-  {id: 8,  name: "イーエーピー" },
-  {id: 9,  name: "イーエム" },
-  {id: 10, name: "イーエムノアール" },
-  {id: 11, name: "ヴァーガス" },
-  {id: 12, name: "ヴァージニア" },
-  {id: 13, name: "ヴァーチュアンドヴァイス" },
-  {id: 14, name: "ヴァイヴィア" },
-  {id: 15, name: "ヴァイオレットバッファローワローズ" },
-  {id: 16, name: "エアウォーク" },
-  {id: 17, name: "エア バギー" },
-  {id: 18, name: "エアパペル" },
-  {id: 19, name: "エアロポステール" },
-  {id: 20, name: "エアロレザー" },
-  {id: 21, name: "オアグローリー" },
-  {id: 22, name: "オアスロウ" },
-  {id: 23, name: "オゥバニスター" },
-  {id: 24, name: "オゥパラディ" },
-  {id: 25, name: "欧州航路" },
-  # 一覧でピックアップされているブランド
-  {id: 26, name: "シャネル" },
-  {id: 27, name: "ナイキ" },
-  {id: 28, name: "ルイ ヴィトン" },
-  {id: 29, name: "シュプリーム" },
-  {id: 30, name: "アディダス" },
-)
+require 'csv'
 
+CSV.read('db/fixtures/04_brand.csv', encoding: 'Shift_JIS:UTF-8').each_with_index do |brand, i|
+  next if i === 0
 
-
+  name = brand[0]
+  Brand.seed_once(:id) do |s|
+    s.id   = i
+    s.name = name
+  end
+end

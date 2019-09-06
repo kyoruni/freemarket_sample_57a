@@ -4,13 +4,19 @@
 
 ### ユーザー
 
-|  Column  |  Type  |         Options          |
-| :------: | :----: | :----------------------: |
-| nickname | string |       null: false        |
-|  email   | string | null:false, unique: true |
-| password | string |        null:false        |
-| birthday |  date  |        null:false        |
-
+|     Column     |  Type  |         Options          |
+| :------------: | :----: | :----------------------: |
+|    nickname    | string |       null: false        |
+|     email      | string | null:false, unique: true |
+|    password    | string |        null:false        |
+|   last_name    | string |        null:false        |
+|   first_name   | string |        null:false        |
+| last_name_kana | string |        null:false        |
+|first_name_kana | string |        null:false        |
+|   birth_year   | string |        null:false        |
+|   birth_month  | string |        null:false        |
+|   birth_day    | string |        null:false        |
+|  phone_number  |integer |        null:false        |
 ### Association
 
 - has_one :credit, dependent: :destroy
@@ -70,7 +76,7 @@
 |    region_id    | references | foreign_key:true |
 |     address     |   string   |                  |
 |    building     |   string   |                  |
-|  phone_number   |   string   |    null:false    |
+|     user_id     | references | foreign_key:true |
 
 ### Association
 
