@@ -30,11 +30,11 @@ class ItemsController < ApplicationController
     10.times{@item.images.build}
 
     # collction_selectで選択肢を呼び出す記述
-    @root_category = Category.order("id ASC").limit(13)
-    @condition = Condition.order("id ASC")
-    @postage = Postage.order("id ASC")
-    @region = Region.order("id ASC")
-    @delivery_day = DeliveryDay.order("id ASC")
+    @root_category = Category.limit(13)
+    @condition = Condition.all
+    @postage = Postage.all
+    @region = Region.all
+    @delivery_day = DeliveryDay.all
   end
 
   def create
