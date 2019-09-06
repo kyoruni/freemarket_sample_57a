@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @item.images.build
+    4.times{@item.images.build}
 
     # collction_selectで選択肢を呼び出す記述
     @root_category = Category.order("id ASC").limit(13)
@@ -23,6 +23,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    
     @item.save!
     redirect_to root_path
     # if @item.save
@@ -36,7 +37,7 @@ class ItemsController < ApplicationController
 
   def item_params
     # binding.pry
-    params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :price, images_attributes: [:image] )
+    params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :price, images_attributes: [:id, :image] )
   end
 end
 
