@@ -28,3 +28,6 @@
 
 # 不要ファイルを除外
 .DS_Store
+
+# 画像ファイル
+/public/uploads/
