@@ -99,7 +99,7 @@
         line-height: 32px;
         display: block;
         &__contents {
-          list-style: none;
+          @extend .header__box__nav__left__contents;
           &__list {
             position: relative;
             display: inline-block;

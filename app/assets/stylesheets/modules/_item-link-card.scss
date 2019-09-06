@@ -33,7 +33,7 @@
 }
 
 .item-photo-size {
-  @include box(220px, 220px);
+  @extend .item-link-card--image;
 }
 
 .item-link-card__text-box--name h3 {

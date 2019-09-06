@@ -50,18 +50,12 @@
           }
         }
         &__right {
-          @include box(50%, "");
-          vertical-align: top;
-          float: left;
-          white-space: normal;
+          @extend .footer__content__box__subhead__left;
           &__list {
-            margin: 16px 0 0;
-            opacity: 0.7;
-            color: $white;
-            font-size: 12px;
+            @extend .footer__content__box__subhead__left__list;
             line-height: 1.5;
             &:hover {
-              text-decoration: underline;
+              @extend .footer__content__box__subhead__left__list:hover;
             }
           }
         }
