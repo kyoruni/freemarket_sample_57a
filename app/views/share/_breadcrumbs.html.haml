@@ -1,20 +1,5 @@
--# .pankuzu-box
--#   - breadcrumb :mypage 
--#   - breadcrumb :personal_info_regist
-  
--#   -# 下記を記述した箇所にパンくずリストが表示される。
--#   = breadcrumbs separator: " &rsaquo; ", class: "breadcrumbs-list"
-
-
-
-
-
 .pankuzu-box
   - breadcrumb :mypage 
-  - breadcrumb :personal_info_regist,@user
-  - breadcrumb :logout ,@user
-  -# - breadcrumb :card_registration ,@user
-
-  
+  - breadcrumb :personal_info_regist
 
   = breadcrumbs separator: " &rsaquo; ", class: "breadcrumbs-list"
