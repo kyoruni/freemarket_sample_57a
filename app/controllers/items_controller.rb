@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    4.times{@item.images.build}
+    10.times{@item.images.build}
 
     # collction_selectで選択肢を呼び出す記述
     @root_category = Category.order("id ASC").limit(13)
