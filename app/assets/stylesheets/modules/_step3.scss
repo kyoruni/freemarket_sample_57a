@@ -40,13 +40,18 @@
   font-size: 12px;
 }
 
-.sign-up-form__btn {
+.sign-up-form__container__input--form__btn {
   width: 480px;
   height: 60px;
   background-color: #ff4639;
   line-height: 60px;
   text-align: center;
-  margin: 0 auto;
+  margin-left: 100px;
   font-size: 20px;
   color: white;
 }
+
+form__btn{
+  margin: 0 auto;
+}
+
