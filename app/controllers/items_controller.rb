@@ -23,14 +23,11 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    
-    @item.save!
-    redirect_to root_path
-    # if @item.save
-    #   redirect_to root_path
-    # else
-    #   redirect_to new_item_path
-    # end
+    if @item.save
+      redirect_to root_path
+    else
+      redirect_to new_item_path
+    end
   end
 
   private

@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
 
-  # active_hashを
+  # active_hashでの紐付け妥協。後で直すかもなのでコメントアウト中。
   # extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :saler, class_name: 'User', foreign_key: 'saler_id', optional: true
   belongs_to :buyer, class_name: 'User', foreign_key: 'buyer_id', optional: true
