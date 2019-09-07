@@ -24,7 +24,7 @@
                   %span.header__box__nav__left__contents__list__heading__link__text ブランドから探す
       .header__box__nav__right
         %ul.header__box__nav__right__contents
-            -if user_signed_in?
+          -if user_signed_in?
             %li.header__box__nav__right__contents__list
               =link_to "#" do
                 .header__box__nav__right__contents__list__link
@@ -41,12 +41,12 @@
                   .header__box__nav__right__contents__list__link__figure
                     .header__box__nav__right__contents__list__link__figure__image
                     %span.header__box__nav__right__contents__list__link__figure__text マイページ
-            -else
+          -else
             %li.header__box__nav__right__content__list
-              =link_to signup_index, method: :get do
+              =link_to signup_index_path, method: :get do
                 .header__box__nav__right__content__list__link
                   .header__box__nav__right__content__list__link--text-red 新規会員登録
-            %li.header__box__nav__right__content__list
-              =link_to sign_in_path, method: :get do
-                .header__box__nav__right__content__list__link
-                  .header__box__nav__right__content__list__link--text-blue ログイン
+              %li.header__box__nav__right__content__list
+                =link_to registration_path, method: :get do
+                  .header__box__nav__right__content__list__link
+                    .header__box__nav__right__content__list__link--text-blue ログイン
