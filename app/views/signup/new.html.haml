@@ -8,10 +8,10 @@
 
       .sign-up__contents__frame__bottom-contents
         .sign-up__contents__frame__bottom-contents__bottom-frame
-
-          .sign-up__contents__frame__bottom-contents__bottom-frame__field-top
-            %i.far.fa-envelope.fa-lg
-            %p メールアドレスで登録する
+          = link_to step1_signup_index_path do
+            .sign-up__contents__frame__bottom-contents__bottom-frame__field-top
+              %i.far.fa-envelope.fa-lg
+              %p メールアドレスで登録する
             
 
           .sign-up__contents__frame__bottom-contents__bottom-frame__field-middle

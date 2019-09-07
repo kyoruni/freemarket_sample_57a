@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :signup do
     collection do
-      get  '/'               => 'signup#index'
+      get  '/'               => 'signup#new'
       get  'step1'           => 'signup#step1'
       get  'step2'           => 'signup#step2'
       get  'step3'           => 'signup#step3'
@@ -26,5 +26,5 @@ Rails.application.routes.draw do
   get 'step6' => 'hello#step6'
   get 'step7' => 'hello#step7'
   get 'card_registration' => 'hello#card_registration'
-  
+  get 'registration'      => 'hello#index'
 end
