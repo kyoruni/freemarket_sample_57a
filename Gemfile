@@ -103,3 +103,4 @@ gem 'fog-aws'
 # パンくず
 gem 'gretel'
 
+gem 'payjp'
