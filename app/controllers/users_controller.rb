@@ -5,5 +5,6 @@ class UsersController < ApplicationController
   def destroy
   end
 
-  def 
+  def index
+  end
 end
