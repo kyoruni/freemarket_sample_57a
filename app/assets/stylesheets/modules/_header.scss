@@ -3,7 +3,7 @@
   position: relative;
   background-color: $white;
   &__box {
-    width: 1020px;
+    @include box(1020px, "");
     margin: 0 auto;
     padding: 8px 0 0;
     background-color: $white;
@@ -26,9 +26,9 @@
         }
       }
       &__search {
+        @include box(100%, "");
         position: relative;
         margin-left: 45px;
-        width: 100%;
         &__box {
           @include box(100%, 40px);
           background: $light-gray;
@@ -53,8 +53,8 @@
       }
     }
     &__nav {
+      @include box("", 32px);
       margin: 8px 0 0;
-      height: 32px;
       &__left {
         float: left;
         line-height: 32px;
@@ -71,9 +71,9 @@
               font-size: 14px;
               font-weight: 400;
               &__link {
+                @include box("", 32px);
                 text-decoration: none;
                 position: relative;
-                height: 32px;
                 line-height: 32px;
                 &__icon {
                   color: $red;
@@ -99,17 +99,16 @@
         line-height: 32px;
         display: block;
         &__contents {
-          list-style: none;
+          @extend .header__box__nav__left__contents;
           &__list {
             position: relative;
             display: inline-block;
-            padding: 0 7px;
             cursor: pointer;
             padding: 0 14px;
             &__link {
+              @include box("", 32px);
               position: relative;
               display: block;
-              height: 32px;
               line-height: 32px;
               font-size: 0;
               color: $dark-gray;
@@ -141,12 +140,10 @@
                   background-size: cover;
                 }
                 &__text {
-                  margin-left: 10px;
-                  font-size: 14px;
-                  line-height: 32px;
+                  @extend .header__box__nav__right__contents__list__link__text;
                   vertical-align: center;
                   &:hover {
-                    color: $light-blue;
+                    @extend .header__box__nav__right__contents__list__link__text:hover;
                   }
                 }
               }
