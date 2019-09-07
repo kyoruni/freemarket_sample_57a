@@ -1,6 +1,5 @@
 = render 'share/simple-header'
 .sign-in
-
   .sign-in__contents
     .sign-in__contents__frame
       .sign-in__contents__frame__top_contents
@@ -11,32 +10,22 @@
               %h3 新規会員登録
       .sign-in__contents__frame__middle_contents
         .sign-in__contents__frame__middle_contents__middle_frame
-          
-            
           .sign-in__contents__frame__middle_contents__middle_frame__field-top
             %i.fab.fa-facebook-square.size
             %p Facebookでログイン
             
-
-
           .sign-in__contents__frame__middle_contents__middle_frame__field-bottom
             %i.fab.fa-google.fa-lg
             %p Googleでログイン 
-
-
-
 
       .sign-in__contents__frame__bottom-contents
         %input.text{:name => "name", :placeholder => "  メールアドレス", :type => "email",:class => "email_text"}
         %input.text{:name => "name", :placeholder => "  パスワード", :type => "email",:class => "password_text"}
           
         .sign-in__contents__frame__bottom-contents__not-robo 
-
-        .sign-in__contents__frame__bottom-contents__login-btn
-          %p ログイン
-
+        =link_to "#" do
+          .sign-in__contents__frame__bottom-contents__login-btn
+            %p ログイン
         %a パスワードをお忘れの方
-
-
 = render 'share/simple-footer'
 
