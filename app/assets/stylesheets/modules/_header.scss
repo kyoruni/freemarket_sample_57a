@@ -2,7 +2,7 @@
   @include box(100%, 100px);
   background-color: $white;
   &__box {
-    width: 1020px;
+    @include box(1020px, "");
     margin: 0 auto;
     padding: 8px 0 0;
     &__top {
@@ -24,9 +24,9 @@
         }
       }
       &__search {
+        @include box(100%, "");
         position: relative;
         margin-left: 45px;
-        width: 100%;
         &__box {
           @include box(100%, 40px);
           background: $light-gray;
@@ -51,10 +51,8 @@
       }
     }
     &__nav {
+      @include box("", 32px);
       margin: 8px 0 0;
-      height: 32px;
-      display: flex;
-      justify-content: space-between;
       &__left {
         line-height: 32px;
         &__contents {
@@ -69,7 +67,9 @@
               font-size: 14px;
               font-weight: 400;
               &__link {
-                height: 32px;
+                @include box("", 32px);
+                text-decoration: none;
+                position: relative;
                 line-height: 32px;
                 &__icon {
                   color: $red;
@@ -93,16 +93,19 @@
       &__right {
         line-height: 32px;
         &__contents {
-          display: flex;
+          @extend .header__box__nav__left__contents;
           &__list {
-            display: block;
-            padding: 0 7px;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
             padding: 0 14px;
             &:last-child {
               padding-right: 0;
             }
             &__link {
-              height: 32px;
+              @include box("", 32px);
+              position: relative;
+              display: block;
               line-height: 32px;
               font-size: 0;
               color: $dark-gray;
@@ -134,12 +137,10 @@
                   margin-bottom: 10px;
                 }
                 &__text {
-                  margin-left: 10px;
-                  font-size: 14px;
-                  line-height: 32px;
+                  @extend .header__box__nav__right__contents__list__link__text;
                   vertical-align: center;
                   &:hover {
-                    color: $light-blue;
+                    @extend .header__box__nav__right__contents__list__link__text:hover;
                   }
                 }
               }

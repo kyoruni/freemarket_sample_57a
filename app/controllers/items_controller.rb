@@ -25,4 +25,31 @@ class ItemsController < ApplicationController
     @supreme_items      = Item.brand_items(supreme_id).recent(4)
     @nike_items         = Item.brand_items(nike_id).recent(4)
   end
+
+  def new
+    @item = Item.new
+    10.times{@item.images.build}
+
+    # collction_selectで選択肢を呼び出す記述
+    @root_category = Category.limit(13)
+    @condition = Condition.all
+    @postage = Postage.all
+    @region = Region.all
+    @delivery_day = DeliveryDay.all
+  end
+
+  def create
+    @item = Item.new(item_params)
+    if @item.save
+      redirect_to root_path
+    else
+      render action: :new
+    end
+  end
+
+  private
+
+  def item_params
+    params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :price, images_attributes: [:id, :image] )
+  end
 end
