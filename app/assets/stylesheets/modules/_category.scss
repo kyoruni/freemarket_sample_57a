@@ -29,11 +29,14 @@
     /*-- 項目の文字だけでなく、全体をリンクにする --*/
     & a {
       display: block;
+      color: $dark-gray;
+      &:hover {
+        color: $white;
+      }
     }
     /*-- 親リスト マウス乗せたとき --*/
     &:hover {
       background: $red3;
-      color: $white;
     }
   }
 }
@@ -49,7 +52,6 @@
   line-height: 14px;
   background: $white;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
-  color: $dark-gray;
   height: 100%;
   /*-- 子リストの項目 --*/
   &__item {
@@ -59,6 +61,9 @@
     &:hover {
       background: #ebebeb;
       color: $dark-gray;
+      & a {
+        color: $dark-gray;
+      }
     }
   }
 }
