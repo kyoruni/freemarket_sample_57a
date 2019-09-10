@@ -10,7 +10,13 @@
           = category.name
   %h1.category-name
     = "#{@category.name}の商品一覧"
-    .category-items
-      - @category_items.each do |category_item|
-        = category_item.name
+  .category-items
+    - @category_items.each do |category_item|
+      .category-items__item
+        = render partial: 'share/item-link-card', locals: { item: category_item }
+  .category-title
+    %h3.category-title__name
+      = @category.name
+    .category-title__caption
+      = @category_message1 + @category_message2
 = render 'shared/main_footer'
