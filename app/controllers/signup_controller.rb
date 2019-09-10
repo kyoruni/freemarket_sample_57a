@@ -52,6 +52,10 @@ class SignupController < ApplicationController
     sign_in @user
   end
 
+  # ログアウトのリンク
+  def step5
+  end
+
   private
 
   def user_params

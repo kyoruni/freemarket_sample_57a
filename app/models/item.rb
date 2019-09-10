@@ -5,7 +5,7 @@ class Item < ApplicationRecord
   belongs_to :brand, optional: true
   belongs_to :condition
   belongs_to :delivery_day
-  # belongs_to :delivery_way
+  belongs_to :delivery_way, optional: true
   # belongs_to :size
   belongs_to :region
   belongs_to :postage
