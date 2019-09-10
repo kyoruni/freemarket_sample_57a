@@ -2,7 +2,7 @@
 .mypage
   = render 'users/mypage-left'
   .logout-main
-    = link_to "#" do
+    = link_to "logout", destroy_user_session_path, method: :delete, do
       .logout-main__registration-btn
         %p ログアウト
 = render 'shared/main_footer'
