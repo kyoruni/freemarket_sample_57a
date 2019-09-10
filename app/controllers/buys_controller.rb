@@ -4,4 +4,7 @@ class BuysController < ApplicationController
 
   def show
   end
+
+  def card_registration
+  end
 end

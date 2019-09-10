@@ -2,7 +2,8 @@
 = link_to "/items/#{item.id}", class:"item-link-card__link" do
   .item-link-card
     .item-link-card--image
-      = image_tag item.images.first[:image], class: "item-photo-size"
+      - if item.images.first
+        = image_tag item.images.first[:image], class: "item-photo-size"
     .item-link-card__text-box
       .item-link-card__text-box--name
         %h3
