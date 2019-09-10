@@ -1,0 +1,27 @@
+= render 'share/simple-header'
+.sign-up
+
+  .sign-up__contents
+    .sign-up__contents__frame
+      .sign-up__contents__frame__top-contents
+        %h2.sign-up__contents__frame__top-contents__registration 新規会員登録
+
+      .sign-up__contents__frame__bottom-contents
+        .sign-up__contents__frame__bottom-contents__bottom-frame
+          = link_to step1_signup_index_path do
+            .sign-up__contents__frame__bottom-contents__bottom-frame__field-top
+              %i.far.fa-envelope.fa-lg
+              %p メールアドレスで登録する
+            
+
+          .sign-up__contents__frame__bottom-contents__bottom-frame__field-middle
+            %i.fab.fa-facebook-square.size
+            %p Facebookで登録する
+            
+
+          .sign-up__contents__frame__bottom-contents__bottom-frame__field-bottom
+            %i.fab.fa-google.fa-lg
+            %p Googleで登録する
+            
+
+= render 'share/simple-footer'
