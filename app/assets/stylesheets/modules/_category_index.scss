@@ -1,0 +1,26 @@
+.category_container {
+  width: 1020px;
+  height: 500px;
+  color: #333;
+  background: pink;
+  font-size: 14px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.category-header {
+  display: inline-block;
+  line-height: 14px;
+  &__list {
+    margin-top: 16px;
+    margin-right: 16px;
+  }
+}
+
+.category-name {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 700;
+}

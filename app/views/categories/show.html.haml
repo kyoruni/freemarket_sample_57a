@@ -1,0 +1,16 @@
+= render 'shared/main_header'
+= render 'share/breadcrumbs'
+
+.category_container
+  -# ランダムで、11件の子or孫カテゴリーを表示
+  - @category_list.each do |category|
+    %ul.category-header
+      = link_to category_path(category.id) do
+        %li.category-header__list
+          = category.name
+  %h1.category-name
+    = "#{@category.name}の商品一覧"
+    .category-items
+      - @category_items.each do |category_item|
+        = category_item.name
+= render 'shared/main_footer'
