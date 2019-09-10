@@ -52,6 +52,8 @@
     }
     &__nav {
       @include box("", 32px);
+      display: flex;
+      justify-content: space-between;
       margin: 8px 0 0;
       &__left {
         line-height: 32px;
