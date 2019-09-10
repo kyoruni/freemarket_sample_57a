@@ -31,3 +31,6 @@
 
 # 画像ファイル
 /public/uploads/
+
+# sms認証
+/vendor/bundle/

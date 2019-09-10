@@ -14,14 +14,22 @@
           
             
           .sign-in__contents__frame__middle_contents__middle_frame__field-top
-            %i.fab.fa-facebook-square.size
-            %p Facebookでログイン
             
+            
+            = link_to user_facebook_omniauth_authorize_path, class: "registration_btn" do
+              .registration_btn
+              %i.fab.fa-facebook-square.size
+              %p Facebookでログイン
 
 
           .sign-in__contents__frame__middle_contents__middle_frame__field-bottom
-            %i.fab.fa-google.fa-lg
-            %p Googleでログイン 
+            = link_to "/auth/google_oauth2", method: :post, class: "registration_btn" do
+              .registration_btn
+              %i.fab.fa-google.fa-lg
+              %p Googleでログイン 
+
+            
+            
 
 
 

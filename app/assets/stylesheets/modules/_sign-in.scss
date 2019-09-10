@@ -81,6 +81,9 @@
               left: 20px;
               color:$white;
             }
+            p {
+              color:$white;
+            }
           }
 
           &__field-bottom{
@@ -97,6 +100,10 @@
               position: absolute;
               top: 17px;
               left: 20px;
+              color:black;
+            }
+            p {
+              color:black;
             }
           }
         }

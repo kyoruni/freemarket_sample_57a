@@ -25,4 +25,7 @@ class HelloController < ApplicationController
 
   def card_registration
   end
+
+  def step8
+  end
 end

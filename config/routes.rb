@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {
+              omniauth_callbacks: "users/omniauth_callbacks"}
   resources  :users, only: [:show, :destroy]
   resources  :items
   resources  :buys, only: [:index, :show]
@@ -26,5 +27,10 @@ Rails.application.routes.draw do
   get 'step6' => 'hello#step6'
   get 'step7' => 'hello#step7'
   get 'card_registration' => 'hello#card_registration'
+  get 'step8' => 'hello#step8'
+
+  # devise_for :users, :controllers => {
+  #   :omniauth_callbacks =>  "users/omniauth_callbacks"
+  # }
   
 end
