@@ -2,7 +2,7 @@
   .header__box
     .header__box__top
       %h1.header__box__top__log
-        = link_to "#" do
+        = link_to "/" do
           .header__box__top__logo__link
       %form.header__box__top__search
         %input.header__box__top__search__box{type:"search",name:"keyword",placeholder:"何かお探しですか"}
@@ -25,19 +25,29 @@
                   %span.header__box__nav__left__contents__list__heading__link__text ブランドから探す
       .header__box__nav__right
         %ul.header__box__nav__right__contents
-          %li.header__box__nav__right__contents__list
-            =link_to "#" do
-              .header__box__nav__right__contents__list__link
-                %i.header__box__nav__right__contents__list__link__icon.fas.fa-bell
-                %span.header__box__nav__right__contents__list__link__text お知らせ
-          %li.header__box__nav__right__contents__list
-            =link_to "#" do
-              .header__box__nav__right__contents__list__link
-                %i.header__box__nav__right__contents__list__link__icon.fas.fa-check
-                %span.header__box__nav__right__contents__list__link__text やることリスト
-          %li.header__box__nav__right__contents__list
-            =link_to "#" do
-              .header__box__nav__right__contents__list__link
-                .header__box__nav__right__contents__list__link__figure
-                  .header__box__nav__right__contents__list__link__figure__image
-                  %span.header__box__nav__right__contents__list__link__figure__text マイページ
+          -if user_signed_in?
+            %li.header__box__nav__right__contents__list
+              =link_to "#" do
+                .header__box__nav__right__contents__list__link
+                  %i.header__box__nav__right__contents__list__link__icon.fas.fa-bell
+                  %span.header__box__nav__right__contents__list__link__text お知らせ
+            %li.header__box__nav__right__contents__list
+              =link_to "#" do
+                .header__box__nav__right__contents__list__link
+                  %i.header__box__nav__right__contents__list__link__icon.fas.fa-check
+                  %span.header__box__nav__right__contents__list__link__text やることリスト
+            %li.header__box__nav__right__contents__list
+              =link_to "/users/#{current_user.id}" do
+                .header__box__nav__right__contents__list__link
+                  .header__box__nav__right__contents__list__link__figure
+                    .header__box__nav__right__contents__list__link__figure__image
+                    %span.header__box__nav__right__contents__list__link__figure__text マイページ
+          -else
+            %li.header__box__nav__right__contents__list
+              =link_to signup_index_path, method: :get do
+                .header__box__nav__right__contents__list__link
+                  .header__box__nav__right__contents__list__link--text-red 新規会員登録
+            %li.header__box__nav__right__contents__list
+              =link_to new_user_session_path, method: :get do
+                .header__box__nav__right__contents__list__link
+                  .header__box__nav__right__contents__list__link--text-blue ログイン

@@ -124,6 +124,32 @@
                   color: $light-blue;
                 }
               }
+              &--text-red{
+                background: #ea352d;
+                border: 1px solid #ea352d;
+                color: $white;
+                float: left;
+                margin: 0 0 0 8px;
+                margin-left: 10px;
+                font-size: 14px;
+                padding: 0 10px;
+                line-height: 30px;
+                border-radius: 4px;
+                text-align: center;
+              }
+              &--text-blue{
+                background: $white;
+                border: 1px solid #0099e8;
+                color: #0099e8;
+                float:right;
+                margin: 0 0 0 8px;
+                margin-left: 10px;
+                font-size: 14px;
+                padding: 0 15px;
+                line-height: 30px;
+                border-radius: 4px;
+                text-align: center;
+              }
               &__figure {
                 display: inline-block;
                 margin: 0;

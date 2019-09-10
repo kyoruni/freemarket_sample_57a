@@ -3,7 +3,8 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    @items = Item.limit(6).order('created_at DESC')
+    @saler_items = Item.where(saler_id: @item.saler_id).limit(6).order('created_at DESC')
+    @same_category_items = Item.where(category_id: @item.category_id).limit(6).order('created_at DESC')
   end
 
   def index

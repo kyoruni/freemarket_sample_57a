@@ -3,7 +3,7 @@
     %ul.mypage-menu__nav__list
       /* メニュー1 */
       %li
-        = link_to "#", class: "mypage-menu__nav__list__item active" do
+        = link_to "/users/#{current_user.id}", class: "mypage-menu__nav__list__item active" do
           マイページ
           #{icon 'fas', 'chevron-right'}
       %li
@@ -19,7 +19,7 @@
           いいね！一覧
           #{icon 'fas', 'chevron-right'}
       %li
-        = link_to "#", class: "mypage-menu__nav__list__item" do
+        = link_to "/items/new", class: "mypage-menu__nav__list__item" do
           出品する
           #{icon 'fas', 'chevron-right'}
       %li
@@ -89,7 +89,7 @@
             メール/パスワード
             #{icon 'fas', 'chevron-right'}
         %li
-          = link_to "#", class: "mypage-menu__nav__list__item" do
+          = link_to "/identification", class: "mypage-menu__nav__list__item" do
             本人情報
             #{icon 'fas', 'chevron-right'}
         %li
@@ -97,6 +97,6 @@
             電話番号の確認
             #{icon 'fas', 'chevron-right'}
         %li
-          = link_to "#", class: "mypage-menu__nav__list__item" do
+          = link_to "/signup/step5", class: "mypage-menu__nav__list__item" do
             ログアウト
             #{icon 'fas', 'chevron-right'}
