@@ -8,16 +8,20 @@
       -# 商品写真
       .item-box__container__box__photo
         .item-box__container__box__photo--main
-          = image_tag @item.images.first.image, class:"main-photo"
+          -if @item.images.first
+            = image_tag @item.images.first[:image], class:"main-photo"
         .item-box__container__box__photo__sub-group
           - @item.images.each do |image|
-            = image_tag image.image, class:"sub-photo"
+            - if @item.images.first.nil?
+              = image_tag "no_image.png", class: "sub-photo"
+            - else
+              = image_tag image[:image], class:"sub-photo"
       %table.item-box__container__box__table
         %tbody
           %tr
             %th 出品者
             %td
-              荒木
+              = @item.saler.name
               .item-box-icon
                 %i.fa.fa-smile
                 %span 22
@@ -40,7 +44,7 @@
             %td= @item.condition.name
           %tr
             %th 配送料の負担
-            %td= @item.postage
+            %td= @item.postage.name
           %tr
             %th 配送の方法
             %td= @item.delivery_way.name
@@ -111,19 +115,19 @@
   -# ユーザーのアイテム欄
   .item-user__container
     %h2
-      = link_to "荒木さんのその他の出品", "#", class:"item-user__container--name"
+      = link_to "#{@item.saler.name}さんのその他の出品", "#", class:"item-user__container--name"
     .item-user__container__user-box
       .item-user__container__user-box--upper-row
-        - @items.each do |item|
+        - @saler_items.each do |item|
           = render partial: 'share/item-link-card', locals: { item: item }
   
   -# 同一カテゴリーのアイテム欄
   .item-category__container
     %h2
-      = link_to "コーチのショルダーバックその他の出品", "#", class:"item-category__container--name"
+      = link_to "#{@item.category.name}その他の出品", "#", class:"item-category__container--name"
     .item-category__container__user-box
       .item-category__container__user-box--upper-row
-        - @items.each do |item|
+        - @same_category_items.each do |item|
           = render partial: 'share/item-link-card', locals: { item: item }
 
 -# 下のパンくずリスト
