@@ -52,18 +52,22 @@
   line-height: 14px;
   background: $white;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
+  color: $dark-gray;
   height: 100%;
   /*-- 子リストの項目 --*/
   &__item {
     max-height: 30px;
     padding: 8px 16px;
-    /*-- 子リスト マウス乗せたとき --*/
-    &:hover {
-      background: #ebebeb;
+    & a {
       color: $dark-gray;
-      & a {
+      &:hover {
+        background: $light-gray2;
         color: $dark-gray;
       }
+    }
+    /*-- 子リスト マウス乗せたとき --*/
+    &:hover {
+      background: $light-gray2;
     }
   }
 }
@@ -76,6 +80,13 @@
   /*-- 孫リストの項目 --*/
   &__item {
     @extend .category-list__child__item;
+    & a {
+      color: $dark-gray;
+      &:hover {
+        background: $light-gray2;
+        color: $dark-gray;
+      }
+    }
     /*-- 孫リスト マウス乗せたとき --*/
     &:hover {
       @extend .category-list__child__item:hover;
