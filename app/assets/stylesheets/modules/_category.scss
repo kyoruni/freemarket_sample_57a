@@ -26,6 +26,10 @@
     font-size: 14px;
     display: -webkit-box; // box要素にする
     -webkit-box-align: center; // 縦位置中央
+    /*-- 項目の文字だけでなく、全体をリンクにする --*/
+    & a {
+      display: block;
+    }
     /*-- 親リスト マウス乗せたとき --*/
     &:hover {
       background: $red3;
