@@ -17,8 +17,8 @@ class CategoriesController < ApplicationController
 
     # 孫カテゴリーの場合
     else
-      @category_list     = @category.siblings.rand_recent(11)
-      @category_items    = Item.category_item(@category).order('created_at DESC'); # ランダムで兄弟カテゴリーを11件取得
+      @category_list     = @category.siblings.rand_recent(11) # ランダムで兄弟カテゴリーを11件取得
+      @category_items    = Item.category_item(@category).order('created_at DESC');
       @category_message1 = category_message(@category.root_id, @category.name);
     end
 
