@@ -71,9 +71,10 @@
       %p= @item.text
     
     -# 商品削除
-    .item-delete__container
-      = link_to @item, method: :delete, data: { confirm: "アイテム「#{@item.name}」を削除します。よろしいですか？"}, class:"item-derete__container__delete--btn" do
-        .item-derete__container__delete--btn 商品の削除
+    - if @item.saler_id == current_user
+      .item-delete__container
+        = link_to @item, method: :delete, data: { confirm: "アイテム「#{@item.name}」を削除します。よろしいですか？"}, class:"item-derete__container__delete--btn" do
+          .item-derete__container__delete--btn 商品の削除
 
     .item-btn-container
       .item-btn-container__left
