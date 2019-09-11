@@ -6,7 +6,7 @@
 .buy__container {
   // メイン部分
   &__main {
-    height: 2150px;
+    height: 2400px;
     background-color: $light-gray;
     &__wrapper {
       width: 700px;
@@ -68,7 +68,7 @@
 
       // 商品の詳細セレクト欄
       &__detail {
-        height: 350px;
+        height: 480px;
         @include frame();
         &__title {
           float: left;
@@ -85,7 +85,7 @@
 
       // 配送についてセレクト欄
       &__delivery {
-        height: 371px;
+        height: 500px;
         @include frame();
         &__title {
           float: left;
@@ -107,6 +107,7 @@
       // 販売価格欄
       &__price {
         height: 299px;
+        background-color: white;
         @include frame();
         &__title {
           float: left;
