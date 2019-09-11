@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :set_category_list, only: [:show]
   def show
-    @category       = Category.find(params[:id])
+    @category = Category.find(params[:id])
 
     # 親カテゴリーの場合
     if @category.is_root?
@@ -45,10 +45,10 @@ class CategoriesController < ApplicationController
   def category_count(category_items)
     count = category_items.count
 
-    # 5の倍数の場合は、そのまま
+    # 商品件数が、5の倍数または4以下の場合：そのまま
     if count / 5 == 0 || count % 5 == 0
       result = count
-    # それ以外は、5の倍数
+    # それ以外：5の倍数
     else
       result = ( count / 5 ) * 5
     end
