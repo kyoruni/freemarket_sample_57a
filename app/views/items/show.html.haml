@@ -69,6 +69,11 @@
     -# テキスト表示
     .item-text
       %p= @item.text
+    
+    -# 商品削除
+    .item-delete__container
+      = link_to "#" do method: :delete do
+        .item-derete__container__delete--btn 商品の削除
 
     .item-btn-container
       .item-btn-container__left
