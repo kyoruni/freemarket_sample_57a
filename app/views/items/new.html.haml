@@ -44,11 +44,12 @@
           %h3.buy__container__main__wrapper__detail__title 商品の詳細
           .buy__container__main__wrapper__detail__select
             .buy__container__main__wrapper__detail__select__category
-              %label<
-                カテゴリー
-                %span.required> 必須
-              .buy__container__main__wrapper__detail__select__category__select
-                = f.collection_select :category_id, @root_category, :id, :name, { prompt: "---" }
+              #category-insert
+                %label<
+                  カテゴリー
+                  %span.required> 必須
+                .buy__container__main__wrapper__detail__select__category__select
+                  = f.collection_select :category_id, @category_parent_array, :id, :name, { prompt: "---" }, id: 'parent_category', style:"margin-bottom: 10px;"
             .buy__container__main__wrapper__detail__select__state
               %label<
                 商品の状態
