@@ -16,7 +16,8 @@
 
           .sign-up__contents__frame__bottom-contents__bottom-frame__field-middle
             %i.fab.fa-facebook-square.size
-            %p Facebookで登録する
+            = link_to "Facebookで登録する" , "https://www.mercari.com/jp/privacy/",
+            = link_to "Facebookでログイン", user_facebook_omniauth_authorize_path
             
 
           .sign-up__contents__frame__bottom-contents__bottom-frame__field-bottom
