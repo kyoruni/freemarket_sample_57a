@@ -32,10 +32,12 @@ class ItemsController < ApplicationController
 
     # collction_selectで選択肢を呼び出す記述
     @category_parent_array = Category.where(ancestry: nil)
+    @brand = Brand.all
     @condition = Condition.all
     @postage = Postage.all
     @region = Region.all
     @delivery_day = DeliveryDay.all
+    @delivery_way = DeliveryWay.all
   end
 
   # 親カテゴリーが選択された後に動くアクション
@@ -69,6 +71,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :price, images_attributes: [:id, :image] ).merge(saler_id: current_user.id, brand_id: 1, delivery_way_id: 1, size_id: 1)
+    params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :delivery_way_id, :brand_id, :price, images_attributes: [:id, :image] ).merge(saler_id: current_user.id, size_id: 1)
   end
 end
