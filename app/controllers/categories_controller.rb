@@ -2,7 +2,6 @@ class CategoriesController < ApplicationController
   before_action :set_category_list, only: [:show]
   def show
     @category       = Category.find(params[:id])
-    @category_items = Item.includes(:images).where(category_id: @category.id ).order('created_at DESC')
 
     # 親カテゴリーの場合
     if @category.is_root?
