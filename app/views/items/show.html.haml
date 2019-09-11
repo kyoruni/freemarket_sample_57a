@@ -9,13 +9,13 @@
       .item-box__container__box__photo
         .item-box__container__box__photo--main
           -if @item.images.first
-            = image_tag @item.images.first[:image], class:"main-photo"
+            = image_tag @item.images.first.image_url, class:"main-photo"
         .item-box__container__box__photo__sub-group
           - @item.images.each do |image|
             - if @item.images.first.nil?
               = image_tag "no_image.png", class: "sub-photo"
             - else
-              = image_tag image[:image], class:"sub-photo"
+              = image_tag image.image_url, class:"sub-photo"
       %table.item-box__container__box__table
         %tbody
           %tr
@@ -69,6 +69,12 @@
     -# テキスト表示
     .item-text
       %p= @item.text
+    
+    -# 商品削除
+    - if user_signed_in? && @item.saler_id == current_user.id
+      .item-delete__container
+        = link_to @item, method: :delete, data: { confirm: "アイテム「#{@item.name}」を削除します。よろしいですか？"}, class:"item-derete__container__delete--btn" do
+          .item-derete__container__delete--btn 商品の削除
 
     .item-btn-container
       .item-btn-container__left
