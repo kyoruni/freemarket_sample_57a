@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_category_list, only: [:index, :show]
 
   def show
     @item = Item.find(params[:id])

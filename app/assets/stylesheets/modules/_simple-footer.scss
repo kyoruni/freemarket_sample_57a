@@ -1,8 +1,7 @@
 .simple-footer {
   background-color: $light-gray;
   &__box {
-    height: 220px;
-    width: 456px;
+    @include box(456px, 220px);
     margin: 0 auto;
     padding: 40px 0;
     &__link {
@@ -17,9 +16,8 @@
       }
     }
     &__logo-image {
+      @include box(65px, 80px);
       margin: 0 auto;
-      height: 80px;
-      width: 65px;
       padding-top: 40px;
     }
     &__logo-text {

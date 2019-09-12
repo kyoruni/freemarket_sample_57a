@@ -14,4 +14,9 @@ class ApplicationController < ActionController::Base
       username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]
     end
   end
+
+  # カテゴリー一覧の取得
+  def set_category_list
+    @categories = Category.order("id ASC")
+  end
 end

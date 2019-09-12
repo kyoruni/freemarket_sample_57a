@@ -1,12 +1,10 @@
 .header {
   @include box(100%, 100px);
-  position: relative;
   background-color: $white;
   &__box {
     @include box(1020px, "");
     margin: 0 auto;
     padding: 8px 0 0;
-    background-color: $white;
     &__top {
       display: flex;
       align-items: center;
@@ -54,19 +52,19 @@
     }
     &__nav {
       @include box("", 32px);
+      display: flex;
+      justify-content: space-between;
       margin: 8px 0 0;
       &__left {
-        float: left;
         line-height: 32px;
-        display: block;
         &__contents {
-          list-style: none;
+          display: flex;
           &__list {
             padding-left: 0;
-            position: relative;
-            display: inline-block;
             padding: 0 11px;
-            cursor: pointer;
+            &:first-child {
+              padding-left: 0;
+            }
             &__heading {
               font-size: 14px;
               font-weight: 400;
@@ -95,9 +93,7 @@
         }
       }
       &__right {
-        float: right;
         line-height: 32px;
-        display: block;
         &__contents {
           @extend .header__box__nav__left__contents;
           &__list {
@@ -105,6 +101,9 @@
             display: inline-block;
             cursor: pointer;
             padding: 0 14px;
+            &:last-child {
+              padding-right: 0;
+            }
             &__link {
               @include box("", 32px);
               position: relative;
@@ -116,7 +115,6 @@
                 color: $light-gray4;
                 font-size: 20px;
                 margin-right: 4px;
-                display: inline-block;
               }
               &__text {
                 margin-left: 10px;
@@ -159,11 +157,12 @@
                 &__image {
                   @include box(30px, 30px);
                   border-radius: 50%;
-                  vertical-align: center;
+                  vertical-align: middle;
                   display: inline-block;
                   background-image: image-url("member_photo_noimage_thumb.png");
                   background-position: center;
                   background-size: cover;
+                  margin-bottom: 10px;
                 }
                 &__text {
                   @extend .header__box__nav__right__contents__list__link__text;
