@@ -1,15 +1,13 @@
 class SignupController < ApplicationController
 
   before_action :validates_step1, only: :step2 # step1のバリデーション
-  # before_action :validates_step2, only: :step3 # step2のバリデーション
-  # before_action :validates_step3, only: :step4 # step3のバリデーション
 
   def step1
-    @user = User.new()
+    @user = User.new
   end
   
   def step2
-    @user = User.new()
+    @user = User.new
     session[:name]                   = user_params[:name]
     session[:email]                  = user_params[:email]
     session[:password]               = user_params[:password]
@@ -24,13 +22,13 @@ class SignupController < ApplicationController
   end
   
   def step3
-    @user = User.new()
+    @user = User.new
     session[:phone_number]           = user_params[:phone_number]
     @user.build_shipping_address(session[:shipping_address_attributes])
   end
 
   def step4
-    @user = User.new()
+    @user = User.new
     session[:shipping_address_attributes] = user_params[:shipping_address_attributes]
     @user.build_shipping_address(session[:shipping_address_attributes])
 
@@ -90,47 +88,6 @@ class SignupController < ApplicationController
     # 仮で作成したインスタンスのバリデーションチェックを行う
     render '/signup/step1' unless @user.valid?
   end
-
-  # def validates_step2
-  #   # step2で入力された値をsessionに保存
-  #   session[:phone_number]           = user_params[:phone_number]
-  #   # バリデーション用に、仮でインスタンスを作成する
-  #   @user = User.new(
-  #     phone_number:                 session[:phone_number],
-  #     shipping_address_attributes:  session[:shipping_address_attributes]
-  #   )
-  #   # 仮で作成したインスタンスのバリデーションチェックを行う
-  #   render '/signup/step2' unless @user.valid?
-  # end 
-
-  # def validates_step3
-  #   # step3で入力された値をsessionに保存
-  #   session[:last_name]              = user_params[:last_name]
-  #   session[:first_name]             = user_params[:first_name]
-  #   session[:last_name_kana]         = user_params[:last_name_kana]
-  #   session[:first_name_kana]        = user_params[:first_name_kana]
-  #   session[:postal_code]            = user_params[:postal_code]
-  #   session[:address]                = user_params[:address]
-  #   session[:birth_year]             = user_params[:birth_year]
-  #   session[:birth_month]            = user_params[:birth_month]
-  #   session[:birth_day]              = user_params[:birth_day]
-  #   @user.build_shipping_address(session[:shipping_address_attributes])
-  #   # バリデーション用に、仮でインスタンスを作成する
-  #   @user = User.new(
-  #     last_name:                    session[:last_name],
-  #     first_name:                   session[:first_name],
-  #     last_name_kana:               session[:last_name_kana],
-  #     first_name_kana:              session[:first_name_kana],
-  #     postal_code:                  session[:postal_code],
-  #     address:                      session[:address],
-  #     birth_year:                   session[:birth_year],
-  #     birth_month:                  session[:birth_month],
-  #     birth_day:                    session[:birth_day],
-  #     shipping_address_attributes:  session[:shipping_address_attributes]
-  #   )
-  #   # 仮で作成したインスタンスのバリデーションチェックを行う
-  #   render '/signup/step3' unless @user.valid?
-  # end
 
   private
 
