@@ -63,6 +63,20 @@ class ItemsController < ApplicationController
 
   def edit
     @item = Item.find(params[:id])
+    10.times{@item.images.build}
+
+    # 選択肢
+    @category_children   = @item.category.root.children
+    @category_grandChildren = @item.category.siblings
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      render action: :edit
+    end
   end
 
   private
