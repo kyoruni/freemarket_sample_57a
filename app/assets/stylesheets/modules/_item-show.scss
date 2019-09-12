@@ -1,10 +1,12 @@
 .item-show__container {
   background-color: $light-gray;
+  width: 700px;
+  margin: 0 auto;
   padding: 40px 0;
 }
 
 .item-box__container {
-  @include box(700px, 1050px);
+  @include box("", 1050px);
   background-color: $white;
   margin: 0 auto;
   padding: 24px 40px 40px;
@@ -214,13 +216,10 @@ tr {
 // アイテムナビ欄
 .item-nav {
   @include box(700px, 28px);
-  margin: 24px 370px;
-  &__prev {
-    float: left;
-  }
-  &__next {
-    float: right;
-  }
+  margin-top: 24px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
   &__link {
     color: $light-blue;
     text-decoration: none;
@@ -235,6 +234,7 @@ tr {
   @include box(700px, 138px);
   background-color: $white;
   margin: 0 auto;
+  margin-top: 24px;
   padding: 32px 0 24px;
   &__box {
     @include box(700px, 52px);
@@ -273,7 +273,7 @@ tr {
 // ユーザーのアイテム欄、同一カテゴリーのアイテム欄
 .item-user__container,
 .item-category__container {
-  @include box(700px, 738px);
+  @include box(700px, auto);
   margin: 0 auto;
   & h2 {
     margin: 24px 0 8px;
@@ -285,9 +285,8 @@ tr {
     font-weight: 600;
   }
   &__user-box {
-    @include box(700px, 700px);
+    @include box(700px, auto);
     &--upper-row {
-      @include box(720px, 700px);
       margin-bottom: 20px;
       display: flex;
       flex-wrap: wrap;
@@ -319,4 +318,10 @@ tr {
       border-bottom: 1px solid black;
     }
   }
+}
+
+.item-buttons__container {
+  width: 100%;
+  height: 500px;
+  background: pink;
 }
