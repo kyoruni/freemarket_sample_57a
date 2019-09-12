@@ -1,15 +1,14 @@
 .buy-confirmation-container {
+  @include box("", 800px);
   background-color: $light-gray;
-  height: 800px;
 }
 
 .buy-confirmation-wrapper {
-  width: 700px;
-  height: 800px;
-  background-color: white;
+  @include box(700px, 800px);
+  background-color: $white;
   margin: 0 auto;
   &__header {
-    height: 65px;
+    @include box("", 65px);
     padding: 16px;
     text-align: center;
     border-bottom: 1px solid $light-gray2;
@@ -19,19 +18,16 @@
     }
   }
   &__main {
-    width: 700px;
-    height: 400px;
+    @include box(700px, 400px);
     padding: 24px 87.5px 0px;
     margin: 0 auto;
     border-bottom: 1px solid $light-gray2;
     &__header {
-      width: 320px;
-      height: 80px;
+      @include box(320px, 80px);
       margin: 0 auto;
       display: flex;
       &--image {
-        height: 80px;
-        width: 60px;
+        @include box(60px, 80px);
       }
       &--text {
         margin-left: 16px;
@@ -52,9 +48,8 @@
       }
     }
     &__point-box {
+      @include box(320px, 48px);
       margin: 16px auto;
-      width: 320px;
-      height: 48px;
       background-color: gray;
       & p {
         text-align: center;
@@ -62,55 +57,48 @@
       }
     }
     &__total-price-box {
-      height: 60px;
-      width: 320px;
+      @include box(320px, 60px);
       display: flex;
       margin: 0 auto;
       font-size: 22px;
       font-weight: bold;
       &__left {
-        width: 156px;
-        height: 60px;
+        @include box(156px, 60px);
         line-height: 60px;
       }
       &__right {
-        width: 164px;
-        height: 60px;
+        @include box(164px, 60px);
         line-height: 60px;
         text-align: right;
       }
     }
     &__btn {
-      width: 320px;
-      height: 50px;
+      @include box(320px, 50px);
       margin: 0 auto;
       background-color: #ea352d;
       text-align: center;
       line-height: 50px;
-      color: white;
+      color: $white;
       font-weight: bold;
     }
   }
 
   // 配送先
   &__delivery {
-    height: 200px;
+    @include box("", 200px);
     padding: 24px 87.5px 0;
     border-bottom: 1px solid $light-gray2;
     &--title {
-      width: 320px;
-      height: 14px;
+      @include box(320px, 14px);
       margin: 0 auto;
       font-weight: bold;
     }
     &--info {
-      width: 320px;
-      height: 80px;
+      @include box(320px, 80px);
       margin: 8px auto;
     }
     &--user-info {
-      width: 320px;
-      height: 14px;
+      @include box(320px, 14px);
       margin: 0 auto;
       text-align: right;
       &__link {
@@ -121,13 +109,11 @@
 
   // カード情報
   &__card {
-    width: 320px;
-    height: 160px;
+    @include box(320px, 160px);
     margin: 0 auto;
     padding: 24px 0px 40px;
     &--user-info {
-      width: 320px;
-      height: 14px;
+      @include box(320px, 14px);
       margin: 0 auto;
       text-align: right;
       &__link {
@@ -138,11 +124,9 @@
 }
 
 .buy-confirmation-image {
-  height: 80px;
-  width: 60px;
+  @include box(60px, 80px);
 }
 
 .visa-card {
-  width: 49px;
-  height: 15px;
+  @include box(49px, 15px);
 }
