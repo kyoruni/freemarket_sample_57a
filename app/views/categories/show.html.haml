@@ -1,0 +1,22 @@
+= render 'shared/main_header'
+= render 'share/breadcrumbs'
+
+.category_container
+  -# ランダムで、11件の子or孫カテゴリーを表示
+  - @category_list.each do |category|
+    %ul.category-header
+      = link_to category_path(category.id) do
+        %li.category-header__list
+          = category.name
+  %h1.category-name
+    = "#{@category.name}の商品一覧"
+  .category-items
+    - @category_items.each do |category_item|
+      .category-items__item
+        = render partial: 'share/item-link-card', locals: { item: category_item }
+  .category-title
+    %h3.category-title__name
+      = @category.name
+    .category-title__caption
+      = @category_message1 + @category_message2
+= render 'shared/main_footer'

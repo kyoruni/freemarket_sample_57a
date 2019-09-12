@@ -17,6 +17,7 @@ class Item < ApplicationRecord
 
   # 指定したカテゴリーのデータを取得
   scope :category_items, -> categories { includes(:images).where(category_id: categories.ids ) }
+  scope :category_item,  -> category_list { includes(:images).where(category_id: category_list.id )}
 
   # 指定したブランドのデータを取得
   scope :brand_items, -> brand_id { includes(:images).where(brand_id: brand_id ) }

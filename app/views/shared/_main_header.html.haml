@@ -10,12 +10,13 @@
     .header__box__nav
       .header__box__nav__left
         %ul.header__box__nav__left__contents
-          %li.header__box__nav__left__contents__list
+          %li.header__box__nav__left__contents__list#category
             %h2.header__box__nav__left__contents__list__heading
-            =  link_to "#" do
-              .header__box__nav__left__contents__list__heading__link
-                %i.header__box__nav__left__contents__list__heading__link__icon.fa.fa-list-ul
-                %span.header__box__nav__left__contents__list__heading__link__text カテゴリーから探す
+              =  link_to "#" do
+                .header__box__nav__left__contents__list__heading__link
+                  %i.header__box__nav__left__contents__list__heading__link__icon.fa.fa-list-ul
+                  %span.header__box__nav__left__contents__list__heading__link__text カテゴリーから探す
+            = render partial: 'shared/category-list', locals: { categories: @categories }
           %li.header__box__nav__left__contents__list
             %h2.header__box__nav__left__contents__list__heading
               = link_to "#" do

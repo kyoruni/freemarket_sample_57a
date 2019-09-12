@@ -2,6 +2,7 @@
   height: 144px;
   background-color: $light-gray;
   &__image {
+    @include box(185px, 49px);
     width: 185px;
     height: 49px;
     margin: 0 auto;
