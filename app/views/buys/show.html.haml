@@ -14,7 +14,7 @@
           %p コーチ ドリフター 2way ミックスドレザー 美品【鑑定済】
       .buy-confirmation-wrapper__main__price
         %p<
-          ￥100,000
+          = "￥ #{@item.price.to_s(:delimited)}"
           %span>
             送料込み
       .buy-confirmation-wrapper__main__point-box
@@ -23,7 +23,7 @@
         .buy-confirmation-wrapper__main__total-price-box__left
           支払い金額
         .buy-confirmation-wrapper__main__total-price-box__right
-          ￥100,000
+          = "￥ #{@item.price.to_s(:delimited)}"
       = link_to "#" do
         .buy-confirmation-wrapper__main__btn
           購入する

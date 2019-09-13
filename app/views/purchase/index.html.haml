@@ -1,16 +1,71 @@
-%h2 購入を確定しますか？
-%p Apple MacBook Pro 13インチ
-%p ¥135,000(送料込み)
-%br
-%h3 支払い方法
-- if @default_card_information.blank?
-  %br /
-- else
-  -#以下カード情報を表示
-  = "**** **** **** " + @default_card_information.last4
-  - exp_month = @default_card_information.exp_month.to_s
-  - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
-  = exp_month + " / " + exp_year
-%br
-= form_tag(action: :pay, method: :post) do
-  %button 購入する
+= render partial: 'share/simple-header'
+
+.buy-confirmation-container
+  .buy-confirmation-wrapper
+    .buy-confirmation-wrapper__header
+      %h2 購入内容の確認
+
+    -# メインエリア
+    .buy-confirmation-wrapper__main
+      .buy-confirmation-wrapper__main__header
+        .buy-confirmation-wrapper__main__header--image
+          = image_tag asset_path("sample.jpeg"), class:"buy-confirmation-image"
+        .buy-confirmation-wrapper__main__header--text
+          %p
+            = @item.name
+      .buy-confirmation-wrapper__main__price
+        %p<
+          = "￥ #{@item.price.to_s(:delimited)}"
+          %span>
+            送料込み
+      .buy-confirmation-wrapper__main__point-box
+        %p ポイントはありません
+      .buy-confirmation-wrapper__main__total-price-box
+        .buy-confirmation-wrapper__main__total-price-box__left
+          支払い金額
+        .buy-confirmation-wrapper__main__total-price-box__right
+          = "￥ #{@item.price.to_s(:delimited)}"
+        
+      = form_tag(action: :pay, method: :post) do
+        %button{class:"buy-confirmation-wrapper__main__btn"}
+          購入する
+        
+    
+    -# 配送先
+    .buy-confirmation-wrapper__delivery
+      .buy-confirmation-wrapper__delivery--title
+        配送先
+      .buy-confirmation-wrapper__delivery--info
+        %p
+          = "〒#{@user.shipping_address.postal_code}"
+        %p
+          = @user.shipping_address.address 
+        %p
+          = "#{@user.shipping_address.last_name} #{@user.shipping_address.first_name}"
+      .buy-confirmation-wrapper__delivery--user-info
+        = link_to "#", class:"buy-confirmation-wrapper__delivery--user-info__link" do
+          変更する
+          %i.fa.fa-chevron-right
+    
+    -# クレジットカード情報
+    - if @default_card_information.blank?
+      %br /
+    - else
+      .buy-confirmation-wrapper__card
+        .buy-confirmation-wrapper__card--title
+          支払い情報
+        .buy-confirmation-wrapper__card--info
+          %p
+            = "**** **** **** " + @default_card_information.last4
+            - exp_month = @default_card_information.exp_month.to_s
+            - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+            = exp_month + " / " + exp_year
+        .buy-confirmation-wrapper__card--user-info
+          = link_to "#", class:"buy-confirmation-wrapper__card--user-info__link" do
+            変更する
+            %i.fa.fa-chevron-right
+
+
+
+
+= render partial: 'share/simple-footer'
