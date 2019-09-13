@@ -1,9 +1,9 @@
 class ItemsController < ApplicationController
+  before_action :set_item,          only: [:show, :edit, :update]
   before_action :set_category_list, only: [:index, :show]
   before_action :set_item_form_collction_select, only: [:new, :edit]
 
   def show
-    @item = Item.find(params[:id])
     @saler_items = Item.where(saler_id: @item.saler_id).limit(6).order('created_at DESC')
     @same_category_items = Item.where(category_id: @item.category_id).limit(6).order('created_at DESC')
   end
@@ -62,12 +62,10 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
     10.times{@item.images.build}
   end
 
   def update
-    @item = Item.find(params[:id])
     if @item.update(item_params)
       redirect_to root_path
     else
@@ -76,6 +74,9 @@ class ItemsController < ApplicationController
   end
 
   private
+  def set_item
+    @item = Item.find(params[:id])
+  end
 
   def item_params
     params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :delivery_way_id, :brand_id, :price, images_attributes: [:id, :image] ).merge(saler_id: current_user.id, size_id: 1)
