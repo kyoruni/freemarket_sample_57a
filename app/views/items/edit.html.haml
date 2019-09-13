@@ -49,11 +49,7 @@
                   カテゴリー
                   %span.required> 必須
                 .buy__container__main__wrapper__detail__select__category__select
-                  = f.collection_select :category_id, @category_parent_array, :id, :name, { selected: @item.category.root_id }, id: 'parent_category', style:"margin-bottom: 10px;"
-                #children_wrapper.buy__container__main__wrapper__detail__select__category__select
-                  = f.collection_select :category_id, @category_children, :id, :name, { selected: @item.category.parent.id, aaa: "aaa"}, id: 'child_category', style:"margin-bottom: 10px;"
-                #grandchildren_wrapper.buy__container__main__wrapper__detail__select__category__select
-                  = f.collection_select :category_id, @category_grandChildren, :id, :name, { selected: @item.category.id }, id: 'grandchild_category', style:"margin-bottom: 10px;"
+                  = f.collection_select :category_id, @category_parent_array, :id, :name, { prompt: "---", selected: @item.category.root_id }, id: 'parent_category', style:"margin-bottom: 10px;"
             .buy__container__main__wrapper__detail__select__state
               %label<
                 ブランド
