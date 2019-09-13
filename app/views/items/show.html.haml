@@ -64,13 +64,15 @@
         (税込)
       .item-price__container__delivery
         送料込み
-    - if user_signed_in? && current_user.id == @item.saler_id
-      .item-delete__container
-        = link_to @item, method: :delete, data: { confirm: "アイテム「#{@item.name}」を削除します。よろしいですか？"}, class:"item-derete__container__delete--btn" do
-          .item-derete__container__delete--btn 商品の削除
+    
+    -# 売り切れてたら売り切れを表示、さらに自分で出品した商品には削除ボタンを表示、そうでなければ購入画面に進むボタンを表示
+    - if @item.buyer_id.present?
+      .item-buy-btn{style: "background-color: gray;"} 売り切れ
     - else
-      - if @item.buyer_id.present?
-        .item-buy-btn{style: "background-color: gray;"} 売り切れ
+      - if user_signed_in? && current_user.id == @item.saler_id
+        .item-delete__container
+          = link_to @item, method: :delete, data: { confirm: "アイテム「#{@item.name}」を削除します。よろしいですか？"}, class:"item-derete__container__delete--btn" do
+            .item-derete__container__delete--btn 商品の削除
       - else
         = link_to "購入画面に進む", "/items/#{@item.id}/purchase/index", class:"item-buy-btn"
 
