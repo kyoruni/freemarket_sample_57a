@@ -17,13 +17,6 @@
         = exp_month + " / " + exp_year
         = form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
           %input{ type: "hidden", name: "card_id", value: "" }
-          %button 削除する
-      .card-registration__bottom-contents__flame
-        .card-registration__bottom-contents__flame__btn
-          = link_to "/card/new" do
-            .card-registration__bottom-contents__flame__btn__registration-btn
-              %span
-                %i.far.fa-credit-card
-              %span クレジットカードを追加する
+          %button.card-registration__bottom-contents__flame__btn__registration-btn 削除する
       
 = render 'shared/main_footer'
