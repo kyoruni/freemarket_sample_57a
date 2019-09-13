@@ -28,3 +28,26 @@ crumb :item do |item|
   link item.name, root_path
   parent :root
 end
+
+crumb :category_index do
+  link "カテゴリー一覧", root_path
+end
+
+crumb :category do |category|
+  # 親カテゴリー
+  if category.is_root?
+    link category.name, category_path(category.id)
+    parent :category_index
+  # 子カテゴリー
+  elsif category.has_children?
+    link category.parent.name, category_path(category.parent.id)
+    link category.name,        category_path(category.id)
+    parent :category_index
+  # 孫カテゴリー
+  else
+    link category.root.name,   category_path(category.root.id)
+    link category.parent.name, category_path(category.parent.id)
+    link category.name,        category_path(category.id)
+    parent :category_index
+  end
+end
