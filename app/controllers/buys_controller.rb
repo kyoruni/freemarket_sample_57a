@@ -1,4 +1,6 @@
 class BuysController < ApplicationController
+  before_action :set_category_list
+
   def index
   end
 
