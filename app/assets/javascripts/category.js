@@ -1,15 +1,15 @@
 window.addEventListener("turbolinks:load", function() {
   // セレクトボックスの削除
   function remove_selectBox(target) {
-    // 親カテゴリーを選択した場合、子カテゴリーのセレクトボックスを削除
+    // 親カテゴリーを変更した場合
     if (target == "parent") {
       $("#children_wrapper").remove();
     }
-    // 親または子カテゴリーを選択した場合、孫カテゴリーのセレクトボックスを削除
+    // 親または子カテゴリーを変更した場合
     if (target == "parent" || target == "child") {
       $("#grandchildren_wrapper").remove();
     }
-    // 共通 孫より下ののセレクトボックスを削除
+    // 共通
     $("#size_wrapper").remove();
     $("#brand_wrapper").remove();
   }
@@ -19,16 +19,115 @@ window.addEventListener("turbolinks:load", function() {
     var html = `<option value="${category.id}">${category.name}</option>`;
     return html;
   }
-  // セレクトボックスを作成
-  function appendSelectBox(insertHTML, wrapper_id, category_id, target) {
-    var html = "";
-    html = `<div class="buy__container__main__wrapper__detail__select__category__select" id= "${wrapper_id}">
-              <select id="${category_id}" name="" style="margin-bottom: 10px;">
-                <option value="---">---</option>
-                ${insertHTML}
-              </select>
-            </div>`;
-    $(target).append(html);
+
+  // 子カテゴリーの表示作成
+  function appendChidrenBox(insertHTML) {
+    var childSelectHtml = "";
+    childSelectHtml = `<div class="buy__container__main__wrapper__detail__select__category__select" id= "children_wrapper">
+                          <select id="child_category" name="" style="margin-bottom: 10px;">
+                          <option value="---" data-category="---">---</option>
+                            ${insertHTML}
+                          </select>
+                        </div>`;
+    $("#category-insert").append(childSelectHtml);
+  }
+  // 孫カテゴリーの表示作成
+  function appendGrandchidrenBox(insertHTML) {
+    var grandchildSelectHtml = "";
+    grandchildSelectHtml = `<div class="buy__container__main__wrapper__detail__select__category__select" id= "grandchildren_wrapper">
+                                <select id="grandchild_category" name="item[category_id]">
+                                  <option value="---">---</option>
+                                  ${insertHTML}
+                                </select>
+                              </div>`;
+    $("#category-insert").append(grandchildSelectHtml);
+  }
+
+  // 子カテゴリーのセレクトボックスを作成
+  function append_children(children) {
+    remove_selectBox("parent");
+    var insertHTML = "";
+    children.forEach(function(child) {
+      insertHTML += appendOption(child);
+    });
+    appendChidrenBox(insertHTML);
+  }
+
+  // 孫カテゴリーのセレクトボックスを作成
+  function append_grandchildren(grandchildren) {
+    remove_selectBox("child");
+    var insertHTML = "";
+    grandchildren.forEach(function(grandchild) {
+      insertHTML += appendOption(grandchild);
+    });
+    appendGrandchidrenBox(insertHTML);
+  }
+
+  // 共通メッセージ
+  function alert_message() {
+    alert("カテゴリー取得に失敗しました");
+  }
+
+  // 商品編集ページ読み込み時、カテゴリーセレクトボックスの全てのトリガーを発火させる
+  //  DOMが表示される前に次のajax処理が動いてしまう可能性を考慮して、各処理はdoneで順番に行う
+  if (window.location.href.match(/\/items\/\d+\/edit/)) {
+    // 最初に商品のカテゴリーを取得
+    $.ajax({
+      url: "api/categories",
+      type: "GET",
+      dataType: "json"
+    })
+      .done(function(data) {
+        $("#parent_category").trigger("change");
+        $("#parent_category").val(data.parent_id); // 親カテゴリーのidをセット
+
+        // 子カテゴリー作成
+        var parentCategory = $("#parent_category").val(); //選択された親カテゴリーの名前を取得
+        if (parentCategory != "---") {
+          //親カテゴリーが初期値でないことを確認
+          $.ajax({
+            url: "get_category_children",
+            type: "GET",
+            data: { parent_id: parentCategory },
+            dataType: "json"
+          })
+            .done(function(children) {
+              append_children(children);
+              $("#child_category").val(data.child_id); // 子カテゴリーのidをセット
+              var childId = $("#child_category").val(); //選択された子カテゴリーのidを取得
+              if (childId != "---") {
+                //子カテゴリーが初期値でないことを確認
+                $.ajax({
+                  url: "get_category_grandchildren",
+                  type: "GET",
+                  data: { child_id: childId },
+                  dataType: "json"
+                })
+                  .done(function(grandchildren) {
+                    if (grandchildren.length != 0) {
+                      append_grandchildren(grandchildren);
+                      $("#grandchild_category").val(data.grandChild_id); // 子カテゴリーのidをセット
+                    }
+                  })
+                  // 孫カテゴリーの取得失敗
+                  .fail(function() {
+                    alert_message();
+                  });
+              } else {
+                remove_selectBox("child");
+              }
+            })
+            // 子カテゴリーの取得失敗
+            .fail(function() {
+              alert_message();
+            });
+        } else {
+          remove_selectBox("parent");
+        }
+      })
+      .fail(function() {
+        alert_message();
+      });
   }
 
   // 親カテゴリー選択後のイベント
@@ -43,20 +142,10 @@ window.addEventListener("turbolinks:load", function() {
         dataType: "json"
       })
         .done(function(children) {
-          remove_selectBox("parent");
-          var insertHTML = "";
-          children.forEach(function(child) {
-            insertHTML += appendOption(child);
-          });
-          appendSelectBox(
-            insertHTML,
-            "children_wrapper",
-            "child_category",
-            $("#category-insert")
-          );
+          append_children(children);
         })
         .fail(function() {
-          alert("カテゴリー取得に失敗しました");
+          alert_message();
         });
     } else {
       remove_selectBox("parent");
@@ -76,21 +165,11 @@ window.addEventListener("turbolinks:load", function() {
       })
         .done(function(grandchildren) {
           if (grandchildren.length != 0) {
-            remove_selectBox("child");
-            var insertHTML = "";
-            grandchildren.forEach(function(grandchild) {
-              insertHTML += appendOption(grandchild);
-            });
-            appendSelectBox(
-              insertHTML,
-              "grandchildren_wrapper",
-              "grandchild_category",
-              $("#category-insert")
-            );
+            append_grandchildren(grandchildren);
           }
         })
         .fail(function() {
-          alert("孫カテゴリー取得に失敗しました");
+          alert_message();
         });
     } else {
       remove_selectBox("child");
