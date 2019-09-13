@@ -29,6 +29,8 @@ Rails.application.routes.draw do
         get 'index', to: 'purchase#index'
         post 'pay', to: 'purchase#pay'
         get 'done', to: 'purchase#done'
+      end
+    end
     # items edit時の、カテゴリーセレクトボックス
     member do
       get 'get_category_children',      defaults: { format: 'json' }
