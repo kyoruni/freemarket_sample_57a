@@ -1,7 +1,8 @@
 = render 'shared/main_header'
 .pankuzu-box
-  - breadcrumb :category, @category
-  = breadcrumbs separator: " &rsaquo; ", class: "breadcrumbs-list"
+  .pankuzu-box__contents
+    - breadcrumb :category, @category
+    = breadcrumbs separator: " &rsaquo; ", class: "breadcrumbs-list"
 
 .category_container
   -# ランダムで、11件の子or孫カテゴリーを表示
