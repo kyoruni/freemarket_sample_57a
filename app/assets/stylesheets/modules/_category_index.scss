@@ -1,0 +1,57 @@
+/*-- カテゴリー一覧ページ --*/
+.category_container {
+  @include box(1020px, auto);
+  color: $dark-gray;
+  font-size: 14px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+/*-- カテゴリー一覧ページ上部の、ランダムにカテゴリーを表示する部分 --*/
+.category-header {
+  display: inline-block;
+  line-height: 14px;
+  &__list {
+    margin-top: 16px;
+    margin-right: 16px;
+  }
+}
+
+/*-- カテゴリー一覧ページの、カテゴリー名を表示する部分 --*/
+.category-name {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* -- カテゴリー一覧ページの、個別アイテム --*/
+.category-items {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    margin-bottom: 20px;
+  }
+}
+
+/*-- カテゴリー一覧ページ下部 --*/
+.category-title {
+  @include box(100%, auto);
+  background: $red;
+  /*-- カテゴリー名を表示する部分 --*/
+  &__name {
+    @include box("", 54px);
+    color: $white;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 16px 8px;
+    text-align: center;
+  }
+  /*-- カテゴリーごとのメッセージを表示する部分 --*/
+  &__caption {
+    background: $white;
+    padding: 30px;
+  }
+}

@@ -1,0 +1,100 @@
+/*-- カテゴリーリストのポジション決め用ブロック --*/
+.category-list-position {
+  position: absolute;
+}
+
+/*-- カテゴリーリスト --*/
+.category {
+  display: none; // jsで表示させるので、最初は非表示にしておく
+  position: relative;
+  z-index: 1111;
+}
+
+/*-- 親リスト本体 --*/
+.category-list__parent {
+  background: $white;
+  top: 0;
+  color: $dark-gray;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
+  display: block;
+  /*-- 親リストの項目 --*/
+  &__item {
+    width: 224px;
+    max-height: 44px;
+    padding: 15px 16px;
+    line-height: 14px;
+    font-size: 14px;
+    display: -webkit-box; // box要素にする
+    -webkit-box-align: center; // 縦位置中央
+    /*-- 項目の文字だけでなく、全体をリンクにする --*/
+    & a {
+      display: block;
+      color: $dark-gray;
+      &:hover {
+        color: $white;
+      }
+    }
+    /*-- 親リスト マウス乗せたとき --*/
+    &:hover {
+      background: $red3;
+    }
+  }
+}
+
+/*-- 子リスト本体 --*/
+.category-list__child {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 224px;
+  width: 224px;
+  font-size: 14px;
+  line-height: 14px;
+  background: $white;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
+  color: $dark-gray;
+  height: 100%;
+  /*-- 子リストの項目 --*/
+  &__item {
+    max-height: 30px;
+    padding: 8px 16px;
+    & a {
+      color: $dark-gray;
+      &:hover {
+        background: $light-gray2;
+        color: $dark-gray;
+      }
+    }
+    /*-- 子リスト マウス乗せたとき --*/
+    &:hover {
+      background: $light-gray2;
+    }
+  }
+}
+
+/*-- 孫リスト本体 --*/
+.category-list__grand__child {
+  @extend .category-list__child;
+  @include box(320px, auto); // 幅と高さは差異があるので上書き
+  min-height: 100%; // 項目が少なくても、子リストと同じ高さにする
+  /*-- 孫リストの項目 --*/
+  &__item {
+    @extend .category-list__child__item;
+    & a {
+      color: $dark-gray;
+      &:hover {
+        background: $light-gray2;
+        color: $dark-gray;
+      }
+    }
+    /*-- 孫リスト マウス乗せたとき --*/
+    &:hover {
+      @extend .category-list__child__item:hover;
+    }
+  }
+}
+
+/*-- 今マウスが乗っているブロック判別用 --*/
+.active-list {
+  display: block;
+}

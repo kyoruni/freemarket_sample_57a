@@ -44,17 +44,25 @@
           %h3.buy__container__main__wrapper__detail__title 商品の詳細
           .buy__container__main__wrapper__detail__select
             .buy__container__main__wrapper__detail__select__category
+              #category-insert
+                %label<
+                  カテゴリー
+                  %span.required> 必須
+                .buy__container__main__wrapper__detail__select__category__select
+                  = f.collection_select :category_id, @category_parent_array, :id, :name, { prompt: "---" }, id: 'parent_category', style:"margin-bottom: 10px;"
+            .buy__container__main__wrapper__detail__select__state
               %label<
-                カテゴリー
+                ブランド
                 %span.required> 必須
-              .buy__container__main__wrapper__detail__select__category__select
-                = f.collection_select :category_id, @root_category, :id, :name, { prompt: "---" }
+              .buy__container__main__wrapper__detail__select__state__select
+                = f.collection_select :brand_id, @brand, :id, :name, { prompt: "---" }
             .buy__container__main__wrapper__detail__select__state
               %label<
                 商品の状態
                 %span.required> 必須
               .buy__container__main__wrapper__detail__select__state__select
                 = f.collection_select :condition_id, @condition, :id, :name, { prompt: "---" }
+                
         
         -# 配送についてセレクト欄
         .buy__container__main__wrapper__delivery
@@ -79,6 +87,12 @@
                 %span.required> 必須
               .buy__container__main__wrapper__delivery__select__schedule__select
                 = f.collection_select :delivery_day_id, @delivery_day, :id, :day, { prompt: "---" }
+            .buy__container__main__wrapper__delivery__select__shipping-origin
+              %label<
+                配送方法
+                %span.required> 必須
+              .buy__container__main__wrapper__delivery__select__burden__select
+                = f.collection_select :delivery_way_id, @delivery_way, :id, :name , { prompt: "---" }
         
         -# 価格のセレクト欄
         .buy__container__main__wrapper__price
