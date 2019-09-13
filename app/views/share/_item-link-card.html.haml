@@ -2,8 +2,11 @@
 = link_to "/items/#{item.id}", class:"item-link-card__link" do
   .item-link-card
     .item-link-card--image
-      - if item.images.first
-        = image_tag item.images.first.image_url, class: "item-photo-size"
+      - if item.buyer_id.present?
+        .item-link-card--image__sold-mark
+          sold out
+        - if item.images.first
+          = image_tag item.images.first.image_url, class: "item-photo-size"
     .item-link-card__text-box
       .item-link-card__text-box--name
         %h3
