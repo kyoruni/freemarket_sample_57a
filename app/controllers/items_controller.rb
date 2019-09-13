@@ -64,10 +64,6 @@ class ItemsController < ApplicationController
   def edit
     @item = Item.find(params[:id])
     10.times{@item.images.build}
-
-    # 選択肢
-    @category_children   = @item.category.root.children
-    @category_grandChildren = @item.category.siblings
   end
 
   def update
