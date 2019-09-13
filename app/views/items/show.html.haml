@@ -141,8 +141,7 @@
   %nav.bread-crumbs
     %ul
       %li
-        = link_to "メルカリ", "/", class:"bread-crumbs__home-rink"
-        %i.fa.fa-angle-right
-      %li
-        %span コーチ
+        - breadcrumb :item, @item
+        = breadcrumbs separator: " &rsaquo; ", class: "breadcrumbs-list"
+
 = render 'shared/main_footer'

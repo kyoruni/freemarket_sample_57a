@@ -23,3 +23,8 @@ crumb :personal_info_regist do
     parent :root
   end
 end
+
+crumb :item do |item|
+  link item.name, root_path
+  parent :root
+end
