@@ -11,15 +11,6 @@ Rails.application.routes.draw do
       post 'delete', to: 'card#delete'
     end
   end
-
-  # 商品購入
-  resources :purchase, only: [:index] do
-    collection do
-      get 'index', to: 'purchase#index'
-      post 'pay', to: 'purchase#pay'
-      get 'done', to: 'purchase#done'
-    end
-  end
   
   devise_for :users, controllers:{
     sessions: 'users/sessions'
@@ -31,7 +22,16 @@ Rails.application.routes.draw do
       get 'get_category_children', defaults: { format: 'json' }
       get 'get_category_grandchildren', defaults: { format: 'json' }
     end
+    # 商品購入
+    resources :purchase, only: [:index] do
+      collection do
+        get 'index', to: 'purchase#index'
+        post 'pay', to: 'purchase#pay'
+        get 'done', to: 'purchase#done'
+      end
+    end
   end
+
   resources  :buys, only: [:index, :show]
   resources  :categories, only: [:show]
   root 'items#index'
