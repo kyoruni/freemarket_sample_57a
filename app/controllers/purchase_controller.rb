@@ -1,9 +1,10 @@
 class PurchaseController < ApplicationController
   require 'payjp'
   before_action :set_payjp_secret_key
+  before_action :set_item
+  before_action :move_to_root
 
   def index
-    @item = Item.find(params[:item_id])
     @user = User.find(current_user.id)
     card = Card.where(user_id: current_user.id).first
     #Cardテーブルは前回記事で作成、テーブルからpayjpの顧客IDを検索
@@ -19,7 +20,6 @@ class PurchaseController < ApplicationController
   end
 
   def pay
-    @item = Item.find(params[:item_id])
     card = Card.where(user_id: current_user.id).first
     Payjp::Charge.create(
     :amount => @item.price, #支払金額を入力（itemテーブル等に紐づけても良い）
@@ -30,4 +30,13 @@ class PurchaseController < ApplicationController
     redirect_to action: 'done' #完了画面に移動
   end
 
+  private
+  def set_item
+    @item = Item.find(params[:item_id])
+  end
+
+  # URLから直接飛ぶのを防ぐ
+  def move_to_root
+    redirect_to root_path if current_user.id == @item.saler_id
+  end
 end
