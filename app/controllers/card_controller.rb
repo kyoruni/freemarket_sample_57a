@@ -1,5 +1,5 @@
 class CardController < ApplicationController
-
+  before_action :set_category_list
   require "payjp"
 
   def new
