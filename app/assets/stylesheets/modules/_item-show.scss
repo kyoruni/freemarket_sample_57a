@@ -1,10 +1,12 @@
 .item-show__container {
   background-color: $light-gray;
+  width: 700px;
+  margin: 0 auto;
   padding: 40px 0;
 }
 
 .item-box__container {
-  @include box(700px, 1050px);
+  @include box("", 1050px);
   background-color: $white;
   margin: 0 auto;
   padding: 24px 40px 40px;
@@ -214,13 +216,10 @@ tr {
 // アイテムナビ欄
 .item-nav {
   @include box(700px, 28px);
-  margin: 24px 370px;
-  &__prev {
-    float: left;
-  }
-  &__next {
-    float: right;
-  }
+  margin-top: 24px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
   &__link {
     color: $light-blue;
     text-decoration: none;
@@ -235,6 +234,7 @@ tr {
   @include box(700px, 138px);
   background-color: $white;
   margin: 0 auto;
+  margin-top: 24px;
   padding: 32px 0 24px;
   &__box {
     @include box(700px, 52px);
@@ -273,7 +273,7 @@ tr {
 // ユーザーのアイテム欄、同一カテゴリーのアイテム欄
 .item-user__container,
 .item-category__container {
-  @include box(700px, 738px);
+  @include box(700px, auto);
   margin: 0 auto;
   & h2 {
     margin: 24px 0 8px;
@@ -285,9 +285,8 @@ tr {
     font-weight: 600;
   }
   &__user-box {
-    @include box(700px, 700px);
+    @include box(700px, auto);
     &--upper-row {
-      @include box(720px, 700px);
       margin-bottom: 20px;
       display: flex;
       flex-wrap: wrap;
@@ -317,6 +316,40 @@ tr {
     &:hover {
       opacity: 0.6;
       border-bottom: 1px solid black;
+    }
+  }
+}
+
+/*-- 自分の出品した商品で表示されるボタン --*/
+.item-buttons {
+  background: $white;
+  margin: 24px 0;
+  padding: 8px 16px;
+  /*-- 削除ボタン --*/
+  &__delete-button {
+    @include box(100%, "");
+    background: #aaa;
+    border: 1px solid #aaa;
+    color: $white;
+    display: block;
+    margin: 16px 0;
+    padding: 1px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  /*-- 編集ボタン --*/
+  &__edit-button {
+    @extend .item-buttons__delete-button;
+    background: $red;
+    border: 1px solid $red;
+    text-align: center;
+    transition: all ease-out 0.3s;
+    &:hover {
+      opacity: 0.7;
+      background: $red2;
+      transition: all ease-out 0.3s;
     }
   }
 }

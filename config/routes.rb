@@ -18,8 +18,9 @@ Rails.application.routes.draw do
 
   resources  :users, only: [:show, :destroy]
   resources  :items do
+    # items new時の、カテゴリーセレクトボックス
     collection do
-      get 'get_category_children', defaults: { format: 'json' }
+      get 'get_category_children',      defaults: { format: 'json' }
       get 'get_category_grandchildren', defaults: { format: 'json' }
     end
     # 商品購入
@@ -28,6 +29,12 @@ Rails.application.routes.draw do
         get 'index', to: 'purchase#index'
         post 'pay', to: 'purchase#pay'
         get 'done', to: 'purchase#done'
+    # items edit時の、カテゴリーセレクトボックス
+    member do
+      get 'get_category_children',      defaults: { format: 'json' }
+      get 'get_category_grandchildren', defaults: { format: 'json' }
+      namespace :api do
+        resources :categories, only: :index, defaults: { format: 'json' }
       end
     end
   end
