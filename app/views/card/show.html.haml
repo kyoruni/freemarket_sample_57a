@@ -1,10 +1,29 @@
-%label 登録クレジットカード情報
-%br
-= "**** **** **** " + @default_card_information.last4
-%br
-- exp_month = @default_card_information.exp_month.to_s
-- exp_year = @default_card_information.exp_year.to_s.slice(2,3)
-= exp_month + " / " + exp_year
-= form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
-  %input{ type: "hidden", name: "card_id", value: "" }
-  %button 削除する
+= render 'shared/main_header'
+= render 'share/breadcrumbs'
+.mypage
+  = render 'users/mypage-left'
+  .card-registration
+    .card-registration__top-contents
+      %h2 支払い方法
+    .card-registration__bottom-contents
+      .card-registration__bottom-contents__text
+        %p クレジットカード一覧
+        %label 登録クレジットカード情報
+        %br
+        = "**** **** **** " + @default_card_information.last4
+        %br
+        - exp_month = @default_card_information.exp_month.to_s
+        - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+        = exp_month + " / " + exp_year
+        = form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
+          %input{ type: "hidden", name: "card_id", value: "" }
+          %button 削除する
+      .card-registration__bottom-contents__flame
+        .card-registration__bottom-contents__flame__btn
+          = link_to "/card/new" do
+            .card-registration__bottom-contents__flame__btn__registration-btn
+              %span
+                %i.far.fa-credit-card
+              %span クレジットカードを追加する
+      
+= render 'shared/main_footer'
