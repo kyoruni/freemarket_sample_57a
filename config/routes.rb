@@ -32,7 +32,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources  :buys, only: [:index, :show]
   resources  :categories, only: [:show]
   root 'items#index'
 
