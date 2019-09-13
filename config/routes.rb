@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'purchase/index'
+  get 'purchase/done'
   # payjp
   resources :card, only: [:new, :show] do
     collection do
