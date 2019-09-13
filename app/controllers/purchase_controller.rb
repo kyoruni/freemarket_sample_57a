@@ -37,6 +37,6 @@ class PurchaseController < ApplicationController
 
   # URLから直接飛ぶのを防ぐ
   def move_to_root
-    redirect_to root_path if current_user.id == @item.saler_id
+    redirect_to root_path if current_user.id == @item.saler_id || @item.buyer_id.present?
   end
 end
