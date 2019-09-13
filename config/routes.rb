@@ -18,25 +18,15 @@ Rails.application.routes.draw do
       get  'step4'           => 'signup#step4'
       post 'signup/create'   => 'signup#create'
       get  'step5'           => 'signup#step5'
-
-      get  '/'               => 'signup#new'
-      get  'step1'           => 'signup#step1'
-
     end
   end
-
-
-  get "/auth/:provider/callback" => 'sessions#createByFacebook'
-  get "/auth/:provider/callback" => 'google#callback'
-  
 
   get 'identification' => 'users#identification'
   get 'card_registration' => 'buys#card_registration'
 end
 
+# registrations: 'users/registrations' ,
+# omniauth_callbacks: 'users/omniauth_callbacks'
 
-
-      # registrations: 'users/registrations' ,
-      # omniauth_callbacks: 'users/omniauth_callbacks'
-
-        # get 'auth/:provider/callback' => 'google#callback'
+# get "/auth/:provider/callback" => 'sessions#createByFacebook'
+# get "/auth/:provider/callback" => 'google#callback'
