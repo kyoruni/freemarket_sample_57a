@@ -39,9 +39,9 @@
         %p
           = "〒#{@user.shipping_address.postal_code}"
         %p
-          = @user.shipping_address.address 
+          = @user.shipping_address.address
         %p
-          = "#{@user.shipping_address.last_name} #{@user.shipping_address.first_name}"
+          = "#{@user.last_name} #{@user.first_name}"
       .buy-confirmation-wrapper__delivery--user-info
         = link_to "#", class:"buy-confirmation-wrapper__delivery--user-info__link" do
           変更する
