@@ -1,27 +1,26 @@
 .header-separate
   = render 'shared/main_header'
-
 .search-container
-  .search-left
   .search-right
-    %h2.search-right__keyword
-      ddd
-      %span.search-right__keyword__text
-        の検索結果
-    .search-right__item-count
-      1 - 132件表示
-    .search-right__items
-      - @items.each do |item|
-        .search-right__items__item
-          - if item.images.first
-            = image_tag item.images.first.image_url, class: "search-right__items__item--image"
-            .search-right__items__item__text-box
-              .search-right__items__item__text-box--name
-                %h3
-                  = item.name
-              .search-right__items__item__text-box__bottom
-                .search-right__items__item__text-box__bottom--price
-                  = "￥ #{item.price.to_s(:delimited)}"
-                .search-right__items__item__text-box__bottom--like
-                  %i.fa.fa-heart
-                  %span 3
+    - if params[:keyword].empty?
+      = render 'search-items-new-label'
+      = render partial: 'search-items', locals: { items: @new_items }
+    - elsif @items.present?
+      = render partial: 'search-items-result', locals: { keyword: params[:keyword] }
+      .search-right__item-count
+        = "1 - #{@items.length}件表示"
+      = render partial: 'search-items', locals: { items: @items }
+    - else
+      = render partial: 'search-items-result', locals: { keyword: params[:keyword] }
+      %p.search-right__nothing-text
+        該当する商品が見つかりません。検索条件を変えて、再度お試しください。
+      = render 'search-items-new-label'
+      = render partial: 'search-items', locals: { items: @new_items }
+-# 下のパンくずリスト
+.bread-crumbs__container
+  %nav.bread-crumbs
+    %ul
+      %li
+        - breadcrumb :search, params[:keyword]
+        = breadcrumbs separator: " &rsaquo; ", class: "breadcrumbs-list"
+= render 'shared/main_footer'
