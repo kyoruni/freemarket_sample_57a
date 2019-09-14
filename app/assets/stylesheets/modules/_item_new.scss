@@ -23,11 +23,11 @@
 
       // 画像投稿フォーム
       &__sell-form {
-        border-bottom: 1px solid $light-gray2; 
+        border-bottom: 1px solid $light-gray2;
         &--up-load-box {
           width: 620px;
           height: 303px;
-          padding: 40px;
+          padding: 40px 0 40px 40px;
         }
         &--up-load-drop-box {
           width: 620px;
@@ -274,4 +274,41 @@ select {
 .text-link {
   text-decoration: none;
   color: $light-blue;
+}
+
+// 真・画像投稿フォームCSS
+.dropzone-container {
+  display: flex;
+}
+
+#preview {
+  display: flex;
+}
+
+.dropzone-area {
+  width: 620px;
+  height: 162px;
+  background-color: $light-gray;
+  margin: 20px 0;
+  border: 1px dashed #d5d5d5;
+  & i {
+    text-align: center;
+    line-height: 162px;
+    display: block;
+  }
+}
+
+.upload-image {
+  display: none;
+}
+
+.img_view img {
+  margin: 20px 5px 0 0;
+  height: 130px;
+  width: 100px;
+}
+
+.delete {
+  color: red;
+  cursor: pointer;
 }
