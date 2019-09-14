@@ -1,7 +1,7 @@
 = render partial: 'share/simple-header'
 
 -# メイン部分
-= form_with(model: @item, local: true, multipart: true) do |f|
+= form_with(model: @item, local: true, multipart: true, class: "sell-form dropzone", id: "item-dropzone") do |f|
   .buy__container
     .buy__container__main
       .buy__container__main__wrapper
@@ -17,7 +17,17 @@
             %p
               最大10枚までアップロードできます
             = f.fields_for :images do |image|
-              = image.file_field :image, type: "file", multipart: true
+              .dropzone-container.clearfix
+                #preview
+                .dropzone-area
+                  = image.label :image, class: "dropzone-box", for: "upload-image" do
+                    .input_area
+                      = image.file_field :image, type: "file", multiple: true, name: 'images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
+                    %p ここをクリックしてください
+                #preview2
+                .dropzone-area2
+                  = image.label :image, class: "dropzone-box", for: "upload-image" do
+                    %p ここをクリックしてください
             -# .buy__container__main__wrapper__sell-form--up-load-drop-box
             -#   .preview
             -#   %pre.buy__container__main__wrapper__sell-form--up-load-drop-box-text

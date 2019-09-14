@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    10.times{@item.images.build}
+    @item.images.build
   end
 
   # 親カテゴリーが選択された後に動くアクション
@@ -47,11 +47,18 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    binding.pry
     @parents = Category.where(ancestry: nil)
-    if @item.save
-      redirect_to root_path
-    else
-      render action: :new
+    respond_to do |format|
+      if @item.save
+        params[:images][:image].each do |image|
+          @item.images.create(image: image, item_id: @item.id)
+        end
+        format.html{redirect_to root_path}
+      else
+        @item.images.build
+        format.html{render action: 'new'}
+      end
     end
   end
 
@@ -79,7 +86,7 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :delivery_way_id, :brand_id, :price, images_attributes: [:id, :image] ).merge(saler_id: current_user.id, size_id: 1)
+    params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :delivery_way_id, :brand_id, :price, images_attributes: [:image] ).merge(saler_id: current_user.id, size_id: 1)
   end
 
   # 出品フォームの選択肢をセット
