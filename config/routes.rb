@@ -3,7 +3,8 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
-  resources  :users, only: [:show, :destroy]
+  resources  :users,  only: [:show, :destroy]
+  resources  :search, only: [:index]
   resources  :items do
     # items new時の、カテゴリーセレクトボックス
     collection do
