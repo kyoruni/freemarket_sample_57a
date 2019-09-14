@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item,          only: [:show, :edit, :update]
   before_action :set_category_list, only: [:index, :show]
+  before_action :set_brand_list,    only: [:index, :show]
   before_action :set_item_form_collction_select, only: [:new, :edit]
 
   def show
