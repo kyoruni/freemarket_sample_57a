@@ -8,6 +8,9 @@
       -# 商品写真
       .item-box__container__box__photo
         .item-box__container__box__photo--main
+          - if @item.buyer_id.present?
+            .item-box__container__box__photo--main__sold-mark
+              sold out
           -if @item.images.first
             = image_tag @item.images.first.image_url, class:"main-photo"
         .item-box__container__box__photo__sub-group
