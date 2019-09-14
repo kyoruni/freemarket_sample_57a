@@ -294,32 +294,6 @@ tr {
   }
 }
 
-// パンくずリスト
-.bread-crumbs__container {
-  background-color: $light-gray;
-  border-top: 1px solid $light-gray2;
-}
-
-.bread-crumbs {
-  @include box(1020px, 48px);
-  margin: 0 210px;
-  & ul {
-    display: flex;
-    line-height: 48px;
-    & span {
-      padding-left: 10px;
-    }
-  }
-  &__home-rink {
-    text-decoration: none;
-    color: black;
-    &:hover {
-      opacity: 0.6;
-      border-bottom: 1px solid black;
-    }
-  }
-}
-
 /*-- 自分の出品した商品で表示されるボタン --*/
 .item-buttons {
   background: $white;
