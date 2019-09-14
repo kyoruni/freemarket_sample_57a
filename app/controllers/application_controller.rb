@@ -19,4 +19,8 @@ class ApplicationController < ActionController::Base
   def set_category_list
     @categories = Category.order("id ASC")
   end
+
+  def set_payjp_secret_key
+    Payjp.api_key = Rails.application.credentials.payjp_secret_key
+  end
 end

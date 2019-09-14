@@ -19,6 +19,16 @@
       @include box(300px, 420px);
       &--main {
         @include box(300px, 300px);
+        position: relative;
+        &__sold-mark {
+          position: absolute;
+          width: 300px;
+          height: 24px;
+          line-height: 24px;
+          background-color: red;
+          color: $white;
+          text-align: center;
+        }
       }
       &__sub-group {
         @include box(300px, 120px);
@@ -285,7 +295,7 @@ tr {
     font-weight: 600;
   }
   &__user-box {
-    @include box(700px, auto);
+    @include box(720px, auto);
     &--upper-row {
       margin-bottom: 20px;
       display: flex;
