@@ -18,5 +18,9 @@ body {
 }
 
 *:focus {
-  outline: none; // デフォルトの枠線を消す
+  outline: none;
+}
+
+input[type="text"]:focus {
+  outline: 0;
 }
