@@ -7,25 +7,32 @@
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  height: auto;
 }
-
-.search-left {
-  height: 500px;
-  width: 280px;
-  background: pink;
-  margin-right: 40px;
-}
-
+/*-- 右側メニュー --*/
+/*-- 左側は未実装 --*/
 .search-right {
   height: auto;
   width: 700px;
-  /*-- 検索ワード表示領域 --*/
-  &__keyword {
+  /*-- 検索結果なかった時のテキスト --*/
+  &__nothing-text {
+    font-size: 14px;
+    color: #333;
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+  /*-- 検索結果なかった時の見出し --*/
+  &__nothing-title {
     margin-bottom: 8px;
     font-size: 22px;
     font-weight: 600;
     line-height: 30.8px;
     color: #333;
+  }
+  /*-- 検索ワード表示領域 --*/
+  &__keyword {
+    @extend .search-right__nothing-title;
+    /*-- 細いテキスト --*/
     &__text {
       font-size: 18px;
       font-weight: 400;
