@@ -295,7 +295,7 @@ tr {
     font-weight: 600;
   }
   &__user-box {
-    @include box(700px, auto);
+    @include box(720px, auto);
     &--upper-row {
       margin-bottom: 20px;
       display: flex;
