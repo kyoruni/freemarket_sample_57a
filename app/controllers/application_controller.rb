@@ -21,6 +21,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_payjp_secret_key
-    Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
+    Payjp.api_key = Rails.application.credentials.payjp_secret_key
   end
 end
