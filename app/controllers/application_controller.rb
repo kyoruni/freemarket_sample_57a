@@ -20,6 +20,12 @@ class ApplicationController < ActionController::Base
     @categories = Category.order("id ASC")
   end
 
+  # ブランド一覧の取得
+  def set_brand_list
+    # @brands = Brand.all
+    @brands = Brand.where(name: ['シャネル', 'ナイキ', 'ルイ ヴィトン', 'シュプリーム', 'アディダス'])
+  end
+
   def set_payjp_secret_key
     Payjp.api_key = Rails.application.credentials.payjp_secret_key
   end
