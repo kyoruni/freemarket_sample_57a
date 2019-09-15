@@ -38,10 +38,11 @@
               = link_to "#{@item.category.root.name}", "#", class:"item-box__container__table-link"
               = link_to "#{@item.category.parent.name}", "#", class:"item-box__container__table-link"
               = link_to "#{@item.category.name}", "#", class:"item-box__container__table-link"
-          %tr
-            %th ブランド
-            %td
-              = link_to "#{@item.brand.name}", "#", class:"item-box__container__table-link"
+          - if @item.brand_id
+            %tr
+              %th ブランド
+              %td
+                = link_to "#{@item.brand.name}", "#", class:"item-box__container__table-link"
           %tr
             %th 商品の状態
             %td= @item.condition.name

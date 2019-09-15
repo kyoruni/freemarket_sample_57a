@@ -54,7 +54,7 @@
             .buy__container__main__wrapper__detail__select__state
               %label<
                 ブランド
-                %span.required> 必須
+                %span.not-required> 任意
               .buy__container__main__wrapper__detail__select__state__select
                 = f.collection_select :brand_id, @brand, :id, :name, { prompt: "---" }
             .buy__container__main__wrapper__detail__select__state

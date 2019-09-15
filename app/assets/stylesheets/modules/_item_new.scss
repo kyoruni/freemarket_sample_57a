@@ -234,6 +234,16 @@
   font-size: 12px;
 }
 
+// 任意のCSS
+.not-required {
+  background-color: $gray;
+  margin-left: 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: white;
+  font-size: 12px;
+}
+
 // セレクトボックスのCSS
 select {
   width: 400px;
