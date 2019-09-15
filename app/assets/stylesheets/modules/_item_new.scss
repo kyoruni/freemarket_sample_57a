@@ -322,3 +322,9 @@ select {
   color: red;
   cursor: pointer;
 }
+
+// エラーメッセージ
+.item_error_message {
+  color: red;
+  text-align: center;
+}

@@ -1,3 +1,9 @@
+-# エラーメッセージを表示
+- if @item.errors.any?
+  - @item.errors.full_messages.each do |message|
+    %ul
+      %li{class:"item_error_message"}= message
+      
 = render partial: 'share/simple-header'
 
 -# メイン部分
