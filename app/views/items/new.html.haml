@@ -114,7 +114,7 @@
               .buy__container__main__wrapper__price__select__price-box__input-block
                 %label<
                 ￥
-                = f.text_field :price, placeholder: "例）300", id:"price"
+                = f.number_field :price, placeholder: "例）300", id:"price", min:"300", max:"9999999"
             .buy__container__main__wrapper__price__select__fee
               .buy__container__main__wrapper__price__select__fee__left
                 %label 販売手数料(10%)
