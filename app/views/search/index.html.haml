@@ -1,6 +1,7 @@
 .header-separate
   = render 'shared/main_header'
 .search-container
+  = render partial: 'search-left',  locals: { keyword: @keyword, categories: @categories }
   = render partial: 'search-right', locals: { keyword: @keyword, items: @items, new_items: @new_items }
 -# 下のパンくずリスト
 .bread-crumbs__container
