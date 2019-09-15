@@ -1,0 +1,21 @@
+= render 'shared/main_header'
+.pankuzu-box
+  .pankuzu-box__contents
+    - breadcrumb :brand, @brand
+    = breadcrumbs separator: " &rsaquo; ", class: "breadcrumbs-list"
+
+.brand_container
+  %h1.brand-name
+    = "#{@brand.name}の商品一覧"
+  .brand-items
+    - @brand_items.each do |brand_item|
+      .brand-items__item
+        = render partial: 'share/item-link-card', locals: { item: brand_item }
+  .brand-title
+    %h3.brand-title__name
+      = @brand.name
+    .brand-title__caption
+      .brand-title__caption--bold
+        = @brand_message1
+      = @brand_message2
+= render 'shared/main_footer'

@@ -44,6 +44,9 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  # テストコード
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -103,5 +106,9 @@ gem 'fog-aws'
 # パンくず
 gem 'gretel'
 
+# クレジットカード
 gem 'payjp'
+
+# 検索
+gem 'ransack', github: 'activerecord-hackery/ransack'
 

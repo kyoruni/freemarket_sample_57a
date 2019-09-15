@@ -9,45 +9,8 @@
     = render partial: 'pickup_category', locals: { category: @categories[6], items: @cosmetics_items }
   .main__container
     %h2.main__container__head ピックアップブランド
-    .main__container__item
-      %h3.main__container__item__category
-        = link_to "#" do
-          .main__container__item__category__title シャネル新着アイテム
-          .main__container__item__category__num
-            - @chanel_items.each do |chanel_item|
-              = render partial: 'share/item-link-card', locals: { item: chanel_item }
-      .main__container__item__all
-        = link_to "#" do
-          %p.main__container__item__all__link 全ての商品を見る
-    .main__container__item
-      %h3.main__container__item__category
-        = link_to "#" do
-          .main__container__item__category__title ルイヴィトン新着アイテム
-          .main__container__item__category__num
-            - @louisVuitton_items.each do |louisVuitton_item|
-              = render partial: 'share/item-link-card', locals: { item: louisVuitton_item }
-      .main__container__item__all
-        = link_to "#" do
-          %p.main__container__item__all__link 全ての商品を見る
-    .main__container__item
-      %h3.main__container__item__category
-        = link_to "#" do
-          .main__container__item__category__title シュプリーム新着アイテム
-          .main__container__item__category__num
-            - @supreme_items.each do |supreme_item|
-              = render partial: 'share/item-link-card', locals: { item: supreme_item }
-      .main__container__item__all
-        = link_to "#" do
-          %p.main__container__item__all__link 全ての商品を見る
-    .main__container__item
-      %h3.main__container__item__category
-        = link_to "#" do
-          .main__container__item__category__title ナイキ新着アイテム
-          .main__container__item__category__num
-            - @nike_items.each do |nike_item|
-              = render partial: 'share/item-link-card', locals: { item: nike_item }
-      .main__container__item__all
-        = link_to "#" do
-          %p.main__container__item__all__link 全ての商品を見る
-
+    = render partial: 'pickup_brand',     locals: { brand:   @chanel,        items: @chanel_items }
+    = render partial: 'pickup_brand',     locals: { brand:   @louisVuitton,  items: @louisVuitton_items }
+    = render partial: 'pickup_brand',     locals: { brand:   @supreme,       items: @supreme_items }
+    = render partial: 'pickup_brand',     locals: { brand:   @nike,          items: @nike_items }
 = render 'shared/main_footer'

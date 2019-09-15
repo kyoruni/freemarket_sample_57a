@@ -3,6 +3,8 @@ class ItemsController < ApplicationController
   before_action :set_item,          only: [:show, :edit, :update]
   before_action :set_category_list, only: [:index, :show]
   before_action :set_item_form_collction_select, only: [:new, :edit, :create]
+  before_action :set_brand_list,    only: [:index, :show]
+
 
   def show
     @saler_items = Item.where(saler_id: @item.saler_id).limit(6).order('created_at DESC')
@@ -14,19 +16,19 @@ class ItemsController < ApplicationController
     mens_categories      = Category.where('ancestry LIKE(?)', "2/%")
     kids_categories      = Category.where('ancestry LIKE(?)', "3/%")
     cosmetics_categories = Category.where('ancestry LIKE(?)', "7/%")
-    chanel_id            = Brand.find_by(name: "シャネル")
-    louisVuitton_id      = Brand.find_by(name: "ルイ ヴィトン")
-    supreme_id           = Brand.find_by(name: "シュプリーム")
-    nike_id              = Brand.find_by(name: "ナイキ")
+    @chanel              = Brand.find_by(name: "シャネル")
+    @louisVuitton        = Brand.find_by(name: "ルイ ヴィトン")
+    @supreme             = Brand.find_by(name: "シュプリーム")
+    @nike                = Brand.find_by(name: "ナイキ")
 
-    @ladies_items       = Item.category_items(ladies_categories).recent(4)
-    @mens_items         = Item.category_items(mens_categories).recent(4)
-    @kids_items         = Item.category_items(kids_categories).recent(4)
-    @cosmetics_items    = Item.category_items(cosmetics_categories).recent(4)
-    @chanel_items       = Item.brand_items(chanel_id).recent(4)
-    @louisVuitton_items = Item.brand_items(louisVuitton_id).recent(4)
-    @supreme_items      = Item.brand_items(supreme_id).recent(4)
-    @nike_items         = Item.brand_items(nike_id).recent(4)
+    @ladies_items        = Item.category_items(ladies_categories).recent(4)
+    @mens_items          = Item.category_items(mens_categories).recent(4)
+    @kids_items          = Item.category_items(kids_categories).recent(4)
+    @cosmetics_items     = Item.category_items(cosmetics_categories).recent(4)
+    @chanel_items        = Item.brand_items(@chanel.id).recent(4)
+    @louisVuitton_items  = Item.brand_items(@louisVuitton.id).recent(4)
+    @supreme_items       = Item.brand_items(@supreme.id).recent(4)
+    @nike_items          = Item.brand_items(@nike.id).recent(4)
   end
 
   def new
