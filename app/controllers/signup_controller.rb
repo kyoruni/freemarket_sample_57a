@@ -46,7 +46,7 @@ class SignupController < ApplicationController
       phone_number:                 session[:phone_number],
       shipping_address_attributes:  user_params[:shipping_address_attributes]
     )
-    @user.save!
+    @user.save
     sign_in @user
   end
 
