@@ -105,3 +105,6 @@ gem 'gretel'
 
 gem 'payjp'
 
+# ページネーション
+gem 'kaminari'
+
