@@ -5,7 +5,7 @@ class SignupController < ApplicationController
   end
   
   def step2
-    @user = User.new
+    @user = User.new()
     user_params[:name]                   = user_params[:name]
     user_params[:email]                  = user_params[:email]
     user_params[:password]               = user_params[:password]

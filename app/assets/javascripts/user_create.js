@@ -61,13 +61,13 @@ window.addEventListener("turbolinks:load", function() {
           required: true,
           telnum: true
         },
-        "user[shipping_address_attributes][postal_code]":{
-          required: true,
-          postnum: true
-        },
-        "user[shipping_address_attributes][address]":{
-          required: true
-        }
+        // "user[shipping_address_attributes][postal_code]":{
+        //   required: true,
+        //   postnum: true
+        // },
+        // "user[shipping_address_attributes][address]":{
+        //   required: true
+        // }
       },
       messages : {
         "user[name]":{

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_11_050616) do
+ActiveRecord::Schema.define(version: 2019_09_13_094810) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "last_name", null: false
@@ -118,16 +118,16 @@ ActiveRecord::Schema.define(version: 2019_09_11_050616) do
   end
 
   create_table "shipping_addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "last_name", null: false
-    t.string "first_name", null: false
-    t.string "last_name_kana", null: false
-    t.string "first_name_kana", null: false
     t.string "postal_code"
-    t.string "address"
-    t.string "duilding"
+    t.string "address", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "region_id"
+    t.string "city", null: false
+    t.string "building"
+    t.string "building_phone"
+    t.index ["region_id"], name: "index_shipping_addresses_on_region_id"
     t.index ["user_id"], name: "index_shipping_addresses_on_user_id"
   end
 
@@ -169,5 +169,6 @@ ActiveRecord::Schema.define(version: 2019_09_11_050616) do
   add_foreign_key "items", "sizes"
   add_foreign_key "items", "users", column: "buyer_id"
   add_foreign_key "items", "users", column: "saler_id"
+  add_foreign_key "shipping_addresses", "regions"
   add_foreign_key "shipping_addresses", "users"
 end
