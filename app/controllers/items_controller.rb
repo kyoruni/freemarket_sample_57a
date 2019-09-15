@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, only: :new
   before_action :set_item,          only: [:show, :edit, :update]
   before_action :set_category_list, only: [:index, :show]
-  before_action :set_item_form_collction_select, only: [:new, :edit]
+  before_action :set_item_form_collction_select, only: [:new, :edit, :create]
 
   def show
     @saler_items = Item.where(saler_id: @item.saler_id).limit(6).order('created_at DESC')
