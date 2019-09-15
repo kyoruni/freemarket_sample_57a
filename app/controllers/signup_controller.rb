@@ -25,14 +25,8 @@ class SignupController < ApplicationController
   def step3
     @user = User.new
     user_params[:phone_number]           = user_params[:phone_number]
-    @user.build_shipping_address(user_params[:shipping_address_attributes])
-  end
-
-  def step4
-    @user = User.new
     user_params[:shipping_address_attributes] = user_params[:shipping_address_attributes]
     @user.build_shipping_address(user_params[:shipping_address_attributes])
-
   end
 
   def create
@@ -75,7 +69,7 @@ class SignupController < ApplicationController
       :birth_month,
       :birth_day,
       :phone_number,
-      shipping_address_attributes:[:user_id,:last_name,:first_name,:last_name_kana,:first_name_kana,:postal_code,:address,:building, :created_at, :updated_at]
+      shipping_address_attributes:[:user_id, :region_id, :postal_code, :address, :building, :city, :building_phone, :created_at, :updated_at]
     )
   end
 end
