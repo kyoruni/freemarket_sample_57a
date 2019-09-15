@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_category_list, only: [:show, :identification]
+  before_action :set_brand_list,    only: [:show, :identification]
 
   def show
     @nickname = current_user.name

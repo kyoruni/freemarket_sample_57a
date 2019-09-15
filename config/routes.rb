@@ -16,7 +16,8 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
-  resources  :users, only: [:show, :destroy]
+  resources  :users,  only: [:show, :destroy]
+  resources  :search, only: [:index]
   resources  :items do
     # items new時の、カテゴリーセレクトボックス
     collection do
@@ -42,6 +43,7 @@ Rails.application.routes.draw do
   end
 
   resources  :categories, only: [:show]
+  resources  :brands,     only: [:show]
   root 'items#index'
 
 

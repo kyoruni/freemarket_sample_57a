@@ -4,9 +4,10 @@
       %h1.header__box__top__log
         = link_to "/" do
           .header__box__top__logo__link
-      %form.header__box__top__search
-        %input.header__box__top__search__box{type:"search",name:"keyword",placeholder:"何かお探しですか"}
-        %i.header__box__top__search__box__icon.fa.fa-search
+      = form_with url: search_index_path, class: "header__box__top__search", local: true, method: :get do |f|
+        = f.text_field :keyword, class: "header__box__top__search__box", value: @keyword, placeholder: "何かお探しですか？"
+        = button_tag type: "submit", class: "header__box__top__search__box__icon" do
+          = icon "fa", "search", class: "header__box__top__search__box__icon__i"
     .header__box__nav
       .header__box__nav__left
         %ul.header__box__nav__left__contents
@@ -17,12 +18,13 @@
                   %i.header__box__nav__left__contents__list__heading__link__icon.fa.fa-list-ul
                   %span.header__box__nav__left__contents__list__heading__link__text カテゴリーから探す
             = render partial: 'shared/category-list', locals: { categories: @categories }
-          %li.header__box__nav__left__contents__list
+          %li.header__box__nav__left__contents__list#brand
             %h2.header__box__nav__left__contents__list__heading
               = link_to "#" do
                 .header__box__nav__left__contents__list__heading__link
                   %i.header__box__nav__left__contents__list__heading__link__icon.fa.fa-tag
                   %span.header__box__nav__left__contents__list__heading__link__text ブランドから探す
+            = render partial: 'shared/brand-list', locals: { brands: @brands }
       .header__box__nav__right
         %ul.header__box__nav__right__contents
           -if user_signed_in?
