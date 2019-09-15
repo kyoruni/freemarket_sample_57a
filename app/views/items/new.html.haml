@@ -108,17 +108,17 @@
               .buy__container__main__wrapper__price__select__price-box__input-block
                 %label<
                 ￥
-                = f.text_field :price, placeholder: "例）300"
+                = f.text_field :price, placeholder: "例）300", value: "", name: "price",oninput: "vop2.value = Number(price.value) - Number(price.value) / 10, vop1.value = Number(price.value) / 10;"
             .buy__container__main__wrapper__price__select__fee
               .buy__container__main__wrapper__price__select__fee__left
                 %label 販売手数料(10%)
               .buy__container__main__wrapper__price__select__fee__right
-                %label -
+                %output{name: "vop1"} -
             .buy__container__main__wrapper__price__select__profit
               .buy__container__main__wrapper__price__select__profit__left
                 %label 販売利益
               .buy__container__main__wrapper__price__select__profit__right
-                %label -
+                %output{name: "vop2"} -
 
         -# ボトム
         .buy__container__main__wrapper__bottom
