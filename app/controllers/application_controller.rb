@@ -22,7 +22,6 @@ class ApplicationController < ActionController::Base
 
   # ブランド一覧の取得
   def set_brand_list
-    # @brands = Brand.all
     @brands = Brand.where(name: ['シャネル', 'ナイキ', 'ルイ ヴィトン', 'シュプリーム', 'アディダス'])
   end
 
