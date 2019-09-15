@@ -1,0 +1,11 @@
+.main__container__item
+  %h3.main__container__item__brand
+    = link_to brand_path(brand.id) do
+      .main__container__item__brand__title
+        = "#{brand.name}新着アイテム"
+      .main__container__item__brand__num
+        - items.each do |item|
+          = render partial: 'share/item-link-card', locals: { item: item }
+  .main__container__item__all
+    = link_to brand_path(brand.id) do
+      %p.main__container__item__all__link 全ての商品を見る
