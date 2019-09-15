@@ -5,7 +5,7 @@
         = link_to "/" do
           .header__box__top__logo__link
       = form_with url: search_index_path, class: "header__box__top__search", local: true, method: :get do |f|
-        = f.text_field :keyword, class: "header__box__top__search__box", value: params[:keyword], placeholder: "何かお探しですか？"
+        = f.text_field :keyword, class: "header__box__top__search__box", value: @keyword, placeholder: "何かお探しですか？"
         = button_tag type: "submit", class: "header__box__top__search__box__icon" do
           = icon "fa", "search", class: "header__box__top__search__box__icon__i"
     .header__box__nav
