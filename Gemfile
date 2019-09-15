@@ -103,5 +103,9 @@ gem 'fog-aws'
 # パンくず
 gem 'gretel'
 
+# クレジットカード
 gem 'payjp'
+
+# 検索
+gem 'ransack', github: 'activerecord-hackery/ransack'
 
