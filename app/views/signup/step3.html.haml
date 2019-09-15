@@ -11,12 +11,12 @@
             郵便番号
             %span.required> 必須
             = i.text_field :postal_code, placeholder: '例)  123-4567', class:"sign-up--form"
-          #emsg_postal_code
+            #emsg_postal_code
         .sign-up-form__container__input--form
           %h3<
             都道府県
             %span.required> 必須
-            = i.collection_select :region_id, @region, :id, :name, { prompt: "---" }
+          = i.collection_select :region_id, @region, :id, :name, { prompt: "---" }
           #emsg_region_id
         .sign-up-form__container__input--form
           %h3<
