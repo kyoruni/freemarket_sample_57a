@@ -105,3 +105,6 @@ gem 'gretel'
 
 # バリデーション
 gem 'jquery-validation-rails'
+
+gem 'payjp'
+

@@ -8,6 +8,9 @@
       -# 商品写真
       .item-box__container__box__photo
         .item-box__container__box__photo--main
+          - if @item.buyer_id.present?
+            .item-box__container__box__photo--main__sold-mark
+              sold out
           -if @item.images.first
             = image_tag @item.images.first.image_url, class:"main-photo"
         .item-box__container__box__photo__sub-group
@@ -64,18 +67,16 @@
         (税込)
       .item-price__container__delivery
         送料込み
-    = link_to "購入画面に進む", "#", class:"item-buy-btn"
+    
+    -# 売り切れてたら売り切れを表示、そうでなければ購入画面に進むボタンを表示
+    - if @item.buyer_id.present?
+      .item-buy-btn{style: "background-color: gray;"} 売り切れ
+    - else
+      = link_to "購入画面に進む", "/items/#{@item.id}/purchase/index", class:"item-buy-btn"
 
     -# テキスト表示
     .item-text
       %p= @item.text
-    
-    -# 商品削除
-    - if user_signed_in? && @item.saler_id == current_user.id
-      .item-delete__container
-        = link_to @item, method: :delete, data: { confirm: "アイテム「#{@item.name}」を削除します。よろしいですか？"}, class:"item-derete__container__delete--btn" do
-          .item-derete__container__delete--btn 商品の削除
-
     .item-btn-container
       .item-btn-container__left
         %button.item-btn-container__left--like
@@ -89,6 +90,12 @@
         = link_to "#", class:"item-btn-container__right--safe" do
           %i.fa.fa-lock
           %span あんしん・あんぜんへの取り組み
+
+  -# 自分の出品した商品で表示されるボタン
+  - if user_signed_in? && @item.saler_id == current_user.id
+    .item-buttons
+      = link_to "商品の編集", edit_item_path(@item.id), class: "item-buttons__edit-button"
+      = link_to "商品の削除", @item, method: :delete, data: { confirm: "アイテム「#{@item.name}」を削除します。よろしいですか？"}, class: "item-buttons__delete-button"
 
   -# コメント欄
   .item-comment__container
@@ -141,8 +148,7 @@
   %nav.bread-crumbs
     %ul
       %li
-        = link_to "メルカリ", "/", class:"bread-crumbs__home-rink"
-        %i.fa.fa-angle-right
-      %li
-        %span コーチ
+        - breadcrumb :item, @item
+        = breadcrumbs separator: " &rsaquo; ", class: "breadcrumbs-list"
+
 = render 'shared/main_footer'
