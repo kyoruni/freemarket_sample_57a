@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category_list, only: [:show]
+  before_action :set_brand_list,    only: [:show]
   def show
     @category = Category.find(params[:id])
 

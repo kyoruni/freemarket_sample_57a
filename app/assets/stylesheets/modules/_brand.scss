@@ -1,0 +1,40 @@
+/*-- ブランドリストのポジション決め用ブロック --*/
+.brand-list-position {
+  position: absolute;
+}
+
+/*-- ブランドリスト --*/
+.brand {
+  display: none; // jsで表示させるので、最初は非表示にしておく
+  position: relative;
+  z-index: 999;
+}
+
+/*-- ブランドリスト本体 --*/
+.brand-list {
+  background: $white;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
+  display: block;
+  /*-- リストの項目 --*/
+  &__item {
+    color: $dark-gray;
+    width: 224px;
+    max-height: 44px;
+    padding: 15px 16px;
+    line-height: 14px;
+    font-size: 14px;
+    display: -webkit-box; // box要素にする
+    -webkit-box-align: center; // 縦位置中央
+    /*-- 項目の文字だけでなく、全体をリンクにする --*/
+    & a {
+      display: block;
+      color: $dark-gray;
+    }
+    /*-- ブランドリスト マウス乗せたとき --*/
+    &:hover {
+      background: $red3;
+      color: $white;
+    }
+  }
+}

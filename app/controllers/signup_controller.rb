@@ -1,6 +1,7 @@
 class SignupController < ApplicationController
 
   before_action :set_category_list, only: [:step5]
+  before_action :set_brand_list,    only: [:step5]
   
 
   def step1
