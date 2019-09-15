@@ -32,7 +32,7 @@
               商品名
               %span.required> 必須
             .buy__container__main__wrapper__name-form__name-box__input
-              = f.text_field :name, placeholder: "商品名（必須４０文字まで）"
+              = f.text_field :name, placeholder: "商品名（必須４０文字まで）", maxlength: "40"
           .buy__container__main__wrapper__name-form__text-box
             %label<
               商品の説明
