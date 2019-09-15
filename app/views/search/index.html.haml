@@ -1,0 +1,26 @@
+.header-separate
+  = render 'shared/main_header'
+.search-container
+  .search-right
+    - if @keyword.empty?
+      = render 'search-items-new-label'
+      = render partial: 'search-items', locals: { items: @new_items }
+    - elsif @items.present?
+      = render partial: 'search-items-result', locals: { keyword: @keyword }
+      .search-right__item-count
+        = "1 - #{@items.length}件表示"
+      = render partial: 'search-items', locals: { items: @items }
+    - else
+      = render partial: 'search-items-result', locals: { keyword: @keyword }
+      %p.search-right__nothing-text
+        該当する商品が見つかりません。検索条件を変えて、再度お試しください。
+      = render 'search-items-new-label'
+      = render partial: 'search-items', locals: { items: @new_items }
+-# 下のパンくずリスト
+.bread-crumbs__container
+  %nav.bread-crumbs
+    %ul
+      %li
+        - breadcrumb :search, @keyword
+        = breadcrumbs separator: " &rsaquo; ", class: "breadcrumbs-list"
+= render 'shared/main_footer'

@@ -1,0 +1,91 @@
+.header-separate {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 3px 0px;
+}
+
+/*-- 検索画面全体を覆うブロック --*/
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  height: auto;
+}
+/*-- 右側メニュー --*/
+/*-- 左側は未実装 --*/
+.search-right {
+  @include box(700px, auto);
+  /*-- 検索結果なかった時のテキスト --*/
+  &__nothing-text {
+    font-size: 14px;
+    color: $dark-gray;
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+  /*-- 検索結果なかった時の見出し --*/
+  &__nothing-title {
+    margin-bottom: 8px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30.8px;
+    color: $dark-gray;
+  }
+  /*-- 検索ワード表示領域 --*/
+  &__keyword {
+    @extend .search-right__nothing-title;
+    /*-- 細いテキスト --*/
+    &__text {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25.2px;
+    }
+  }
+  /*-- 検索結果の件数 --*/
+  &__item-count {
+    color: $gray;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    margin: 16px 0;
+  }
+  /*-- 検索結果表示領域 --*/
+  &__items {
+    @include box(700px, auto);
+    display: flex;
+    flex-wrap: wrap;
+    /*-- 商品1つ --*/
+    &__item {
+      @extend .item-link-card;
+      @include box(160px, auto);
+      margin-bottom: 20px;
+      /*-- 商品の画像 --*/
+      &--image {
+        @include box(160px, 160px);
+      }
+      /*-- 商品のキャプション --*/
+      &__text-box {
+        @extend .item-link-card__text-box;
+        @include box(160px, 58px);
+        padding: 8px 12px;
+        font-size: 14px;
+        /*-- 商品名 --*/
+        &--name {
+          height: 16px;
+        }
+        /*-- 商品の価格といいねマーク --*/
+        &__bottom {
+          @extend .item-link-card__text-box__bottom;
+          @include box(100%, "");
+          display: flex;
+          justify-content: space-between;
+          /*-- 商品の価格 --*/
+          &--price {
+            font-weight: bold;
+          }
+        }
+      }
+      /*-- 4の倍数の商品 --*/
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
