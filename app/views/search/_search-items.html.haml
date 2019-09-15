@@ -1,0 +1,16 @@
+.search-right__items
+  - items.each do |item|
+    = link_to item_path(item.id) do
+      .search-right__items__item
+        - if item.images.first
+          = image_tag item.images.first.image_url, class: "search-right__items__item--image"
+          .search-right__items__item__text-box
+            .search-right__items__item__text-box--name
+              %h3
+                = item.name
+            .search-right__items__item__text-box__bottom
+              .search-right__items__item__text-box__bottom--price
+                = "￥ #{item.price.to_s(:delimited)}"
+              .search-right__items__item__text-box__bottom--like
+                %i.fa.fa-heart
+                %span 3

@@ -2,8 +2,8 @@ crumb :root do
   link "メルカリ", root_path
 end
 
+# マイページ
 crumb :mypage do
-  
   link "マイページ", '/users/show'
   parent :root
 end
@@ -24,11 +24,13 @@ crumb :personal_info_regist do
   end
 end
 
+# 商品詳細
 crumb :item do |item|
   link item.name, root_path
   parent :root
 end
 
+# カテゴリー一覧
 crumb :category_index do
   link "カテゴリー一覧", root_path
 end
@@ -50,4 +52,10 @@ crumb :category do |category|
     link category.name,        category_path(category.id)
     parent :category_index
   end
+end
+
+# 検索画面
+crumb :search do |keyword|
+  link keyword, search_index_path(keyword)
+  parent :root
 end

@@ -16,3 +16,11 @@ body {
   font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic,
     メイリオ, Meiryo, sans-serif;
 }
+
+*:focus {
+  outline: none;
+}
+
+input[type="text"]:focus {
+  outline: 0;
+}

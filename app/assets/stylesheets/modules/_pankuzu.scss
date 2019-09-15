@@ -1,4 +1,4 @@
-/*-- パンくずリスト --*/
+/*-- 上のパンくずリスト --*/
 .pankuzu-box {
   @include box(100%, "");
   background: $white;
@@ -20,5 +20,33 @@
     .current {
       font-weight: bold;
     }
+  }
+}
+
+/*-- 下のパンくずリスト --*/
+.bread-crumbs__container {
+  background-color: $light-gray;
+  border-top: 1px solid $light-gray2;
+}
+.bread-crumbs {
+  @include box(1020px, 48px);
+  margin: 0 210px;
+  font-size: 14px;
+  & ul {
+    display: flex;
+    line-height: 48px;
+    & span {
+      padding-left: 10px;
+    }
+  }
+  a {
+    color: $dark-gray;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  /*-- 今いるページ --*/
+  .current {
+    font-weight: bold;
   }
 }
