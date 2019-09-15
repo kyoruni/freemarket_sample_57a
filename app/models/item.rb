@@ -9,7 +9,7 @@ class Item < ApplicationRecord
   belongs_to :size
   belongs_to :region
   belongs_to :postage
-  has_many :images, dependent: :destroy
+  has_many :images, dependent: :destroy, index_errors: true
   accepts_nested_attributes_for :images
 
   # 最新のデータを、指定した件数取得
@@ -21,4 +21,15 @@ class Item < ApplicationRecord
 
   # 指定したブランドのデータを取得
   scope :brand_items, -> brand_id { includes(:images).where(brand_id: brand_id ) }
+
+  # バリデーションを定義
+  validates :name, presence: true
+  validates :text, presence: true
+  validates :category_id, presence: true
+  validates :condition_id, presence: true
+  validates :delivery_day_id, presence: true
+  validates :delivery_way_id, presence: true
+  validates :saler_id, presence: true
+  validates :postage_id, presence: true
+  validates :region_id, presence: true
 end
