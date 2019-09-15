@@ -115,10 +115,10 @@ window.addEventListener("turbolinks:load", function() {
           required: "※ 郵便番号 は必須項目です",
           postnum: "※ 不正な郵便番号が入力されました<br/><span>・連続した数字ではないか？</span><br/><span>・前半を半角数字3文字、後半を半角数字4文字</span><br/>上記を確認し入力してください"
         },
-        "user[shipping_address_attributes][adress]":{
+        "user[shipping_address_attributes][city]":{
           required: "※ 市区町村 は必須項目です"
         },
-        "user[shipping_address_attributes][address]":{
+        "user[shipping_address_attributes][building]":{
           required: "※ 番地 は必須項目です"
         },
       },
@@ -162,7 +162,7 @@ window.addEventListener("turbolinks:load", function() {
         if (element.attr('name') == 'user[address_attributes][postal_code]') {
           error.appendTo($('#emsg_post_number'));
         }
-        if (element.attr('name') == 'user[address_attributes][address]') {
+        if (element.attr('name') == 'user[address_attributes][region]') {
           error.appendTo($('#emsg_address'));
         }
       }

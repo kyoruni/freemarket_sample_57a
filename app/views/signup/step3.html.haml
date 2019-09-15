@@ -15,7 +15,7 @@
           %h3<
             都道府県
             %span.required> 必須
-            = i.text_field :address, placeholder: '例)  東京都', class:"sign-up--form"
+            = i.collection_select :region_id, @region, :id, :name, { prompt: "---" }
         .sign-up-form__container__input--form
           %h3<
             市町村

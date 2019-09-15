@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one :shipping_address
   accepts_nested_attributes_for :shipping_address
-
+  belongs_to :region, optional: true
   # VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   # # step1入力項目
   # validates :name,                    presence: true
