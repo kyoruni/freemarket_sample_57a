@@ -54,6 +54,18 @@ crumb :category do |category|
   end
 end
 
+# ブランド一覧
+crumb :brand_index do
+  link "ブランド一覧", root_path
+end
+
+# ブランド個別
+crumb :brand do |brand|
+  link brand.name, brand_path(brand.id)
+  parent :brand_index
+end
+
+
 # 検索画面
 crumb :search do |keyword|
   link keyword, search_index_path(keyword)
