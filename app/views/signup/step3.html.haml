@@ -1,6 +1,6 @@
 -# 仮で会員登録ページの一部をマークアップ
 -# ヘッダー後で呼び出す
-= form_for @user,url: signup_create_signup_index_path, method: :post do |f|
+= form_for @user,url: signup_create_signup_index_path, method: :post, html: {id: :user_form} do |f|
   = f.fields_for :shipping_address do |i|
     .sign-up-form__container
       .sign-up-form__container__title
@@ -11,21 +11,25 @@
             郵便番号
             %span.required> 必須
             = i.text_field :postal_code, placeholder: '例)  123-4567', class:"sign-up--form"
+          #emsg_postal_code
         .sign-up-form__container__input--form
           %h3<
             都道府県
             %span.required> 必須
             = i.collection_select :region_id, @region, :id, :name, { prompt: "---" }
+          #emsg_region_id
         .sign-up-form__container__input--form
           %h3<
             市町村
             %span.required> 必須
             = i.text_field :city, placeholder: '例)  渋谷区', class:"sign-up--form"
+          #emsg_city
         .sign-up-form__container__input--form
           %h3<
             番地
             %span.required> 必須
             = i.text_field :address, placeholder: '例)  渋谷1-1-1', class:"sign-up--form"
+          #emsg_address
         .sign-up-form__container__input--form
           %h3<
             建物名

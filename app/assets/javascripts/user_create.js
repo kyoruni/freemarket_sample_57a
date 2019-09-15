@@ -61,13 +61,19 @@ window.addEventListener("turbolinks:load", function() {
           required: true,
           telnum: true
         },
-        // "user[shipping_address_attributes][postal_code]":{
-        //   required: true,
-        //   postnum: true
-        // },
-        // "user[shipping_address_attributes][address]":{
-        //   required: true
-        // }
+        "user[shipping_address_attributes][postal_code]":{
+          required: true,
+          postnum: true
+        },
+        "user[shipping_address_attributes][region_id]":{
+          required: true
+        },
+        "user[shipping_address_attributes][city]":{
+          required: true
+        },
+        "user[shipping_address_attributes][address]":{
+          required: true
+        }
       },
       messages : {
         "user[name]":{
@@ -118,7 +124,7 @@ window.addEventListener("turbolinks:load", function() {
         "user[shipping_address_attributes][city]":{
           required: "※ 市区町村 は必須項目です"
         },
-        "user[shipping_address_attributes][building]":{
+        "user[shipping_address_attributes][address]":{
           required: "※ 番地 は必須項目です"
         },
       },
@@ -160,9 +166,15 @@ window.addEventListener("turbolinks:load", function() {
           error.appendTo($('#emsg_phone_number'));
         }
         if (element.attr('name') == 'user[address_attributes][postal_code]') {
-          error.appendTo($('#emsg_post_number'));
+          error.appendTo($('#emsg_postal_code'));
         }
-        if (element.attr('name') == 'user[address_attributes][region]') {
+        if (element.attr('name') == 'user[address_attributes][region_id]') {
+          error.appendTo($('#emsg_region_id'));
+        }
+        if (element.attr('name') == 'user[address_attributes][city]') {
+          error.appendTo($('#emsg_city'));
+        }
+        if (element.attr('name') == 'user[address_attributes][address]') {
           error.appendTo($('#emsg_address'));
         }
       }
