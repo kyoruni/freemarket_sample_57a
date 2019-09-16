@@ -34,3 +34,6 @@
 
 #SMS認証
 /vendor/bundle/
+
+#sns環境変数
+/.env

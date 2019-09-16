@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users, controllers:{
     sessions: 'users/sessions',
+    omniauth_callbacks: 'users/omniauth_callbacks' 
   }
+
 
   resources  :users, only: [:show, :destroy]
   resources  :items do
@@ -24,6 +26,8 @@ Rails.application.routes.draw do
       get  'step4'           => 'signup#step4'
       post 'signup/create'   => 'signup#create'
       get  'step5'           => 'signup#step5'
+      
+
     end
   end
 
@@ -31,8 +35,4 @@ Rails.application.routes.draw do
   get 'card_registration' => 'buys#card_registration'
 end
 
-# registrations: 'users/registrations' ,
-# omniauth_callbacks: 'users/omniauth_callbacks'
 
-# get "/auth/:provider/callback" => 'sessions#createByFacebook'
-# get "/auth/:provider/callback" => 'google#callback'

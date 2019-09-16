@@ -1,8 +1,75 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  # before_action :configure_sign_up_params, only: [:create]
-  # before_action :configure_account_update_params, only: [:update]
+
+#   def create
+#     @user = User.new(
+#       name:session[:name], 
+#       email: session[:email], 
+#       password: session[:password], 
+#       password_confirmation: session[:password_confirmation], 
+#       lastname: session[:lastname],
+#       lastname_kana: session[:lastname_kana], 
+#       firstname: session[:firstname], 
+#       firstname_kana: session[:firstname_kana], 
+#       birth_year: session[:birth_year], 
+#       birth_month: session[:birth_month], 
+#       birth_day: session[:birth_day], 
+#       phone_number: session[:phone_number], 
+#       address_attributes: session[:address_attributes])
+#     # unless session[:provider_data] == {}
+#     # @user.sns_credentials.build(
+#     #   uid: session[:provider_data]["uid"],
+#     #   provider: session[:provider_data]["provider"]
+#     if @user.save
+#       sign_in @user
+#     end
+#   end
+
+
+# #///////
+
+#   def sns
+#     @user = User.new(
+#       name: session[:name],
+#       email: session[:email],
+#       password: session[:password],
+#       password_confirmation: session[:password],
+#       )
+#   end
+
+#   def create
+#     super
+#     @user.uid = session[:uid]
+#     @user.provider = session[:provider]
+#     @user.save
+#   end
+# end
+
+
+# # /////////////
+
+
+
+
+#   def create
+#     @user = User.new(nickname:session[:nickname], email: session[:email], password: session[:password], password_confirmation: session[:password_confirmation], lastname: session[:lastname],lastname_kana: session[:lastname_kana], firstname: session[:firstname], firstname_kana: session[:firstname_kana], birth_year: session[:birth_year], birth_month: session[:birth_month], birth_day: session[:birth_day], phone_number: session[:phone_number], address_attributes: session[:address_attributes])
+#     unless session[:provider_data] == {}
+#     # @user.sns_credentials.build(
+#     #   uid: session[:provider_data]["uid"],
+#     #   provider: session[:provider_data]["provider"])
+#     end
+#     if @user.save
+#       sign_in @user
+#     end
+#   end
+#   private
+#   def user_params
+#     params.require(:user).permit(:nickname, :email, :password, :password_confirmation, :lastname,:lastname_kana, :firstname, :firstname_kana, :birth_year,:birth_month, :birth_day, :phone_number, address_attributes: [:id, :zip_code, :address_city, :address_number, :building,:prefecture_id])
+#   end
+  
+#   before_action :configure_sign_up_params, only: [:create]
+#   before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
   # def new
