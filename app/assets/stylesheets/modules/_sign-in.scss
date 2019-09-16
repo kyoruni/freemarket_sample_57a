@@ -117,15 +117,6 @@
           border-radius: 4px;
           margin-top: 24px;
         }
-
-        .sign-in__contents__frame__bottom-contents__not-robo{
-          width: 280px;
-          height: 70px;
-          border-radius: 4px;
-          margin-top: 24px;
-          background: $gray;
-        }
-
         &__login-btn{
           width: 328px;
           height: 50px;
@@ -133,6 +124,7 @@
           background-color:$red;
           position: relative;
           margin-top: 24px;
+          color: $white;
           
           p {
             float: left;
