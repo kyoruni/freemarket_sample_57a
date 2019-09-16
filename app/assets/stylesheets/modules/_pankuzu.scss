@@ -1,15 +1,52 @@
-.pankuzu-box{
-  width: 1680px;
-  height: 49px;
+/*-- 上のパンくずリスト --*/
+.pankuzu-box {
+  @include box(100%, "");
   background: $white;
   border-top: 1px solid $light-gray3;
   box-shadow: 2px 2px 4px $shadow-color;
-  padding-left: 330px;
-  line-height: 48px;
+  font-size: 14px;
+  /*-- パンくずリスト本体 --*/
+  &__contents {
+    @include box(1020px, "");
+    margin: 0 auto;
+    padding: 16px 0;
+    a {
+      color: $dark-gray;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    /*-- 今いるページ --*/
+    .current {
+      font-weight: bold;
+    }
+  }
+}
 
-  .breadcrumbs-list{
+/*-- 下のパンくずリスト --*/
+.bread-crumbs__container {
+  background-color: $light-gray;
+  border-top: 1px solid $light-gray2;
+}
+.bread-crumbs {
+  @include box(1020px, 48px);
+  margin: 0 210px;
+  font-size: 14px;
+  & ul {
+    display: flex;
     line-height: 48px;
+    & span {
+      padding-left: 10px;
+    }
+  }
+  a {
+    color: $dark-gray;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  /*-- 今いるページ --*/
+  .current {
     font-weight: bold;
-    font-size: 15px;
   }
 }

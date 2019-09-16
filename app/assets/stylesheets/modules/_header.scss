@@ -34,6 +34,7 @@
           padding: 0 42px 0 10px;
           line-height: 1.5;
           font-size: 16px;
+          border: 1px solid #ccc;
           &__icon {
             @include box(40px, 40px);
             border-top-right-radius: 4px;
@@ -43,9 +44,12 @@
             right: 0;
             display: flex;
             cursor: pointer;
-            color: #272121;
+            color: $light-gray4;
             justify-content: center;
             align-items: center;
+            font-size: 14px;
+            border: none;
+            background: none;
           }
         }
       }
@@ -124,9 +128,9 @@
                   color: $light-blue;
                 }
               }
-              &--text-red{
-                background: #ea352d;
-                border: 1px solid #ea352d;
+              &--text-red {
+                background: $red;
+                border: 1px solid $red;
                 color: $white;
                 float: left;
                 margin: 0 0 0 8px;
@@ -137,11 +141,11 @@
                 border-radius: 4px;
                 text-align: center;
               }
-              &--text-blue{
+              &--text-blue {
                 background: $white;
-                border: 1px solid #0099e8;
-                color: #0099e8;
-                float:right;
+                border: 1px solid $light-blue;
+                color: $light-blue;
+                float: right;
                 margin: 0 0 0 8px;
                 margin-left: 10px;
                 font-size: 14px;

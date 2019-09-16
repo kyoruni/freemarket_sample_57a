@@ -75,11 +75,13 @@
     &__btn {
       @include box(320px, 50px);
       margin: 0 auto;
-      background-color: #ea352d;
+      background-color: $red;
       text-align: center;
       line-height: 50px;
       color: $white;
       font-weight: bold;
+      display: block;
+      cursor: pointer;
     }
   }
 

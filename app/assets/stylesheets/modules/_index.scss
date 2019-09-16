@@ -33,6 +33,15 @@
           margin: 8px 0 0;
         }
       }
+      &__brand {
+        @extend .main__container__item__category;
+        &__title {
+          @extend .main__container__item__category__title;
+        }
+        &__num {
+          @extend .main__container__item__category__num;
+        }
+      }
       &__all {
         @include box(99.5%, "");
         padding: 20px 0 30px;

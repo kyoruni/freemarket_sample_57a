@@ -1,0 +1,7 @@
+.brand-list-potision
+  .brand
+    %ul.brand-list
+      - brands.each do |brand|
+        = link_to brand_path(brand.id) do
+          %li.brand-list__item
+            = brand.name

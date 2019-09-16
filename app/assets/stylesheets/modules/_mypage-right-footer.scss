@@ -1,7 +1,7 @@
 .mypage-main__footer {
   @include box(100%, auto);
   color: $dark-gray;
-  background: white;
+  background: $white;
   margin-top: 40px;
   /*-- 購入した商品 --*/
   &__head {

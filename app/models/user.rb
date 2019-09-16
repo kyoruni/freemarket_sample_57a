@@ -9,12 +9,10 @@ class User < ApplicationRecord
   has_many :sns_credential
   has_one :shipping_address
   accepts_nested_attributes_for :shipping_address
+
+
+  
   accepts_nested_attributes_for :sns_credential
-
-
-
-
-
   def self.find_omniauth(auth)
 
     uid = auth.uid
@@ -46,6 +44,23 @@ class User < ApplicationRecord
     end
     return user
   end
+
+
+
+
+  belongs_to :region, optional: true
+  
+  validates :name,                    presence: true
+  validates :email,                   presence: true
+  validates :password,                presence: true
+  validates :password_confirmation,   presence: true
+  validates :last_name,               presence: true
+  validates :first_name,              presence: true
+  validates :last_name_kana,          presence: true
+  validates :first_name_kana,         presence: true
+  validates :birth_year,              presence: true
+  validates :birth_month,             presence: true
+  validates :birth_day,               presence: true
 end
 
 

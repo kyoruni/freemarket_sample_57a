@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_05_015042) do
+ActiveRecord::Schema.define(version: 2019_09_13_094810) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "last_name", null: false
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(version: 2019_09_05_015042) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "customer_id"
+    t.string "card_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -118,16 +126,16 @@ ActiveRecord::Schema.define(version: 2019_09_05_015042) do
   end
 
   create_table "shipping_addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "last_name", null: false
-    t.string "first_name", null: false
-    t.string "last_name_kana", null: false
-    t.string "first_name_kana", null: false
     t.string "postal_code"
-    t.string "address"
-    t.string "duilding"
+    t.string "address", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "region_id"
+    t.string "city", null: false
+    t.string "building"
+    t.string "building_phone"
+    t.index ["region_id"], name: "index_shipping_addresses_on_region_id"
     t.index ["user_id"], name: "index_shipping_addresses_on_user_id"
   end
 
@@ -153,7 +161,7 @@ ActiveRecord::Schema.define(version: 2019_09_05_015042) do
     t.string "birth_year", null: false
     t.string "birth_month", null: false
     t.string "birth_day", null: false
-    t.integer "phone_number", null: false
+    t.string "phone_number", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -169,5 +177,6 @@ ActiveRecord::Schema.define(version: 2019_09_05_015042) do
   add_foreign_key "items", "sizes"
   add_foreign_key "items", "users", column: "buyer_id"
   add_foreign_key "items", "users", column: "saler_id"
+  add_foreign_key "shipping_addresses", "regions"
   add_foreign_key "shipping_addresses", "users"
 end

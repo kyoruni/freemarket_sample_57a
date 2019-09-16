@@ -1,0 +1,30 @@
+= render 'share/simple-header'
+.sign-in
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .sign-in__contents
+      .sign-in__contents__frame
+        .sign-in__contents__frame__top_contents
+          .sign-in__contents__frame__top_contents__top_frame
+            %p アカウントをお持ちでない方はこちら
+            = link_to step1_signup_index_path, class: "registration_btn" do
+              .registration_btn
+                %h3 新規会員登録
+        .sign-in__contents__frame__middle_contents
+          .sign-in__contents__frame__middle_contents__middle_frame
+            .sign-in__contents__frame__middle_contents__middle_frame__field-top
+              %i.fab.fa-facebook-square.size
+              %p Facebookでログイン
+              
+            .sign-in__contents__frame__middle_contents__middle_frame__field-bottom
+              %i.fab.fa-google.fa-lg
+              %p Googleでログイン 
+
+        .sign-in__contents__frame__bottom-contents
+          .field
+            = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス",class:"email_text"
+          .field
+            = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード",class:"password_text"
+            = f.submit "ログイン", class: "sign-in__contents__frame__bottom-contents__login-btn"
+          %a パスワードをお忘れの方
+= render 'share/simple-footer'
+

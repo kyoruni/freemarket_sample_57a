@@ -1,96 +1,75 @@
-
-.sign-in{
-
-  &__header{
-    width: 100%;
-    height: 128px;
+.sign-in {
+  &__header {
+    @include box(100%, 128px);
     padding: 0 auto;
     font-size: 22px;
   }
-
-  &__contents{
+  &__contents {
     background-color: $light-gray;
     width: 100%;
-    height: 731px;
-
-    &__frame{
-      width: 456px;
-      height: 100%;
+    &__frame {
+      @include box(456px, 100%);
       background-color: $white;
       margin: 0 auto;
-
-      &__top_contents{
+      &__top_contents {
         height: 144px;
         position: relative;
-        
-        &__top_frame{
-          width: 456px;
-          height: 64px;
+        &__top_frame {
+          @include box(456px, 64px);
           padding: 40 64;
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translateY(-50%) translateX(-50%);
         }
-
-          p {
-            font-size: 13px;
+        p {
+          font-size: 13px;
+          text-align: center;
+          margin-bottom: 8px;
+        }
+        .registration_btn {
+          @include box(326px, 45px);
+          margin: 0 auto;
+          background-color: $light-blue;
+          h3 {
             text-align: center;
-            margin-bottom: 8px;
-          }
-
-          .registration_btn{
-            width: 326px;
             height: 45px;
-            margin: 0 auto;
-            background-color: $light-blue;
-            h3 {
-              text-align: center;
-              height: 45px;
-              line-height:45px;
-              font-size: 15px;
-              color: $white;
-            }
+            line-height: 45px;
+            font-size: 15px;
+            color: $white;
           }
+        }
       }
-      
-      &__middle_contents{
+      &__middle_contents {
+        @include box(456px, 181px);
         padding: 32px 64px;
         border-top: 1px solid $light-gray;
-        height: 181px;
-        width: 456px;
-        
-        &__middle_frame{
+        &__middle_frame {
           width: 328px;
           margin: 0 auto;
           height: 116px;
-          line-height:50px;
-          
-          &__field-top{
-            width: 328px;
-            height: 50px;
+          line-height: 50px;
+          &__field-top {
+            @include box(328px, 50px);
             text-align: center;
-            background-color:$facebook-color;
+            background-color: $facebook-color;
             position: relative;
-            color:$white;
-            
+            color: $white;
             i {
               float: left;
               position: absolute;
               top: 17px;
               left: 20px;
-              color:$white;
+              color: $white;
             }
           }
-
-          &__field-bottom{
-            width: 328px;
-            height: 50px;
+          &__field-bottom {
+            @include box(328px, 50px);
             text-align: center;
             margin-top: 16px;
-            background-color:$white;
+            background-color: $white;
             border: 1px solid $light-gray;
-            border-color:$gray;
+            border-color: $gray;
             position: relative;
             i {
               float: left;
@@ -101,50 +80,34 @@
           }
         }
       }
-
-      &__bottom-contents{
+      &__bottom-contents {
         padding: 24px 64px 32px;
-        height: 406px;
         width: 456px;
         background-color: $white;
-        .email_text{
-          width: 328px;
-          height: 48px;
+        .email_text {
+          @include box(328px, 48px);
           border-radius: 4px;
         }
-        
-        .password_text{
-          width: 328px;
-          height: 48px;
+        .password_text {
+          @include box(328px, 48px);
           border-radius: 4px;
           margin-top: 24px;
         }
-
-        .sign-in__contents__frame__bottom-contents__not-robo{
-          width: 280px;
-          height: 70px;
-          border-radius: 4px;
-          margin-top: 24px;
-          background: $gray;
-        }
-
-        &__login-btn{
-          width: 328px;
-          height: 50px;
+        &__login-btn {
+          @include box(328px, 50px);
           text-align: center;
-          background-color:$red;
+          background-color: $red;
           position: relative;
           margin-top: 24px;
-          
+          color: $white;
           p {
             float: left;
             position: absolute;
             top: 13px;
             left: 132px;
-            color:$white;
+            color: $white;
           }
         }
-        
         a {
           margin-top: 40px;
           display: inline-block;

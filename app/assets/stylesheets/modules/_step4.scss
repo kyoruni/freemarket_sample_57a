@@ -1,85 +1,71 @@
-.payment-method{
-  &__header{
-    width: 2000px;
-    height: 128px;
+.payment-method {
+  &__header {
+    @include box(2000px, 128px);
     background-color: $light-gray;
     font-size: 22px;
   }
-  &__contents{
+  &__contents {
+    @include box(100%, 700px);
     background-color: $light-gray;
-    width: 100%;
-    height: 700px;
-    &__all-frame{
-    width: 700px;
-    height: 347px;
-    background-color: $white;
-    margin: 0 auto;
-      &__top-contents{
+    &__all-frame {
+      @include box(700px, 347px);
+      background-color: $white;
+      margin: 0 auto;
+      &__top-contents {
         height: 95px;
         h2 {
+          @include box(100%, 33px);
           text-align: center;
-          width: 100%;
-          height: 33px;
           line-height: 95px;
           font-size: 20px;
           font-weight: bold;
         }
       }
-      &__bottom-contents{
+      &__bottom-contents {
+        @include box(700px, 650px);
         padding: 24px 16px 40px;
-        height: 650px;
-        width: 700px;
         border-top: 1px solid $light-gray;
         background-color: $white;
-        &__bottom-frame{
-          width: 343px;
-          height:550px;
+        &__bottom-frame {
+          @include box(343px, 550px);
           background: $white;
           margin: auto;
-          &__from{
-            width: 343px;
-            height: 130px;
-            h4{
+          &__from {
+            @include box(343px, 130px);
+            h4 {
               font-size: 14px;
             }
-            .card-number{
-            width: 100%;
-            height: 48px;
-            border-radius: 4px;
-            margin-top: 8px;
+            .card-number {
+              @include box(100%, 48px);
+              border-radius: 4px;
+              margin-top: 8px;
             }
           }
-          .card-image{
-            width: 40px;
-            height: 20px;
+          .card-image {
+            @include box(40px, 20px);
             margin-top: 8px;
           }
-          &__expiration-date-form{
-            width: 100%;
-            height: 200px;
-            &__text-date{
+          &__expiration-date-form {
+            @include box(100%, 200px);
+            &__text-date {
               height: 56px;
               line-height: 48px;
-              &__expiration-date{
-                width: 130px;
-                height: 48px;
+              &__expiration-date {
+                @include box(130px, 48px);
                 margin-top: 8px;
-                display:flex;
+                display: flex;
                 border: 1px solid $gray;
                 border-radius: 4px;
-                line-height:48px;
-                &__date-flame{
-                  width: 100px;
-                  height: 48px;
+                line-height: 48px;
+                &__date-flame {
+                  @include box(100px, 48px);
                 }
-                  .year{
-                  width: 130px;
-                  height: 48px;
+                .year {
+                  @include box(130px, 48px);
                   border-radius: 4px;
-                  }
-                &__select-flame{
-                width: 30px;
-                height: 48px;
+                }
+                &__select-flame {
+                  @include box(30px, 48px);
                 }
                 p date {
                   line-height: 56px;
@@ -87,18 +73,16 @@
               }
             }
           }
-          &__cord-from{
-            width: 343px;
-            height: 85px;
+          &__cord-from {
+            @include box(343px, 85px);
             margin-top: 20px;
-            h4{
+            h4 {
               font-size: 14px;
             }
-            .card-number{
-            width: 100%;
-            height: 48px;
-            border-radius: 4px;
-            margin-top: 8px;
+            .card-number {
+              @include box(100%, 48px);
+              border-radius: 4px;
+              margin-top: 8px;
             }
           }
           a.reason-box {
@@ -109,15 +93,13 @@
             text-align: right;
             color: $light-blue;
           }
-          &__next-btn{
-            width: 343px;
-            height: 50px;
+          &__next-btn {
+            @include box(343px, 50px);
             text-align: center;
-            background-color:$red;
+            background-color: $red;
             position: relative;
             margin-top: 30px;
             color: $white;
-            
           }
         }
       }
