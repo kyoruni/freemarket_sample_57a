@@ -1,4 +1,4 @@
-= form_for @user,url: step3_signup_index_path, method: :get do |f|
+= form_for @user,url: step3_signup_index_path, method: :get, html: {id: :user_form} do |f|
   .sms-comfirmation
 
     .sms-comfirmation__header
@@ -13,6 +13,7 @@
             .sms-comfirmation__contents__all-frame__bottom-contents__bottom-frame__from
               %h4 携帯の電話番号
               = f.text_field :phone_number, placeholder: '  携帯の電話番号を入力', class: "telephone-number"
+            #emsg_phone_number
             %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
 
             
