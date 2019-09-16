@@ -126,7 +126,7 @@ tr {
   text-decoration: none;
   line-height: 60px;
   margin-top: 16px;
-  background-color: #ff4639;
+  background-color: $red4;
   font-weight: bold;
 }
 
@@ -140,7 +140,7 @@ tr {
   text-decoration: none;
   line-height: 60px;
   margin-top: 16px;
-  background-color: #ff4639;
+  background-color: $red4;
   font-weight: bold;
 }
 
@@ -211,7 +211,7 @@ tr {
   & button {
     @include box(652px, 50px);
     border-style: none;
-    background-color: #aaa;
+    background-color: $gray2;
     & span {
       color: $white;
       font-size: 14px;
@@ -311,8 +311,8 @@ tr {
   /*-- 削除ボタン --*/
   &__delete-button {
     @include box(100%, "");
-    background: #aaa;
-    border: 1px solid #aaa;
+    background: $gray2;
+    border: 1px solid $gray2;
     color: $white;
     display: block;
     margin: 16px 0;

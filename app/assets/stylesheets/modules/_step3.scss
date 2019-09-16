@@ -34,18 +34,18 @@
   margin-left: 8px;
   padding: 2px 4px;
   border-radius: 2px;
-  color: white;
+  color: $white;
   font-size: 12px;
 }
 
 .sign-up-form__container__input--form__btn {
   @include box(480px, 60px);
-  background-color: #ff4639;
+  background-color: $red4;
   line-height: 60px;
   text-align: center;
   margin-left: 100px;
   font-size: 20px;
-  color: white;
+  color: $white;
 }
 
 form__btn {
