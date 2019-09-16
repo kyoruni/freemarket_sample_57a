@@ -115,3 +115,6 @@ gem 'payjp'
 # 検索
 gem 'ransack', github: 'activerecord-hackery/ransack'
 
+# ページネーション
+gem 'kaminari'
+
