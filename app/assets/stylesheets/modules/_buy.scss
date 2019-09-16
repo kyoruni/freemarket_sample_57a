@@ -275,3 +275,45 @@ select {
   text-decoration: none;
   color: $light-blue;
 }
+
+// 真・画像投稿フォームCSS
+.dropzone-container, #preview {
+  display: flex;
+}
+
+.dropzone-area {
+  @include box(620px, 162px);
+  background-color: $light-gray;
+  margin: 20px 0;
+  border: 1px dashed $gray;
+  & i {
+    text-align: center;
+    line-height: 162px;
+    display: block;
+  }
+}
+
+.upload-image {
+  display: none;
+}
+
+.img_view img {
+  margin: 20px 5px 0 0;
+  @include box(100px, 130px);
+}
+
+.delete {
+  color: $red;
+  cursor: pointer;
+}
+
+// 価格入力欄のスピンボタンを消す
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#parent_category {
+  margin-bottom: 10px;
+}
