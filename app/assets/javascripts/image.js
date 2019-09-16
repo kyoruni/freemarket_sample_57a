@@ -5,6 +5,14 @@ $(document).on('turbolinks:load', function(){
   var input_area = $('.input_area');
   var preview = $('#preview');
 
+  // 画像挿入の処理
+  function insert_image (){
+        $.each(images, function(index, image) {
+          image.attr('data-image', index);
+          preview.append(image);
+        })
+  }
+
   // 選択されたファイルを読み込んでプレビュー画像を作成
   $(document).on('change', 'input[type= "file"].upload-image',function(event) {
     var file = $(this).prop('files')[0];
@@ -22,21 +30,13 @@ $(document).on('turbolinks:load', function(){
     images.push(img);
 
     // 画像プレビューを挿入する
+    $('#preview').empty();
+    insert_image();
     if(images.length == 5) {
-      $('#preview').empty();
-        $.each(images, function(index, image) {
-          image.attr('data-image', index);
-          preview.append(image);
-        })
       dropzone.css({
         'display': 'none'
       })
     } else {
-        $('#preview').empty();
-        $.each(images, function(index, image) {
-          image.attr('data-image', index);
-          preview.append(image);
-        })
         dropzone.css({
           'width': `calc(100% - (100px * ${images.length}))`
         })
@@ -72,18 +72,11 @@ $(document).on('turbolinks:load', function(){
       })
       $('input[type= "file"].upload-image:first').after(input)
     })
-    if (images.length >= 5) {
-      dropzone2.css({
-        'display': 'block'
-      })
-    } else {
+    if (images.length < 5) {
       dropzone.css({
         'display': 'block'
       })
-      $.each(images, function(index, image) {
-        image.attr('data-image', index);
-        preview.append(image);
-      })
+      insert_image();
       dropzone.css({
         'width': `calc(100% - (135px * ${images.length}))`
       })
