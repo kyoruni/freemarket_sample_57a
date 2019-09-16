@@ -11,25 +11,25 @@
               %p 
               ニックネーム 
               %span.required> 必須
-            = f.text_field :name, placeholder: '例)  メルカリ太郎', class:"nickname-text", id: "name"
+            = f.text_field :name, placeholder: '例)  メルカリ太郎', class:"nickname-text", id: "name", required:"required"
             #emsg_name
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
               メールアドレス
               %span.required> 必須
-              = f.email_field :email, placeholder: '  PC・携帯どちらでも可', class:"email-text", id: "email"
+              = f.email_field :email, placeholder: '  PC・携帯どちらでも可', class:"email-text", id: "email", required:"required"
               #emsg_email
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
               パスワード
               %span.required> 必須
-              = f.password_field :password, placeholder: '  7文字以上', class: "password-text"
+              = f.password_field :password, placeholder: '  7文字以上', class: "password-text", required:"required"
             #emsg_password
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
               パスワード（確認）
               %span.required> 必須
-              = f.password_field :password_confirmation, placeholder: '  7文字以上', class: "re-password-text"
+              = f.password_field :password_confirmation, placeholder: '  7文字以上', class: "re-password-text", required:"required"
             #emsg_password_confirmation
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %h3 本人確認
@@ -38,16 +38,16 @@
               %p 
                 お名前(全角)
                 %span.required> 必須
-              = f.text_field :last_name, placeholder: '例)  山田', class: "familyname-text"
-              = f.text_field :first_name, placeholder: '例)  彩', class: "familyname-text"
+              = f.text_field :last_name, placeholder: '例)  山田', class: "familyname-text", required:"required"
+              = f.text_field :first_name, placeholder: '例)  彩', class: "familyname-text", required:"required"
             #emsg_first_name
             #emsg_last_name
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
                 お名前カナ(全角)
                 %span.required> 必須
-              = f.text_field :last_name_kana, placeholder: '例)  ヤマダ', class: "familyname-text"
-              = f.text_field :first_name_kana, placeholder: '例)  アヤ', class: "familyname-text"
+              = f.text_field :last_name_kana, placeholder: '例)  ヤマダ', class: "familyname-text", required:"required"
+              = f.text_field :first_name_kana, placeholder: '例)  アヤ', class: "familyname-text", required:"required"
             #emsg_first_name_kana
             #emsg_last_name_kana
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
@@ -57,15 +57,15 @@
               .text-date
                 .y
                   .date-flame
-                    = f.number_field :birth_year, placeholder: "  --", class: "year", min:"1900", max:"2020"
+                    = f.number_field :birth_year, placeholder: "  --", class: "year", min:"1900", max:"2020", required:"required"
                 %p.date 年
                 .y
                   .date-flame
-                    = f.number_field :birth_month, placeholder: "  --", class: "month", min:"1", max:"12"
+                    = f.number_field :birth_month, placeholder: "  --", class: "month", min:"1", max:"12", required:"required"
                 %p.date 月
                 .y
                   .date-flame
-                    = f.number_field :birth_day, placeholder: "  --", class: "days", min:"1", max:"31"
+                    = f.number_field :birth_day, placeholder: "  --", class: "days", min:"1", max:"31", required:"required"
                 %p.date 日
             #emsg_birth_year
             #emsg_birth_month

@@ -245,3 +245,8 @@
     font-weight: 600;
   }
 }
+
+// validetionにかかった時の縁の色
+form input:focus:invalid{
+  border : tomato 2px solid;
+}
