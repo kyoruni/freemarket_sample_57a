@@ -1,7 +1,9 @@
 class SignupController < ApplicationController
+
   before_action :set_category_list, only: [:step5]
   before_action :set_brand_list,    only: [:step5]
   
+
   def step1
     @user = User.new()
   end
@@ -22,16 +24,10 @@ class SignupController < ApplicationController
   end
   
   def step3
-    @user = User.new()
+    @user   = User.new()
+    @region = Region.all
     session[:phone_number]           = user_params[:phone_number]
     @user.build_shipping_address(session[:shipping_address_attributes])
-  end
-
-  def step4
-    @user = User.new()
-    session[:shipping_address_attributes] = user_params[:shipping_address_attributes]
-    @user.build_shipping_address(session[:shipping_address_attributes])
-
   end
 
   def create
@@ -48,7 +44,7 @@ class SignupController < ApplicationController
       birth_month:                  session[:birth_month],
       birth_day:                    session[:birth_day],
       phone_number:                 session[:phone_number],
-      shipping_address_attributes:  session[:shipping_address_attributes] 
+      shipping_address_attributes:  user_params[:shipping_address_attributes]
     )
     @user.save
     sign_in @user
@@ -74,7 +70,7 @@ class SignupController < ApplicationController
       :birth_month,
       :birth_day,
       :phone_number,
-      shipping_address_attributes:[:user_id,:last_name,:first_name,:last_name_kana,:first_name_kana,:postal_code,:address,:building, :created_at, :updated_at]
+      shipping_address_attributes:[:user_id, :region_id, :postal_code, :address, :building, :city, :building_phone, :created_at, :updated_at]
     )
   end
 end

@@ -55,3 +55,16 @@ form__btn{
   margin: 0 auto;
 }
 
+#emsg_postal_code,
+#emsg_address,
+#emsg_region_id,
+#emsg_city{
+  font-weight: 300;
+  color:$red;
+  padding-top:10px;
+  font-size:12px;
+  line-height: 16px;
+  span{
+    font-weight: 600;
+  }
+}

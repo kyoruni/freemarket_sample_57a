@@ -68,14 +68,12 @@
 
 |     Column      |    Type    |     Options      |
 | :-------------: | :--------: | :--------------: |
-|    last_name    |   string   |    null:false    |
-|   first_name    |   string   |    null:false    |
-| last_name_kana  |   string   |    null:false    |
-| first_name_kana |   string   |    null:false    |
-|   postal_code   |   string   |                  |
+|   postal_code   |   string   |    null:false    |
 |    region_id    | references | foreign_key:true |
-|     address     |   string   |                  |
+|     address     |   string   |    null:false    |
 |    building     |   string   |                  |
+|  building_pone  |   string   |                  |
+|      city       |   string   |    null:false    |
 |     user_id     | references | foreign_key:true |
 
 ### Association

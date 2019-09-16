@@ -106,6 +106,9 @@ gem 'fog-aws'
 # パンくず
 gem 'gretel'
 
+# バリデーション
+gem 'jquery-validation-rails'
+
 # クレジットカード
 gem 'payjp'
 
