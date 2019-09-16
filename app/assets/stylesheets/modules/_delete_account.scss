@@ -1,12 +1,10 @@
-.logout-main{
+.logout-main {
+  @include box(700px, 179px);
   background-color: $white;
-  width: 700px;
-  height: 179px;
   padding: 64px;
-  &__registration-btn{
-    width: 343px;
-    height: 50px;
-    background-color:$red;
+  &__registration-btn {
+    @include box(343px, 50px);
+    background-color: $red;
     text-align: center;
     line-height: 50px;
     margin: 0px auto;

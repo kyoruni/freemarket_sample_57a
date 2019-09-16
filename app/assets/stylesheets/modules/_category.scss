@@ -43,17 +43,16 @@
 
 /*-- 子リスト本体 --*/
 .category-list__child {
+  @include box(224px, 100%);
   display: none;
   position: absolute;
   top: 0;
   left: 224px;
-  width: 224px;
   font-size: 14px;
   line-height: 14px;
   background: $white;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
   color: $dark-gray;
-  height: 100%;
   /*-- 子リストの項目 --*/
   &__item {
     max-height: 30px;

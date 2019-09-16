@@ -1,65 +1,54 @@
-.sms-comfirmation{
-  &__header{
-    width: 2000px;
-    height: 128px;
+.sms-comfirmation {
+  &__header {
+    @include box(2000px, 128px);
     background-color: $light-gray5;
     font-size: 22px;
   }
-  &__contents{
+  &__contents {
+    @include box(100%, 600px);
     background-color: $light-gray;
-    width: 100%;
-    height: 600px;
-    &__all-frame{
-    width: 700px;
-    height: 347px;
-    background-color: $white;
-    margin: 0 auto;
-      &__top-contents{
+    &__all-frame {
+      @include box(700px, 347px);
+      background-color: $white;
+      margin: 0 auto;
+      &__top-contents {
         height: 95px;
         h2 {
+          @include box(100%, 33px);
           text-align: center;
-          width: 100%;
-          height: 33px;
           line-height: 95px;
           font-size: 20px;
           font-weight: bold;
         }
       }
-      &__bottom-contents{
+      &__bottom-contents {
+        @include box(700px, 347px);
         padding: 24px 16px 40px;
-        height: 347px;
-        width: 700px;
         border-top: 1px solid $light-gray;
         background-color: $white;
-        &__bottom-frame{
-          width: 343px;
-          height: 282px;
+        &__bottom-frame {
+          @include box(343px, 282px);
           background: $white;
           margin: auto;
-          &__from{
-            width: 343px;
-            height: 70px;
-            h4{
+          &__from {
+            @include box(343px, 70px);
+            h4 {
               font-size: 14px;
             }
-            .telephone-number{
-            width: 100%;
-            height: 48px;
-            border-radius: 4px;
-            margin-top: 8px;
+            .telephone-number {
+              @include box(100%, 48px);
+              border-radius: 4px;
+              margin-top: 8px;
             }
-
           }
-          p{
+          p {
             font-size: 14px;
             margin-top: 10px;
           }
-
-          &__next-btn{
-            width: 343px;
-            height: 50px;
+          &__next-btn {
+            @include box(343px, 50px);
             text-align: center;
-            background-color:$red;
+            background-color: $red;
             position: relative;
             margin-top: 24px;
             color: $white;
@@ -71,14 +60,11 @@
               color: $white;
             }
           }
-
           p.sms-btn {
-          margin-top: 8px;
+            margin-top: 8px;
           }
-
-          .reason-box{
-            width: 100%;
-            height: 14px;
+          .reason-box {
+            @include box(100%, 14px);
             margin-top: 24px;
             display: flex;
             justify-content: flex-end;
