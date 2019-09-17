@@ -15,7 +15,12 @@ class UsersController < ApplicationController
 
   private
   # 自分以外のマイページに入れないようにする
+  #  ログインしていたら自分のマイページ、していなかったらトップページに飛ばす
   def move_to_mypage
-    redirect_to user_path(current_user.id) unless current_user.id == params[:id].to_i
+    if user_signed_in?
+      redirect_to user_path(current_user.id) unless current_user.id == params[:id].to_i
+    else
+      redirect_to root_path
+    end
   end
 end
