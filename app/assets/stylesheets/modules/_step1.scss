@@ -41,40 +41,32 @@
             font-weight: bold;
           }
           .nickname-text {
-            @include box(343px, 48px);
-            border-radius: 4px;
+            @include step1-form(343px, 48px);
           }
           .email-text {
-            @include box(343px, 48px);
-            border-radius: 4px;
+            @include step1-form(343px, 48px);
           }
           .password-text {
-            @include box(343px, 48px);
-            border-radius: 4px;
+            @include step1-form(343px, 48px);
           }
           .re-password-text {
-            @include box(343px, 48px);
-            border-radius: 4px;
+            @include step1-form(343px, 48px);
           }
           h3 {
             margin-bottom: 8px;
           }
           .familyname-text {
-            @include box(167.5px, 48px);
-            border-radius: 4px;
+            @include step1-form(167.5px, 48px);
           }
           .name-text {
-            @include box(167.5px, 48px);
-            border-radius: 4px;
+            @include step1-form(167.5px, 48px);
             margin: 0px 8px 0px 0px;
           }
           .familyname-text {
-            @include box(167.5px, 48px);
-            border-radius: 4px;
+            @include step1-form(167.5px, 48px);
           }
           .name-text {
-            @include box(167.5px, 48px);
-            border-radius: 4px;
+            @include step1-form(167.5px, 48px);
             margin-right: 8px;
           }
           p.date {
@@ -96,8 +88,7 @@
                 @include box(46px, 48px);
               }
               .year {
-                @include box(76px, 48px);
-                border-radius: 4px;
+                @include step1-form(76px, 48px);
               }
               .select-flame {
                 @include box(30px, 48px);
@@ -105,12 +96,10 @@
             }
           }
           .month {
-            @include box(76px, 48px);
-            border-radius: 4px;
+            @include step1-form(76px, 48px);
           }
           .days {
-            @include box(76px, 48px);
-            border-radius: 4px;
+            @include step1-form(76px, 48px);
           }
           p.Notice {
             margin-top: 8px;
@@ -130,8 +119,7 @@
             }
           }
           &__not-robo {
-            @include box(280px, 70px);
-            border-radius: 4px;
+            @include step1-form(280px, 70px);
             margin-top: 24px;
             background: $gray;
           }
