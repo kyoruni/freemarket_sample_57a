@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_action :move_to_mypage,    only: [:show]
-  before_action :set_category_list, only: [:show, :identification]
-  before_action :set_brand_list,    only: [:show, :identification]
+  before_action :authenticate_user!, only: [:show, :identification]
+  before_action :move_to_mypage,     only: [:show, :identification]
+  before_action :set_category_list,  only: [:show, :identification]
+  before_action :set_brand_list,     only: [:show, :identification]
 
   def show
     @nickname = current_user.name
@@ -15,12 +16,7 @@ class UsersController < ApplicationController
 
   private
   # 自分以外のマイページに入れないようにする
-  #  ログインしていたら自分のマイページ、していなかったらトップページに飛ばす
   def move_to_mypage
-    if user_signed_in?
-      redirect_to user_path(current_user.id) unless current_user.id == params[:id].to_i
-    else
-      redirect_to root_path
-    end
+    redirect_to user_path(current_user.id) unless current_user.id == params[:id].to_i
   end
 end
