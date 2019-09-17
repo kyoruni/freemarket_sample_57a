@@ -140,17 +140,12 @@
                 text-align: center;
               }
               &--text-blue {
+                @extend .header__box__nav__right__contents__list__link--text-red;
                 background: $white;
                 border: 1px solid $light-blue;
                 color: $light-blue;
                 float: right;
-                margin: 0 0 0 8px;
-                margin-left: 10px;
-                font-size: 14px;
                 padding: 0 15px;
-                line-height: 30px;
-                border-radius: 4px;
-                text-align: center;
               }
               &__figure {
                 display: inline-block;
