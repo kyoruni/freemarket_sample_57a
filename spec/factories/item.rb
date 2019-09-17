@@ -12,6 +12,6 @@ FactoryBot.define do
     size
     postage
     region
-    saler_id {1}
+    saler
   end
 end
