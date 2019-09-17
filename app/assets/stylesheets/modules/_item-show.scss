@@ -116,21 +116,8 @@ tr {
   }
 }
 
-// 商品削除ボタン
-.item-delete__container {
-  @include box(620px, 60px);
-  font-size: 25px;
-  display: block;
-  text-align: center;
-  color: $white;
-  text-decoration: none;
-  line-height: 60px;
-  margin-top: 16px;
-  background-color: $red4;
-  font-weight: bold;
-}
-
-// 購入画面へ進むボタン
+// 商品削除ボタン、購入画面へ進むボタン
+.item-delete__container,
 .item-buy-btn {
   @include box(620px, 60px);
   font-size: 25px;
@@ -256,27 +243,18 @@ tr {
 }
 
 .fa-facebook-square {
+  @include sns-icon();
   color: $facebook-color;
-  text-decoration: none;
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
 .fa-twitter-square {
+  @include sns-icon();
   color: $twitter-color;
-  text-decoration: none;
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
 .fa-pinterest-square {
+  @include sns-icon();
   color: $pinterest-color;
-  text-decoration: none;
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
 // ユーザーのアイテム欄、同一カテゴリーのアイテム欄
