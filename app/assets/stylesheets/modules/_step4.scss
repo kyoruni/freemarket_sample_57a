@@ -61,7 +61,7 @@
                   @include box(100px, 48px);
                 }
                 .year {
-                  @include step1-form(130px, 48px);
+                  @include signup-form(130px, 48px);
                 }
                 &__select-flame {
                   @include box(30px, 48px);
@@ -79,7 +79,7 @@
               font-size: 14px;
             }
             .card-number {
-              @include step1-form(100%, 48px);
+              @include signup-form(100%, 48px);
               margin-top: 8px;
             }
           }

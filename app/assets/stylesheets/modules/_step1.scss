@@ -41,32 +41,32 @@
             font-weight: bold;
           }
           .nickname-text {
-            @include step1-form(343px, 48px);
+            @include signup-form(343px, 48px);
           }
           .email-text {
-            @include step1-form(343px, 48px);
+            @include signup-form(343px, 48px);
           }
           .password-text {
-            @include step1-form(343px, 48px);
+            @include signup-form(343px, 48px);
           }
           .re-password-text {
-            @include step1-form(343px, 48px);
+            @include signup-form(343px, 48px);
           }
           h3 {
             margin-bottom: 8px;
           }
           .familyname-text {
-            @include step1-form(167.5px, 48px);
+            @include signup-form(167.5px, 48px);
           }
           .name-text {
-            @include step1-form(167.5px, 48px);
+            @include signup-form(167.5px, 48px);
             margin: 0px 8px 0px 0px;
           }
           .familyname-text {
-            @include step1-form(167.5px, 48px);
+            @include signup-form(167.5px, 48px);
           }
           .name-text {
-            @include step1-form(167.5px, 48px);
+            @include signup-form(167.5px, 48px);
             margin-right: 8px;
           }
           p.date {
@@ -88,7 +88,7 @@
                 @include box(46px, 48px);
               }
               .year {
-                @include step1-form(76px, 48px);
+                @include signup-form(76px, 48px);
               }
               .select-flame {
                 @include box(30px, 48px);
@@ -96,10 +96,10 @@
             }
           }
           .month {
-            @include step1-form(76px, 48px);
+            @include signup-form(76px, 48px);
           }
           .days {
-            @include step1-form(76px, 48px);
+            @include signup-form(76px, 48px);
           }
           p.Notice {
             margin-top: 8px;
@@ -119,7 +119,7 @@
             }
           }
           &__not-robo {
-            @include step1-form(280px, 70px);
+            @include signup-form(280px, 70px);
             margin-top: 24px;
             background: $gray;
           }

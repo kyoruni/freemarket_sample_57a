@@ -29,8 +29,8 @@
   }
 }
 
-/* step1 入力項目 */
-@mixin step1-form($width, $height) {
+/* ユーザー登録 入力項目 */
+@mixin signup-form($width, $height) {
   width: $width;
   height: $height;
   border-radius: 4px;
