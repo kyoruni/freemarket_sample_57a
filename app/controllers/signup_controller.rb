@@ -1,9 +1,8 @@
 class SignupController < ApplicationController
-  before_action :move_to_index,     except: [:step5]
+  before_action :move_to_index,     except: [:step5]
   before_action :set_category_list, only: [:step5]
   before_action :set_brand_list,    only: [:step5]
   
-
   def step1
     @user = User.new()
   end
@@ -75,8 +74,8 @@ class SignupController < ApplicationController
   end
 
   # ログインしていたら、トップページに飛ばす
-  def move_to_index
-    redirect_to root_path if user_signed_in?
+  def move_to_index
+    redirect_to root_path if user_signed_in?
   end
 end
 
