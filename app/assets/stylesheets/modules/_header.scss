@@ -14,9 +14,7 @@
         color: $dark-gray;
         &__link {
           @include box(134px, 36px);
-          background-image: image-url("mercari-logo.png");
-          background-position: center;
-          background-size: cover;
+          @include bg-image("mercari-logo.png");
           z-index: 10;
           &__image {
             vertical-align: middle;
@@ -160,12 +158,10 @@
                 padding: 0;
                 &__image {
                   @include box(30px, 30px);
+                  @include bg-image("member_photo_noimage_thumb.png");
                   border-radius: 50%;
                   vertical-align: middle;
                   display: inline-block;
-                  background-image: image-url("member_photo_noimage_thumb.png");
-                  background-position: center;
-                  background-size: cover;
                   margin-bottom: 10px;
                 }
                 &__text {

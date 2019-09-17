@@ -7,3 +7,10 @@
     height: $height;
   }
 }
+
+/* 背景画像 */
+@mixin bg-image($url) {
+  background-image: image-url($url);
+  background-position: center;
+  background-size: cover;
+}

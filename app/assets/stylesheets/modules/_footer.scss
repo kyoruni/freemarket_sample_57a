@@ -65,12 +65,10 @@
       margin: 30px auto 20px;
       &__icon {
         @include box(120px, 30px);
+        @include bg-image("mercari-logo_white.png");
         display: inline-block;
-        background-image: image-url("mercari-logo_white.png");
         margin-right: 30%;
         color: $white;
-        background-position: center;
-        background-size: cover;
       }
       &__copy-right {
         color: $white;
