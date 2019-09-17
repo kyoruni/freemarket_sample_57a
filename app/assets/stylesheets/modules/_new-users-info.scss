@@ -1,182 +1,151 @@
-.new-users-info{
-
-  &__main{
+.new-users-info {
+  &__main {
     background-color: $white;
-    width: 700px;
-    height: 1542px;
+    @include box(700px, 1542px);
 
-    &__top-contents{
+    &__top-contents {
       height: 50px;
-        h2 {
-          text-align: center;
-          width: 100%;
-          height: 50px;
-          line-height: 50px;
-          font-size: 24px;
-          font-weight: bold;
-        }
+      h2 {
+        @include box(100%, 50px);
+        text-align: center;
+        line-height: 50px;
+        font-size: 24px;
+        font-weight: bold;
       }
-    
-    &__bottom-contents{
+    }
+
+    &__bottom-contents {
+      @include box(100%, 1492px);
       padding: 40px 64px;
-      width: 100%;
-      height: 1492px;
       display: inline-block;
       border-top: 1px solid $light-gray;
       font-size: 14px;
-      .identification_update_box{
+      .identification_update_box {
         display: flex;
         margin-top: 8px;
         justify-content: flex-end;
-          .identification_update{
-            color: $light-blue;
-          }
+        .identification_update {
+          color: $light-blue;
         }
+      }
 
-      &__from{
+      &__from {
+        @include box(100%, 126px);
         margin-top: 40px;
         border-radius: 4px;
-        width: 100%;
-        height: 126px;
         font-weight: bold;
       }
 
-      
-        .name-text{
-          width: 100%;
-          height: 48px;
-          border-radius: 4px;
-          margin-top: 8px;
-        }
-      
+      .name-text {
+        @include box(100%, 48px);
+        border-radius: 4px;
+        margin-top: 8px;
+      }
 
-
-      &__from-group{
+      &__from-group {
+        @include box(100%, 280px);
         margin-top: 40px;
         border-radius: 4px;
-        width: 100%;
-        height: 280px;
-
-        &__name-text{
-          width: 167.5px;
-          height: 25px;
+        &__name-text {
+          @include box(167.5px, 25px);
           border-radius: 4px;
           margin-right: 8px;
           font-weight: bold;
         }
-
-        p.date{
+        p.date {
           flex-wrap: wrap;
           margin: 0px 2px;
           height: 20px;
         }
-
-          .text-date{
-            height: 56px;
-            .y{
-              width: 76px;
+        .text-date {
+          height: 56px;
+          .y {
+            @include box(76px, 48px);
+            margin: 5px 0px;
+            border-radius: 4px;
+            line-height: 48px;
+            display: flex;
+            .date-flame {
+              width: 46px;
               height: 48px;
-              margin: 5px 0px;
-              border-radius: 4px;
-              line-height:48px;
-              display: flex;
-              .date-flame{
-                width: 46px;
-                height: 48px;
-                
-              }
-                .year{
-                width: 76px;
-                height: 48px;
-                border-radius: 4px;
-                  
-                }
-                  
-              .select-flame{
-              width: 30px;
-              height: 48px;
-              }
             }
-          }  
-
-            .month{
-              width: 76px;
-              height: 48px;
+            .year {
+              @include box(76px, 48px);
               border-radius: 4px;
             }
-
-            .days{
-              width: 76px;
-              height: 48px;
-              border-radius: 4px;
+            .select-flame {
+              @include box(30px, 48px);
             }
+          }
+        }
 
+        .month {
+          @include box(76px, 48px);
+          border-radius: 4px;
+        }
+
+        .days {
+          @include box(76px, 48px);
+          border-radius: 4px;
+        }
       }
-      &__Notes-box{
+      &__Notes-box {
         font-size: 14px;
         margin-bottom: 40px;
         p {
           color: $gray;
         }
       }
-
-      &__from-streetaddress{
+      &__from-streetaddress {
+        @include box(100%, 80px);
         margin-top: 30px;
         border-radius: 4px;
-        width: 100%;
-        height: 80px;
         font-weight: bold;
 
-        .y{
-          width: 200px;
-          height: 48px;
+        .y {
+          @include box(200px, 48px);
           margin: 5px 0px;
           border-radius: 4px;
-          line-height:48px;
+          line-height: 48px;
           display: flex;
-          .date-flame{
-            width: 46px;
-            height: 48px;
+          .date-flame {
+            @include box(46px, 48px);
           }
-            .name-text{
-            width: 572px;
-            height: 48px;
+          .name-text {
+            @include box(572px, 48px);
             border-radius: 4px;
             display: flex;
             justify-content: flex-end;
-            }
-              .select-flame{
-              width: 30px;
-              height: 48px;
-              margin: 10px 0px 0px 490px;
-              }
+          }
+          .select-flame {
+            @include box(30px, 48px);
+            margin: 10px 0px 0px 490px;
+          }
         }
-        &__name-text{
-          width: 100%;
-          height: 48px;
+        &__name-text {
+          @include box(100%, 48px);
           border-radius: 4px;
           margin-top: 8px;
         }
       }
 
-        &__registration-btn{
-          width: 343px;
-          height: 50px;
-          text-align: center;
-          background-color:$red;
-          position: relative;
-          margin: 24px 0px 0px 100px;
-          display: inline-block;
-          p {
-            float: left;
-            position: absolute;
-            top: 14px;
-            left: 145.5px;
-            color: $white;
-          }
+      &__registration-btn {
+        @include box(343px, 50px);
+        text-align: center;
+        background-color: $red;
+        position: relative;
+        margin: 24px 0px 0px 100px;
+        display: inline-block;
+        p {
+          float: left;
+          position: absolute;
+          top: 14px;
+          left: 145.5px;
+          color: $white;
         }
+      }
 
-      &__registration-text{
+      &__registration-text {
         display: flex;
         justify-content: flex-end;
         margin: 24px auto 0px;
