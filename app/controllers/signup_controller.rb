@@ -1,7 +1,8 @@
 class SignupController < ApplicationController
-  before_action :move_to_index,     except: [:step5]
-  before_action :set_category_list, only: [:step5]
-  before_action :set_brand_list,    only: [:step5]
+  before_action :authenticate_user!, only: [:step5] # ログインしていない場合、ログアウトページに入れなくする
+  before_action :move_to_index,      except: [:step5]
+  before_action :set_category_list,  only: [:step5]
+  before_action :set_brand_list,     only: [:step5]
   
   def step1
     @user = User.new()
