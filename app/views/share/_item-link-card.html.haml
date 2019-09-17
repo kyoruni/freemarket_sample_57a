@@ -1,5 +1,5 @@
 -# アイテムリンクカード
-= link_to "/items/#{item.id}", class:"item-link-card__link" do
+= link_to item_path(item.id), class:"item-link-card__link" do
   .item-link-card
     .item-link-card--image
       - if item.buyer_id.present?

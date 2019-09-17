@@ -14,9 +14,7 @@
         color: $dark-gray;
         &__link {
           @include box(134px, 36px);
-          background-image: image-url("mercari-logo.png");
-          background-position: center;
-          background-size: cover;
+          @include bg-image("mercari-logo.png");
           z-index: 10;
           &__image {
             vertical-align: middle;
@@ -142,17 +140,12 @@
                 text-align: center;
               }
               &--text-blue {
+                @extend .header__box__nav__right__contents__list__link--text-red;
                 background: $white;
                 border: 1px solid $light-blue;
                 color: $light-blue;
                 float: right;
-                margin: 0 0 0 8px;
-                margin-left: 10px;
-                font-size: 14px;
                 padding: 0 15px;
-                line-height: 30px;
-                border-radius: 4px;
-                text-align: center;
               }
               &__figure {
                 display: inline-block;
@@ -160,12 +153,10 @@
                 padding: 0;
                 &__image {
                   @include box(30px, 30px);
+                  @include bg-image("member_photo_noimage_thumb.png");
                   border-radius: 50%;
                   vertical-align: middle;
                   display: inline-block;
-                  background-image: image-url("member_photo_noimage_thumb.png");
-                  background-position: center;
-                  background-size: cover;
                   margin-bottom: 10px;
                 }
                 &__text {
