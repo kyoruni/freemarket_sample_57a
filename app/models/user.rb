@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_one :shipping_address
   accepts_nested_attributes_for :shipping_address
   belongs_to :region, optional: true
+  has_many :items, foreign_key: "saler_id", class_name: "Item"
+  has_many :items, foreign_key: "buyer_id", class_name: "Item"
   
   validates :name,                    presence: true
   validates :email,                   presence: true
