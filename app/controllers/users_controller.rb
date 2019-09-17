@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :identification]
-  before_action :move_to_mypage,     only: [:show, :identification]
-  before_action :set_category_list,  only: [:show, :identification]
-  before_action :set_brand_list,     only: [:show, :identification]
+  before_action :authenticate_user!, only: [:show, :identification, :edit]
+  before_action :move_to_mypage,     only: [:show, :identification, :edit]
+  before_action :set_category_list,  only: [:show, :identification, :edit]
+  before_action :set_brand_list,     only: [:show, :identification, :edit]
 
   def show
     @nickname = current_user.name
@@ -12,6 +12,10 @@ class UsersController < ApplicationController
   end
 
   def identification
+  end
+
+  def edit
+    @user = User.find(params[:id])
   end
 
   private
