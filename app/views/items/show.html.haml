@@ -92,18 +92,19 @@
           %i.fa.fa-lock
           %span あんしん・あんぜんへの取り組み
 
-  -# 自分の出品した商品で表示されるボタン
-  - if user_signed_in? && @item.saler_id == current_user.id
-    .item-buttons
-      = link_to "商品の編集", edit_item_path(@item.id), class: "item-buttons__edit-button"
-      = link_to "商品の削除", @item, method: :delete, data: { confirm: "アイテム「#{@item.name}」を削除します。よろしいですか？"}, class: "item-buttons__delete-button"
+  - if user_signed_in?
+    -# 自分の出品した商品で表示されるボタン
+    - if @item.saler_id == current_user.id
+      .item-buttons
+        = link_to "商品の編集", edit_item_path(@item.id), class: "item-buttons__edit-button"
+        = link_to "商品の削除", @item, method: :delete, data: { confirm: "アイテム「#{@item.name}」を削除します。よろしいですか？"}, class: "item-buttons__delete-button"
 
-  -# コメント欄
-  .item-comment__container
-    %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-    %textarea
-    %button
-      %span.item-comment__container--submit コメントする
+    -# ログイン時のみ表示されるコメント欄
+    .item-comment__container
+      %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %textarea
+      %button
+        %span.item-comment__container--submit コメントする
 
   -# アイテムナビ欄
   %ul.item-nav
