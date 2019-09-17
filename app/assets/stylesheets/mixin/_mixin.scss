@@ -14,3 +14,9 @@
   background-position: center;
   background-size: cover;
 }
+
+/* 商品出品画面のセレクト欄 */
+@mixin frame() {
+  padding: 40px;
+  border-bottom: 1px solid $light-gray2;
+}
