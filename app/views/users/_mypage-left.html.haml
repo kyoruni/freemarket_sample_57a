@@ -3,7 +3,7 @@
     %ul.mypage-menu__nav__list
       /* メニュー1 */
       %li
-        = link_to "/users/#{current_user.id}", class: "mypage-menu__nav__list__item active" do
+        = link_to user_path(current_user.id), class: "mypage-menu__nav__list__item active" do
           マイページ
           #{icon 'fas', 'chevron-right'}
       %li
@@ -19,7 +19,7 @@
           いいね！一覧
           #{icon 'fas', 'chevron-right'}
       %li
-        = link_to "/items/new", class: "mypage-menu__nav__list__item" do
+        = link_to new_item_path, class: "mypage-menu__nav__list__item" do
           出品する
           #{icon 'fas', 'chevron-right'}
       %li
@@ -73,7 +73,7 @@
       %h3.mypage-menu__head 設定
       %ul.mypage-menu__nav__list
         %li
-          = link_to "#", class: "mypage-menu__nav__list__item" do
+          = link_to edit_user_path(current_user.id), class: "mypage-menu__nav__list__item" do
             プロフィール
             #{icon 'fas', 'chevron-right'}
         %li
@@ -81,7 +81,7 @@
             発送元・お届け先住所変更
             #{icon 'fas', 'chevron-right'}
         %li
-          = link_to "/card/show", class: "mypage-menu__nav__list__item" do
+          = link_to card_index_path, class: "mypage-menu__nav__list__item" do
             支払い方法
             #{icon 'fas', 'chevron-right'}
         %li
