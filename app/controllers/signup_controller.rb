@@ -30,59 +30,36 @@ class SignupController < ApplicationController
     @user   = User.new()
     @region = Region.all
     session[:phone_number]           = user_params[:phone_number]
+    # binding.pry
     @user.build_shipping_address(session[:shipping_address_attributes])
-    binding.pry
+    
   end
-
-  def create
-    @user = User.new(
-      name:                         session[:name],
-      email:                        session[:email],
-      password:                     session[:password],
-      password_confirmation:        session[:password_confirmation],
-      last_name:                    session[:last_name],
-      first_name:                   session[:first_name],
-      last_name_kana:               session[:last_name_kana],
-      first_name_kana:              session[:first_name_kana],
-      birth_year:                   session[:birth_year],
-      birth_month:                  session[:birth_month],
-      birth_day:                    session[:birth_day],
-      phone_number:                 session[:phone_number],
-      shipping_address_attributes:  user_params[:shipping_address_attributes]
-    )
-    @user.save
-    sign_in @user
-  end
-
-  # ログアウトのリンク
-  def step5
-  end
-
 
   def create
     if session[:provider_data].present?
-    @user = User.new(
-      name:               session[:name],
-      email:              session[:email],
-      password:           session[:password],
-      first_name:         session[:first_name],
-      last_name:          session[:last_name],
-      first_name_kana:    session[:first_name_kana],
-      last_name_kana:     session[:last_name_kana],
-      birth_year:         session[:birth_year],
-      birth_month:        session[:birth_month],
-      birth_day:          session[:birth_day],
-      phone_number:       session[:phone_number],
-      address_attributes: user_params[:address_attributes],
-      SnsCredential_attributes: {
-        uid:session[:provider_data]["uid"],
-        provider:session[:provider_data]["provider"],
-        sns_name:"",
-        user_id:"",
-        created_at:"",
-        updated_at:""
-      }
-    )
+      @user = User.new(
+        name:                         session[:name],
+        email:                        session[:email],
+        password:                     session[:password],
+        password_confirmation:        session[:password_confirmation],
+        last_name:                    session[:last_name],
+        first_name:                   session[:first_name],
+        last_name_kana:               session[:last_name_kana],
+        first_name_kana:              session[:first_name_kana],
+        birth_year:                   session[:birth_year],
+        birth_month:                  session[:birth_month],
+        birth_day:                    session[:birth_day],
+        phone_number:                 session[:phone_number],
+        shipping_address_attributes:  user_params[:shipping_address_attributes],
+        SnsCredential_attributes: {
+          uid:session[:provider_data]["uid"],
+          provider:session[:provider_data]["provider"],
+          sns_name:"",
+          user_id:"",
+          created_at:"",
+          updated_at:""
+        }
+      )
     else
       @user = User.new(
         name:               session[:name],
@@ -96,12 +73,62 @@ class SignupController < ApplicationController
         birth_month:        session[:birth_month],
         birth_day:          session[:birth_day],
         phone_number:       session[:phone_number],
-        address_attributes: user_params[:address_attributes],
+        shipping_address_attributes: user_params[:shipping_address_attributes],
       )
     end
+    
     @user.save
     sign_in @user
   end
+
+  # ログアウトのリンク
+  def step5
+  end
+
+
+  # def create
+  #   if session[:provider_data].present?
+  #   @user = User.new(
+  #     name:               session[:name],
+  #     email:              session[:email],
+  #     password:           session[:password],
+  #     first_name:         session[:first_name],
+  #     last_name:          session[:last_name],
+  #     first_name_kana:    session[:first_name_kana],
+  #     last_name_kana:     session[:last_name_kana],
+  #     birth_year:         session[:birth_year],
+  #     birth_month:        session[:birth_month],
+  #     birth_day:          session[:birth_day],
+  #     phone_number:       session[:phone_number],
+  #     address_attributes: user_params[:address_attributes],
+  #     SnsCredential_attributes: {
+  #       uid:session[:provider_data]["uid"],
+  #       provider:session[:provider_data]["provider"],
+  #       sns_name:"",
+  #       user_id:"",
+  #       created_at:"",
+  #       updated_at:""
+  #     }
+  #   )
+  #   else
+  #     @user = User.new(
+  #       name:               session[:name],
+  #       email:              session[:email],
+  #       password:           session[:password],
+  #       first_name:         session[:first_name],
+  #       last_name:          session[:last_name],
+  #       first_name_kana:    session[:first_name_kana],
+  #       last_name_kana:     session[:last_name_kana],
+  #       birth_year:         session[:birth_year],
+  #       birth_month:        session[:birth_month],
+  #       birth_day:          session[:birth_day],
+  #       phone_number:       session[:phone_number],
+  #       address_attributes: user_params[:address_attributes],
+  #     )
+  #   end
+  #   @user.save
+  #   sign_in @user
+  # end
 
   private
 
