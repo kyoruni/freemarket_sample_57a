@@ -9,37 +9,31 @@ class User < ApplicationRecord
   has_many :sns_credential
   has_one :shipping_address
   accepts_nested_attributes_for :shipping_address
-
+  accepts_nested_attributes_for :sns_credential
 
   
-  accepts_nested_attributes_for :sns_credential
   def self.find_omniauth(auth)
 
     uid = auth.uid
     provider = auth.provider
     snscredential = SnsCredential.where(uid: uid, provider: provider).first
-    
     if snscredential.present?
       user = User.where(id: snscredential.user_id).first
-    else
+    else 
+      # providerから取得したアドレスがすでに登録されているか確認
       user = User.where(email: auth.info.email).first
-      if user.present?
+      if user.present? # 最初(providerに登録しているアドレスですでに登録されている時)
         SnsCredential.create(
           uid: uid,
           provider: provider,
           user_id: user.id)
-      else
+      else  # 最初(登録されてなかった時)
         user = User.new(
           name: auth.info.name,
           email:    auth.info.email,
           password: Devise.friendly_token[0, 20],
           phone_number: "00000000000"
           )
-        SnsCredential.create(
-          uid: uid,
-          provider: provider,
-          user_id: user.id)
-          # binding.pry
       end
     end
     return user
@@ -64,13 +58,3 @@ class User < ApplicationRecord
   validates :birth_month,             presence: true
   validates :birth_day,               presence: true
 end
-
-
-# def self.find_omniauth(auth)
-#   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-#     # binding.pry
-#     user.email = auth.info.email
-#     user.password = Devise.friendly_token[0, 20]
-
-#     end
-#   end

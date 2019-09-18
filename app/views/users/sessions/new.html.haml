@@ -13,11 +13,11 @@
           .sign-in__contents__frame__middle_contents__middle_frame
             .sign-in__contents__frame__middle_contents__middle_frame__field-top
               %i.fab.fa-facebook-square.size
-              %p Facebookでログイン
+              = link_to "Facebookで登録する", user_facebook_omniauth_authorize_path, method: :post 
               
             .sign-in__contents__frame__middle_contents__middle_frame__field-bottom
               %i.fab.fa-google.fa-lg
-              %p Googleでログイン 
+              = link_to "Googleで登録する", user_google_oauth2_omniauth_authorize_path, method: :post
 
         .sign-in__contents__frame__bottom-contents
           .field
