@@ -11,12 +11,12 @@ class User < ApplicationRecord
   
   # バリデーション
   VALID_EMAIL_REGIX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
-  validates :name,                  presence: true
+  validates :name,                  presence: true, length: { minimum:2, maximum:20 }
   validates :email,                 presence: true
   validates :email,                 uniqueness: true
   validates :email,                 format: { with: VALID_EMAIL_REGIX }
   validates :password,              presence: true
-  validates :password,              length: { minimum: 7, maximum: 128 }
+  validates :password,              length: { minimum: 7, maximum: 20 }
   validates :password,              format: { with: /\A(?=.*?[a-zA-Z])(?=.*?\d)[a-zA-Z\d]{7,128}\z/,
                                     message: "には英字と数字の両方を含めてください"}
   validates :password,              confirmation: true
