@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   get 'purchase/index'
   get 'purchase/done'
-
   # クレジットカード登録
   resources :card, only: [:new, :show] do
     collection do
@@ -11,12 +10,10 @@ Rails.application.routes.draw do
       post 'delete', to: 'card#delete'
     end
   end
-  
   devise_for :users, controllers:{
     sessions: 'users/sessions',
     omniauth_callbacks: 'users/omniauth_callbacks' 
   }
-
 
   resources  :users,  only: [:show, :destroy, :edit]
   resources  :search, only: [:index]
@@ -48,7 +45,6 @@ Rails.application.routes.draw do
   resources  :brands,     only: [:show]
   root 'items#index'
 
-
   resources :signup do
     collection do
       get  '/'               => 'signup#new'
@@ -56,7 +52,6 @@ Rails.application.routes.draw do
       get  'step2'           => 'signup#step2'
       get  'step3'           => 'signup#step3'
       post 'signup/create'   => 'signup#create'
-
     end
   end
   get 'logout' => 'signup#step5'
