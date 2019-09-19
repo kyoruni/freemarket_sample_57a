@@ -18,7 +18,8 @@
             - if @item.images.first.nil?
               = image_tag "no_image.png", class: "sub-photo"
             - else
-              = image_tag image.image_url, class:"sub-photo"
+              - if image.image_url.present?
+                = image_tag image.image_url, class:"sub-photo"
       %table.item-box__container__box__table
         %tbody
           %tr

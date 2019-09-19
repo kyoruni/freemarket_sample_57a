@@ -74,31 +74,8 @@ class ItemsController < ApplicationController
   end
 
   def update
-    if @item.update(item_update_params)
-      if params[:images].present?
-        params[:images][:image].each do |image|
-          @item.images.create(image: image, item_id: @item.id)
-        end
-      end
-      if params[:remove_image].present?
-        @item.iamges.remove_image!
-      end
-      redirect_to item_path(@item.id)
-    end
-    #   if @item.update(item_update_params)
-    #     params[:images][:image].each do |image|
-    #       @item.images.create(image: image, item_id: @item.id)
-    #     end
-    #     if params[:images][:remove_image].present?
-    #       @item.images.remove_image!
-    #     end
-    #     @item.save
-    #     format.html{redirect_to root_path}
-    #   else
-    #     @item.images.build
-    #     format.html{render action: 'new'}
-    #   end
-    # end
+    @item.update(item_update_params)
+    redirect_to item_path(@item.id)
   end
 
   private
