@@ -12,7 +12,7 @@ class SignupController < ApplicationController
   def step2
     @user = User.new()
     session[:name]                   = user_params[:name]
-    session[:email]                  = user_params[:email] 
+    session[:email]                  = user_params[:email]
     session[:password]               = user_params[:password]
     session[:password_confirmation]  = user_params[:password_confirmation]
     session[:last_name]              = user_params[:last_name]
