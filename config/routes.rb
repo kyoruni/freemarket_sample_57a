@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   }
 
 
-  resources  :users,  only: [:show, :destroy]
+  resources  :users,  only: [:show, :destroy, :edit]
   resources  :search, only: [:index]
   resources  :items do
     # items new時の、カテゴリーセレクトボックス
@@ -56,12 +56,10 @@ Rails.application.routes.draw do
       get  'step2'           => 'signup#step2'
       get  'step3'           => 'signup#step3'
       post 'signup/create'   => 'signup#create'
-      get  'step5'           => 'signup#step5'
-      
 
     end
   end
-
+  get 'logout' => 'signup#step5'
   get 'identification' => 'users#identification'
   get 'card_registration' => 'buys#card_registration'
 end
