@@ -11,7 +11,7 @@ class User < ApplicationRecord
   
   # バリデーション
   VALID_EMAIL_REGIX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
-  validates :name,                  presence: true, length: { minimum:2, maximum:20 }
+  validates :name,                  presence: true, length: { minimum:2, maximum:10 }
   validates :email,                 presence: true
   validates :email,                 uniqueness: true
   validates :email,                 format: { with: VALID_EMAIL_REGIX }
@@ -30,4 +30,7 @@ class User < ApplicationRecord
   validates :first_name_kana,       presence: true, format: { 
                                     with: /\A[\p{katakana}ー－]+\z/, 
                                     message: "はカナ文字を入力してください" }
+  validates :birth_year,            presence: true
+  validates :birth_month,           presence: true
+  validates :birth_day,             presence: true
 end
