@@ -127,7 +127,7 @@ RSpec.describe User do
       expect(user).to be_valid
     end
 
-    it "passeordは21文字では保存出来ない" do
+    it "passwordは21文字では保存出来ない" do
       user = FactoryBot.build(:user, password: "a12345678901234567890", password_confirmation: "a12345678901234567890")
       user.valid?
       expect(user.errors[:password][0]).to include("is too long")
