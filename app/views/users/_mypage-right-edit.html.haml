@@ -2,12 +2,11 @@
   .mypage-main__profile
   %h2.mypage-main__profile__header
     プロフィール
-  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-    = render "devise/shared/error_messages", resource: resource
+  = form_with model: @user, class: 'profile-edit__form' do |f|
     // アイコンと名前入力欄
     .mypage-main__profile__icon
       = image_tag "member_photo_noimage_thumb.png", class: "mypage-main__profile__icon__image"
-      = f.email_field :email, class: "mypage-main__profile__icon__input", autocomplete: "email", :placeholder => "例）AYA☆セール中"
+      = f.text_field :name, class: "mypage-main__profile__icon__input",:placeholder => "例）AYA☆セール中"
     .mypage-main__profile__contents
       %textarea.mypage-main__profile__contents__text{:name => "introduction", :placeholder => "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
         プロフィールをご覧いただきありがとうございます。
