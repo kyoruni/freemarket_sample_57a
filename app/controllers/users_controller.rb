@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @nickname = current_user.name
+    @item = Item.where(saler_id: current_user.id)
   end
 
   def destroy
