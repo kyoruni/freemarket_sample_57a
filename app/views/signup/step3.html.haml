@@ -1,5 +1,3 @@
--# 仮で会員登録ページの一部をマークアップ
--# ヘッダー後で呼び出す
 = form_for @user,url: signup_create_signup_index_path, method: :post, html: {id: :user_form} do |f|
   = f.fields_for :shipping_address do |i|
     .sign-up-form__container

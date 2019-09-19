@@ -31,3 +31,9 @@
 
 # 画像ファイル
 /public/uploads/
+
+#SMS認証
+/vendor/bundle/
+
+#sns環境変数
+/.env

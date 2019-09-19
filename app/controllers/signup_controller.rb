@@ -7,7 +7,7 @@ class SignupController < ApplicationController
   def step1
     @user = User.new()
   end
-  
+
   def step2
     @user = User.new()
     session[:name]                   = user_params[:name]
@@ -22,7 +22,7 @@ class SignupController < ApplicationController
     session[:birth_month]            = user_params[:birth_month]
     session[:birth_day]              = user_params[:birth_day]
   end
-  
+
   def step3
     @user   = User.new()
     @region = Region.all
@@ -46,7 +46,7 @@ class SignupController < ApplicationController
       phone_number:                 session[:phone_number],
       shipping_address_attributes:  user_params[:shipping_address_attributes]
     )
-    @user.save
+    @user.save!
     sign_in @user
   end
 

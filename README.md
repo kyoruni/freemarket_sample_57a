@@ -27,6 +27,7 @@
 - has_many :comments
 - has_many :items, foreign_key: "saler_id", class_name: "Item"
 - has_many :items, foreign_key: "buyer_id", class_name: "Item"
+- has_many :sns_credential
 
 ## profile table
 
@@ -243,3 +244,22 @@
 
 - belongs_to :item
 - belongs_to :user
+
+###  sns_credentials
+
+|  Column  |   Type   |     Options      |
+|  :-----: | :------: | :--------------: |
+| provider |  string  |    null:false    |
+|    uid   |  string  |    null:false    |
+| user_id  |  bigint  | foreign_key:true |
+
+
+- belongs_to :user
+
+
+
+Column	Type	Options
+uid	string	null: false
+provider	string	null: false
+Association
+belongs_to :user
