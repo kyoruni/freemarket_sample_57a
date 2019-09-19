@@ -78,10 +78,22 @@ RSpec.describe User do
       expect(user.errors[:name][0]).to include("is too short")
     end
 
+    it "nameが2文字以上で保存出来る" do
+      user = FactoryBot.build(:user, name: "メル")
+      user.valid?
+      expect(user).to be_valid
+    end
+
     it "nameが11文字以上だと保存出来ない" do
       user = FactoryBot.build(:user, name: "aaaaaaaaaaa")
       user.valid?
       expect(user.errors[:name][0]).to include("is too long")
+    end
+
+    it "nameが10文字で保存出来る" do
+      user = FactoryBot.build(:user, name: "メルかり楽しいなああ")
+      user.valid?
+      expect(user).to be_valid
     end
 
     it "同じメールアドレスは登録出来ない" do
@@ -91,17 +103,54 @@ RSpec.describe User do
       expect(another_user.errors[:email]).to include("has already been taken")
     end
 
+    it "不正なメールアドレスは登録出来ない" do
+      user = FactoryBot.build(:user, email: "sampleaddress")
+      user.valid?
+      expect(user.errors[:email]).to include("is invalid")
+    end
+  
     it "passwordが存在してもpassword_confirmationが空では登録できない" do
-      user = build(:user, password_confirmation: "")
+      user = FactoryBot.build(:user, password_confirmation: "")
       user.valid?
       expect(user.errors[:password_confirmation]).to include("doesn't match Password")
     end
 
     it "passwordが6文字以下であれば登録できない" do
-      user = build(:user, password: "000000", password_confirmation: "000000")
+      user = FactoryBot.build(:user, password: "000000", password_confirmation: "000000")
       user.valid?
       expect(user.errors[:password][0]).to include("is too short")
     end
+
+    it "passwordが7文字で保存出来る" do
+      user = FactoryBot.build(:user, password: "a123456", password_confirmation: "a123456")
+      user.valid?
+      expect(user).to be_valid
+    end
+
+    it "passeordは21文字では保存出来ない" do
+      user = FactoryBot.build(:user, password: "a12345678901234567890", password_confirmation: "a12345678901234567890")
+      user.valid?
+      expect(user.errors[:password][0]).to include("is too long")
+    end
+
+    it "passwordが20文字で保存出来る" do
+      user = FactoryBot.build(:user, password: "a1234567891234567890", password_confirmation: "a1234567891234567890")
+      user.valid?
+      expect(user).to be_valid
+    end
+
+    it "last_name_kanaはカタカナでないと保存出来ない" do
+      user = FactoryBot.build(:user, last_name_kana: "さとう")
+      user.valid?
+      expect(user.errors[:last_name_kana]).to include("はカナ文字を入力してください" )
+    end
+
+    it "first_name_kanaはカタカナでないと保存出来ない" do
+      user = FactoryBot.build(:user, first_name_kana: "たろう")
+      user.valid?
+      expect(user.errors[:first_name_kana]).to include("はカナ文字を入力してください" )
+    end
+
   end
 end
 
