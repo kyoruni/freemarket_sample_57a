@@ -1,7 +1,7 @@
-.buy__container {
+.buy-edit__container {
   // メイン部分
   &__main {
-    height: 2400px;
+    height: 2100px;
     background-color: $light-gray;
     &__wrapper {
       @include box(700px, 1888px);
