@@ -90,6 +90,18 @@ RSpec.describe User do
       another_user.valid?
       expect(another_user.errors[:email]).to include("has already been taken")
     end
+
+    it "passwordが存在してもpassword_confirmationが空では登録できない" do
+      user = build(:user, password_confirmation: "")
+      user.valid?
+      expect(user.errors[:password_confirmation]).to include("doesn't match Password")
+    end
+
+    it "passwordが6文字以下であれば登録できない" do
+      user = build(:user, password: "000000", password_confirmation: "000000")
+      user.valid?
+      expect(user.errors[:password][0]).to include("is too short")
+    end
   end
 end
 

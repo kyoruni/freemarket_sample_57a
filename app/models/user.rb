@@ -16,9 +16,7 @@ class User < ApplicationRecord
   validates :email,                 uniqueness: true
   validates :email,                 format: { with: VALID_EMAIL_REGIX }
   validates :password,              presence: true
-  validates :password,              length: { minimum: 7, maximum: 20 }
-  validates :password,              format: { with: /\A(?=.*?[a-zA-Z])(?=.*?\d)[a-zA-Z\d]{7,128}\z/,
-                                    message: "には英字と数字の両方を含めてください"}
+  validates :password,              length: { minimum: 7 }
   validates :password,              confirmation: true
   validates :password_confirmation, presence: true
   validates :phone_number,          presence: true
