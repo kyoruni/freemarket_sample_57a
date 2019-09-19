@@ -27,7 +27,7 @@ class User < ApplicationRecord
           uid: uid,
           provider: provider,
           user_id: user.id)
-      else  # 最初(登録されてなかった時)
+      else  # 最初(登録saretenaitoki 時)
         user = User.new(
           name: auth.info.name,
           email:    auth.info.email,
@@ -58,3 +58,13 @@ class User < ApplicationRecord
   validates :birth_month,             presence: true
   validates :birth_day,               presence: true
 end
+
+
+# def self.find_omniauth(auth)
+#   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+#     # binding.pry
+#     user.email = auth.info.email
+#     user.password = Devise.friendly_token[0, 20]
+
+#     end
+#   end
