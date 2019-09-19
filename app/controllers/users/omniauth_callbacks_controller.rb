@@ -14,14 +14,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     if @user.persisted?
       sign_in_and_redirect @user, event: :authentication 
-      # binding.pry
     else
       session[:name]                = request.env["omniauth.auth"].info.name
       session[:provider_data]       = request.env["omniauth.auth"].except("extra")
       session[:email]               = request.env["omniauth.auth"].info.email
       session[:uid]                 = request.env["omniauth.auth"].uid
       session[:provider]            = provider.to_s
-      # binding.pry
       redirect_to step1_signup_index_path
 
     end

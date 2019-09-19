@@ -54,50 +54,6 @@ class SignupController < ApplicationController
   def step5
   end
 
-
-  # def create
-  #   if session[:provider_data].present?
-  #   @user = User.new(
-  #     name:               session[:name],
-  #     email:              session[:email],
-  #     password:           session[:password],
-  #     first_name:         session[:first_name],
-  #     last_name:          session[:last_name],
-  #     first_name_kana:    session[:first_name_kana],
-  #     last_name_kana:     session[:last_name_kana],
-  #     birth_year:         session[:birth_year],
-  #     birth_month:        session[:birth_month],
-  #     birth_day:          session[:birth_day],
-  #     phone_number:       session[:phone_number],
-  #     address_attributes: user_params[:address_attributes],
-  #     SnsCredential_attributes: {
-  #       uid:session[:provider_data]["uid"],
-  #       provider:session[:provider_data]["provider"],
-  #       sns_name:"",
-  #       user_id:"",
-  #       created_at:"",
-  #       updated_at:""
-  #     }
-  #   )
-  #   else
-  #     @user = User.new(
-  #       name:               session[:name],
-  #       email:              session[:email],
-  #       password:           session[:password],
-  #       first_name:         session[:first_name],
-  #       last_name:          session[:last_name],
-  #       first_name_kana:    session[:first_name_kana],
-  #       last_name_kana:     session[:last_name_kana],
-  #       birth_year:         session[:birth_year],
-  #       birth_month:        session[:birth_month],
-  #       birth_day:          session[:birth_day],
-  #       phone_number:       session[:phone_number],
-  #       address_attributes: user_params[:address_attributes],
-  #     )
-  #   end
-  #   @user.save
-  #   sign_in @user
-  # end
   private
 
   def user_params
