@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, only: :new
   before_action :set_item,          only: [:show, :edit, :update]
   before_action :set_category_list, only: [:index, :show]
-  before_action :set_item_form_collction_select, only: [:new, :edit, :create]
+  before_action :set_item_form_collction_select, only: [:new, :edit, :create, :update]
   before_action :set_brand_list,    only: [:index, :show]
 
 
@@ -71,14 +71,23 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    10.times{@item.images.build}
   end
 
   def update
-    if @item.update(item_params)
-      redirect_to root_path
-    else
-      render action: :edit
+    respond_to do |format|
+      if @item.update(item_update_params)
+        params[:images][:image].each do |image|
+          @item.images.create(image: image, item_id: @item.id)
+        end
+        if params[:images][:remove_image].present?
+          @item.image.remove_image!
+        end
+        @item.save
+        format.html{redirect_to root_path}
+      else
+        @item.images.build
+        format.html{render action: 'new'}
+      end
     end
   end
 
@@ -89,6 +98,10 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :delivery_way_id, :brand_id, :price, images_attributes: [:image] ).merge(saler_id: current_user.id, size_id: 1)
+  end
+
+  def item_update_params
+    params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :delivery_way_id, :brand_id, :price, images_attributes: [:image, :_destroy, :remove_image, :id] ).merge(saler_id: current_user.id, size_id: 1)
   end
 
   # 出品フォームの選択肢をセット
