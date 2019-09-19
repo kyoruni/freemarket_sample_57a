@@ -4,15 +4,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,:omniauthable,
          omniauth_providers: [:facebook, :google_oauth2]
 
-
   has_many :sns_credential
   has_one :shipping_address
   accepts_nested_attributes_for :shipping_address
   accepts_nested_attributes_for :sns_credential
-
   
   def self.find_omniauth(auth)
-
     uid = auth.uid
     provider = auth.provider
     snscredential = SnsCredential.where(uid: uid, provider: provider).first
@@ -37,9 +34,6 @@ class User < ApplicationRecord
     end
     return user
   end
-
-
-
 
   belongs_to :region, optional: true
   has_many :items, foreign_key: "saler_id", class_name: "Item"
