@@ -1,4 +1,5 @@
 class CardController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_category_list
   before_action :set_brand_list
   before_action :set_payjp_secret_key, except: :new

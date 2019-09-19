@@ -1,13 +1,13 @@
 class SignupController < ApplicationController
-
-  before_action :set_category_list, only: [:step5]
-  before_action :set_brand_list,    only: [:step5]
+  before_action :authenticate_user!, only: [:step5] # ログインしていない場合、ログアウトページに入れなくする
+  before_action :move_to_index,      except: [:step5]
+  before_action :set_category_list,  only: [:step5]
+  before_action :set_brand_list,     only: [:step5]
   
-
   def step1
     @user = User.new()
   end
-  
+
   def step2
     @user = User.new()
     session[:name]                   = user_params[:name]
@@ -22,7 +22,7 @@ class SignupController < ApplicationController
     session[:birth_month]            = user_params[:birth_month]
     session[:birth_day]              = user_params[:birth_day]
   end
-  
+
   def step3
     @user   = User.new()
     @region = Region.all
@@ -46,7 +46,7 @@ class SignupController < ApplicationController
       phone_number:                 session[:phone_number],
       shipping_address_attributes:  user_params[:shipping_address_attributes]
     )
-    @user.save
+    @user.save!
     sign_in @user
   end
 
@@ -72,6 +72,11 @@ class SignupController < ApplicationController
       :phone_number,
       shipping_address_attributes:[:user_id, :region_id, :postal_code, :address, :building, :city, :building_phone, :created_at, :updated_at]
     )
+  end
+
+  # ログインしていたら、トップページに飛ばす
+  def move_to_index
+    redirect_to root_path if user_signed_in?
   end
 end
 
