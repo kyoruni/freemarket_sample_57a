@@ -16,12 +16,12 @@
 
           .sign-up__contents__frame__bottom-contents__bottom-frame__field-middle
             %i.fab.fa-facebook-square.size
-            %p Facebookで登録する
+            = link_to "Facebookで登録する", user_facebook_omniauth_authorize_path, method: :post 
             
 
           .sign-up__contents__frame__bottom-contents__bottom-frame__field-bottom
             %i.fab.fa-google.fa-lg
-            %p Googleで登録する
+            = link_to "Googleで登録する", user_google_oauth2_omniauth_authorize_path, method: :post 
             
 
 = render 'share/simple-footer'

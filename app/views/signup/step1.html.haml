@@ -11,13 +11,13 @@
               %p 
               ニックネーム 
               %span.required> 必須
-            = f.text_field :name, placeholder: '例)  メルカリ太郎', class:"nickname-text", id: "name", required:"required"
+            = f.text_field :name, placeholder: '例)  メルカリ太郎', class:"nickname-text", id: "name", required:"required",value: session[:name]
             #emsg_name
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
               メールアドレス
               %span.required> 必須
-              = f.email_field :email, placeholder: '  PC・携帯どちらでも可', class:"email-text", id: "email", required:"required"
+              = f.email_field :email, placeholder: '  PC・携帯どちらでも可', class:"email-text", id: "email", required:"required",value: session[:email]
               #emsg_email
             .new-menber-info__contents__all-frame__bottom-contents__bottom-frame__text
               %p 
