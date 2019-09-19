@@ -74,21 +74,31 @@ class ItemsController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @item.update(item_update_params)
+    if @item.update(item_update_params)
+      if params[:images].present?
         params[:images][:image].each do |image|
           @item.images.create(image: image, item_id: @item.id)
         end
-        if params[:images][:remove_image].present?
-          @item.image.remove_image!
-        end
-        @item.save
-        format.html{redirect_to root_path}
-      else
-        @item.images.build
-        format.html{render action: 'new'}
       end
+      if params[:remove_image].present?
+        @item.iamges.remove_image!
+      end
+      redirect_to item_path(@item.id)
     end
+    #   if @item.update(item_update_params)
+    #     params[:images][:image].each do |image|
+    #       @item.images.create(image: image, item_id: @item.id)
+    #     end
+    #     if params[:images][:remove_image].present?
+    #       @item.images.remove_image!
+    #     end
+    #     @item.save
+    #     format.html{redirect_to root_path}
+    #   else
+    #     @item.images.build
+    #     format.html{render action: 'new'}
+    #   end
+    # end
   end
 
   private
