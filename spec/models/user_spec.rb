@@ -151,6 +151,11 @@ RSpec.describe User do
       expect(user.errors[:first_name_kana]).to include("はカナ文字を入力してください" )
     end
 
+    it "passwordとpassword_confirmationが一致しないと登録出来ない" do
+      user = FactoryBot.build(:user, password: "a123456", password_confirmation: "b123456")
+      user.valid?
+      expect(user.errors[:password_confirmation]).to include("doesn't match Password")
+    end
   end
 end
 
