@@ -2,9 +2,8 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!,             only: [:new, :edit]
   before_action :set_item,                       only: [:show, :edit, :update]
   before_action :set_category_list,              only: [:index, :show]
-  before_action :set_item_form_collction_select, only: [:new, :edit, :create]
+  before_action :set_item_form_collction_select, only: [:new, :edit, :create, :update]
   before_action :set_brand_list,                 only: [:index, :show]
-
 
   def show
     @saler_items = Item.where(saler_id: @item.saler_id).limit(6).order('created_at DESC')
@@ -71,15 +70,11 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    10.times{@item.images.build}
   end
 
   def update
-    if @item.update(item_params)
-      redirect_to root_path
-    else
-      render action: :edit
-    end
+    @item.update(item_update_params)
+    redirect_to item_path(@item.id)
   end
 
   private
@@ -89,6 +84,10 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :delivery_way_id, :brand_id, :price, images_attributes: [:image] ).merge(saler_id: current_user.id, size_id: 1)
+  end
+
+  def item_update_params
+    params.require(:item).permit(:name, :text, :category_id, :condition_id, :region_id, :postage_id, :delivery_day_id, :delivery_way_id, :brand_id, :price, images_attributes: [:image, :_destroy, :remove_image, :id] ).merge(saler_id: current_user.id, size_id: 1)
   end
 
   # 出品フォームの選択肢をセット
