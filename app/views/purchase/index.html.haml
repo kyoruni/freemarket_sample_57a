@@ -9,7 +9,7 @@
     .buy-confirmation-wrapper__main
       .buy-confirmation-wrapper__main__header
         .buy-confirmation-wrapper__main__header--image
-          = image_tag asset_path("sample.jpeg"), class:"buy-confirmation-image"
+          = image_tag @item.images.first.image_url, class:"buy-confirmation-image"
         .buy-confirmation-wrapper__main__header--text
           %p
             = @item.name
