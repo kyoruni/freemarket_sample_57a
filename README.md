@@ -257,7 +257,6 @@
 - belongs_to :user
 
 
-
 Column	Type	Options
 uid	string	null: false
 provider	string	null: false
