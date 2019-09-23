@@ -126,7 +126,7 @@ ActiveRecord::Schema.define(version: 2019_09_20_081032) do
   end
 
   create_table "shipping_addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "postal_code"
+    t.string "postal_code", default: ""
     t.string "address", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -171,8 +171,6 @@ ActiveRecord::Schema.define(version: 2019_09_20_081032) do
     t.string "birth_month", null: false
     t.string "birth_day", null: false
     t.string "phone_number", null: false
-    t.string "provider"
-    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
